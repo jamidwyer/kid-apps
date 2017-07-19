@@ -23,22 +23,46 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
+subs = ['chicagosunauto', 'chicago', 'imagesofillinois', 'political_revolution', 'bluemidterm2018', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos']
+
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("Amanda Howland is running against Peter Roskam. \n\n"
+            "Campaign site: http://www.amandahowlandforcongress.com/ \n\n"
+            "Register to vote: https://ova.elections.il.gov/Step0.aspx \n\n"
+            "Facebook: https://www.facebook.com/howlandforcongress \n\n"
+            "Twitter: https://twitter.com/amandahowland06 \n\n"
+            "Howland supports single-payer health care, renewable energy, rejoining the Paris Climate Agreement,"
+             "and affordable higher education.\n\n"
+
+            "Map of Illinois District 6: https://www.govtrack.us/congress/members/IL/6 \n\n "
+
+            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        submission.reply(text)
+        print("Bot replying to : ", submission.title)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
+
 # Get the top 100 values from our subreddit
-subreddit = reddit.subreddit('indivisibleguide')
-for submission in subreddit.hot(limit=500):
-    #print(submission.title)
+def searchAndPost(sub):
+    subreddit = reddit.subreddit(sub)
+    for submission in subreddit.hot(limit=500):
+        #print(submission.title)
 
-    # If we haven't replied to this post before
-    if submission.id not in posts_replied_to:
+        # If we haven't replied to this post before
+        if submission.id not in posts_replied_to:
 
-        # Do a case insensitive search
-        if re.search("roskam", submission.title, re.IGNORECASE):
-            # Reply to the post
-            submission.reply("Amanda Howland is running against Peter Roskam. \n\n Campaign site: http://www.amandahowlandforcongress.com/ \n\n Register to vote: https://ova.elections.il.gov/Step0.aspx \n\n Facebook: https://www.facebook.com/howlandforcongress \n\n Twitter: https://twitter.com/amandahowland06 \n\n Howland supports single-payer health care, renewable energy, rejoining the Paris Climate Agreement, and affordable higher education.\n\n I'm a bot and I'm learning. Let me know if I can do better.")
-            print("Bot replying to : ", submission.title)
+            # Do a case insensitive search
+            terms = ['roskam']
+            for term in terms:
+                 search(term, submission);
 
-            # Store the current id into our list
-            posts_replied_to.append(submission.id)
+for sub in subs:
+     print(sub)
+     searchAndPost(sub);
 
 # Write our updated list back to the file
 with open("posts_replied_to.txt", "w") as f:
