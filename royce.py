@@ -23,22 +23,52 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-# Get the top 100 values from our subreddit
-subreddit = reddit.subreddit('democracy')
-for submission in subreddit.hot(limit=500):
-    #print(submission.title)
+subs = ['losangeles', 'enoughtrumpspam', 'orangecounty', 'political_revolution', 'worldnews', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'impeach_trump', 'autotldr', 'esist', 'indepthstories', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto', 'geprnotes']
 
-    # If we haven't replied to this post before
-    if submission.id not in posts_replied_to:
+# Get the top 500 values from our subreddit
+def searchAndPost(sub):
+    subreddit = reddit.subreddit(sub)
+    for submission in subreddit.hot(limit=500):
+        #print(submission.title)
 
-        # Do a case insensitive search
-        if re.search("ed royce", submission.title, re.IGNORECASE):
-            # Reply to the post
-            submission.reply("Phil Janowicz is running against Ed Royce. \n\n Campaign site: http://philforhouse.com/#issues \n\n Register to vote: http://registertovote.ca.gov/ \n\n Donate: https://secure.actblue.com/contribute/page/phil \n\n Facebook: https://www.facebook.com/philforhouse \n\n Twitter: https://twitter.com/PhilforHouse \n\n Instagram: https://www.instagram.com/philforhouse/ \n\n He supports living wages, LGBTQ equality, equal pay for equal work, and increasing funding for science.\n\n I'm a bot and I'm learning. Let me know if I can do better.")
-            print("Bot replying to : ", submission.title)
+        # If we haven't replied to this post before
+        if submission.id not in posts_replied_to:
 
-            # Store the current id into our list
-            posts_replied_to.append(submission.id)
+            # Do a case insensitive search
+            terms = ['ed royce', 'rep. royce', 'congressman royce', 'rep royce']
+            for term in terms:
+                 search(term, submission);
+
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Mai Khanh Tran**](https://doctran2018.com/) is running against Ed Royce. \n\n"
+            "[Donate](https://secure.actblue.com/donate/drtranforcongress) | "
+            "[Facebook](https://www.facebook.com/DocTran2018/) | "
+            "[Twitter](https://twitter.com/DocTran2018) \n\n"
+            "Tran supports universal health care coverage and Planned Parenthood. \n\n\n"
+
+            "[**Phil Janowicz**](http://philforhouse.com/#issues) is running against Ed Royce. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/phil) | "
+            "[Facebook](https://www.facebook.com/philforhouse) | "
+            "[Twitter](https://twitter.com/PhilforHouse) \n\n"
+            "Janowicz supports renewable energy, living wages, LGBTQ equality, equal pay for equal work, and increasing funding for science.\n\n"
+
+            "Map of California District 39: https://www.govtrack.us/congress/members/CA/39 \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+
+        submission.reply(text)
+        print("Bot replying to : ", submission.title)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
+
+for sub in subs:
+     print(sub)
+     searchAndPost(sub);
 
 # Write our updated list back to the file
 with open("posts_replied_to.txt", "w") as f:

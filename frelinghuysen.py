@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['enoughtrumpspam', 'kansas', 'kansascity', 'political_revolution', 'worldnews', 'bluemidterm2018', 'politicaltweets', 'technology', 'impeach_trump', 'autotldr', 'esist', 'indepthstories', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto', 'geprnotes', 'UMukhasimAutoNews', 'trussiagate']
+subs = ['enoughtrumpspam', 'badlawyer', 'newjersey', 'ecointernet', 'political_revolution', 'worldnews', 'bluemidterm2018', 'politicaltweets', 'technology', 'impeach_trump', 'autotldr', 'esist', 'indepthstories', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto', 'geprnotes', 'UMukhasimAutoNews', 'trussiagate']
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
@@ -35,14 +35,14 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            if re.search("yoder", submission.title, re.IGNORECASE):
+            if re.search("frelinghuysen", submission.title, re.IGNORECASE):
                 # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) \n\n"
-                "[**Andrea Ramsey**](http://www.andrearamseyforcongress.com/) is running against Kevin Yoder. \n\n"
-                "[Donate](https://secure.actblue.com/donate/ramsey) | [Facebook](https://www.facebook.com/AndreaRamseyKS) | [Twitter](https://twitter.com/AndreaRamseyKS) \n\n"
-                "Ramsey supports public schools. \n\n\n "
+                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
+                "[**Jack Gebbia**](https://jackgebbiaforcongress.com/) is running against Rodney Frelinghuysen."
+                "[Donate](https://www.crowdpac.com/campaigns/233827/jack-gebbia-for-congress-its-time-for-a-change) | [Facebook](https://www.facebook.com/JackGebbia4Congress/) | [Twitter](https://twitter.com/jack_gebbia) \n\n"
+                "Gebbia supports single-payer health care and LGBTQ equality. \n\n\n "
 
-                "Map of Kansas District 3: https://www.govtrack.us/congress/members/KS/3 \n\n"
+                "Map of New Jersey District 11: https://www.govtrack.us/congress/members/NJ/11 \n\n"
 
                 "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
                 "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['orangecounty', 'political_revolution', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+subs = ['enoughtrumpspam', 'orangecounty', 'political_revolution', 'worldnews', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'impeach_trump', 'autotldr', 'esist', 'indepthstories', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto', 'geprnotes', 'politicalcalifornia', 'trussiagate']
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
@@ -37,43 +37,39 @@ def searchAndPost(sub):
             # Do a case insensitive search
             if re.search("rohrabacher", submission.title, re.IGNORECASE):
                 # Reply to the post
-                text = ("Tony Zarkades is running against Dana Rohrabacher. \n\n"
-                    "Campaign website: https://www.tonyzforcongress.org/on-the-issues \n\n"
-                    "Donate: https://secure.actblue.com/contribute/page/tonyzforcongress \n\n"
-                    "Facebook: https://www.facebook.com/tonyzforcongress/ \n\n"
-                    "Twitter: https://twitter.com/tonyz4congress \n\n"
+                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+                    "[**Tony Zarkades**](https://www.tonyzforcongress.org/on-the-issues) is running against Dana Rohrabacher. \n\n"
+                    "[Donate](https://secure.actblue.com/contribute/page/tonyzforcongress) | "
+                    "[Facebook](https://www.facebook.com/tonyzforcongress/) | "
+                    "[Twitter](https://twitter.com/tonyz4congress) \n\n"
                     "Zarkades supports single-payer health care, living wages, paid family leave, Social Security, Medicare, "
                     "affordable college, equal pay for equal work, renewable energy, common-sense gun control, funding "
                     "science and the EPA, DACA, and a path to citizenship for hard-working, law-abiding people, while "
                     "deporting criminals. \n\n\n"
 
-                    "Laura Oatman is running against Dana Rohrabacher. \n\n"
-                    "Campaign website: https://oatmanforcongress.com/my-platform \n\n"
-                    "Donate: https://act.myngp.com/Forms/4363798847687232000 \n\n"
-                    "Facebook: https://www.facebook.com/OatmanforCongress/ \n\n"
-                    "Twitter: https://twitter.com/Laura_Oatman \n\n"
+                    "[**Laura Oatman**](https://www.tonyzforcongress.org/on-the-issues) is running against Dana Rohrabacher. \n\n"
+                    "[Donate](https://act.myngp.com/Forms/4363798847687232000) | "
+                    "[Facebook](https://www.facebook.com/OatmanforCongress/) | "
+                    "[Twitter](https://twitter.com/Laura_Oatman) \n\n"
                     "Oatman supports single-payer health care, public schools, IDEA, "
                     "affordable college, equal pay for equal work, and renewable energy. \n\n\n"
 
-                    "Harley Rouda is running against Dana Rohrabacher. \n\n"
-                    "Campaign website: https://harleyforcongress.com/issues/ \n\n"
-                    "Donate: https://secure.actblue.com/contribute/page/rouda \n\n"
-                    "Facebook: https://www.facebook.com/HarleyforCongress/ \n\n"
-                    "Twitter: https://twitter.com/HarleyRouda \n\n"
+                    "[**Harley Rouda**](https://harleyforcongress.com/issues/) is running against Dana Rohrabacher. \n\n"
+                    "[Donate](https://secure.actblue.com/contribute/page/rouda) | "
+                    "[Facebook](https://www.facebook.com/HarleyforCongress/) | "
+                    "[Twitter](https://twitter.com/HarleyRouda) \n\n"
                     "Rouda supports universal health care coverage, "
                     "equal pay for equal work, renewable energy, standing with our international "
                     "allies, LGBTQ equality, and funding science. \n\n\n"
 
-                    "Michael Kotick is running against Dana Rohrabacher. \n\n"
-                    "Campaign website: http://kotickforcongress.com/priorities/ \n\n"
-                    "Donate: https://www.crowdpac.com/campaigns/264265/michael-kotick-for-us-congress \n\n"
-                    "Facebook: https://www.facebook.com/KotickForCongress/ \n\n"
-                    "Twitter: https://twitter.com/Kotick4Congress \n\n"
+                    "[**Michael Kotick**](http://kotickforcongress.com/priorities/) is running against Dana Rohrabacher. \n\n"
+                    "[Donate](https://www.crowdpac.com/campaigns/264265/michael-kotick-for-us-congress) | "
+                    "[Facebook](https://www.facebook.com/KotickForCongress/) | "
+                    "[Twitter](https://twitter.com/Kotick4Congress) \n\n"
                     "Kotick supports universal health care coverage, Medicare, "
                     "equal pay for equal work, renewable energy, LGBTQ equality, funding science, and a path to "
                     "citizenship for hard-working, law-abiding people, while deporting criminals. \n\n\n"
 
-                    "Register to vote: http://registertovote.ca.gov/ \n\n"
                     "Map of California District 48: https://www.govtrack.us/congress/members/CA/48 \n\n"
 
                     "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
