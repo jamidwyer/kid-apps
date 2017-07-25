@@ -29,13 +29,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
-            "[**Amanda Howland**](http://www.amandahowlandforcongress.com/) is running against Peter Roskam. \n\n"
-            "[Facebook](https://www.facebook.com/howlandforcongress) | "
-            "[Twitter](https://twitter.com/amandahowland06) \n\n"
-            "Howland supports single-payer health care, renewable energy, rejoining the Paris Climate Agreement,"
-             "and affordable higher education.\n\n"
+            "[**Jim Walz**](https://www.jimwalzforcongress.com/) is running against Randy Hultgren. \n\n"
+            "[Facebook](https://www.facebook.com/jimwalzforcongress/) | "
+            "[Twitter](https://twitter.com/walzforcongress) \n\n"
+            "Walz supports single-payer health care, renewable energy, campaign finance reform, LGBTQ equality, "
+             "protecting Social Security, and funding science.\n\n"
 
-            "Map of Illinois District 6: https://www.govtrack.us/congress/members/IL/6 \n\n "
+            "Map of Illinois District 14: https://www.govtrack.us/congress/members/IL/14 \n\n "
 
             "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
@@ -48,14 +48,14 @@ def search(term, submission):
 # Get the top 100 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['roskam']
+            terms = ['hultgren', 'il-14']
             for term in terms:
                  search(term, submission);
 

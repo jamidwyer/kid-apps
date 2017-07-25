@@ -1,0 +1,31 @@
+#!/bin/sh
+
+python valadao.py > log.err > log.out
+python paulsen.py > log.err > log.out
+python royce.py > log.err > log.out
+python issa.py > log.err > log.out
+python roskam.py > log.err > log.out
+python knight.py > log.err > log.out
+python walters.py > log.err > log.out
+python mcsally.py > log.err > log.out
+python denham.py > log.err > log.out
+python petesessions.py > log.err > log.out
+python rohrabacher.py > log.err > log.out
+python culberson.py > log.err > log.out
+python yoder.py > log.err > log.out
+python frelinghuysen.py > log.err > log.out
+python jasonlewis.py > log.err > log.out
+python balart.py > log.err > log.out
+python bacon.py > log.err > log.out
+python scotttaylor.py > log.err > log.out
+python flake.py > log.err > log.out
+python davidyoung.py > log.err > log.out
+python blum.py > log.err > log.out
+python hultgren.py > log.err > log.out
+python trott.py > log.err > log.out
+python cruz.py > log.err > log.out
+python nunes.py > log.err > log.out
+python schweikert.py > log.err > log.out
+python ryan.py > log.err > log.out
+python walden.py > log.err > log.out
+python mccarthy.py > log.err > log.out

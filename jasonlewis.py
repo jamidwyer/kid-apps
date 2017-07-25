@@ -40,7 +40,7 @@ def searchAndPost(sub):
                 text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx) \n\n"
                 "**Angie Craig** is running against Jason Lewis. \n\n"
                 "[Donate](https://www.crowdpac.com/campaigns/241325/angie-craig) | [Facebook](https://www.facebook.com/AngieCraigforCongress/) | [Twitter](https://twitter.com/angiecraigmn?lang=en) \n\n"
-                "Craign supports universal health coverage. \n\n\n "
+                "Craig supports universal health coverage. \n\n\n "
 
                 "Map of Minnesota 2: https://www.govtrack.us/congress/members/MN/2 \n\n"
 

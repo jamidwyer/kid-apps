@@ -40,7 +40,7 @@ def searchAndPost(sub):
                 text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
                 "[**Alina Valdes**](http://alinavaldesforcongress.com/) is running against Mario Diaz-Balart. \n\n"
                 "[Donate](https://secure.actblue.com/contribute/page/alina-valdes-1) | [Facebook](https://www.facebook.com/alinavaldesforcongress/) | [Twitter](https://twitter.com/DrAlinaValdes) \n\n"
-                "Valdes supports Medicare for all, public schools. \n\n\n "
+                "Valdes supports Medicare for all. \n\n\n "
 
                 "Map of Florida District 25: https://www.govtrack.us/congress/members/FL/25 \n\n"
 

@@ -23,22 +23,29 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
+subs = ['UMukhasimAutoNews', 'california_politics', 'politicalrevolutionca', 'politicalcalifornia', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'thehillauto', 'waexauto', 'unremovable', 'politicaltweets', 'thenewcoldwar', 'technology', 'autonewspaper', 'autotldr', 'esist', 'marchagainsttrump', 'politicalvideo', 'keepournetfree', 'goodlongposts', 'badgovnofreedom', 'good_cake', 'democracy', 'fcc', 'worldnews', 'nottheonion', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'fuckthealtright', 'environment', 'keep_track', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'cornbreadliberals', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'trussiagate', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'skydtech']
+
 # Get the top 100 values from our subreddit
-subreddit = reddit.subreddit('california')
-for submission in subreddit.hot(limit=100):
-    #print(submission.title)
+def searchAndPost(sub):
+    subreddit = reddit.subreddit('california')
+    for submission in subreddit.hot(limit=100):
+        #print(submission.title)
 
-    # If we haven't replied to this post before
-    if submission.id not in posts_replied_to:
+        # If we haven't replied to this post before
+        if submission.id not in posts_replied_to:
 
-        # Do a case insensitive search
-        if re.search("valadao", submission.title, re.IGNORECASE):
-            # Reply to the post
-            submission.reply("Emilio Huerta is running against David Valadao. \n\n Campaign site: http://www.huertaforcongress.com/ \n\n Register to vote: http://registertovote.ca.gov/ \n\n I'm a bot and I'm learning. Let me know if I can do better.")
-            print("Bot replying to : ", submission.title)
+            # Do a case insensitive search
+            if re.search("valadao", submission.title, re.IGNORECASE):
+                # Reply to the post
+                submission.reply("Emilio Huerta is running against David Valadao. \n\n Campaign site: http://www.huertaforcongress.com/ \n\n Register to vote: http://registertovote.ca.gov/ \n\n I'm a bot and I'm learning. Let me know if I can do better.")
+                print("Bot replying to : ", submission.title)
 
-            # Store the current id into our list
-            posts_replied_to.append(submission.id)
+                # Store the current id into our list
+                posts_replied_to.append(submission.id)
+
+for sub in subs:
+     print(sub)
+     searchAndPost(sub);
 
 # Write our updated list back to the file
 with open("posts_replied_to.txt", "w") as f:
