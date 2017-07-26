@@ -27,5 +27,9 @@ python cruz.py > log.err > log.out
 python nunes.py > log.err > log.out
 python schweikert.py > log.err > log.out
 python ryan.py > log.err > log.out
+python bost.py > log.err > log.out
+python hatch.py > log.err > log.out
 python walden.py > log.err > log.out
 python mccarthy.py > log.err > log.out
+python gowdy.py > log.err > log.out
+python corker.py > log.err > log.out
