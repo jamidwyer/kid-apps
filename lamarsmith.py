@@ -41,14 +41,14 @@ def searchAndPost(sub):
 def search(term, submission):
             if re.search(term, submission.title, re.IGNORECASE):
                 # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
-                    "[**Chris Fedalei**](http://www.votefedalei.com/) is running against Trey Gowdy. \n\n"
-                    "[Donate](https://scdp.ngpvanhost.com/form/3838457334105966592) | "
-                    "[Facebook](https://www.facebook.com/votefedalei) | "
-                    "[Twitter](https://twitter.com/VoteFedalei) \n\n"
-                    "Fedalei supports protecting Social Security. \n\n\n"
+                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
+                    "[**Derrick Crowe**](https://www.electcrowe.com/#issues-home-section) is running against Lamar Smith. \n\n"
+                    "[Donate](https://secure.actblue.com/contribute/page/electcrowe) | "
+                    "[Facebook](https://www.facebook.com/electcrowe) | "
+                    "[Twitter](https://twitter.com/electcrowe) \n\n"
+                    "Crowe supports universal health care, renewable energy, living wages, paid family leave, college affordability, campaign finance reform, and LGBTQ equality. \n\n\n"
 
-                    "Map of South Carolina District 4: https://www.govtrack.us/congress/members/SC/4 \n\n"
+                    "[Map of Texas District 21](https://www.govtrack.us/congress/members/TX/21) \n\n"
 
                     "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
                     "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

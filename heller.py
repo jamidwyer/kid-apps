@@ -23,30 +23,31 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['operationcorkscrew', 'clarksville', 'tennessee', 'enoughtrumpspam', 'unbubbledpolitics', 'nashville', 'knoxville', 'chattanooga', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+subs = ['vegas', 'reno', 'enoughtrumpspam', 'unbubbledpolitics', 'nevada', 'politicalrevolutionnv', 'dumpdean', 'lasvegas', 'vegaslocals', 'cnnauto', 'newsbotbot', 'donaldtrumpwhitehouse', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['bob corker', 'sen. corker', 'senator corker', 'senate foreign relations committee chairman']
+            terms = ['heller', 'health care after trump threats', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://sos.tn.gov/products/elections/register-vote) \n\n"
-        "[**James Mackler**](https://www.jamesmackler.com/) is running against Bob Corker. \n\n "
-        "[Donate](https://secure.actblue.com/donate/james-mackler-1) | "
-        "[Facebook](https://www.facebook.com/JamesMacklerForSenate/) | "
-        "[Twitter](https://twitter.com/james_mackler) \n\n "
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
+        "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
+        "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
+        "[Facebook](https://www.facebook.com/rosenfornevada/) | "
+        "[Twitter](https://twitter.com/RosenforNevada) \n\n "
+        "Rosen supports universal health care, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
         "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

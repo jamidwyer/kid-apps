@@ -23,6 +23,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
+subs = ['modesto', 'orangecounty', 'california_politics', 'politicalrevolutionca', 'politicalcalifornia', '2018elections', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'thehillauto', 'waexauto', 'unremovable', 'politicaltweets', 'thenewcoldwar', 'technology', 'autonewspaper', 'autotldr', 'esist', 'marchagainsttrump', 'politicalvideo', 'keepournetfree', 'goodlongposts', 'badgovnofreedom', 'good_cake', 'democracy', 'fcc', 'worldnews', 'nottheonion', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'fuckthealtright', 'environment', 'keep_track', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'cornbreadliberals', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'trussiagate', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'skydtech']
+
 # Get the top 100 values from our subreddit
 subreddit = reddit.subreddit('california_politics')
 for submission in subreddit.hot(limit=500):

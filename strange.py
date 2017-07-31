@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['alabama', 'badlawyer', 'birmingham' 'UMukhasimAutoNews', 'enoughtrumpspam', 'unbubbledpolitics', 'nashville', 'knoxville', 'chattanooga', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+subs = ['alabama', 'badlawyer', 'birmingham', 'UMukhasimAutoNews', 'enoughtrumpspam', 'unbubbledpolitics', 'nashville', 'knoxville', 'chattanooga', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -42,11 +42,13 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://sos.tn.gov/products/elections/register-vote) \n\n"
-        "[**James Mackler**](https://www.jamesmackler.com/) is running against Bob Corker. \n\n "
-        "[Donate](https://secure.actblue.com/donate/james-mackler-1) | "
-        "[Facebook](https://www.facebook.com/JamesMacklerForSenate/) | "
-        "[Twitter](https://twitter.com/james_mackler) \n\n "
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) \n\n"
+        "[**Will Boyd**](http://willboydforcongress.com/) is running against Luther Strange. \n\n "
+        "[Donate](https://www.paypal.com/donate/?token=eJ3NLueUO7muzRmyxdxsUyuVSYU95UJYcCy75iWFxDw0TtnkRKcKN-VciFQn10rGB9xJQm&country.x=US&locale.x=US) | "
+        "[Facebook](https://www.facebook.com/wboyd4senate) | "
+        "[Twitter](https://twitter.com/wboyd4senate) \n\n "
+
+        "Boyd supports universal health care, public school, living wages, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality.  \n\n "
 
         "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
         "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
