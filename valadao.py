@@ -37,7 +37,16 @@ def searchAndPost(sub):
             # Do a case insensitive search
             if re.search("valadao", submission.title, re.IGNORECASE):
                 # Reply to the post
-                submission.reply("Emilio Huerta is running against David Valadao. \n\n Campaign site: http://www.huertaforcongress.com/ \n\n Register to vote: http://registertovote.ca.gov/ \n\n I'm a bot and I'm learning. Let me know if I can do better.")
+                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+                "[**Emilio Huerta**](http://www.huertaforcongress.com/) is running against David Valadao. \n\n "
+                "[Donate](https://secure.actblue.com/donate/huerta/) | "
+                "[Facebook](https://www.facebook.com/huertaforcongress/) | "
+                "[Twitter](https://twitter.com/huerta4congress/) \n\n "
+
+                "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
+                "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+
+                submission.reply(text)
                 print("Bot replying to : ", submission.title)
 
                 # Store the current id into our list

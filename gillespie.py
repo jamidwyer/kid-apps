@@ -49,7 +49,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/RalphNortham) \n\n"
             "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, LGBT equality, and common-sense gun safety laws. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)

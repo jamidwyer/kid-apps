@@ -50,8 +50,8 @@ def search(term, submission):
 
         "Boyd supports universal health care, public school, living wages, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality.  \n\n "
 
-        "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
+            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 

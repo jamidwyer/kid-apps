@@ -54,7 +54,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/PhilMurphyNJ) \n\n"
             "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, and background checks on all gun sales. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
