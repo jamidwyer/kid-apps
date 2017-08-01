@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['atheism', 'virginiapolitics', 'virginia', 'uspolitics', 'lgbtnews', 'atheismrebooted', 'enoughlibertarianspam', 'conspiratard', 'rva', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'keepournetfree', 'thehillauto', 'cornbreadliberals', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'wayofthebern', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'politicalvideo', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'nottheonion', 'newsbotbot', 'impeach_trump', 'fuckthealtright', 'collapse', 'environment', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'tytpolitics', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'restorethefourth', 'indivisibleguide', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'progressive', 'datauncensored', 'skydtech', 'gogopgo']
+subs = ['virginia', 'rva', 'bluemidterm2018', 'indepthstories', 'democrats', 'chapotraphouse', 'enoughtrumpspam', 'keepournetfree', 'politicalvideo', 'wayofthebern', 'impeach_trump', 'russialago', 'liberal', 'tytpolitics', 'cornbreadliberals', 'political_revolution', 'thehillauto', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'news', 'nottheonion', 'breakingnews24hr', 'worldpolitics', 'newsbotbot', 'fuckthealtright', 'collapse', 'environment', 'umukhasimautonews', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'nofilternews', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'cbsauto', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'datauncensored', 'progressive', 'skydtech', 'gogopgo', 'atheism', 'uspolitics', 'lgbtnews', 'atheismrebooted', 'donaldtrumpwhitehouse', 'enoughlibertarianspam', 'conspiratard']
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['dave brat', 'rep. brat', 'congressman brat', 'rep brat']
+            terms = ['dave brat', 'rep. brat', 'congressman brat', 'rep brat', 'representative brat']
             for term in terms:
                  search(term, submission);
 
@@ -49,9 +49,16 @@ def search(term, submission):
 
                     "Bedell supports universal health care, renewable energy, living wages, and LGBTQ equality.  \n\n"
 
+                    "[**Abigail Spanberger**](https://abigailspanberger.com/) is running against Dave Brat. \n\n"
+                    "[Donate](https://secure.actblue.com/donate/spanberger_website) | "
+                    "[Facebook](https://www.facebook.com/SpanbergerForCongress/) | "
+                    "[Twitter](https://twitter.com/SpanbergerVA07) \n\n"
+
+                    "Spanberger supports public schools, funding the State Department to promote international diplomacy, and net neutrality.  \n\n"
+
                     "Map of Virginia District 7: https://www.govtrack.us/congress/members/VA/7 \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+                    "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
                     "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
                 submission.reply(text)
                 print("Bot replying to : ", submission.title)
