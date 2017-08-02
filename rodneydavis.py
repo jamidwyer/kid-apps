@@ -22,33 +22,33 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['uiuc', 'chicagosunauto', 'republicansaredicks', 'news', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'keepournetfree', 'thehillauto', 'cornbreadliberals', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'wayofthebern', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'politicalvideo', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'nottheonion', 'BreakingNews24hr', 'newsbotbot', 'impeach_trump', 'fuckthealtright', 'collapse', 'environment', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'tytpolitics', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'restorethefourth', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'progressive', 'datauncensored', 'skydtech', 'portland', 'oregon']
+subs = ['uiuc', 'politicalrevolutionil', 'chicagosunauto', 'republicansaredicks', 'news', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'keepournetfree', 'thehillauto', 'cornbreadliberals', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'wayofthebern', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'politicalvideo', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'nottheonion', 'BreakingNews24hr', 'newsbotbot', 'impeach_trump', 'fuckthealtright', 'collapse', 'environment', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'tytpolitics', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'restorethefourth', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'progressive', 'datauncensored', 'skydtech']
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=1000):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'congressman king']
+            terms = ['rodney davis']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-            "[**Fayrouz Saad**](https://www.fayrouzsaad.com/) is running against David Trott. \n\n"
-            "[Donate](https://www.fayrouzsaad.com/contribute/) | "
-            "[Facebook](https://www.facebook.com/FayrouzSaadForCongress/) | "
-            "[Twitter](https://twitter.com/saadforcongress) \n\n"
-            "Saad supports public schools, paid family leave, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
+            "[**David Gill**](https://www.davidgill2018.com/platform) is running against Rodney Davis. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/doctorgillforcongress) | "
+            "[Facebook](https://www.facebook.com/DavidGill2018/) | "
+            "[Twitter](https://twitter.com/davidgill2018) \n\n"
+            "Gill supports universal health care, public schools, living wages, affordable college, renewable energy, standing with our international allies, LGBTQ equality, and background checks on every gun sale. \n\n\n"
 
-            "Map of New Jersey District 2: https://www.govtrack.us/congress/members/NJ/2 \n\n"
+            "Map of Illinois District 13: https://www.govtrack.us/congress/members/IL/13 \n\n"
 
             "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

@@ -2,6 +2,7 @@
 
 python christie.py
 python gillespie.py
+python travisharris.py
 python strange.py
 python valadao.py
 python paulsen.py
@@ -27,17 +28,21 @@ python davidyoung.py
 python blum.py
 python hultgren.py
 python trott.py
-python brat.py
+python rodneydavis.py
+python macarthur.py
 python cruz.py
 python nunes.py
-python schweikert.py
 python lamarsmith.py
+python schweikert.py
 python ryan.py
 python bost.py
+python hunter.py
 python buddycarter.py
 python hatch.py
 python walden.py
-python brownback.py
 python mccarthy.py
 python gowdy.py
 python corker.py
+python scottwalker.py
+python brownback.py
+python brat.py

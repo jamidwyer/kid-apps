@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['news', 'newjersey', 'ecointernet', 'leftcentral', 'thedavidpakmanshow', 'trumpforrussia', 'cbsauto', 'nypostauto', 'worldpolitics', 'progressive', 'economics', 'phillyauto', 'badlawyer', 'atheism', 'freeatheism', 'democrats', 'UMukhasimAutoNews', 'nytimes', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'thehillauto', 'waexauto', 'unremovable', 'politicaltweets', 'thenewcoldwar', 'technology', 'autonewspaper', 'autotldr', 'esist', 'marchagainsttrump', 'politicalvideo', 'keepournetfree', 'goodlongposts', 'badgovnofreedom', 'good_cake', 'democracy', 'fcc', 'worldnews', 'nottheonion', 'newsbotbot', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'fuckthealtright', 'environment', 'keep_track', 'PoliticalVideos', 'climate', 'latimesauto', 'cnet_all_rss', 'women', 'netneutrality', 'cornbreadliberals', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'trussiagate', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'skydtech']
+subs = ['newjersey', 'bluemidterm2018', 'indepthstories', 'democrats', 'chapotraphouse', 'enoughtrumpspam', 'keepournetfree', 'politicalvideo', 'wayofthebern', 'impeach_trump', 'russialago', 'liberal', 'tytpolitics', 'cornbreadliberals', 'political_revolution', 'thehillauto', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'goodlongposts', 'latimesauto', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'news', 'nottheonion', 'breakingnews24hr', 'worldpolitics', 'newsbotbot', 'fuckthealtright', 'collapse', 'environment', 'UMukhasimAutoNews', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'nofilternews', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'cbsauto', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'datauncensored', 'progressive', 'skydtech', 'gogopgo', 'atheism', 'uspolitics', 'lgbtnews', 'atheismrebooted', 'donaldtrumpwhitehouse', 'enoughlibertarianspam', 'conspiratard', 'nypostauto', 'economics', 'phillyauto', 'badlawyer', 'freeatheism', 'nytimes', 'ecointernet', 'leftcentral', 'thedavidpakmanshow', 'trumpforrussia']
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'new jersey governor', 'nj gov']
+            terms = ['chris christie', 'new jersey governor', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'christie\'s secret attorney fee']
             for term in terms:
                  search(term, submission);
 
