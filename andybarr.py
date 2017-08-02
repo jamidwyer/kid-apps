@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -35,7 +36,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['andy barr', 'rep. barr', 'rep barr', 'representative barr', 'congressman barr']
+            terms = ['andy barr', 'rep. barr', 'rep barr', 'representative barr', 'congressman barr', 'kentucky\'s 6th congressional district', 'ky-6', 'ky-06', 'Kentucky\’s 6th Congressional District']
             for term in terms:
                  search(term, submission);
 
@@ -51,6 +52,7 @@ def search(term, submission):
 
         "[**Amy McGrath**](https://www.amymcgrathforcongress.com/) is running against Andy Barr. \n\n "
         "[Donate](https://secure.actblue.com/donate/amy-mcgrath-for-congress) | "
+        "[Reddit](https://www.reddit.com/r/AmyMcGrath/) | "
         "[Facebook](https://www.facebook.com/AmyMcGrathKY/) | "
         "[Twitter](https://twitter.com/AmyMcGrathKY) \n\n "
 

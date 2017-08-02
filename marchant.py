@@ -23,38 +23,40 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['enoughtrumpspam', 'houstonchronauto', 'houston', 'texas', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+local_subs = open("texas.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=1000):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['john culberson', 'rep. culberson', 'congressman culberson', 'rep culberson']
+            terms = ['kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("James Cargas is running against John Culberson. \n\n"
-            "Campaign website: http://www.jamescargas.com/on-the-issues/ \n\n"
-             "Register to vote: http://www.votetexas.gov/register-to-vote/ \n\n"
-             "Donate: https://secure.actblue.com/contribute/page/james-cargas-1 \n\n"
-             "Facebook: https://www.facebook.com/Cargas7/ \n\n"
-             "Twitter: https://twitter.com/Cargas7 \n\n"
-             "Cargas supports renewable energy, science, universal pre-K, public schools, affordable college, LGBTQ "
-             "equality, background checks on every gun sale, and the Voting Rights Act. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
+            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
+            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
+            "[Twitter](https://twitter.com/JanForCongress) \n\n"
+            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
 
-            "Map of Texas District 7: https://www.govtrack.us/congress/members/TX/7 \n\n "
+            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. "
+            "If you prefer a different candidate, let me know. If they care about some of the things non-billionaires care about, I'll add them.)")
 
         submission.reply(text)
         print("Bot replying to : ", submission.title)
@@ -70,3 +72,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

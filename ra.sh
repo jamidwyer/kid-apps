@@ -29,6 +29,7 @@ python blum.py
 python hultgren.py
 python trott.py
 python rodneydavis.py
+python marchant.py
 python macarthur.py
 python cruz.py
 python nunes.py
