@@ -1,9 +1,10 @@
 #!/bin/sh
 
+python strange.py
 python christie.py
 python gillespie.py
 python travisharris.py
-python strange.py
+python curbelo.py
 python valadao.py
 python paulsen.py
 python royce.py
@@ -31,6 +32,7 @@ python trott.py
 python rodneydavis.py
 python marchant.py
 python macarthur.py
+python woodall.py
 python cruz.py
 python nunes.py
 python lamarsmith.py

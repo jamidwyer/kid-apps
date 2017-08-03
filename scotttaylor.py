@@ -22,7 +22,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['virginiapolitics', 'virginiabeach', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'keepournetfree', 'thehillauto', 'cornbreadliberals', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'wayofthebern', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'politicalvideo', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'nottheonion', 'newsbotbot', 'impeach_trump', 'fuckthealtright', 'collapse', 'environment', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'tytpolitics', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'restorethefourth', 'indivisibleguide', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'progressive', 'datauncensored', 'skydtech']
+local_subs = open("virginia.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
@@ -65,3 +69,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

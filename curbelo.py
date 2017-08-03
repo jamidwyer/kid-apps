@@ -23,24 +23,53 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-# Get the top 100 values from our subreddit
-subreddit = reddit.subreddit('newsbotbot')
-for submission in subreddit.hot(limit=100):
-    #print(submission.title)
+local_subs = open("florida.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-    # If we haven't replied to this post before
-    if submission.id not in posts_replied_to:
+# Get the top values from our subreddit
+def searchAndPost(sub):
+    subreddit = reddit.subreddit(sub)
+    for submission in subreddit.hot(limit=500):
+        #print(submission.title)
 
-        # Do a case insensitive search
-        if re.search("issa", submission.title, re.IGNORECASE):
-            # Reply to the post
-            submission.reply("Col. Doug Applegate is running against Darrell Issa. \n\n Campaign site: http://www.applegateforcongress.com/issues/ \n\n Register to vote: http://registertovote.ca.gov/ \n\n He supports single-payer health care, renewable energy, living wages, campaign finance reform, LGBTQ equality, and protecting Social Security and Medicare.\n\n I'm a bot and I'm learning. Let me know if I can do better.")
-            print("Bot replying to : ", submission.title)
+        # If we haven't replied to this post before
+        if submission.id not in posts_replied_to:
 
-            # Store the current id into our list
-            posts_replied_to.append(submission.id)
+            # Do a case insensitive search
+            terms = ['curbelo']
+            for term in terms:
+                 search(term, submission);
+
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
+            "[**Debbie Mucarsel-Powell**](https://debbiemucarselpowell.com/) is running against Carlos Curbelo. \n\n"
+            "[Donate](https://secure.actblue.com/donate/debbiemucarselpowell) | "
+            "[Facebook](https://www.facebook.com/debbieforfl/) |"
+            "[Twitter](https://twitter.com/debbieforfl) \n\n"
+            "Mucarsel-Powell supports universal health care, living wages, affordable college, and renewable energy. \n\n\n"
+
+        "[Map of Florida District 26](https://www.govtrack.us/congress/members/FL/26) \n\n"
+
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        submission.reply(text)
+        print("Bot replying to : ", submission.title)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
+
+for sub in subs:
+     print(sub)
+     searchAndPost(sub);
 
 # Write our updated list back to the file
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()
