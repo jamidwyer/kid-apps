@@ -1,5 +1,7 @@
 #!/bin/sh
 
+python mostsen28.py
+python chaffetz.py
 python strange.py
 python christie.py
 python gillespie.py
@@ -22,6 +24,7 @@ python yoder.py
 python frelinghuysen.py
 python jasonlewis.py
 python balart.py
+python handel.py
 python bacon.py
 python scotttaylor.py
 python flake.py
@@ -33,6 +36,9 @@ python rodneydavis.py
 python marchant.py
 python macarthur.py
 python woodall.py
+python chabot.py
+python bishop.py
+python love.py
 python cruz.py
 python nunes.py
 python lamarsmith.py
@@ -46,6 +52,7 @@ python walden.py
 python mccarthy.py
 python gowdy.py
 python corker.py
+python johnjduncan.py
 python scottwalker.py
 python brownback.py
 python brat.py

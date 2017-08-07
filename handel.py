@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("florida.dat", "r")
+local_subs = open("georgia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,17 +39,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['carlos curbelo', 'rep. curbelo', 'rep curbelo', 'representative curbelo', 'congressman curbelo', 'fl-26']
+            terms = ['karen handel', 'rep. handel', 'rep handel', 'representative handel', 'congressman handel', 'ga-6', 'ga-06']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
-        "Carlos Curbelo is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
+        "Karen Handel is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
 
-        "[Map of Florida District 26](https://www.govtrack.us/congress/members/FL/26) \n\n"
+        "[Map of Georgia District 6](https://www.govtrack.us/congress/members/GA/6) \n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)

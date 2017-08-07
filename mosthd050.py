@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("missouri.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,33 +31,33 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant']
+            terms = ['sara walsh', 'Missouri State House District 50', 'missouri special election', 'august 8 special election', 'august 8th special election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
-    if re.search(term, submission.title, re.IGNORECASE):
+    if re.search(term, submission.selftext, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
-            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
-            "[Twitter](https://twitter.com/JanForCongress) \n\n"
-            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](https://s1.sos.mo.gov/elections/goVoteMissouri/howtovote) \n\n"
+            "[**Michela Skelton**](http://www.michelaskelton.com/) is running to represent Missouri State House District 50. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/michelaskelton) | "
+            "[Facebook](https://www.facebook.com/skeltonfor50/) | "
+            "[Twitter](https://twitter.com/SkeltonFor50) \n\n"
 
-            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
+            "Skelton supports living wages and paid family leave. \n\n\n"
+
+            "Map of [Missouri State House District 50](https://ballotpedia.org/File:MO_HD_050.JPG) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
-        print("Bot replying to : ", submission.title)
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

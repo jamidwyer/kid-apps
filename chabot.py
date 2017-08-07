@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("ohio.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,33 +32,28 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant']
+            terms = ['steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
-            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
-            "[Twitter](https://twitter.com/JanForCongress) \n\n"
-            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n"
+        "Steve Chabot is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
 
-            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
+        "[Map of Ohio District 1](https://www.govtrack.us/congress/members/OH/1) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
-        print("Bot replying to : ", submission.title)
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("utah.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,24 +38,24 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant']
+            terms = ['chaffetz', 'ut-3', 'ut-03']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
-            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
-            "[Twitter](https://twitter.com/JanForCongress) \n\n"
-            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
+            "[**Kathie Allen**](https://www.drkathieforcongress.com/) is running to represent Utah District 3. \n\n"
+            "[Donate](https://www.drkathieforcongress.com/donate-now/) | "
+            "[Facebook](https://www.facebook.com/KathieAllenMDforCongress/) | "
+            "[Twitter](https://twitter.com/kathieallenmd) \n\n"
 
-            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
+            "Allen supports universal health care, public schools, living wages, campaign finance reform, and LGBTQIA equality.  \n\n\n"
+
+            "[Map of Utah District 3](https://www.govtrack.us/congress/members/UT/3) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

@@ -28,7 +28,7 @@ subs = ['orangecounty', 'UMukhasimAutoNews', 'political_revolution', 'bluemidter
 # Get the top 1000 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=50):
         #print(submission.selftext)
 
         # If we haven't replied to this post before

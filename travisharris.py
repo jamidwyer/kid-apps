@@ -27,7 +27,7 @@ subs = ['iowa', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm201
 # Get the top 200 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=1000):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before

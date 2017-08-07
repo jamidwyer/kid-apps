@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("michigan.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,24 +38,23 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant']
+            terms = ['mike bishop', 'rep. bishop', 'rep bishop', 'representative bishop', 'congressman bishop', 'mi-08', 'mi-8', 'Michigan\'s 8th District']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
-            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
-            "[Twitter](https://twitter.com/JanForCongress) \n\n"
-            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
+            "[**Elissa Slotkin**](https://elissaforcongress.com/) is running against Mike Bishop. \n\n"
+            "[Donate](https://secure.actblue.com/donate/slotkinforcongress) | "
+            "[Facebook](https://www.facebook.com/elissaslotkinforcongress) | "
+            "[Twitter](https://twitter.com/ElissaSlotkin) \n\n"
 
-            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
+            "[Map of Michigan District 11](https://www.govtrack.us/congress/members/MI/8) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
+            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

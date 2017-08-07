@@ -28,7 +28,7 @@ subs = ['losangeles', 'enoughtrumpspam', 'orangecounty', 'political_revolution',
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=500):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before

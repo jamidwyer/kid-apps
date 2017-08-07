@@ -23,12 +23,16 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['enoughtrumpspam', 'houstonchronauto', 'houston', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+local_subs = open("texas.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-# Get the top 5 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -45,12 +49,12 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
         "[**Beto O\'Rourke**](https://www.betofortexas.com/) is running against Ted Cruz. \n\n "
         "[Donate](https://secure.actblue.com/contribute/page/beto-homepage) | "
+        "[Reddit](https://www.reddit.com/r/BetoORourke/) | "
         "[Facebook](https://www.facebook.com/betoorourke) | "
         "[Twitter](https://twitter.com/betoorourke) \n\n "
         "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, and the Voting Rights Act.\n\n "
 
-        "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
@@ -65,3 +69,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

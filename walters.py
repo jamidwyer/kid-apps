@@ -23,9 +23,9 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-# Get the top 100 values from our subreddit
+# Get the top values from our subreddit
 subreddit = reddit.subreddit('indivisibleguide')
-for submission in subreddit.hot(limit=500):
+for submission in subreddit.hot(limit=50):
     #print(submission.title)
 
     # If we haven't replied to this post before
