@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=500):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -43,7 +43,7 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-    if re.search(term, submission.selftext, re.IGNORECASE):
+    if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](https://s1.sos.mo.gov/elections/goVoteMissouri/howtovote) \n\n"
             "[**Al Skalicky**](http://www.alfor28.com/) is running to represent Missouri State Senate District 28. \n\n"

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 python mostsen28.py
+python mosthd050.py
 python chaffetz.py
 python strange.py
 python christie.py
@@ -48,6 +49,7 @@ python bost.py
 python hunter.py
 python buddycarter.py
 python hatch.py
+python lamalfa.py
 python walden.py
 python mccarthy.py
 python gowdy.py

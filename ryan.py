@@ -47,7 +47,7 @@ def search(term, submission):
                     "[Reddit](https://www.reddit.com/r/RandyBryce) | "
                     "[Facebook](https://www.facebook.com/RandyBryce2018) | "
                     "[Twitter](https://twitter.com/IronStache) \n\n"
-                    "Bryce supports universal health care, living wages, and campaign finance reform. \n\n\n"
+                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, and campaign finance reform. \n\n\n"
 
                     "Map of Wisconsin District 1: https://www.govtrack.us/congress/members/WI/1 \n\n"
 

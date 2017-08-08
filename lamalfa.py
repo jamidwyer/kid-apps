@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,42 +23,44 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("missouri.dat", "r")
+local_subs = open("california.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
+
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['sara walsh', 'historically red 50th', 'Missouri State House District 50', 'missouri special election', 'august 8 special election', 'august 8th special election']
+            terms = ['lamalfa', 'ca-01', 'California GOP congressman gets an earful at town hall', '@replamalfa', 'OFF STAGE during OROVILLE Town Hall']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](https://s1.sos.mo.gov/elections/goVoteMissouri/howtovote) \n\n"
-            "[**Michela Skelton**](http://www.michelaskelton.com/) is running to represent Missouri State House District 50. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/michelaskelton) | "
-            "[Facebook](https://www.facebook.com/skeltonfor50/) | "
-            "[Twitter](https://twitter.com/SkeltonFor50) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Dennis Duncan**](https://www.dennis2018.com/) is running against Doug LaMalfa. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/dennis2018) | "
+            "[Facebook](https://www.facebook.com/Dennis4district1/) | "
+            "[Twitter](https://twitter.com/DennisCD01) \n\n"
+            "Duncan supports Medicare for all, living wages, college affordability, renewable energy, and campaign finance reform.\n\n\n"
 
-            "Skelton supports living wages and paid family leave. \n\n\n"
-
-            "Map of [Missouri State House District 50](https://ballotpedia.org/File:MO_HD_050.JPG) \n\n"
+            "[Map of California District 1](https://www.govtrack.us/congress/members/CA/1) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
+
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

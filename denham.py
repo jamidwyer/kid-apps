@@ -41,23 +41,29 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = ['jeff denham', 'ca-10', 'rep. denham', 'rep denham', 'congressman denham', 'representative denham']
-            if re.search("jeff denham", submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-                    "[**Dotty Nygard**](https://www.dottynygardforcongress.com/) is running against Jeff Denham. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/dottyforcongress) | "
-                    "[Facebook](https://www.facebook.com/DottyForCongressCD10/) | "
-                    "[Twitter](https://twitter.com/Dotty4Congress) \n\n"
-                    "Nygard supports Medicare for all/single-payer health care, renewable energy, campaign finance reform, net neutrality, and college affordability.\n\n\n"
+            for term in terms:
+                 search(term, submission);
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Dotty Nygard**](https://www.dottynygardforcongress.com/) is running against Jeff Denham. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/dottyforcongress) | "
+            "[Facebook](https://www.facebook.com/DottyForCongressCD10/) | "
+            "[Twitter](https://twitter.com/Dotty4Congress) \n\n"
+            "Nygard supports Medicare for all/single-payer health care, renewable energy, campaign finance reform, net neutrality, and college affordability.\n\n\n"
 
-                print("Bot replying to : ", submission.title)
-                submission.reply(text)
+            "[Map of California District 10](https://www.govtrack.us/congress/members/CA/10) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)
