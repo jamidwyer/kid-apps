@@ -1,12 +1,9 @@
 #!/bin/sh
 
-python mostsen28.py
-python mosthd050.py
 python chaffetz.py
 python strange.py
 python christie.py
 python gillespie.py
-python travisharris.py
 python curbelo.py
 python valadao.py
 python paulsen.py
@@ -54,6 +51,7 @@ python walden.py
 python mccarthy.py
 python gowdy.py
 python corker.py
+python womack.py
 python johnjduncan.py
 python scottwalker.py
 python brownback.py

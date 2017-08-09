@@ -47,10 +47,9 @@ def search(term, submission):
         "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
         "[Facebook](https://www.facebook.com/rosenfornevada/) | "
         "[Twitter](https://twitter.com/RosenforNevada) \n\n "
-        "Rosen supports universal health care, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
+        "Rosen supports affordable health care for every American, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
 
-        "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

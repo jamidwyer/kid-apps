@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,13 +23,14 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("california.dat", "r")
+local_subs = open("arkansas.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=100):
@@ -38,28 +40,29 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['nunes', 'devin nunes', 'rep. nunes', 'congressman nunes', 'rep nunes']
+            terms = ['steve womack', 'ar-03', 'ar-3', 'rep. womack', 'rep womack', 'representative womack', 'congressman womack']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-                    "[**Andrew Janz**](http://andrewjanzforcongress.org/) is running against Devin Nunes. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/andrew-janz) | "
-                    "[Facebook](https://www.facebook.com/andrewjanzforcongress/) | "
-                    "[Twitter](https://twitter.com/janzforcongress) \n\n"
-                    "Janz supports universal health care, protecting Medicare, renewable energy, campaign finance reform, and college affordability. \n\n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Josh Mahony**](https://joshuamahony.com/) is running against Steve Womack. \n\n"
+            "[Donate](https://secure.actblue.com/donate/mahony) | "
+            "[Facebook](https://www.facebook.com/mahonyarkansas/) | "
+            "[Twitter](https://twitter.com/joshuamahony?lang=en) \n\n"
 
-                    "[Map of California District 22](https://www.govtrack.us/congress/members/CA/22) \n\n"
+            "[Map of Arkansas District 3](https://www.govtrack.us/congress/members/AR/3) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

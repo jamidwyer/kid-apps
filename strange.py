@@ -60,6 +60,20 @@ def search(term, submission):
 
             "Jones supports universal health care, public schools, living wages, protecting Medicare, equal pay for equal work, and renewable energy.  \n\n "
 
+            "[**Michael Hansen**](http://www.hansenforalabama.com/) is running against Luther Strange. \n\n "
+            "[Donate](https://hansenforalabama.nationbuilder.com/donate) | "
+            "[Facebook](https://www.facebook.com/hansenforalabama/) | "
+            "[Twitter](https://twitter.com/Hansen4Alabama) \n\n "
+
+            "Hansen supports universal health care, public schools, living wages, affordable college, renewable energy, and LGBTQ equality.  \n\n "
+
+            "[**Jason Fisher**](https://fisherforsenate.com/) is running against Luther Strange. \n\n "
+            "[Donate](https://secure.actblue.com/contribute/page/jasonfisher) | "
+            "[Facebook](https://www.facebook.com/FisherforSenateAL/) | "
+            "[Twitter](https://twitter.com/fisher4senate) \n\n "
+
+            "Fisher supports renewable energy, public schools, LGBTQ equality, and equal pay for equal work.  \n\n "
+
             "[**Robert Kennedy, Jr.**](http://www.teamkennedy2017.org/) is running against Luther Strange. \n\n "
             "[Donate](https://secure.actblue.com/donate/rkjr2017) | "
             "[Facebook](https://www.facebook.com/BobbyK4Senate) | "
@@ -67,8 +81,7 @@ def search(term, submission):
 
             "Kennedy supports public schools, and protecting voting rights.  \n\n "
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 

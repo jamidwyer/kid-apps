@@ -29,7 +29,6 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
@@ -53,6 +52,11 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/Dennis4district1/) | "
             "[Twitter](https://twitter.com/DennisCD01) \n\n"
             "Duncan supports Medicare for all, living wages, college affordability, renewable energy, and campaign finance reform.\n\n\n"
+
+            "[**Jessica Holcombe**](https://jessicaforcongress.org/) is running against Doug LaMalfa. \n\n"
+            "[Donate](https://www.crowdpac.com/campaigns/245830/progress-for-californias-1st-congressional-district) | "
+            "[Facebook](https://www.facebook.com/Jessica-Holcombe-for-Congress-1775710765779809/) \n\n "
+            "Duncan supports universal health care, living wages, public schools, college affordability, and renewable energy.\n\n\n"
 
             "[Map of California District 1](https://www.govtrack.us/congress/members/CA/1) \n\n"
 

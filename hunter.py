@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter']
+            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50']
             for term in terms:
                  search(term, submission);
 
@@ -48,7 +48,7 @@ def search(term, submission):
                     "[Twitter](https://twitter.com/BeauregardCA50) \n\n"
                     "Beauregard supports universal health care, living wages, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
 
-                    "Map of California District 50: https://www.govtrack.us/congress/members/CA/50 \n\n"
+                    "[Map of California District 50](https://www.govtrack.us/congress/members/CA/50) \n\n"
 
                     "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
                     "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
