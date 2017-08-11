@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'strange 22.6', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'no strange']
+            terms = ['luther strange', 'roy moore', 'Trump-McConnell Feud Doesn\'t Exist in Alabama', 'Strange Has Alabama Conservatives Reeling', 'strange 22.6', 'alabama senate poll', 'Trump and McConnell Are a United Front', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'no strange']
             for term in terms:
                  search(term, submission);
 

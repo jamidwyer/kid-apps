@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$']
+            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'Virginia\'s race for governor']
             for term in terms:
                  search(term, submission);
 
@@ -49,8 +49,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/RalphNortham) \n\n"
             "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, LGBT equality, and common-sense gun safety laws. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 

@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("georgia.dat", "r")
+local_subs = open("montana.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,21 +38,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['gianforte']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Steve Jarvis**](http://www.electstevejarvis.com/) is running against Buddy Carter. \n\n"
-            "[Donate](http://www.electstevejarvis.com/make-a-donation/) | "
-            "[Facebook](https://www.facebook.com/WinIn2018/) | "
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://sos.mt.gov/elections/vote/index) \n\n"
+            "[**John Heenan**](http://www.heenanforcongress.com/issues/) is running against Greg Gianforte. \n\n"
+            "[Donate](https://secure.actblue.com/entity/fundraisers/52906) | "
+            "[Facebook](https://www.facebook.com/HeenanForCongress/) | "
             "[Twitter](https://twitter.com/ElectSteve2018) \n\n"
-            "Jarvis supports campaign finance reform, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
-
-            "Map of Georgia District 1: https://www.govtrack.us/congress/members/GA/1 \n\n"
+            "Heenan supports Medicare for all, renewable energy, campaign finance reform, and protecting Social Security. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

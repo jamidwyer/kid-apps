@@ -27,7 +27,7 @@ subs = ['ecointernet', 'thecolorisorange', 'anythinggoesnews', 'fiveyearsagoonre
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=500):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -50,8 +50,7 @@ def search(term, submission):
 
                     "[Map of Texas District 21](https://www.govtrack.us/congress/members/TX/21) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+                    "^(I'm a bot and I'm learning. Let me know how I can do better.)")
                 print("Bot replying to : ", submission.title)
                 submission.reply(text)
 

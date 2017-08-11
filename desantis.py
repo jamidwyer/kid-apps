@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("georgia.dat", "r")
+local_subs = open("florida.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,28 +32,27 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['desantis']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Steve Jarvis**](http://www.electstevejarvis.com/) is running against Buddy Carter. \n\n"
-            "[Donate](http://www.electstevejarvis.com/make-a-donation/) | "
-            "[Facebook](https://www.facebook.com/WinIn2018/) | "
-            "[Twitter](https://twitter.com/ElectSteve2018) \n\n"
-            "Jarvis supports campaign finance reform, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
+            "[**Nancy Soderberg**](https://soderbergforcongress.com/) is running against Ron DeSantis. \n\n"
+            "[Donate](https://act.myngp.com/Forms/-8933655054907471104) | "
+            "[Facebook](https://www.facebook.com/SoderbergforCongress/) |"
+            "[Twitter](https://twitter.com/nancysoderberg) \n\n"
 
-            "Map of Georgia District 1: https://www.govtrack.us/congress/members/GA/1 \n\n"
+            "[Map of Florida District 6](https://www.govtrack.us/congress/members/FL/6) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

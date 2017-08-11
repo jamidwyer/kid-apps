@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['doug collins', 'rep. collins', 'rep collins', 'Reddest district in Georgia', 'representative collins', 'congressman collins', 'ga-9', 'ga-09']
             for term in terms:
                  search(term, submission);
 
@@ -46,13 +46,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Steve Jarvis**](http://www.electstevejarvis.com/) is running against Buddy Carter. \n\n"
-            "[Donate](http://www.electstevejarvis.com/make-a-donation/) | "
-            "[Facebook](https://www.facebook.com/WinIn2018/) | "
-            "[Twitter](https://twitter.com/ElectSteve2018) \n\n"
-            "Jarvis supports campaign finance reform, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+            "[**Joshua McCall**](https://mccallforall.com/) is running against Doug Collins. \n\n"
+            "[Donate](https://secure.actblue.com/donate/mccall) | "
+            "[Facebook](https://www.facebook.com/groups/1017264461740177/) | "
+            "[Twitter](https://twitter.com/Mccallforall) \n\n"
+            "McCall supports universal health care, campaign finance reform, protecting Social Security, and affordable college. \n\n\n"
 
-            "Map of Georgia District 1: https://www.govtrack.us/congress/members/GA/1 \n\n"
+            "Map of Georgia District 9: https://www.govtrack.us/congress/members/GA/9 \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -47,10 +47,16 @@ def searchAndPost(sub):
                     "[Twitter](https://twitter.com/deedra2018) \n\n"
                     "Abboud supports single-payer health care, public schools, and net neutrality. \n\n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                submission.reply(text)
+                    # "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
+                    # "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
+                    # "[Facebook](https://www.facebook.com/ksinemaaz/) | "
+                    # "[Twitter](https://twitter.com/kyrstensinema) \n\n"
+                    # "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+
+                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
                 print("Bot replying to : ", submission.title)
+                submission.reply(text)
 
                 # Store the current id into our list
                 posts_replied_to.append(submission.id)

@@ -4,6 +4,7 @@ python chaffetz.py
 python strange.py
 python christie.py
 python gillespie.py
+python valtgov.py
 python curbelo.py
 python valadao.py
 python paulsen.py
@@ -34,6 +35,7 @@ python rodneydavis.py
 python marchant.py
 python macarthur.py
 python woodall.py
+python brat.py
 python chabot.py
 python bishop.py
 python love.py
@@ -45,9 +47,11 @@ python ryan.py
 python bost.py
 python hunter.py
 python buddycarter.py
+python desantis.py
 python hatch.py
 python lamalfa.py
 python walden.py
+python gianforte.py
 python mccarthy.py
 python gowdy.py
 python corker.py
@@ -57,4 +61,3 @@ python scottwalker.py
 python kasich.py
 python brownback.py
 python reichert.py
-python brat.py
