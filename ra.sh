@@ -54,5 +54,7 @@ python corker.py
 python womack.py
 python johnjduncan.py
 python scottwalker.py
+python kasich.py
 python brownback.py
+python reichert.py
 python brat.py

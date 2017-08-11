@@ -47,7 +47,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n"
-        "Steve Chabot is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
+        "[**Sam Ronan**](https://www.ronanforcongress.com/issues) is running against Steve Chabot. \n\n"
+        "[Donate](https://donorbox.org/sam-ronan-for-congress) | "
+        "[Facebook](https://www.facebook.com/RonanForCongress/) | "
+        "[Twitter](https://twitter.com/ronan4progress) \n\n"
+
+        "Ronan supports universal health care, public schools, living wages, paid family leave, affordable college, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, net neutrality, and a background check on every gun sale.  \n\n"
 
         "[Map of Ohio District 1](https://www.govtrack.us/congress/members/OH/1) \n\n"
 
