@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 subreddit = reddit.subreddit('philadelphia')
 for submission in subreddit.hot(limit=500):
     #print(submission.title)

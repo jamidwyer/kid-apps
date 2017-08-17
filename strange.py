@@ -32,54 +32,26 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'roy moore', 'Trump-McConnell Feud Doesn\'t Exist in Alabama', 'Strange Has Alabama Conservatives Reeling', 'strange 22.6', 'alabama senate poll', 'Trump and McConnell Are a United Front', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'no strange']
+            terms = ['luther strange', 'al-sen', 'alabama senate primaries', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'no strange']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) \n\n"
-            "[**Will Boyd**](http://willboydforcongress.com/) is running against Luther Strange. \n\n "
-            "[Donate](https://www.paypal.com/donate/?token=eJ3NLueUO7muzRmyxdxsUyuVSYU95UJYcCy75iWFxDw0TtnkRKcKN-VciFQn10rGB9xJQm&country.x=US&locale.x=US) | "
-            "[Facebook](https://www.facebook.com/wboyd4senate) | "
-            "[Twitter](https://twitter.com/wboyd4senate) \n\n "
-
-            "Boyd supports universal health care, public schools, living wages, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality.  \n\n "
-
-            "[**Doug Jones**](http://dougjonesforsenate.com/) is running against Luther Strange. \n\n "
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) \n\n"
+            "[**Doug Jones**](http://dougjonesforsenate.com/) is running to represent Alabama in the U.S. Senate. \n\n "
             "[Donate](https://secure.actblue.com/donate/homepage-donate) | "
             "[Facebook](https://www.facebook.com/dougjonessenate) \n\n "
 
             "Jones supports universal health care, public schools, living wages, protecting Medicare, equal pay for equal work, and renewable energy.  \n\n "
-
-            "[**Michael Hansen**](http://www.hansenforalabama.com/) is running against Luther Strange. \n\n "
-            "[Donate](https://hansenforalabama.nationbuilder.com/donate) | "
-            "[Facebook](https://www.facebook.com/hansenforalabama/) | "
-            "[Twitter](https://twitter.com/Hansen4Alabama) \n\n "
-
-            "Hansen supports universal health care, public schools, living wages, affordable college, renewable energy, and LGBTQ equality.  \n\n "
-
-            "[**Jason Fisher**](https://fisherforsenate.com/) is running against Luther Strange. \n\n "
-            "[Donate](https://secure.actblue.com/contribute/page/jasonfisher) | "
-            "[Facebook](https://www.facebook.com/FisherforSenateAL/) | "
-            "[Twitter](https://twitter.com/fisher4senate) \n\n "
-
-            "Fisher supports renewable energy, public schools, LGBTQ equality, and equal pay for equal work.  \n\n "
-
-            "[**Robert Kennedy, Jr.**](http://www.teamkennedy2017.org/) is running against Luther Strange. \n\n "
-            "[Donate](https://secure.actblue.com/donate/rkjr2017) | "
-            "[Facebook](https://www.facebook.com/BobbyK4Senate) | "
-            "[Twitter](https://twitter.com/BobbyK4Senate) \n\n "
-
-            "Kennedy supports public schools, and protecting voting rights.  \n\n "
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         submission.reply(text)

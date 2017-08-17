@@ -50,8 +50,7 @@ def search(term, submission):
 
             "Map of New Jersey District 2: https://www.govtrack.us/congress/members/NJ/2 \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

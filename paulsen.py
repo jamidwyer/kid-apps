@@ -23,32 +23,42 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['minnesota', 'bluemidterm2018', 'indepthstories', 'democrats', 'chapotraphouse', 'enoughtrumpspam', 'keepournetfree', 'politicalvideo', 'wayofthebern', 'impeach_trump', 'russialago', 'liberal', 'political_revolution', 'esist', 'technology', 'autotldr', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'autonewspaper', 'sandersforpresident', 'environment', 'keep_track', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos']
+local_subs = open("minnesota.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = """Dean Phillips is running against Erik Paulsen. \n\n
-        Campaign site: https://www.phillipsforcongress.org/ \n\n
-        Register to vote: https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx \n\n
-        Donate: https://secure.actblue.com/contribute/page/deanforcongress?refcode=web_invest&sc=web_invest \n\n
-        Facebook: https://www.facebook.com/deanphillipsforcongress \n\n
-        Twitter: https://twitter.com/deanbphillips \n\n He supports net neutrality.\n\n\n
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx) \n\n"
+            "[**Brian Santa Maria**](https://www.briansantamariaforcongress.com/) is running against Erik Paulsen. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/bsm) | "
+            "[Facebook](https://www.facebook.com/BrianSantaMariaforCongress/) | "
+            "[Twitter](https://twitter.com/briansantamaria) \n\n"
+            "Santa Maria supports universal health care, paid maternity leave, and renewable energy. \n\n\n"
 
-        Map of Minnesota District 3: https://www.govtrack.us/congress/members/MN/3 \n\n
+            "[**Dean Phillips**](https://www.phillipsforcongress.org/) is running against Erik Paulsen. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/deanforcongress) | "
+            "[Facebook](https://www.facebook.com/deanphillipsforcongress) | "
+            "[Twitter](https://twitter.com/deanbphillips) \n\n"
+            "Phillips supports net neutrality. \n\n\n"
 
-         ^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of
-         work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)"""
+            "Map of Minnesota District 3: https://www.govtrack.us/congress/members/MN/3 \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 
-# Get the top 100 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:

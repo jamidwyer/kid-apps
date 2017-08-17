@@ -23,11 +23,15 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['enoughtrumpspam', 'houstonchronauto', 'houston', 'texas', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+local_subs = open("texas.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-# Get the top 100 values from our subreddit
+# Get the top values from our subreddit
 subreddit = reddit.subreddit('indivisibleguide')
-for submission in subreddit.hot(limit=500):
+for submission in subreddit.hot(limit=50):
     #print(submission.title)
 
     # If we haven't replied to this post before
@@ -46,3 +50,6 @@ for submission in subreddit.hot(limit=500):
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

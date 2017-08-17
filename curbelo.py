@@ -53,11 +53,12 @@ def search(term, submission):
             "[Twitter](https://twitter.com/debbieforfl) \n\n"
             "Mucarsel-Powell supports universal health care, living wages, affordable college, and renewable energy. \n\n\n"
 
-        "[Map of Florida District 26](https://www.govtrack.us/congress/members/FL/26) \n\n"
+            "[Map of Florida District 26](https://www.govtrack.us/congress/members/FL/26) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

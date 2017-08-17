@@ -42,16 +42,16 @@ def search(term, submission):
             if re.search(term, submission.title, re.IGNORECASE):
                 # Reply to the post
                 text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-                    "[**Robert Owen**](https://www.robertowenforcongress.com/) is running against Kevin McCarthy. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/robertowenforcongress) | "
-                    "[Facebook](https://www.facebook.com/RobertOwenForCongress) | "
-                    "[Twitter](https://twitter.com/VoteRobertOwen) \n\n"
-                    "Owen supports universal health care, living wages, net neutrality, and affordable college. \n\n\n"
+                    "[**Wendy Reed**](http://wendyreedforcongress.com/issues/) is running against Kevin McCarthy. \n\n"
+                    "[Donate](https://secure.actblue.com/contribute/page/reed2018) | "
+                    "[Facebook](https://www.facebook.com/wendyreedforcongress/) | "
+                    "[Twitter](https://twitter.com/wendyreedtweet) \n\n"
+                    "Reed supports universal health care. \n\n\n"
 
-                    "Map of  District 23: https://www.govtrack.us/congress/members/CA/23 \n\n"
+                    "[Map of  District 23](https://www.govtrack.us/congress/members/CA/23) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
                 print("Bot replying to : ", submission.title)
                 submission.reply(text)
 

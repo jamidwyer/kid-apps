@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -60,7 +60,7 @@ def search(term, submission):
 
                     "Spanberger supports public schools, funding the State Department to promote international diplomacy, and net neutrality.  \n\n"
 
-                    "Map of Virginia District 7: https://www.govtrack.us/congress/members/VA/7 \n\n"
+                    "[Map of Virginia District 7](https://www.govtrack.us/congress/members/VA/7) \n\n"
 
                     "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
                     "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

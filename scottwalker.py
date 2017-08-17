@@ -24,10 +24,10 @@ else:
 
 subs = ['racine', 'kenosha', 'politicalrevolutionwi', 'bluemidterm2018', 'enoughtrumpspam', 'indepthstories', 'democrats', 'chapotraphouse', 'liberal', 'keepournetfree', 'thenewcoldwar', 'politicalvideo', 'badlawyer', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'anythinggoesnews', 'russialago', 'tytpolitics', 'cornbreadliberals', 'political_revolution', 'thehillauto', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'autotldr', 'marchagainsttrump', 'goodlongposts', 'latimesauto', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'news', 'nottheonion', 'breakingnews24hr', 'worldpolitics', 'newsbotbot', 'fuckthealtright', 'collapse', 'environment', 'progressive', 'UMukhasimAutoNews', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'donaldtrumpwhitehouse', 'nofilternews', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'restorethefourth', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'datauncensored', 'skydtech', 'atheism', 'uspolitics', 'lgbtnews', 'atheismrebooted', 'enoughlibertarianspam', 'conspiratard', 'gogopgo', 'nypostauto', 'economics', 'phillyauto', 'freeatheism', 'nytimes', 'ecointernet', 'leftcentral', 'thedavidpakmanshow', 'trumpforrussia']
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -48,8 +48,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/bobharlow_) \n\n"
             "Harlow supports universal health care and public schools. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 

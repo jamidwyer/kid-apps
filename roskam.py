@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['politicalrevolutionil', 'chicagosunauto', 'chicago', 'imagesofillinois', 'political_revolution', 'bluemidterm2018', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos']
+subs = ['politicalrevolutionil', 'CHICAGOTRIBauto', 'ChicagoSuburbs', 'chicagosunauto', 'chicago', 'imagesofillinois', 'political_revolution', 'bluemidterm2018', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos']
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
@@ -35,12 +35,11 @@ def search(term, submission):
             "Howland supports single-payer health care, renewable energy, rejoining the Paris Climate Agreement,"
              "and affordable higher education.\n\n"
 
-            "Map of Illinois District 6: https://www.govtrack.us/congress/members/IL/6 \n\n "
+            "[Map of Illinois District 6](https://www.govtrack.us/congress/members/IL/6) \n\n "
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-        submission.reply(text)
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

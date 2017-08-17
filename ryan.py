@@ -27,14 +27,14 @@ subs = ['tdbauto', 'indepthstories', 'democrats', 'chapotraphouse', 'bluemidterm
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'Took Millions From Russian Oligarch Tied To Putin']
+            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'Took Millions From Russian Oligarch Tied To Putin', 'Wisconsin\'s First Congressional District']
             for term in terms:
                  search(term, submission);
 
@@ -47,14 +47,18 @@ def search(term, submission):
                     "[Reddit](https://www.reddit.com/r/RandyBryce) | "
                     "[Facebook](https://www.facebook.com/RandyBryce2018) | "
                     "[Twitter](https://twitter.com/IronStache) \n\n"
-                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, and campaign finance reform. \n\n\n"
+                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, and campaign finance reform. \n\n\n"
 
-                    "Map of Wisconsin District 1: https://www.govtrack.us/congress/members/WI/1 \n\n"
+                    "[**Cathy Myers**](https://cathymyersforcongress.com/) is running against Paul Ryan. \n\n"
+                    "[Donate](https://secure.actblue.com/donate/cathy-for-congress-1?refcode=website) | "
+                    "[Facebook](https://www.facebook.com/cathymyersforcongress/) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                submission.reply(text)
+                    "[Map of Wisconsin District 1](https://www.govtrack.us/congress/members/WI/1) \n\n"
+
+                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
                 print("Bot replying to : ", submission.title)
+                submission.reply(text)
 
                 # Store the current id into our list
                 posts_replied_to.append(submission.id)

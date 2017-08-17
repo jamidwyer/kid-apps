@@ -22,9 +22,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['news', 'eckansasnews', 'worldpolitics', 'progressive', 'economics', 'kansas', 'kansascity', 'atheism', 'freeatheism', 'democrats', 'UMukhasimAutoNews', 'nytimes', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'thehillauto', 'waexauto', 'unremovable', 'politicaltweets', 'thenewcoldwar', 'technology', 'autonewspaper', 'autotldr', 'esist', 'marchagainsttrump', 'politicalvideo', 'keepournetfree', 'goodlongposts', 'badgovnofreedom', 'good_cake', 'democracy', 'fcc', 'worldnews', 'nottheonion', 'newsbotbot', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'fuckthealtright', 'environment', 'keep_track', 'PoliticalVideos', 'climate', 'latimesauto', 'cnet_all_rss', 'women', 'netneutrality', 'cornbreadliberals', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'trussiagate', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'skydtech']
+local_subs = open("kansas.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -34,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['brownback', 'colyer', 'congressman bacon', 'rep bacon', 'kansas governor']
+            terms = ['brownback', 'kobach', 'colyer', 'kansas governor']
             for term in terms:
                  search(term, submission);
 
@@ -54,8 +58,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/BrewerForKansas) \n\n"
             "Brewer supports public schools. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
@@ -70,3 +73,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

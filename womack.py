@@ -48,10 +48,18 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Robb Ryerse**](http://robb2018.com) is running against Steve Womack. \n\n"
+
+            "[Donate](https://www.crowdpac.com/campaigns/244359/robb-ryerse-for-congress) | "
+            "[Facebook](https://www.facebook.com/robb2018/) | "
+            "[Twitter](https://twitter.com/robb2018) \n\n"
+
+            "Ryerse supports universal health care, renewable energy, LGBTQ equality, and affordable college. \n\n\n"
+
             "[**Josh Mahony**](https://joshuamahony.com/) is running against Steve Womack. \n\n"
             "[Donate](https://secure.actblue.com/donate/mahony) | "
             "[Facebook](https://www.facebook.com/mahonyarkansas/) | "
-            "[Twitter](https://twitter.com/joshuamahony?lang=en) \n\n"
+            "[Twitter](https://twitter.com/joshuamahony?lang=en) \n\n\n"
 
             "[Map of Arkansas District 3](https://www.govtrack.us/congress/members/AR/3) \n\n"
 

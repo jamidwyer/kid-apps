@@ -55,8 +55,8 @@ def search(term, submission):
         "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, and the Voting Rights Act.\n\n "
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

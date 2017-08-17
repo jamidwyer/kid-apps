@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['buddy carter', 'Republican congressman from the state wants to withhold federal dollars to test these kits', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
             for term in terms:
                  search(term, submission);
 
@@ -46,6 +46,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
+            "[**Lisa Ring**](http://www.lisaringforcongress.com/) is running against Buddy Carter. \n\n"
+            "[Donate](https://secure.actblue.com/donate/lisaringforcongress) | "
+            "[Facebook](https://www.facebook.com/LisaRingGA/) | "
+            "[Twitter](https://twitter.com/lisaringga) \n\n"
+            "Ring supports Medicare for all and living wages. \n\n\n"
+
             "[**Steve Jarvis**](http://www.electstevejarvis.com/) is running against Buddy Carter. \n\n"
             "[Donate](http://www.electstevejarvis.com/make-a-donation/) | "
             "[Facebook](https://www.facebook.com/WinIn2018/) | "
