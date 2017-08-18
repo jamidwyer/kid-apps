@@ -50,7 +50,7 @@ def search(term, submission):
             "[Donate](https://secure.actblue.com/contribute/page/thompson2018) | "
             "[Facebook](https://www.facebook.com/votejamesthompson/) | "
             "[Twitter](https://twitter.com/JamesThompsonKS) \n\n"
-            "Thompson supports renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
+            "Thompson supports Medicare for all, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
 
             "[Map of Kansas District 4](https://www.govtrack.us/congress/members/KS/4) \n\n"
 

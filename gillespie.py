@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'Virginia\'s race for governor', 'virginia gubernatorial']
+            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'corey stewart', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death']
             for term in terms:
                  search(term, submission);
 

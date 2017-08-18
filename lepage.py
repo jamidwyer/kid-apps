@@ -54,7 +54,7 @@ def search(term, submission):
             "[**Betsy Sweet**](https://secure.actblue.com/donate/sweet4governor) is running to be Governor of Maine. \n\n"
             "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
             "[Facebook](https://www.facebook.com/sweet4governor/) | "
-            "[Twitter](https://twitter.com/betsysweetmaine) | "
+            "[Twitter](https://twitter.com/betsysweetmaine) \n\n"
             "Sweet supports single-payer health care and campaign finance reform. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
