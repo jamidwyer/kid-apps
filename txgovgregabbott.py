@@ -31,21 +31,21 @@ subs.extend(ssubs)
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'governor of texas', 'tx gov', 'tx governor\'s']
+            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'rape insurance', 'tx governor\'s']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n"
             "[**Jeffrey Payne**](http://www.jeffrey4texas.com/) is running to be Governor of Texas. \n\n"
             "[Donate](https://secure.actblue.com/donate/jeffrey4texas) | "
             "[Facebook](https://www.facebook.com/Jeffrey4Texas/) | "

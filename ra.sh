@@ -62,10 +62,12 @@ python mccarthy.py
 python goodlatte.py
 python gowdy.py
 python corker.py
+python ks-4-ron-estes.py
 python womack.py
 python johnjduncan.py
 python dougcollins.py
 python il-gov-bruce-rauner.py
+python lepage.py
 python scottwalker.py
 python kasich.py
 python txgovgregabbott.py
