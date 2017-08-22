@@ -62,6 +62,7 @@ python mccarthy.py
 python goodlatte.py
 python gowdy.py
 python corker.py
+python steveking.py
 python ks-4-ron-estes.py
 python womack.py
 python johnjduncan.py

@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['brownback', 'kobach', 'colyer', 'kansas governor']
+            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'house minority leader jim ward']
             for term in terms:
                  search(term, submission);
 
@@ -46,6 +46,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) \n\n"
+            "[**Jim Ward**](https://kansasforward.com) is running to be Governor of Kansas. \n\n"
+            "[Donate](https://secure.actblue.com/donate/kansasforward) | "
+            "[Facebook](https://www.facebook.com/RepJimWard/) | "
+            "[Twitter](https://twitter.com/repjimward) \n\n"
+            "Ward supports universal health care, public schools, LGBTQ equality, protecting Medicare, and voting rights. \n\n\n"
+
             "[**Joshua Svaty**](https://joshuasvaty.com/) is running to be Governor of Kansas. \n\n"
             "[Donate](https://joshuasvaty.com/donate/) | "
             "[Facebook](https://www.facebook.com/SvatyforKansas/) | "

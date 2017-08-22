@@ -31,14 +31,14 @@ subs.extend(ssubs)
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'congressman king', 'ia-1', 'ia-01']
+            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'congressman king', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 
@@ -46,6 +46,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration) \n\n"
+            "[**Leanne Jacobsen**](https://www.leannjacobsen.com/) is running against Steve King. \n\n"
+            "[Donate](https://secure.actblue.com/donate/leann-for-iowa) | "
+            "[Facebook](https://www.facebook.com/LeannforIowa) | "
+            "[Twitter](https://twitter.com/LeannforIowa) \n\n"
+            "Jacobsen supports universal health care, renewable energy, public schools, and protecting Medicare. \n\n\n"
+
             "[**J.D. Scholten**](http://www.scholten4iowa.com/) is running against Steve King. \n\n"
             "[Donate](http://www.scholten4iowa.com/Contribute) | "
             "[Facebook](https://www.facebook.com/Scholten4Iowa/) | "

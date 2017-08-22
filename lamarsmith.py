@@ -24,7 +24,7 @@ else:
 
 subs = ['ecointernet', 'thecolorisorange', 'anythinggoesnews', 'fiveyearsagoonreddit', 'thenewsrightnow', 'occupy', 'newsofthestupid', 'democrats', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'keepournetfree', 'thehillauto', 'cornbreadliberals', 'thenewcoldwar', 'esist', 'waexauto', 'unremovable', 'good_cake', 'technology', 'autonewspaper', 'wayofthebern', 'sandersforpresident', 'autotldr', 'marchagainsttrump', 'politicalvideo', 'goodlongposts', 'badgovnofreedom', 'libs', 'democracy', 'stupid_watergate', 'fcc', 'netneutrality', 'worldnews', 'nottheonion', 'BreakingNews24hr', 'newsbotbot', 'impeach_trump', 'fuckthealtright', 'collapse', 'environment', 'inthenews', 'hotandtrending', 'keep_track', 'thecolorisblue', 'PoliticalVideos', 'climate', 'cnet_all_rss', 'women', 'newsy', 'cnnauto', 'tytpolitics', 'huffpoauto', 'cbsauto', 'greed', 'watchingcongress', 'trussiagate', '538auto', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'progressive', 'datauncensored', 'skydtech']
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -34,7 +34,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['lamar smith', 'house science committee chair', 'Secret Tour Of Melting Arctic']
+            terms = ['lamar smith', 'house science committee chair', 'Secret Tour Of Melting Arctic', 'tx-21', 'tx21']
             for term in terms:
                  search(term, submission);
 
