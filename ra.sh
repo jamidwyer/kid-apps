@@ -69,6 +69,7 @@ python dougcollins.py
 python il-gov-bruce-rauner.py
 python lepage.py
 python scottwalker.py
+python rickscott.py
 python kasich.py
 python txgovgregabbott.py
 python brownback.py

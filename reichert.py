@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressman reichert', 'wa-8', 'wa-08']
+            terms = ['reichert', 'dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressmen reichert', 'congressman reichert', 'wa-8', 'wa-08', '@davereichert', 'wa\'s 8th district' ]
             for term in terms:
                  search(term, submission);
 
@@ -47,12 +47,19 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) \n\n"
-        "[**Tola Marts**](https://www.ronanforcongress.com/issues) is running against Dave Reichert. \n\n"
+        "[**Tola Marts**](https://tola.nationbuilder.com/) is running against Dave Reichert. \n\n"
         "[Donate](https://secure.anedot.com/marts/donate) | "
         "[Facebook](https://www.facebook.com/electtolamarts/) | "
         "[Twitter](https://twitter.com/electtolamarts) \n\n"
 
         "Marts supports universal health care and affordable college.  \n\n"
+
+        "[**Mona Das**](https://www.electmona.com/more-about-mona) is running against Dave Reichert. \n\n"
+        "[Donate](https://secure.squarespace.com/commerce/donate?donatePageId=595b20538419c2e81ee2f471) | "
+        "[Facebook](https://www.facebook.com/electmona/) | "
+        "[Twitter](https://twitter.com/elect_mona) \n\n"
+
+        "Das supports universal health care.  \n\n"
 
         "[Map of Washington District 8](https://www.google.com/maps/d/u/0/viewer?ll=47.59875500000003%2C-121.21215799999999&spn=2.222513%2C2.883911&hl=en&t=m&msa=0&z=8&source=embed&ie=UTF8&mid=1qzIBZU5QZgKWh_woys_JM2h5HqY) \n\n"
 
