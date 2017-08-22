@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("arizona.dat", "r")
+local_subs = open("idaho.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,31 +32,28 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ducey', 'arizona governor', 'az. gubernatorial race', 'arizona\'s race for governor', 'arizona gubernatorial', 'arizona\'s republican governor']
+            terms = ['zollinger', 'Republican promotes theory that Obama plotted Charlottesville neo-Nazi rally', 'Obama staged Charlottesville riots']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
-            "[**David Garcia**](http://dg4az.com/) is running to be Arizona's Governor. \n\n"
-            "[Donate](https://act.myngp.com/Forms/-4374401513548677120) | "
-            "[Facebook](https://act.myngp.com/Forms/-4374401513548677120) | "
-            "[Twitter](https://twitter.com/dg4az) \n\n"
-            "Garcia supports public schools. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.idahovotes.gov/VoterReg/voter_registration.pdf) \n\n"
+        "Bryan Zollinger is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/32566-state-representative-id-33-seat-2/interest_form)? \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        "[Map of Idaho State House District 33](https://www.google.com/maps/d/u/2/viewer?mid=1DWB6vryl4ZZTyplk4s_Iiwt8ih0&hl=en_US&authuser=2&ll=43.48927161166976%2C-112.03849150000002&z=12) \n\n"
 
-        print("Bot replying to : ", submission.title)
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
