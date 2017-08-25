@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['zollinger', 'Republican promotes theory that Obama plotted Charlottesville neo-Nazi rally', 'Obama staged Charlottesville riots']
+            terms = ['zollinger', 'Republican promotes theory that Obama plotted Charlottesville neo-Nazi rally', 'Obama staged Charlottesville riots', 'Idaho state rep shares conspiracy theory accusing George Soros of staging Charlottesville', 'Idaho GOP politician shares conspiracy theory accusing Obama of staging Charlottesville', 'Idaho state rep shares conspiracy theory accusing Obama of staging Charlottesville']
             for term in terms:
                  search(term, submission);
 

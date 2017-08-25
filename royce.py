@@ -23,19 +23,23 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['losangeles', 'enoughtrumpspam', 'orangecounty', 'political_revolution', 'worldnews', 'bluemidterm2018', 'california_politics', 'politicaltweets', 'technology', 'impeach_trump', 'autotldr', 'esist', 'indepthstories', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto', 'geprnotes']
+local_subs = open("california.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed royce', 'rep. royce', 'congressman royce', 'rep royce']
+            terms = ['ed royce', 'rep. royce', 'congressman royce', 'rep royce', 'ca-39', 'In a swing district, a Democrat runs on']
             for term in terms:
                  search(term, submission);
 
@@ -49,16 +53,21 @@ def search(term, submission):
             "[Twitter](https://twitter.com/DocTran2018) \n\n"
             "Tran supports universal health care coverage and Planned Parenthood. \n\n\n"
 
+            "[**Andy Thorburn**](https://www.thorburnforcongress.com/) is running against Ed Royce. \n\n"
+            "[Donate](https://secure.actblue.com/donate/andythorburnca?refcode=website) | "
+            "[Facebook](https://www.facebook.com/AndyThorburnCA) | "
+            "[Twitter](https://twitter.com/AndyThorburnCA) \n\n"
+            "Thorburn supports universal health care coverage. \n\n\n"
+
             "[**Phil Janowicz**](http://philforhouse.com/#issues) is running against Ed Royce. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/phil) | "
             "[Facebook](https://www.facebook.com/philforhouse) | "
             "[Twitter](https://twitter.com/PhilforHouse) \n\n"
             "Janowicz supports renewable energy, living wages, LGBTQ equality, equal pay for equal work, and increasing funding for science.\n\n"
 
-            "Map of California District 39: https://www.govtrack.us/congress/members/CA/39 \n\n"
+            "[Map of California District 39](https://www.govtrack.us/congress/members/CA/39) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         submission.reply(text)
         print("Bot replying to : ", submission.title)
@@ -74,3 +83,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

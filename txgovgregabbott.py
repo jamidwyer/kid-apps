@@ -28,17 +28,17 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'rape insurance', 'tx governor\'s']
+            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
             for term in terms:
                  search(term, submission);
 

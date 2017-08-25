@@ -22,19 +22,23 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['nova', 'progressive', 'economics', 'uspolitics', 'roanoke', 'virginia', 'lgbt', 'rva', 'dailyshow', 'atheism', 'freeatheism', 'democrats', 'UMukhasimAutoNews', 'nytimes', 'chapotraphouse', 'bluemidterm2018', 'enoughtrumpspam', 'liberal', 'political_revolution', 'thehillauto', 'waexauto', 'unremovable', 'thenewcoldwar', 'technology', 'autonewspaper', 'autotldr', 'esist', 'marchagainsttrump', 'politicalvideo', 'keepournetfree', 'goodlongposts', 'badgovnofreedom', 'good_cake', 'democracy', 'fcc', 'worldnews', 'nottheonion', 'newsbotbot', 'wayofthebern', 'sandersforpresident', 'impeach_trump', 'fuckthealtright', 'environment', 'keep_track', 'PoliticalVideos', 'climate', 'latimesauto', 'cnet_all_rss', 'women', 'netneutrality', 'cornbreadliberals', 'greed', 'huffpoauto', 'watchingcongress', 'restorethefourth', 'libs', 'trussiagate', 'theconstitution', 'pancakepalpatine', 'geprnotes', 'skydtech']
+local_subs = open("virginia.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'corey stewart', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death']
+            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'corey stewart', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', 'Virginia GOP apologizes for \'heritage\' tweets']
             for term in terms:
                  search(term, submission);
 
@@ -50,8 +54,9 @@ def search(term, submission):
             "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, LGBT equality, and common-sense gun safety laws. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-        submission.reply(text)
+
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
@@ -64,3 +69,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

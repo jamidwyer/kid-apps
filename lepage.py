@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul lepage', 'maine governor', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage', 'Maine Republicans: Strike']
+            terms = ['paul lepage', 'maine governor', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage', 'Maine Republicans: Strike', 'liar lepage', 'lepage blames']
             for term in terms:
                  search(term, submission);
 
@@ -47,20 +47,20 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.maine.gov/sos/cec/elec/voter-info/voterguide.html) \n\n"
             "[**Patrick Eisenhart**](http://www.eisenhartforgovernor.org/issues) is running to be Governor of Maine. \n\n"
-            "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
+            "[Donate](https://secure.campaigncontributions.net/52810/Contribute-to-I-Like-Ike) | "
             "[Facebook](https://www.facebook.com/patrick.eisenhart) \n\n"
             "Eisenhart supports universal health care and public schools. \n\n\n"
 
             "[**Betsy Sweet**](https://secure.actblue.com/donate/sweet4governor) is running to be Governor of Maine. \n\n"
-            "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
+            "[Donate](https://secure.actblue.com/donate/sweet4governor) | "
             "[Facebook](https://www.facebook.com/sweet4governor/) | "
             "[Twitter](https://twitter.com/betsysweetmaine) \n\n"
             "Sweet supports single-payer health care and campaign finance reform. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

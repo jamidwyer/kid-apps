@@ -29,7 +29,6 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
@@ -56,7 +55,7 @@ def search(term, submission):
 
             "[Map of California District 10](https://www.govtrack.us/congress/members/CA/10) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

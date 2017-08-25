@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("arizona.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,26 +31,29 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ducey', 'arizona governor', 'az. gubernatorial race', 'arizona\'s race for governor', 'arizona gubernatorial', 'arizona\'s republican governor', 'so divisive that not even the GOP governor is showing up']
+            terms = ['lemunyon', 'va 67th', 'virginia primaries']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
-            "[**David Garcia**](http://dg4az.com/) is running to be Arizona's Governor. \n\n"
-            "[Donate](https://act.myngp.com/Forms/-4374401513548677120) | "
-            "[Facebook](https://act.myngp.com/Forms/-4374401513548677120) | "
-            "[Twitter](https://twitter.com/dg4az) \n\n"
-            "Garcia supports public schools. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+            "[**Karrie Delaney**](http://www.karriedelaney.com/about) is running to represent Virginia State House District 67. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/delaneyfordelegate) | "
+            "[Facebook](https://www.facebook.com/DelaneyforDelegate/) | "
+            "[Twitter](https://twitter.com/KarrieKDelaney) \n\n"
+
+            "Delaney supports public schools, paid family and sick leave, equal pay for equal work, and background checks on every gun sale.  \n\n"
+
+            "[Map of Virginia State House District 67](http://redistricting.dls.virginia.gov/2010/Data%5C2011HouseMaps%5CHB5005%20-%20House%2067.pdf) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

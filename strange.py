@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# coding: utf-8
+
 import praw
 import pdb
 import re
@@ -32,14 +34,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'al-sen', 'alabama senate primaries', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'no strange']
+            terms = ['luther strange', 'al-sen', 'alabama senate primaries', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'no strange']
             for term in terms:
                  search(term, submission);
 

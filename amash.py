@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['amash', 'il-03', 'il-3', 'Illinois\' 3rd District']
+            terms = ['amash', 'mi-03', 'mi-3', 'michigan\'s 3rd District']
             for term in terms:
                  search(term, submission);
 
@@ -46,12 +46,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
-            "[**Jeff Thomas**](https://www.jeffforthethird.com/) is running to represent Illinois District 3. \n\n"
+            "[**Jeff Thomas**](https://www.jeffforthethird.com/) is running to represent Michigan District 3. \n\n"
             "[Donate](https://secure.actblue.com/donate/jtmain) | "
             "[Facebook](https://www.facebook.com/jeffforthethird) | "
             "[Twitter](https://twitter.com/jeffforthethird/) \n\n"
 
-            "[Map of Illinois District 3](https://www.govtrack.us/congress/members/IL/3) \n\n"
+            "[Map of Michigan District 3](https://www.govtrack.us/congress/members/MI/3) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
