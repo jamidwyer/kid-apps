@@ -46,6 +46,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration) \n\n"
+            "[**Pete D'Alessandro**](http://peteforiowa.com/) is running against David Young. \n\n"
+            "[Donate](https://secure.actblue.com/donate/pete-for-iowa) | "
+            "[Facebook](https://www.facebook.com/peteforiowa/) | "
+            "[Twitter](https://twitter.com/peteforiowa) \n\n\n"
+
+            "D'Alessandro supports universal health care, renewable energy, a living wage, and affordable college. \n\n\n"
+
             "[**Austin Frerick**](http://www.austinfrerick.com/) is running against David Young. \n\n"
             "[Donate](https://secure.actblue.com/donate/austin-frerick) | "
             "[Facebook](https://www.facebook.com/AustinFrerick) | "
@@ -64,12 +71,12 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/CindyAxneForCongress/) | "
             "[Twitter](https://twitter.com/Axne4Congress) \n\n\n"
 
-            "Map of Iowa District 3: https://www.govtrack.us/congress/members/IA/3 \n\n"
+            "[Map of Iowa District 3](https://www.govtrack.us/congress/members/IA/3) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-        submission.reply(text)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

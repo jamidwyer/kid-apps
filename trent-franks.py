@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("nevada.dat", "r")
+local_subs = open("arizona.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,28 +31,32 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['heller', 'health care after trump threats', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
+            terms = ['trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks', 'http://thehill.com/homenews/administration/348061-trump-pardons-arpaio', 'The Republican Party is responsible for the pardon of the hate criminal Joe Arpaio']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
-        "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
-        "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
-        "[Facebook](https://www.facebook.com/rosenfornevada/) | "
-        "[Twitter](https://twitter.com/RosenforNevada) \n\n "
-        "Rosen supports affordable health care for every American, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
+            "[**Hiral Tiperneni**](http://hiralforcongress.com/) is running against Trent Franks. \n\n"
+            "[Donate](https://act.myngp.com/Forms/8720455484384873216) | "
+            "[Facebook](https://www.facebook.com/hiralforcongress/) | "
+            "[Twitter](https://twitter.com/hiral4congress) \n\n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "Tipernini supports universal health care. \n\n\n"
+
+            "[Map of Arizona House District 8](https://www.govtrack.us/congress/members/AZ/8) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

@@ -17,6 +17,8 @@ python mcsally.py
 python denham.py
 python heller.py
 python nv-gov.py
+python mi-sen-stabenow.py
+python mi-gov-snyder.py
 python petesessions.py
 python rohrabacher.py
 python culberson.py
@@ -58,7 +60,9 @@ python hatch.py
 python lamalfa.py
 python randyweber.py
 python walden.py
+python trent-franks.py
 python mccarthy.py
+python farenthold.py
 python goodlatte.py
 python gowdy.py
 python corker.py

@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("nevada.dat", "r")
+local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,21 +39,20 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['heller', 'health care after trump threats', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
+            terms = ['farenthold', 'tx-27', 'Texas Republicans Intentionally Discriminated Against Minority Voters']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
-        "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
-        "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
-        "[Facebook](https://www.facebook.com/rosenfornevada/) | "
-        "[Twitter](https://twitter.com/RosenforNevada) \n\n "
-        "Rosen supports affordable health care for every American, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
+            "Blake Farenthold is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/29977-u-s-representative-tx-27/interest_form)? \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "[Map of Texas District 27](https://www.govtrack.us/congress/members/TX/27) \n\n "
+
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
