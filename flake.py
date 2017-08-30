@@ -31,35 +31,41 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
+
             # Do a case insensitive search
-            if re.search('^(?!.*snowflake).*flake.*$', submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
-                    "[**Deedra Abboud**](http://deedra2018.com/) is running against Jeff Flake. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
-                    "[Facebook](https://www.facebook.com/Deedra2018/) | "
-                    "[Twitter](https://twitter.com/deedra2018) \n\n"
-                    "Abboud supports single-payer health care, public schools, and net neutrality. \n\n\n"
+            terms = ['^(?!.*snowflake).*flake.*$', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            for term in terms:
+                 search(term, submission);
 
-                    # "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
-                    # "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
-                    # "[Facebook](https://www.facebook.com/ksinemaaz/) | "
-                    # "[Twitter](https://twitter.com/kyrstensinema) \n\n"
-                    # "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
+            "[**Deedra Abboud**](http://deedra2018.com/) is running against Jeff Flake. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
+            "[Facebook](https://www.facebook.com/Deedra2018/) | "
+            "[Twitter](https://twitter.com/deedra2018) \n\n"
+            "Abboud supports single-payer health care, public schools, and net neutrality. \n\n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            # "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
+            # "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
+            # "[Facebook](https://www.facebook.com/ksinemaaz/) | "
+            # "[Twitter](https://twitter.com/kyrstensinema) \n\n"
+            # "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
 
-                print("Bot replying to : ", submission.title)
-                submission.reply(text)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

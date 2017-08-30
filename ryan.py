@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'Took Millions From Russian Oligarch Tied To Putin', 'Wisconsin\'s First Congressional District', 'WI: 34%']
+            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'Republicans Will Let America Burn', 'Took Millions From Russian Oligarch Tied To Putin', 'Time for the GOP to abandon ship', 'Wisconsin\'s First Congressional District', 'WI: 34%']
             for term in terms:
                  search(term, submission);
 

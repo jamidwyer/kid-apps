@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wisconsin.dat", "r")
+local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,33 +39,28 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scott walker', 'governor walker', 'wisconsin governor', 'wi gov', 'wi governor\'s', 'lawmakers vote to pay Foxconn']
+            terms = ['hensarling', 'Texas Republican vows to fight for flood insurance overhaul']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Andy Gronik**](https://www.andygronik.com) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/donate/gronik-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/AndyGronik) | "
-            "[Twitter](https://twitter.com/AndyGronik) \n\n"
-            "Gronik supports universal health care, public schools, affordable college, equal pay for equal work, and voting rights. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
+        "[**Dan Wood**](https://www.votedanwood.com/) is running against Jeb Hensarling. \n\n"
+        "[Donate](https://www.crowdpac.com/campaigns/192921/dan-wood-for-congress-tx-5th-district) | "
+        "[Facebook](https://www.facebook.com/votedanwood/) | "
+        "[Twitter](https://twitter.com/danwood2018) \n\n"
 
-            "[**Bob Harlow**](https://bobharlow.net/) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/harlow-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/HarlowForWisconsin/) | "
-            "[Twitter](https://twitter.com/bobharlow_) \n\n"
-            "Harlow supports universal health care and public schools. \n\n\n"
+        "Wood supports universal health care, living wages, protecting Medicare, equal pay for equal work, and campaign finance reform.  \n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+    # Store the current id into our list
+    posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

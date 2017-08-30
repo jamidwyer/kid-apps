@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wisconsin.dat", "r")
+local_subs = open("newjersey.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,37 +31,33 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scott walker', 'governor walker', 'wisconsin governor', 'wi gov', 'wi governor\'s', 'lawmakers vote to pay Foxconn']
+            terms = ['diane allen']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Andy Gronik**](https://www.andygronik.com) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/donate/gronik-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/AndyGronik) | "
-            "[Twitter](https://twitter.com/AndyGronik) \n\n"
-            "Gronik supports universal health care, public schools, affordable college, equal pay for equal work, and voting rights. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
+            "[**Troy Singleton**](http://www.troysingleton.com/home) is running to represent New Jersey State Senate District 7. \n\n"
+            "[Donate](https://troysingleton.nationbuilder.com/donate) | "
+            "[Facebook](https://www.facebook.com/singletonld7/) | "
+            "[Twitter](https://twitter.com/LD7Singleton) \n\n"
+            "Singleton supports renewable energy, public schools, and equal pay for equal work. \n\n\n"
 
-            "[**Bob Harlow**](https://bobharlow.net/) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/harlow-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/HarlowForWisconsin/) | "
-            "[Twitter](https://twitter.com/bobharlow_) \n\n"
-            "Harlow supports universal health care and public schools. \n\n\n"
+            "[Map of New Jersey State Senate District 27](https://ballotpedia.org/File:NJ_LD_07.JPG) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-        print("Bot replying to : ", submission.title)
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

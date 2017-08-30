@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wisconsin.dat", "r")
+local_subs = open("washington.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,28 +39,24 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scott walker', 'governor walker', 'wisconsin governor', 'wi gov', 'wi governor\'s', 'lawmakers vote to pay Foxconn']
+            terms = ['manka dhingra', 'jinyoung englund']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Andy Gronik**](https://www.andygronik.com) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/donate/gronik-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/AndyGronik) | "
-            "[Twitter](https://twitter.com/AndyGronik) \n\n"
-            "Gronik supports universal health care, public schools, affordable college, equal pay for equal work, and voting rights. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) \n\n"
+        "[**Manka Dhingra**](http://www.electmanka.com/) is running to represent Washington's 45th Senate District. \n\n"
+        "[Donate](https://act.myngp.com/Forms/1478398861426297344) | "
+        "[Reddit](https://www.reddit.com/r/MankaDhingra/) | "
+        "[Facebook](https://www.facebook.com/electmanka/) | "
+        "[Twitter](https://twitter.com/ElectManka) \n\n"
+        "Dhingra supports public schools. \n\n\n"
 
-            "[**Bob Harlow**](https://bobharlow.net/) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/harlow-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/HarlowForWisconsin/) | "
-            "[Twitter](https://twitter.com/bobharlow_) \n\n"
-            "Harlow supports universal health care and public schools. \n\n\n"
+        "[Map of Washington State Senate District 45](https://upload.wikimedia.org/wikipedia/commons/4/45/LD_45.pdf) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

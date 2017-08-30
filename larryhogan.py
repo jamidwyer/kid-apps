@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -38,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['larry hogan', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s']
+            terms = ['larry hogan', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate']
             for term in terms:
                  search(term, submission);
 
@@ -51,6 +52,13 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/sheaforMD/) | "
             "[Twitter](https://twitter.com/sheaformd) \n\n"
             "Shea supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n\n"
+
+            "[**Ben Jealous**](https://benjealous.com/) is running to be Governor of Maryland. \n\n"
+            "[Donate](https://secure.actblue.com/donate/bj1706) | "
+            "[Reddit](https://www.reddit.com/r/BenJealous/) | "
+            "[Facebook](https://www.facebook.com/benjealous/) | "
+            "[Twitter](https://twitter.com/BenJealous) \n\n"
+            "Jealous supports single-payer health care, renewable energy, and LGBTQ equality. \n\n\n"
 
             "[**Krishanti Vignarajah**](http://krishformaryland.com/) is running to be Governor of Maryland. \n\n"
             "[Donate](https://www.crowdpac.com/campaigns/323377/krish-for-maryland) | "

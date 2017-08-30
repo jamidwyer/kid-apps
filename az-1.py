@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wisconsin.dat", "r")
+local_subs = open("arizona.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,27 +39,24 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scott walker', 'governor walker', 'wisconsin governor', 'wi gov', 'wi governor\'s', 'lawmakers vote to pay Foxconn']
+            terms = ['Congressman Tom O\´Halleran', '@RepOHalleran', 'o\'halleran', 'kevin cavanaugh', 'steve smith']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Andy Gronik**](https://www.andygronik.com) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/donate/gronik-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/AndyGronik) | "
-            "[Twitter](https://twitter.com/AndyGronik) \n\n"
-            "Gronik supports universal health care, public schools, affordable college, equal pay for equal work, and voting rights. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
+            "[**Tom O'Halleran**](http://www.tomohalleran.com/issues) is running to represent Arizona House District 1 in the United States Congress. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/ohalleran) | "
+            "[Facebook](https://www.facebook.com/ohalleranforaz) | "
+            "[Twitter](https://twitter.com/tomohalleran) \n\n\n"
 
-            "[**Bob Harlow**](https://bobharlow.net/) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/harlow-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/HarlowForWisconsin/) | "
-            "[Twitter](https://twitter.com/bobharlow_) \n\n"
-            "Harlow supports universal health care and public schools. \n\n\n"
+            "O'Halleran supports public schools, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "[Map of Arizona House District 1](https://www.govtrack.us/congress/members/AZ/1) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

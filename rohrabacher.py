@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'rhorabacher']
+            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'GOP lawmaker setting up meeting to share Assange info on DNC hack with Trump', 'Democrats exploit GOP ethics woes in battle for the House', 'rhorabacher']
             for term in terms:
                  search(term, submission);
 
