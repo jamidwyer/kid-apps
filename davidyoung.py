@@ -31,14 +31,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['david young']
+            terms = ['david young', 'Democratic Party Fundraiser Leaders Snub Iowa Candidate']
             for term in terms:
                  search(term, submission);
 
@@ -46,6 +46,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration) \n\n"
+            "[**Heather Ryan**](https://www.ryanforiowa.com/) is running against David Young. \n\n"
+            "[Donate](https://secure.actblue.com/donate/heatherryan) | "
+            "[Facebook](https://www.facebook.com/HeatherRyanForIowa/) | "
+            "[Twitter](https://twitter.com/LoudAndLiberal) \n\n\n"
+
+            "Ryan supports universal health care, public schools, affordable college, a living wage, subsidized child care, equal pay for equal work, renewable energy, and campaign finance reform. \n\n\n"
+
             "[**Pete D'Alessandro**](http://peteforiowa.com/) is running against David Young. \n\n"
             "[Donate](https://secure.actblue.com/donate/pete-for-iowa) | "
             "[Facebook](https://www.facebook.com/peteforiowa/) | "

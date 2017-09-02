@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=500):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['desantis', 'Rider for Spending Bill that Would End Mueller Probe', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
+            terms = ['desantis', 'GOP rep: Congress should set limits for Mueller probe', 'Rider for Spending Bill that Would End Mueller Probe', 'Republicans Ignore the Russia Scandal', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
             for term in terms:
                  search(term, submission);
 

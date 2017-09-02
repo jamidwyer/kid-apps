@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,22 +38,25 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['james morefield', 'bill bunch']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+            "[**Bill Bunch**](https://www.billbunchfordelegate.com/platform) is running to represent Virginia State House District 3. \n\n"
+            "[Donate](https://secure.actblue.com/donate/billbunch) | "
+            "[Facebook](https://www.facebook.com/BunchForDelegate/) | "
+            "[Twitter](https://twitter.com/bunch4delegate) \n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
+            "Bunch supports single payer health care, renewable energy, and net neutrality.  \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
+            "[Map of Virginia State House District 3](http://redistricting.dls.virginia.gov/2010/Data%5C2011HouseMaps%5CHB5005%20-%20House%203.pdf) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

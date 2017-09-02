@@ -22,13 +22,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("iowa.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top values from our subreddit
+# Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -38,22 +38,21 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['kim reynolds', 'iowa governor', 'governor of iowa']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration) \n\n"
+            "[**John Norris**](http://www.norrisforthepeople.com/) is running to be Governor of Iowa. \n\n"
+            "[Donate](https://secure.actblue.com/donate/johnnorris) | "
+            "[Facebook](https://www.facebook.com/NorrisforthePeople/) | "
+            "[Twitter](https://twitter.com/JohnNorrisIA) \n\n"
+            "Norris supports universal health care, public schools, living wages, renewable energy, and campaign finance reform. \n\n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

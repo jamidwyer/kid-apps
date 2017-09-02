@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -38,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'house minority leader jim ward', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'punishing public officials who disenfranchise voters']
+            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'house minority leader jim ward', 'Federal judge decries Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'Trump voting panel apologizes', 'Trump voter fraud panel head confirms he', 'punishing public officials who disenfranchise voters']
             for term in terms:
                  search(term, submission);
 

@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ken paxton', 'texas attorney general', 'distract from his own felony trial', 'Courts repeatedly chastise Texas for voting-rights violations', 'racist attack on minority voting rights might finally backfire', 'U.S. Supreme Court temporarily blocks ruling against Texas congressional map', 'Fix Its Discriminatory Voting Laws']
+            terms = ['ken paxton', 'texas attorney general', 'distract from his own felony trial', 'Courts repeatedly chastise Texas for voting-rights violations', 'racist attack on minority voting rights might finally backfire', 'U.S. Supreme Court temporarily blocks ruling against Texas congressional map', 'blocks Texas ban on sanctuary cities', 'A federal judge just blocked Texas', 'Fix Its Discriminatory Voting Laws']
             for term in terms:
                  search(term, submission);
 

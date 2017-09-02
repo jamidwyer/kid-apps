@@ -70,8 +70,10 @@ python ks-4-ron-estes.py
 python steveking.py
 python womack.py
 python johnjduncan.py
+python babin.py
 python dougcollins.py
 python tx-01-louie-gohmert.py
+python wa-st-sen-45.py
 python nj-st-sen-7.py
 python larryhogan.py
 python va-st-hd-67-lemunyon.py
@@ -80,6 +82,8 @@ python az-st-hd-10-clodfelter.py
 python az-st-hd-18-norgaard.py
 python az-st-hd-28-mcgee.py
 python az-st-hd-28-syms.py
+python ny-st-hd-9.py
+python sc-st-hd-99.py
 python lepage.py
 python az-1.py
 python mi-sen-stabenow.py
@@ -95,10 +99,14 @@ python gianforte.py
 python brownback.py
 python nc-st-hd-67-justin-burr.py
 python id-st-hd-33b-zollinger.py
+python wy-gov.py
+python ga-st-hd-180.py
+python va-st-hd-3.py
 python coffman.py
 python reichert.py
 python lobiondo.py
 python mccaul.py
+python az-5.py
 python jasonlewis.py
 python nc-st-hd-03-michael-speciale.py
 python nd-st-hd-39-keith-kempenich.py

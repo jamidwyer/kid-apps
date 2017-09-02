@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("georgia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,31 +32,28 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['jason spencer', 'may go missing', 'GOP Rep Tells Black Attorney', 'Georgia Civil War Statue Row', 'White lawmaker warns black attorney she may']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
+        "Jason Spencer is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/32439-state-representative-ga-180/interest_form)? \n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
+        "[Map of Georgia State House District 180](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/lower/st13_ga/sldl13180/DC10SLDL13180_001.pdf) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
-        print("Bot replying to : ", submission.title)
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

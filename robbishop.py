@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("utah.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,22 +39,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['rob bishop', 'ut-01', 'Utah Congressman Seeks to Prevent Future Land Gifts']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
+            "Rob Bishop is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31445-u-s-representative-ut-1/interest_form)? \n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
+            "[Map of Utah District 1](https://www.govtrack.us/congress/members/UT/1) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

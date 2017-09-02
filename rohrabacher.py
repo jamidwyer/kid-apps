@@ -31,14 +31,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'GOP lawmaker setting up meeting to share Assange info on DNC hack with Trump', 'Democrats exploit GOP ethics woes in battle for the House', 'rhorabacher']
+            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'one of our local Members of Congress...', 'GOP lawmaker setting up meeting to share Assange info on DNC hack with Trump', 'Democrats exploit GOP ethics woes in battle for the House', 'rhorabacher']
             for term in terms:
                  search(term, submission);
 

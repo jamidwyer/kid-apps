@@ -46,6 +46,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n"
+            "[**Constance Gadell-Newton**](https://www.constanceforohio.com/) is running to be Governor of Ohio. \n\n"
+            "[Donate](https://www.constanceforohio.com/donate) | "
+            "[Reddit](https://www.reddit.com/r/ConstanceGadellNewton/) | "
+            "[Facebook](https://www.facebook.com/ConstanceforOH/) | "
+            "[Twitter](https://twitter.com/constanceforoh) \n\n"
+            "Gadell-Newton supports universal health care, public schools, affordable college, living wages, and renewable energy. \n\n\n"
+
             "[**Joe Schiavoni**](http://joeforohio.com/issues/) is running to be Governor of Ohio. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/joeschiavoni) | "
             "[Facebook](https://www.facebook.com/JoeSchiavoniOhio/) | "

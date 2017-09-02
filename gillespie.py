@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'corey stewart', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', 'Virginia GOP apologizes for \'heritage\' tweets']
+            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'va. gubernatorial race', 'corey stewart', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', 'Virginia GOP apologizes for \'heritage\' tweets']
             for term in terms:
                  search(term, submission);
 

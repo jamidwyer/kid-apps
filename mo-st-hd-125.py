@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("missouri.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,24 +38,21 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['warren love', 'Missouri State House District 125', 'Missouri rep posts hope that vandal is hanged', 'hung from a tall tree', 'Missouri representative appears to call for lynching', 'Republican calls for vandals of Confederate monument to be lynched', 'advocating \'lynching\' of Confederate statue vandal', 'Threaten Lynching']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) \n\n"
+            "Warren Love is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/34558-state-representative-mo-125/interest_form)? \n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
+            "Map of [Missouri State House District 125](https://statisticalatlas.com/state-lower-legislative-district/Missouri/District-125/Overview) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
-        print("Bot replying to : ", submission.title)
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

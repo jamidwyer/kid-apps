@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("tennessee.dat", "r")
+local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,27 +39,35 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. duncan', 'rep. john j. duncan', 'rep duncan', 'representative duncan', 'congressman duncan']
+            terms = ['brian babin', 'rep. babin', 'rep babin', 'representative babin', 'congressman babin', 'Climate Change Denying GOP Congressman Trapped In His Texas Home By Flood Waters']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-            "[**Joshua Williams**](http://www.joshuawilliamsforcongress.com/) is running to represent Tennessee's 2nd Congressional District. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/basic1) | "
-            "[Facebook](https://www.facebook.com/williams4congress) \n\n "
-            "Williams supports renewable energy, public schools, living wages, and protecting Medicare and Social Security. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
+        "[**Dayna Steele**](https://daynasteele36.com/) is running against Brian Babin. \n\n"
+        "[Donate](https://daynasteele36.givingfuel.com/dayna-steele-campaign) | "
+        "[Facebook](https://www.facebook.com/daynasteele) | "
+        "[Twitter](https://twitter.com/daynasteele) \n\n"
 
-            "[Map of Tennessee District 2](https://www.govtrack.us/congress/members/TN/2) \n\n"
+        "Steele supports single-payer health care.  \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I\'ll add another candidate if they support progressive policies.)")
-        print("Bot replying to : ", submission.title)
+        "[**Jon Powell**](http://jonpowellforcongress.us/) is running against Brian Babin. \n\n"
+        "[Donate](https://secure.actblue.com/contribute/page/jptx36) | "
+        "[Facebook](https://www.facebook.com/JonPowellTX36/) | "
+        "[Twitter](https://twitter.com/JonPowellTX36) \n\n"
+
+        "Powell supports affordable health care for everyone.  \n\n"
+
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+    # Store the current id into our list
+    posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

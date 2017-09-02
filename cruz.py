@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
+            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'dis cruz', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
             for term in terms:
                  search(term, submission);
 
@@ -54,7 +54,7 @@ def search(term, submission):
         "[Twitter](https://twitter.com/betoorourke) \n\n "
         "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, and the Voting Rights Act.\n\n "
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.id, submission.title)
         submission.reply(text)
 

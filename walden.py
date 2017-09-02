@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden']
+            terms = ['greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden', 'Net neutrality billboard targets Walden']
             for term in terms:
                  search(term, submission);
 
@@ -49,13 +49,13 @@ def search(term, submission):
                     "[**Ross Wordhouse**](http://rosswordhouse.com/washington-table-flipper/) is running against Greg Walden. \n\n"
                     "[Donate](https://secure.actblue.com/donate/wordhouse) | "
                     "[Facebook](https://www.facebook.com/wordhouseforcongress/) \n\n "
-                    "Wordhouse supports universal health care, renewable energy, public schools, campaign finance reform, affordable college, and equal pay for equal work. \n\n\n"
+                    "Wordhouse supports universal health care, public schools, affordable college, equal pay for equal work, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
 
                     "[**Jim Crary**](https://crary4congress.com/) is running against Greg Walden. \n\n"
                     "[Donate](https://secure.actblue.com/contribute/page/crary2018) | "
                     "[Facebook](https://www.facebook.com/crary4congress) | "
                     "[Twitter](https://twitter.com/crary4congress) \n\n"
-                    "Crary supports universal health care, renewable energy, campaign finance reform, LGBTQ equality, and protecting Social Security. \n\n\n"
+                    "Crary supports universal health care, protecting Social Security, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
 
                     "[Map of Oregon District 2](https://www.govtrack.us/congress/members/OR/2) \n\n"
 
