@@ -39,22 +39,27 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            if re.search("valadao", submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-                "[**Emilio Huerta**](http://www.huertaforcongress.com/) is running against David Valadao. \n\n "
-                "[Donate](https://secure.actblue.com/donate/huerta/) | "
-                "[Facebook](https://www.facebook.com/huertaforcongress/) | "
-                "[Twitter](https://twitter.com/huerta4congress/) \n\n "
+            terms = ['valadao', 'who controls the House in 2018, especially in California']
+            for term in terms:
+                 search(term, submission);
 
-                "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-                "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        "[**Emilio Huerta**](http://www.huertaforcongress.com/) is running against David Valadao. \n\n "
+        "[Donate](https://secure.actblue.com/donate/huerta/) | "
+        "[Facebook](https://www.facebook.com/huertaforcongress/) | "
+        "[Twitter](https://twitter.com/huerta4congress/) \n\n "
 
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+        "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
+        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)
