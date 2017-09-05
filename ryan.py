@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'GOP Will Settle For The Usual Litany Of Tax Cuts', 'Republicans Will Let America Burn', 'Took Millions From Russian Oligarch Tied To Putin', 'Time for the GOP to abandon ship', 'Wisconsin\'s First Congressional District', 'WI: 34%']
+            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'GOP Will Settle For The Usual Litany Of Tax Cuts', 'Republicans Could Protect Dreamers', 'Republicans Will Let America Burn', 'Took Millions From Russian Oligarch Tied To Putin', 'Time for the GOP to abandon ship', 'Wisconsin\'s First Congressional District', 'WI: 34%']
             for term in terms:
                  search(term, submission);
 
@@ -52,7 +52,7 @@ def search(term, submission):
                     "[Reddit](https://www.reddit.com/r/RandyBryce) | "
                     "[Facebook](https://www.facebook.com/RandyBryce2018) | "
                     "[Twitter](https://twitter.com/IronStache) \n\n"
-                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, and campaign finance reform. \n\n\n"
+                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, campaign finance reformm, and DACA. \n\n\n"
 
                     "[**Cathy Myers**](https://cathymyersforcongress.com/) is running against Paul Ryan. \n\n"
                     "[Donate](https://secure.actblue.com/donate/cathy-for-congress-1?refcode=website) | "

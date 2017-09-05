@@ -28,7 +28,7 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'congressman king', 'ia-4', 'ia-04']
+            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 

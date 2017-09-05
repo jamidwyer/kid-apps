@@ -40,26 +40,36 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = ['chris christie', 'guadagno', 'new jersey governor', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'christie\'s secret attorney fee']
             for term in terms:
-                 search(term, submission);
+                include_green = 1
+                if subreddit == "bluemidterm2018":
+                    include_green = 0
+
+                    search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-            "[**Seth Kaper-Dale**](https://www.kaperdaleforgovernor.com/) is running to be Governor of New Jersey. \n\n"
-            "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
-            "[Reddit](https://www.reddit.com/r/SethKaperDale/) | "
-            "[Facebook](https://www.facebook.com/kaperdaleforgovernor) | "
-            "[Twitter](https://twitter.com/KaperDaleForGov) \n\n"
-            "Kaper-Dale supports single payer Medicare for all, renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, and LGBTQ equality. \n\n\n"
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n")
 
-            "[**Phil Murphy**](https://www.murphy4nj.com/issues) is running to be Governor of New Jersey. \n\n"
+        green = ""
+
+        if include_green:
+            green = ("[**Seth Kaper-Dale**](https://www.kaperdaleforgovernor.com/) is running to be Governor of New Jersey. \n\n"
+                "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
+                "[Reddit](https://www.reddit.com/r/SethKaperDale/) | "
+                "[Facebook](https://www.facebook.com/kaperdaleforgovernor) | "
+                "[Twitter](https://twitter.com/KaperDaleForGov) \n\n"
+                "Kaper-Dale supports single payer Medicare for all, renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, and LGBTQ equality. \n\n\n")
+
+        dems = ("[**Phil Murphy**](https://www.murphy4nj.com/issues) is running to be Governor of New Jersey. \n\n"
             "[Donate](https://act.myngp.com/Forms/2599649002085616384) | "
             "[Facebook](https://www.facebook.com/PhilMurphyNJ) | "
             "[Twitter](https://twitter.com/PhilMurphyNJ) \n\n"
-            "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, and background checks on all gun sales. \n\n\n"
+            "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, and background checks on all gun sales. \n\n\n")
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
+        text = '\n'.join([vote_link, green, dems, disclaimer])
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

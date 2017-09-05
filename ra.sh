@@ -50,6 +50,7 @@ python schweikert.py
 python ryan.py
 python poliquin.py
 python pittenger.py
+python johncarter.py
 python bost.py
 python hunter.py
 python andybarr.py
@@ -68,6 +69,8 @@ python gowdy.py
 python corker.py
 python ks-4-ron-estes.py
 python steveking.py
+python hensarling.py
+python meadows.py
 python womack.py
 python johnjduncan.py
 python babin.py
@@ -77,6 +80,7 @@ python wa-st-sen-45.py
 python nj-st-sen-7.py
 python larryhogan.py
 python va-st-hd-67-lemunyon.py
+python va-st-hd-51.py
 python il-gov-bruce-rauner.py
 python az-st-hd-10-clodfelter.py
 python az-st-hd-18-norgaard.py
@@ -104,6 +108,7 @@ python ga-st-hd-180.py
 python va-st-hd-3.py
 python coffman.py
 python reichert.py
+python leonardlance.py
 python lobiondo.py
 python mccaul.py
 python az-5.py

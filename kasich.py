@@ -28,7 +28,7 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -40,18 +40,38 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = ['kasich', 'ohio governor', 'oh gov', 'oh governor\'s']
             for term in terms:
-                 search(term, submission);
+                include_green = 1
+                if subreddit == "bluemidterm2018":
+                    include_green = 0
 
-def search(term, submission):
+                search(term, submission, include_green);
+
+def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n"
-            "[**Constance Gadell-Newton**](https://www.constanceforohio.com/) is running to be Governor of Ohio. \n\n"
-            "[Donate](https://www.constanceforohio.com/donate) | "
-            "[Reddit](https://www.reddit.com/r/ConstanceGadellNewton/) | "
-            "[Facebook](https://www.facebook.com/ConstanceforOH/) | "
-            "[Twitter](https://twitter.com/constanceforoh) \n\n"
-            "Gadell-Newton supports universal health care, public schools, affordable college, living wages, and renewable energy. \n\n\n"
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n")
+
+        green = ("")
+
+        if include_green:
+            green = ("[**Constance Gadell-Newton**](https://www.constanceforohio.com/) is running to be Governor of Ohio. \n\n"
+                "[Donate](https://www.constanceforohio.com/donate) | "
+                "[Reddit](https://www.reddit.com/r/ConstanceGadellNewton/) | "
+                "[Facebook](https://www.facebook.com/ConstanceforOH/) | "
+                "[Twitter](https://twitter.com/constanceforoh) \n\n"
+                "Gadell-Newton supports universal health care, public schools, affordable college, living wages, and renewable energy. \n\n\n")
+
+        dems = ("[**Betty Sutton**](https://www.bettysutton.com/) is running to be Governor of Ohio. \n\n"
+            "[Donate](https://act.myngp.com/Forms/4074442571628677632) | "
+            "[Facebook](https://www.facebook.com/BettySuttonOH/) | "
+            "[Twitter](https://twitter.com/BettySutton) \n\n"
+            "Sutton supports universal health care, public schools, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+
+            "[**Connie Pillich**](https://www.conniepillich.com/) is running to be Governor of Ohio. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/pillich-homepage) | "
+            "[Facebook](https://www.facebook.com/ConniePillichforOH/) | "
+            "[Twitter](https://twitter.com/ConniePillich) \n\n"
+            "Pillich supports universal health care. \n\n\n"
 
             "[**Joe Schiavoni**](http://joeforohio.com/issues/) is running to be Governor of Ohio. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/joeschiavoni) | "
@@ -59,7 +79,16 @@ def search(term, submission):
             "[Twitter](https://twitter.com/JoeSchiavoni) \n\n"
             "Schiavoni supports public schools, living wages, and affordable college. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "[**Nan Whaley**](http://nanwhaleyforohio.com/) is running to be Governor of Ohio. \n\n"
+            "[Donate](https://act.myngp.com/Forms/8108579996857403392) | "
+            "[Facebook](https://www.facebook.com/mayornanwhaley/) | "
+            "[Twitter](https://twitter.com/nanwhaley) \n\n"
+            "Whaley supports LGBTQ equality and universal pre-K. \n\n\n")
+
+        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
+        text = '\n'.join([vote_link, green, dems, disclaimer])
+
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

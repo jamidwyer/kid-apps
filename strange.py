@@ -34,14 +34,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'al-sen', 'alabama senate primaries', 'Roy Moore for Senate? I Think Not', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'no strange', 'alabama sen. candidate', 'alabama senate race']
+            terms = ['luther strange', 'al-sen', 'alabama senate primaries', 'Roy Moore for Senate? I Think Not', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'Alabama Senate candidate', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'no strange', 'alabama sen. candidate', 'alabama senate race']
             for term in terms:
                  search(term, submission);
 

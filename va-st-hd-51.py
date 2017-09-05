@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("arizona.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -37,27 +37,23 @@ def searchAndPost(sub):
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
-
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['richard anderson', 'va 51st']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
-            "[**Deedra Abboud**](http://deedra2018.com/) is running against Jeff Flake. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
-            "[Facebook](https://www.facebook.com/Deedra2018/) | "
-            "[Twitter](https://twitter.com/deedra2018) \n\n"
-            "Abboud supports single-payer health care, public schools, and net neutrality. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+            "[**Hala Ayala**](https://ayalafordelegate.com/) is running to represent Virginia State House District 51. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/ayala) | "
+            "[Facebook](https://www.facebook.com/AyalaforDelegate/) | "
+            "[Twitter](https://twitter.com/halaayala) \n\n"
 
-            # "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
-            # "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
-            # "[Facebook](https://www.facebook.com/ksinemaaz/) | "
-            # "[Twitter](https://twitter.com/kyrstensinema) \n\n"
-            # "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+            "Ayala supports equal pay for equal work.  \n\n"
+
+            "[Map of Virginia State House District 51](http://www.vpap.org/offices/house-of-delegates-51/redistricting/) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

@@ -32,29 +32,33 @@ subs.extend(ssubs)
 # Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.top('month'):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            if re.search("balart", submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
-                "[**Alina Valdes**](http://alinavaldesforcongress.com/) is running against Mario Diaz-Balart. \n\n"
-                "[Donate](https://secure.actblue.com/contribute/page/alina-valdes-1) | [Facebook](https://www.facebook.com/alinavaldesforcongress/) | [Twitter](https://twitter.com/DrAlinaValdes) \n\n"
-                "Valdes supports Medicare for all. \n\n\n "
+            terms = ['balart', 'fl-27']
+            for term in terms:
+                 search(term, submission);
 
-                "Map of Florida District 25: https://www.govtrack.us/congress/members/FL/25 \n\n"
+def search(term, submission):
+    if re.search("balart", submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
+        "[**Alina Valdes**](http://alinavaldesforcongress.com/) is running against Mario Diaz-Balart. \n\n"
+        "[Donate](https://secure.actblue.com/contribute/page/alina-valdes-1) | [Facebook](https://www.facebook.com/alinavaldesforcongress/) | [Twitter](https://twitter.com/DrAlinaValdes) \n\n"
+        "Valdes supports Medicare for all. \n\n\n "
 
-                "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+        "Map of Florida District 25: https://www.govtrack.us/congress/members/FL/25 \n\n"
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

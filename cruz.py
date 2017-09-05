@@ -32,7 +32,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -41,7 +41,7 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'dis cruz', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
             for term in terms:
-                 search(term, submission);
+                search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
@@ -52,7 +52,7 @@ def search(term, submission):
         "[Reddit](https://www.reddit.com/r/BetoORourke/) | "
         "[Facebook](https://www.facebook.com/betoorourke) | "
         "[Twitter](https://twitter.com/betoorourke) \n\n "
-        "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, and the Voting Rights Act.\n\n "
+        "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, voting rights, and DACA.\n\n "
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.id, submission.title)

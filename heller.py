@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['heller', 'health care after trump threats', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
+            terms = ['^(?!.*hellerweather).*heller.*$', 'health care after trump threats', 'Congress resumes health care fight', 'Congress face packed September agenda', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
             for term in terms:
                  search(term, submission);
 
@@ -51,7 +51,7 @@ def search(term, submission):
         "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
         "[Facebook](https://www.facebook.com/rosenfornevada/) | "
         "[Twitter](https://twitter.com/RosenforNevada) \n\n "
-        "Rosen supports affordable health care for every American, renewable energy, public schools, and protecting Social Security and Medicare. \n\n\n"
+        "Rosen supports affordable health care for every American, public schools, protecting Social Security and Medicare, renewable energy, net neutrality, and DACA. \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)

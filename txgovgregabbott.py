@@ -40,19 +40,38 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'Federal Judge Blocks Texas', 'rolando pablos', 'Texas Republican turns down donated blankets', 'Judge blocks provisions in Texas law punishing \'sanctuary cities\'', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'Texas crackdown on sanctuary cities', 'sb-4', 'sb4', 'Senate Bill 4', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
             for term in terms:
-                 search(term, submission);
+                blend_in = 0
+                if subreddit == "twoxchromosomes":
+                    blend_in = 1
+                fb_link = 1
+                if subreddit == "twoxchromosomes":
+                    fb_link = 0
+                twitter_link = 1
+                if subreddit == "twoxchromosomes":
+                    twitter_link = 0
+                donate_link = 1
+                if subreddit == "twoxchromosomes":
+                    donate_link = 0
+                search(term, submission, blend_in, fb_link, twitter_link, donate_link);
 
-def search(term, submission):
+def search(term, submission, blend_in, fb_link, twitter_link, donate_link):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n"
-            "[**Jeffrey Payne**](http://www.jeffrey4texas.com/) is running to be Governor of Texas. \n\n"
+
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n")
+
+        if blend_in:
+            vote_link = ("[Register To Vote](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n")
+
+        dems = ("[**Jeffrey Payne**](http://www.jeffrey4texas.com/) is running to be Governor of Texas. \n\n"
             "[Donate](https://secure.actblue.com/donate/jeffrey4texas) | "
             "[Facebook](https://www.facebook.com/Jeffrey4Texas/) | "
             "[Twitter](https://twitter.com/Jeffrey4Texas) \n\n"
-            "Payne supports renewable energy, public schools, living wages, equal pay for equal work, and LGBTQ equality. \n\n\n"
+            "Payne supports renewable energy, public schools, living wages, equal pay for equal work, and LGBTQ equality. \n\n\n")
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
+        text = '\n'.join([vote_link, dems, disclaimer])
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

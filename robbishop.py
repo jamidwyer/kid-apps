@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rob bishop', 'ut-01', 'Utah Congressman Seeks to Prevent Future Land Gifts']
+            terms = ['rob bishop', 'ut-01', 'Utah Congressman Seeks to Prevent Future Land Gifts', 'bishop\'s decision to move on']
             for term in terms:
                  search(term, submission);
 
@@ -47,9 +47,9 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-            "Rob Bishop is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31445-u-s-representative-ut-1/interest_form)? \n\n"
+            "No progressive is currently running to represent Utah's First Congressional District in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31445-u-s-representative-ut-1/interest_form)? \n\n"
 
-            "[Map of Utah District 1](https://www.govtrack.us/congress/members/UT/1) \n\n"
+            "[Map of Utah Congressional District 1](https://www.govtrack.us/congress/members/UT/1) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
