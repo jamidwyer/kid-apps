@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'house minority leader jim ward', 'Federal judge decries Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'Trump voting panel apologizes', 'Trump voter fraud panel head confirms he', 'punishing public officials who disenfranchise voters']
+            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'kansas republican governance experiment', 'Trump adviser caught in gleeful, racist tirade', 'house minority leader jim ward', 'Federal judge decries Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'Trump voting panel apologizes', 'Trump voter fraud panel head confirms he', 'punishing public officials who disenfranchise voters']
             for term in terms:
                  search(term, submission);
 

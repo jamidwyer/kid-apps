@@ -97,6 +97,7 @@ python rickscott.py
 python ducey.py
 python kasich.py
 python txgovgregabbott.py
+python ia-gov.py
 python tx-ag-paxton.py
 python sc-gov-henry-mcmaster.py
 python gianforte.py

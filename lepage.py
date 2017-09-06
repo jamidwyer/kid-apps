@@ -46,12 +46,18 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.maine.gov/sos/cec/elec/voter-info/voterguide.html) \n\n"
+            "[**Adam Cote**](http://www.coteformaine.com/) is running to be Governor of Maine. \n\n"
+            "[Donate](https://coteformaine.ngpvanhost.com/contribute) | "
+            "[Facebook](https://www.facebook.com/CoteForMaine/) | "
+            "[Twitter](https://twitter.com/coteformaine) \n\n"
+            "Cote supports universal health care, public schools, and renewable energy. \n\n\n"
+
             "[**Patrick Eisenhart**](http://www.eisenhartforgovernor.org/issues) is running to be Governor of Maine. \n\n"
             "[Donate](https://secure.campaigncontributions.net/52810/Contribute-to-I-Like-Ike) | "
             "[Facebook](https://www.facebook.com/patrick.eisenhart) \n\n"
             "Eisenhart supports universal health care and public schools. \n\n\n"
 
-            "[**Betsy Sweet**](https://secure.actblue.com/donate/sweet4governor) is running to be Governor of Maine. \n\n"
+            "[**Betsy Sweet**](http://sweetforgovernor.com/) is running to be Governor of Maine. \n\n"
             "[Donate](https://secure.actblue.com/donate/sweet4governor) | "
             "[Facebook](https://www.facebook.com/sweet4governor/) | "
             "[Twitter](https://twitter.com/betsysweetmaine) \n\n"

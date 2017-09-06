@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['nunes', 'devin nunes', 'rep. nunes', 'congressman nunes', 'rep nunes']
+            terms = ['devin nunes', 'rep. nunes', 'congressman nunes', 'rep nunes', 'House panel subpoenas Justice Dept. and FBI', 'House Republican subpoenas Justice and FBI seeking dossier information', 'Nunes vents anger at Sessions over subpoena']
             for term in terms:
                  search(term, submission);
 
@@ -51,6 +51,12 @@ def search(term, submission):
                     "[Facebook](https://www.facebook.com/andrewjanzforcongress/) | "
                     "[Twitter](https://twitter.com/janzforcongress) \n\n"
                     "Janz supports universal health care, protecting Medicare, renewable energy, campaign finance reform, and college affordability. \n\n\n"
+
+                    "[**Ricardo Franco**](https://ricofranco.com/) is running against Devin Nunes. \n\n"
+                    "[Donate](https://secure.actblue.com/contribute/page/francoforcongress) | "
+                    "[Facebook](https://www.facebook.com/RicoFrancoforCongress) | "
+                    "[Twitter](https://twitter.com/ricojfranco) \n\n"
+                    "Franco supports universal health care and renewable energy. \n\n\n"
 
                     "[Map of California District 22](https://www.govtrack.us/congress/members/CA/22) \n\n"
 

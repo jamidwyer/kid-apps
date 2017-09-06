@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -39,7 +39,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['^(?!.*snowflake).*flake.*$', 'Congress Has Always Let Dreamers Down', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
             for term in terms:
                  search(term, submission);
 

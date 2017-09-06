@@ -52,7 +52,7 @@ def search(term, submission):
         "[Reddit](https://www.reddit.com/r/BetoORourke/) | "
         "[Facebook](https://www.facebook.com/betoorourke) | "
         "[Twitter](https://twitter.com/betoorourke) \n\n "
-        "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, voting rights, and DACA.\n\n "
+        "O\'Rourke supports universal health care, renewable energy, campaign finance reform, net neutrality, protecting Social Security, equal pay for equal work, LGBT equality, voting rights, and DACA.\n\n "
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.id, submission.title)
