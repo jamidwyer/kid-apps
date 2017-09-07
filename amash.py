@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['amash', 'mi-03', 'mi-3', 'michigan\'s 3rd District']
+            terms = ['amash', 'mi-03', 'mi-3', 'michigan\'s 3rd District', 'Republicans Begrudgingly Swallow Fiscal Deal', 'voted no on the emergency Harvey relief']
             for term in terms:
                  search(term, submission);
 
@@ -50,6 +50,7 @@ def search(term, submission):
             "[Donate](https://secure.actblue.com/donate/jtmain) | "
             "[Facebook](https://www.facebook.com/jeffforthethird) | "
             "[Twitter](https://twitter.com/jeffforthethird/) \n\n"
+            "Jeff Thomas supports a \"Medicare For All\" single-payer health care system, paid family leave, protecting Social Security, equal pay for equal work, LGBTQ equality, DACA, net neutrality, and relief for hurricane victims. \n\n\n"
 
             "[Map of Michigan District 3](https://www.govtrack.us/congress/members/MI/3) \n\n"
 

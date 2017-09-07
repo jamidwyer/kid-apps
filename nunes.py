@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['devin nunes', 'rep. nunes', 'congressman nunes', 'rep nunes', 'House panel subpoenas Justice Dept. and FBI', 'House Republican subpoenas Justice and FBI seeking dossier information', 'Nunes vents anger at Sessions over subpoena']
+            terms = ['devin nunes', 'rep. nunes', 'congressman nunes', 'Republicans Trying to Discredit Mueller Investigation', 'rep nunes', 'House panel subpoenas Justice Dept. and FBI', 'House Republican subpoenas Justice and FBI seeking dossier information', 'Nunes vents anger at Sessions over subpoena']
             for term in terms:
                  search(term, submission);
 

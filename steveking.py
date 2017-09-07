@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
+            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'live in the shadows', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 
@@ -50,13 +50,13 @@ def search(term, submission):
             "[Donate](https://secure.actblue.com/donate/leann-for-iowa) | "
             "[Facebook](https://www.facebook.com/LeannforIowa) | "
             "[Twitter](https://twitter.com/LeannforIowa) \n\n"
-            "Jacobsen supports universal health care, renewable energy, public schools, and protecting Medicare. \n\n\n"
+            "Jacobsen supports universal health care, renewable energy, public schools, protecting Medicare, and DACA. \n\n\n"
 
             "[**J.D. Scholten**](http://www.scholten4iowa.com/) is running against Steve King. \n\n"
             "[Donate](http://www.scholten4iowa.com/Contribute) | "
             "[Facebook](https://www.facebook.com/Scholten4Iowa/) | "
             "[Twitter](https://twitter.com/scholten4iowa) \n\n"
-            "Scholten supports universal health care. \n\n\n"
+            "Scholten supports universal health care and DACA. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)

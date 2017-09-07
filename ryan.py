@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'GOP Will Settle For The Usual Litany Of Tax Cuts', 'Republicans Could Protect Dreamers', 'Republicans Will Let America Burn', 'Took Millions From Russian Oligarch Tied To Putin', 'Time for the GOP to abandon ship', 'Wisconsin\'s First Congressional District', 'WI: 34%']
+            terms = ['paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'Trump sides with Democrats over length of debt limit hike', 'Trump welcome to the resistance', 'Republican plans into chaos', 'GOP Will Settle For The Usual Litany Of Tax Cuts', 'Republicans Could Protect Dreamers', 'Republicans Will Let America Burn', 'Took Millions From Russian Oligarch Tied To Putin', 'Time for the GOP to abandon ship', 'Wisconsin\'s First Congressional District', 'WI: 34%']
             for term in terms:
                  search(term, submission);
 
@@ -52,7 +52,7 @@ def search(term, submission):
                     "[Reddit](https://www.reddit.com/r/RandyBryce) | "
                     "[Facebook](https://www.facebook.com/RandyBryce2018) | "
                     "[Twitter](https://twitter.com/IronStache) \n\n"
-                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, campaign finance reformm, and DACA. \n\n\n"
+                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, campaign finance reform, and DACA. \n\n\n"
 
                     "[**Cathy Myers**](https://cathymyersforcongress.com/) is running against Paul Ryan. \n\n"
                     "[Donate](https://secure.actblue.com/donate/cathy-for-congress-1?refcode=website) | "
@@ -63,7 +63,12 @@ def search(term, submission):
                     "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
                 print("Bot replying to : ", submission.title)
-                submission.reply(text)
+
+                try:
+                    submission.reply(text)
+                except Exception:
+                    print("Error : ", submission.title)
+                    pass
 
                 # Store the current id into our list
                 posts_replied_to.append(submission.id)

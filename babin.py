@@ -66,8 +66,8 @@ def search(term, submission):
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
-    # Store the current id into our list
-    posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

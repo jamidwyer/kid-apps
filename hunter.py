@@ -31,14 +31,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'GOP lawmaker gives profane tribute to Trump', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
+            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'GOP lawmaker gives profane tribute to Trump', 'House GOP blocks vote protecting medical', 'House to vote on an amendment that would bar the Justice Department from pursuing states that have legalized medical marijuana', 'House GOP Blocks Vote For Protecting Medical Cannabis', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
             for term in terms:
                  search(term, submission);
 
