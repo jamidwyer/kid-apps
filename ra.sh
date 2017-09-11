@@ -1,10 +1,18 @@
 #!/bin/sh
 
-python chaffetz.py
 python strange.py
 python christie.py
-python gillespie.py
+python va-st-hd-50.py
+python va-st-hd-67-lemunyon.py
+python va-st-hd-42.py
+python va-st-hd-51.py
 python valtgov.py
+python gillespie.py
+python va-st-hd-12.py
+python chaffetz.py
+python va-st-hd-3.py
+python va-st-hd-58.py
+python va-st-hd-8.py
 python curbelo.py
 python valadao.py
 python paulsen.py
@@ -58,6 +66,7 @@ python buddycarter.py
 python desantis.py
 python foxx.py
 python hatch.py
+python ks-2.py
 python lamalfa.py
 python randyweber.py
 python walden.py
@@ -107,6 +116,7 @@ python id-st-hd-33b-zollinger.py
 python wy-gov.py
 python ga-st-hd-180.py
 python va-st-hd-3.py
+python roslehtinen.py
 python coffman.py
 python reichert.py
 python leonardlance.py

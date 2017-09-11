@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'GOP lawmaker gives profane tribute to Trump', 'House GOP blocks vote protecting medical', 'House to vote on an amendment that would bar the Justice Department from pursuing states that have legalized medical marijuana', 'House GOP Blocks Vote For Protecting Medical Cannabis', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
+            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'medical marijuana. Will Congress listen?', 'GOP lawmaker gives profane tribute to Trump', 'House GOP blocks vote protecting medical', 'House to vote on an amendment that would bar the Justice Department from pursuing states that have legalized medical marijuana', 'House GOP Blocks Vote For Protecting Medical Cannabis', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
             for term in terms:
                  search(term, submission);
 

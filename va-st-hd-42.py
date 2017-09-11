@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("nevada.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,26 +31,35 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['michael roberson']
+            terms = ['dave albo', 'rep. albo', 'Michael Drobnis', 'Mancheno-Smoak', 'kathy tran']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
-        "Michael Roberson is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
 
-        "[Map of Nevada State Senate District 20](https://www.govtrack.us/congress/members/NV/20) \n\n"
+            "[**Kathy Tran**](https://www.kathyfordelegate.com/) is running to represent Virginia State House District 42. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/kathytran) | "
+            "[Facebook](https://www.facebook.com/KathyForDelegate/) | "
+            "[Twitter](https://twitter.com/KathyKLTran) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "Tran supports renewable energy, public schools, universal pre-K, voting rights, and redistricting reform.  \n\n"
+
+            "[Map of Virginia State House District 42](http://www.vpap.org/offices/house-of-delegates-42/redistricting/) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

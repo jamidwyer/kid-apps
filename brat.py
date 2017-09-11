@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
             "[**Eileen Bedell**](https://www.bedellforvirginia.com/issues) is running against Dave Brat. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/bedell-for-virginia--inc-1) | "
             "[Facebook](https://www.facebook.com/EileenBedellforVirginia/) | "

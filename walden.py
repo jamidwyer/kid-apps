@@ -55,7 +55,7 @@ def search(term, submission):
                     "[Donate](https://secure.actblue.com/contribute/page/crary2018) | "
                     "[Facebook](https://www.facebook.com/crary4congress) | "
                     "[Twitter](https://twitter.com/crary4congress) \n\n"
-                    "Crary supports universal health care, protecting Social Security, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
+                    "Crary supports universal health care, protecting Social Security, renewable energy, campaign finance reform, LGBTQ equality, and DACA. \n\n\n"
 
                     "[Map of Oregon District 2](https://www.govtrack.us/congress/members/OR/2) \n\n"
 

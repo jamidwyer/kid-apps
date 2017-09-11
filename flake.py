@@ -39,7 +39,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'Congress Has Always Let Dreamers Down', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['^(?!.*snowflake).*flake.*$', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
             for term in terms:
                  search(term, submission);
 
@@ -62,7 +62,11 @@ def search(term, submission):
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

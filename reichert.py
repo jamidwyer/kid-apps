@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressmen reichert', 'congressman reichert', 'wa-8', 'wa-08', '@davereichert', 'wa\'s 8th district', 'Reichert announces he will not seek reelection in 2018']
+            terms = ['dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressmen reichert', 'congressman reichert', 'wa-8', 'wa-08', '@davereichert', 'wa\'s 8th district', 'Here Come the Republican Retirements', 'Three repub congressman have bailed on 2018 run', 'Reichert announces he will not seek reelection in 2018']
             for term in terms:
                  search(term, submission);
 
@@ -66,7 +66,11 @@ def search(term, submission):
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

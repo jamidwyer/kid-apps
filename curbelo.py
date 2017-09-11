@@ -39,26 +39,41 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['curbelo']
+            terms = ['curbelo', 'congressional GOP helped Trump keep tax returns secret', 'Congress gives Trump a pass on releasing his tax returns', 'Republicans vote against forcing Trump to release tax returns', 'Congress gives Trump pass on his tax returns']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
-            "[**Debbie Mucarsel-Powell**](https://debbiemucarselpowell.com/) is running against Carlos Curbelo. \n\n"
-            "[Donate](https://secure.actblue.com/donate/debbiemucarselpowell) | "
-            "[Facebook](https://www.facebook.com/debbieforfl/) |"
-            "[Twitter](https://twitter.com/debbieforfl) \n\n"
-            "Mucarsel-Powell supports universal health care, living wages, affordable college, and renewable energy. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) by July 30, 2018 \n\n"
+            "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
 
+            "[**Steven Machat**](http://machat2018.com/issues/) is running against Carlos Curbelo. \n\n"
+            "[Facebook](https://www.facebook.com/stevenmachat) | "
+            "[Twitter](https://twitter.com/machat2018) | "
+            "[Volunteer](http://machat2018.com/volunteer/) | "
+            "[Donate](https://secure.actblue.com/donate/machat) \n\n "
+            "Machat supports Medicare for All (HR 676), public schools, affordable college, living wages, protecting Social Security, affordable housing, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, and DACA. \n\n\n"
+
+            "[**Debbie Mucarsel-Powell**](https://debbiemucarselpowell.com/) is running against Carlos Curbelo. \n\n"
+            "[Facebook](https://www.facebook.com/debbieforfl/) | "
+            "[Twitter](https://twitter.com/debbieforfl) | "
+            "[Volunteer](https://debbiemucarselpowell.com/) | "
+            "[Donate](https://secure.actblue.com/donate/debbiemucarselpowell) \n\n"
+            "Mucarsel-Powell supports universal health care, living wages, affordable college, renewable energy, and DACA. \n\n\n\n"
+
+            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Florida District 26](https://www.govtrack.us/congress/members/FL/26) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

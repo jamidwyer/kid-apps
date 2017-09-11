@@ -43,29 +43,34 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
-                    "[**Andrew Janz**](http://andrewjanzforcongress.org/) is running against Devin Nunes. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/andrew-janz) | "
-                    "[Facebook](https://www.facebook.com/andrewjanzforcongress/) | "
-                    "[Twitter](https://twitter.com/janzforcongress) \n\n"
-                    "Janz supports universal health care, protecting Medicare, renewable energy, campaign finance reform, and college affordability. \n\n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+            "[**Andrew Janz**](http://andrewjanzforcongress.org/) is running against Devin Nunes. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/andrew-janz) | "
+            "[Facebook](https://www.facebook.com/andrewjanzforcongress/) | "
+            "[Twitter](https://twitter.com/janzforcongress) \n\n"
+            "Janz supports universal health care, protecting Medicare, renewable energy, campaign finance reform, and college affordability. \n\n\n"
 
-                    "[**Ricardo Franco**](https://ricofranco.com/) is running against Devin Nunes. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/francoforcongress) | "
-                    "[Facebook](https://www.facebook.com/RicoFrancoforCongress) | "
-                    "[Twitter](https://twitter.com/ricojfranco) \n\n"
-                    "Franco supports universal health care and renewable energy. \n\n\n"
+            "[**Ricardo Franco**](https://ricofranco.com/) is running against Devin Nunes. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/francoforcongress) | "
+            "[Facebook](https://www.facebook.com/RicoFrancoforCongress) | "
+            "[Twitter](https://twitter.com/ricojfranco) \n\n"
+            "Franco supports universal health care and renewable energy. \n\n\n"
 
-                    "[Map of California District 22](https://www.govtrack.us/congress/members/CA/22) \n\n"
+            "[Map of California District 22](https://www.govtrack.us/congress/members/CA/22) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

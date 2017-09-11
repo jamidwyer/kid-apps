@@ -43,23 +43,23 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
-                    "[**Dave Belote**](https://votebelote.com/) is running against Scott Taylor. \n\n"
-                    "[Donate](https://act.myngp.com/Forms/9136122881237124864) | "
-                    "[Facebook](https://www.facebook.com/votebelote/) | "
-                    "[Twitter](https://twitter.com/votebelote) \n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "[**Dave Belote**](https://votebelote.com/) is running against Scott Taylor. \n\n"
+            "[Donate](https://act.myngp.com/Forms/9136122881237124864) | "
+            "[Facebook](https://www.facebook.com/votebelote/) | "
+            "[Twitter](https://twitter.com/votebelote) \n\n"
 
-                    "Map of Virginia District 2: https://www.govtrack.us/congress/members/VA/2 \n\n"
+            "Map of Virginia District 2: https://www.govtrack.us/congress/members/VA/2 \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
+            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        submission.reply(text)
+        print("Bot replying to : ", submission.title)
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

@@ -48,7 +48,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-        "[**Jack Gebbia**](https://jackgebbiaforcongress.com/) is running against Rodney Frelinghuysen."
+        "[**Jack Gebbia**](https://jackgebbiaforcongress.com/) is running against Rodney Frelinghuysen. \n\n"
         "[Donate](https://www.crowdpac.com/campaigns/233827/jack-gebbia-for-congress-its-time-for-a-change) | [Facebook](https://www.facebook.com/JackGebbia4Congress/) | [Twitter](https://twitter.com/jack_gebbia) \n\n"
         "Gebbia supports single-payer health care and LGBTQ equality. \n\n\n "
 
@@ -57,7 +57,11 @@ def search(term, submission):
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

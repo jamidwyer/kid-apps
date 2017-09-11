@@ -45,7 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
+
             "[**Karrie Delaney**](http://www.karriedelaney.com/about) is running to represent Virginia State House District 67. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/delaneyfordelegate) | "
             "[Facebook](https://www.facebook.com/DelaneyforDelegate/) | "

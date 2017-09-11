@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'GOP to Latinos: Drop Dead', 'kansas republican governance experiment', 'Trump adviser caught in gleeful, racist tirade', 'house minority leader jim ward', 'Federal judge decries Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'Trump voting panel apologizes', 'Trump voter fraud panel head confirms he', 'punishing public officials who disenfranchise voters']
+            terms = ['brownback', 'kobach', 'colyer', 'kansas governor', 'GOP to Latinos: Drop Dead', 'Trump official accused 5,000 people of voter fraud with no proof', 'kansas republican governance experiment', 'Voter Fraud Panel, No Stranger to Controversy', 'Trump adviser caught in gleeful, racist tirade', 'house minority leader jim ward', 'Trump Voter Fraud Probe Slams Voting Restriction Efforts', '\"election integrity commission\"', 'Federal judge decries Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel is a sham', 'The Trump Administration Is Planning an Unprecedented Attack on Voting Rights', 'backs up his voter fraud claims. He', 'Trump voting panel apologizes', 'Trump voter fraud panel head confirms he', 'punishing public officials who disenfranchise voters']
             for term in terms:
                  search(term, submission);
 
@@ -66,8 +66,12 @@ def search(term, submission):
             "Brewer supports public schools. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

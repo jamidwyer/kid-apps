@@ -38,30 +38,34 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['goodlatte']
+            terms = ['goodlatte', 'latest Republican patsy']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
-                    "[**Peter Volosin**](http://www.votevolosin.com/) is running against Bob Goodlatte. \n\n"
-                    "[Donate](https://secure.actblue.com/donate/volosin) | "
-                    "[Facebook](https://www.facebook.com/votevolosin/) | "
-                    "[Twitter](https://twitter.com/votevolosin) \n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+            "[**Peter Volosin**](http://www.votevolosin.com/) is running against Bob Goodlatte. \n\n"
+            "[Donate](https://secure.actblue.com/donate/volosin) | "
+            "[Facebook](https://www.facebook.com/votevolosin/) | "
+            "[Twitter](https://twitter.com/votevolosin) \n\n"
 
-                    "Volosin supports universal health care.  \n\n"
+            "Volosin supports universal health care.  \n\n"
 
-                    "Map of Virginia District 6: https://www.govtrack.us/congress/members/VA/6 \n\n"
+            "[Map of Virginia District 6](https://www.govtrack.us/congress/members/VA/6) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                submission.reply(text)
-                print("Bot replying to : ", submission.title)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

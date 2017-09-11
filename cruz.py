@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'dis cruz', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
+            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'dis cruz', 'states like Texas to request federal assistance after Harvey', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
             for term in terms:
                 search(term, submission);
 
@@ -56,7 +56,11 @@ def search(term, submission):
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.id, submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -41,14 +41,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'al-sen', 'roy moore', 'Alabama GOP primary', 'alabama senate showdown', 'alabama senate primaries', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'Alabama Senate candidate', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'no strange', 'alabama sen. candidate', 'alabama senate race']
+            terms = ['luther strange', 'al-sen', 'roy moore', 'Alabama GOP primary', 'alabama senate showdown', 'alabama senate primaries', 'interviews for Senate seat were a sham', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'Alabama Senate candidate', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'alabama sen. candidate', 'alabama senate race']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) by Monday, November 27, 2017 \n\n"
+            "General Election: December 12, 2017 \n\n"
+            "[Find your polling place](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do) \n\n"
+
             "[**Doug Jones**](http://dougjonesforsenate.com/) is running to represent Alabama in the U.S. Senate. \n\n "
             "[Donate](https://secure.actblue.com/donate/homepage-donate) | "
             "[Facebook](https://www.facebook.com/dougjonessenate) \n\n "
@@ -57,7 +60,11 @@ def search(term, submission):
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

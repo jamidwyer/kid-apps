@@ -33,17 +33,35 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
+            "[**Ryan Huffman**](http://www.huffmanforcongress.com/) is running against Peter Roskam. \n\n"
+            "[Facebook](https://www.facebook.com/HuffmanForIL6/) | "
+            "[Twitter](https://twitter.com/HuffmanForIL6) \n\n"
+            "[Volunteer](http://www.huffmanforcongress.com/volunteer.html) | "
+            "[Donate](https://secure.actblue.com/donate/ryanhuffman) | "
+            "Huffman supports Medicare for all, public schools, affordable college, living wages, paid family leave, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, DACA, and background checks on every gun sale.\n\n"
+
+            "[**Kelly Mazeski**](http://www.kellymazeski.com/) is running against Peter Roskam. \n\n"
+            "[Facebook](https://www.facebook.com/kellymazeskiforcongress/) | "
+            "[Twitter](https://twitter.com/KellyMazeski) \n\n"
+            "[Volunteer](https://www.kellymazeski.com/get-involved/) | "
+            "[Donate](https://secure.actblue.com/contribute/page/kelly-mazeski-website) | "
+            "Mazeski supports universal health care, public schools, affordable college, living wages, paid family leave, protecting Social Security, equal pay for equal work, renewable energy, and DACA.\n\n"
+
             "[**Amanda Howland**](http://www.amandahowlandforcongress.com/) is running against Peter Roskam. \n\n"
             "[Facebook](https://www.facebook.com/howlandforcongress) | "
             "[Twitter](https://twitter.com/amandahowland06) \n\n"
-            "Howland supports single-payer health care, renewable energy, rejoining the Paris Climate Agreement,"
-             "and affordable higher education.\n\n"
+            "Howland supports single-payer health care, renewable energy, the Paris Climate Agreement,"
+             "and affordable college.\n\n"
 
             "[Map of Illinois District 6](https://www.govtrack.us/congress/members/IL/6) \n\n "
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
@@ -58,7 +76,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['roskam']
+            terms = ['roskam', 'il-6', 'il-06', 'GOP outraged after Trump refuses to consider Lois Lerner prosecution', 'GOP request to reopen case against former IRS official Lois Lerner']
             for term in terms:
                  search(term, submission);
 

@@ -78,7 +78,7 @@ def search(term, submission):
             "equal pay for equal work, renewable energy, LGBTQ equality, funding science, and a path to "
             "citizenship for hard-working, law-abiding people, while deporting criminals. \n\n\n"
 
-            "Map of California District 48: https://www.govtrack.us/congress/members/CA/48 \n\n"
+            "[Map of California District 48](https://www.govtrack.us/congress/members/CA/48) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

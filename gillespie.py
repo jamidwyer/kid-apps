@@ -38,14 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'virginia contest a referendum and bellwether', 'va. gubernatorial race', 'corey stewart', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', 'Virginia GOP apologizes for \'heritage\' tweets']
+            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'virginia contest a referendum and bellwether', 'va. gubernatorial race', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'Virginia candidates responded to the white nationalist rally', 'Virginia has left Southwest Virginia behind', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', '^(?!.*northampton).*northam.*$',, 'Virginia GOP apologizes for \'heritage\' tweets']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
+
             "[**Ralph Northam**](http://ralphnortham.com/) is running to be Governor of Virginia. \n\n"
             "[Donate](https://act.myngp.com/northam/homepage) | "
             "[Reddit](https://www.reddit.com/r/RalphNortham/) | "
@@ -56,7 +59,11 @@ def search(term, submission):
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

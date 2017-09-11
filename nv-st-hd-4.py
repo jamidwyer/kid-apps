@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['michael roberson']
+            terms = ['Richard McArthur', 'tony smith', 'tony smith', '250 in my campaign for NV Assembly', 'Candidate for Local Office in Nevada Fights Big Money by Voluntarily Refusing Any Donation', 'Democratic Candidate for NV Assembly is Refusing Any Donation Over', 'Why Am I Capping Donations to My Campaign']
             for term in terms:
                  search(term, submission);
 
@@ -47,11 +47,13 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
-        "Michael Roberson is currently unopposed in 2018. [Nominate someone great](https://brandnewcongress.org/Nominate). \n\n"
+        "[**Tony T. Smith**](https://tonytfornv.com/honestdeal/) is running to represent Nevada State Assembly District 4. \n\n "
+        "[Donate](https://secure.squarespace.com/commerce/donate?donatePageId=597c5d1af14aa1fbe7888103) | "
+        "[Facebook](https://www.facebook.com/TonyTforNV) | "
+        "[Twitter](https://twitter.com/TonyT4NV) \n\n "
+        "Smith supports renewable energy, a living wage, college affordability, campaign finance reform, and net neutrality. \n\n\n"
 
-        "[Map of Nevada State Senate District 20](https://www.govtrack.us/congress/members/NV/20) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

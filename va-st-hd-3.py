@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=500):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -45,7 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/citizen-portal/index.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
+
             "[**Bill Bunch**](https://www.billbunchfordelegate.com/platform) is running to represent Virginia State House District 3. \n\n"
             "[Donate](https://secure.actblue.com/donate/billbunch) | "
             "[Facebook](https://www.facebook.com/BunchForDelegate/) | "
@@ -58,7 +61,11 @@ def search(term, submission):
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -42,8 +42,8 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.nebraska.gov/apps-sos-voter-registration/) \n\n"
-            "[**Kara Eastman**](http://eastmanforcongress.com/) is running against Don Bacon. \n\n"
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.nebraska.gov/apps-sos-voter-registration/) \n\n")
+        dems = ("[**Kara Eastman**](http://eastmanforcongress.com/) is running against Don Bacon. \n\n"
             "[Donate](https://secure.actblue.com/donate/eastmanforcongress) | "
             "[Facebook](https://www.facebook.com/eastmanforcongress/) | "
             "[Twitter](https://twitter.com/karaforcongress) \n\n"
@@ -51,11 +51,17 @@ def search(term, submission):
 
             "Map of Nebraska District 2: https://www.govtrack.us/congress/members/NE/2 \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        with open('disclaimer.txt', 'r') as myfile:
+            disclaimer=myfile.read().replace('\n', '')
 
-        submission.reply(text)
+        text = '\n'.join([vote_link, dems, disclaimer])
+
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

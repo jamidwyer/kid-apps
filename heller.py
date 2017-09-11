@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['^(?!.*hellerweather).*heller.*$', 'health care after trump threats', 'Congress resumes health care fight', 'Congress face packed September agenda', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
+            terms = ['^(?!.*hellerweather).*heller.*$', 'Bannon plotting primaries against slate of GOP incumbents', 'health care after trump threats', 'Congress resumes health care fight', 'Congress face packed September agenda', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
             for term in terms:
                  search(term, submission);
 
