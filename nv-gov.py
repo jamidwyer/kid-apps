@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jared fisher', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s']
+            terms = ['jared fisher', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
             for term in terms:
                  search(term, submission);
 
@@ -48,9 +48,11 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
         "[**Steve Sisolak**](https://www.stevesisolak.com/) is running to be Governor of Nevada. \n\n "
-        "[Donate](https://www.stevesisolak.com/donate/) | "
         "[Facebook](https://www.facebook.com/VoteSteveSisolak) | "
-        "[Twitter](https://twitter.com/SteveSisolak) \n\n "
+        "[Twitter](https://twitter.com/SteveSisolak) | "
+        "[Donate](https://www.stevesisolak.com/donate/) \n\n"
+
+        "Sisolak supports public schools and DACA. \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)

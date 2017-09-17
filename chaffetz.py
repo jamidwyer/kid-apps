@@ -46,7 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) by October 31, 2017 \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Sign up to vote by mail](https://secure.utah.gov/voterreg/index.html) \n\n"
+
             "[**Kathie Allen**](https://www.drkathieforcongress.com/) is running to represent Utah District 3. \n\n"
             "[Donate](https://www.drkathieforcongress.com/donate-now/) | "
             "[Facebook](https://www.facebook.com/KathieAllenMDforCongress/) | "

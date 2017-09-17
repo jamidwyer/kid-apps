@@ -45,19 +45,26 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+
             "[**Pierre (Pete) Beauregard**](http://beauregard4congress.com/) is running against Duncan Hunter. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/pete-beauregard-1) | "
             "[Facebook](https://www.facebook.com/Beauregard4Congress/) | "
-            "[Twitter](https://twitter.com/BeauregardCA50) \n\n"
+            "[Twitter](https://twitter.com/BeauregardCA50) | "
+            "[Donate](https://secure.actblue.com/contribute/page/pete-beauregard-1) \n\n"
             "Beauregard supports universal health care, living wages, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
 
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 50](https://www.govtrack.us/congress/members/CA/50) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

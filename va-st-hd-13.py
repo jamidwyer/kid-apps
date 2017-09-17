@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("michigan.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,30 +38,29 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['trott', 'frustrations may doom their majority', 'GOP worries as state Dems outperform in special elections', 'Mercurial Trump Rattles Republican Party Ahead of Midterms', '2018 as 3rd House Republican Says He', 'Michigan Republican congressman won\'t seek re-election', 'Congressional GOP Retirement Surge']
+            terms = ['danica roem', 'bob marshall', 'delegate marshall', 'del. marshall', 'her supporters would call him a bigot']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
-            "[**Haley Stevens**](https://haleystevensforcongress.com/) is running to represent Michigan's 11th U.S. Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/HaleyStevensForCongress/) | "
-            "[Twitter](https://twitter.com/haleylive) | "
-            "[Donate](https://secure.actblue.com/contribute/page/hs_website) \n\n"
-            "Stevens supports single-payer health care, affordable college, and DACA. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+            "General Election: November 7, 2017 \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
 
-            "[**Fayrouz Saad**](https://www.fayrouzsaad.com/) is running to represent Michigan's 11th U.S. Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/FayrouzSaadForCongress/) | "
-            "[Twitter](https://twitter.com/saadforcongress) | "
-            "[Donate](https://www.fayrouzsaad.com/contribute/) \n\n"
-            "Saad supports public schools, paid family leave, equal pay for equal work, and DACA. \n\n\n"
+            "[**Danica Roem**](http://danicaroem.ngpvanhost.com/) is running to represent Virginia State House District 13. \n\n"
+            "[Facebook](https://www.facebook.com/danicafordelegate/) | "
+            "[Twitter](https://twitter.com/pwcdanica) | "
+            "[Volunteer](http://danicaroem.ngpvanhost.com/form/7027678027276880384) | "
+            "[Donate](https://secure.actblue.com/contribute/page/danica-for-delegate) \n\n"
 
-            "[Map of Michigan District 11](https://www.govtrack.us/congress/members/MI/11) \n\n"
+            "Roem supports affordable health care for all, public schools, LGBTQ equality, and DACA.  \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "[Map of Virginia State House District 13](http://www.vpap.org/offices/house-of-delegates-13/redistricting/) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -71,6 +70,7 @@ def search(term, submission):
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
+
 
 for sub in subs:
      print(sub)

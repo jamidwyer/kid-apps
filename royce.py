@@ -46,7 +46,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+
             "[**Mai Khanh Tran**](https://doctran2018.com/) is running against Ed Royce. \n\n"
             "[Donate](https://secure.actblue.com/donate/drtranforcongress) | "
             "[Facebook](https://www.facebook.com/DocTran2018/) | "
@@ -65,12 +67,17 @@ def search(term, submission):
             "[Twitter](https://twitter.com/PhilforHouse) \n\n"
             "Janowicz supports renewable energy, living wages, LGBTQ equality, equal pay for equal work, and increasing funding for science.\n\n"
 
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 39](https://www.govtrack.us/congress/members/CA/39) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

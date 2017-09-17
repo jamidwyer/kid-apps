@@ -38,31 +38,49 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rauner', 'IL gubernatorial', '@govrauner', 'biss', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'Illinois House passes school funding bill on second try', 'il governor\'s']
+            terms = ['rauner', 'IL gubernatorial', '@govrauner', 'biss', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'running mate who lost son to Chicago gun violence', 'Illinois House passes school funding bill on second try', 'il governor\'s']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
+
             "[**Ameya Pawar**](https://www.pawar2018.com/issues/) is running to be Governor of Illinois. \n\n"
-            "[Donate](https://secure.actblue.com/donate/pawar2018-today) | "
             "[Reddit](https://www.reddit.com/r/Pawar2018) | "
             "[Facebook](https://www.facebook.com/AmeyaPawarIL/) | "
-            "[Twitter](https://twitter.com/Ameya_Pawar_IL) \n\n"
-            "Pawar supports universal health care, renewable energy, public schools, living wages, paid family leave, paid sick leave, affordable college, campaign finance reform, and LGBTQ equality. \n\n\n"
+            "[Twitter](https://twitter.com/Ameya_Pawar_IL) | "
+            "[Volunteer](https://www.pawar2018.com/get-involved/) | "
+            "[Donate](https://secure.actblue.com/donate/pawar2018-today) \n\n "
+            "Pawar supports universal health care, renewable energy, public schools, living wages, paid family leave, paid sick leave, affordable college, campaign finance reform, LGBTQ equality, DACA, and the Paris Climate Agreement. \n\n\n"
 
             "[**Daniel Biss**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/biss1) | "
             "[Facebook](https://www.facebook.com/DanielBiss/) | "
-            "[Twitter](https://twitter.com/danielbiss) \n\n"
-            "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, and LGBTQ equality. \n\n\n"
+            "[Twitter](https://twitter.com/danielbiss) | "
+            "[Volunteer](https://www.danielbiss.com/take-action/) | "
+            "[Donate](https://secure.actblue.com/contribute/page/biss1) \n\n"
+            "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, LGBTQ equality, DACA, and the Paris Climate Agreement. \n\n\n"
+
+            "[**Chris Kennedy**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
+            "[Facebook](https://www.facebook.com/KennedyforIllinois/) | "
+            "[Twitter](https://twitter.com/kennedyforIL) | "
+            "[Volunteer](https://kennedyforillinois.com/get-involved/) | "
+            "[Donate](https://secure.actblue.com/donate/kennedy-joy-launch) \n\n"
+            "Kennedy supports Medicare for All, public schools, living wages, paid family and sick leave, equal pay for equal work, LGBTQ equality, and DACA. \n\n\n"
+
+            "[**JB Pritzker**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
+            "[Facebook](https://www.facebook.com/jbpritzker) | "
+            "[Twitter](https://twitter.com/jbpritzker) | "
+            "[Volunteer](https://www.jbpritzker.com/volunteer/) \n\n"
+            "Pritzker supports renewable energy, public schools, universal pre-K, child care assistance, and the Paris Climate Agreement. \n\n\n"
+
+            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-
         try:
             submission.reply(text)
         except Exception:

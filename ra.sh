@@ -37,7 +37,6 @@ python balart.py
 python handel.py
 python bacon.py
 python scotttaylor.py
-python flake.py
 python davidyoung.py
 python blum.py
 python hultgren.py
@@ -50,7 +49,6 @@ python brat.py
 python chabot.py
 python bishop.py
 python love.py
-python cruz.py
 python amash.py
 python nunes.py
 python lamarsmith.py
@@ -76,6 +74,7 @@ python farenthold.py
 python goodlatte.py
 python gowdy.py
 python corker.py
+python tx-26-burgess.py
 python ks-4-ron-estes.py
 python steveking.py
 python hensarling.py
@@ -95,7 +94,6 @@ python az-st-hd-10-clodfelter.py
 python az-st-hd-18-norgaard.py
 python az-st-hd-28-mcgee.py
 python az-st-hd-28-syms.py
-python ny-st-hd-9.py
 python sc-st-hd-99.py
 python lepage.py
 python az-1.py

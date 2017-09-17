@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kasich', 'ohio governor', 'oh gov', 'oh governor\'s']
+            terms = ['kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
@@ -90,7 +90,11 @@ def search(term, submission, include_green):
         text = '\n'.join([vote_link, green, dems, disclaimer])
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

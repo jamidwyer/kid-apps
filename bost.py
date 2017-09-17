@@ -43,28 +43,31 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
-                    "[**Dean Pruitt**](http://www.deanforcongress.org/issues.htm) is running against Mike Bost. \n\n"
-                    "[Donate](http://www.deanforcongress.org/donate.htm) | "
-                    "[Facebook](https://www.facebook.com/deanforcongress) | "
-                    "Pruitt supports universal health care, protecting Social Security and Medicare, the Voting Rights Act, and universal pre-K. \n\n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
 
-                    "[**Brendan Kelly**](https://brendan4southernil.com/) is running against Mike Bost. \n\n"
-                    "[Donate](https://secure.actblue.com/donate/kelly-donate) | "
-                    "[Facebook](https://www.facebook.com/Brendan4SouthernIllinois/) | "
-                    "[Twitter](https://twitter.com/Kelly4SouthrnIL) \n\n"
+            "[**Dean Pruitt**](http://www.deanforcongress.org/issues.htm) is running against Mike Bost. \n\n"
+            "[Donate](http://www.deanforcongress.org/donate.htm) | "
+            "[Facebook](https://www.facebook.com/deanforcongress) | "
+            "Pruitt supports universal health care, protecting Social Security and Medicare, the Voting Rights Act, and universal pre-K. \n\n\n"
 
-                    "Map of Illinois District 12: https://www.govtrack.us/congress/members/IL/12 \n\n"
+            "[**Brendan Kelly**](https://brendan4southernil.com/) is running against Mike Bost. \n\n"
+            "[Donate](https://secure.actblue.com/donate/kelly-donate) | "
+            "[Facebook](https://www.facebook.com/Brendan4SouthernIllinois/) | "
+            "[Twitter](https://twitter.com/Kelly4SouthrnIL) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                    "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-                print("Bot replying to : ", submission.title)
-                submission.reply(text)
+            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
+            "[Map of Illinois District 12](https://www.govtrack.us/congress/members/IL/12) \n\n"
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

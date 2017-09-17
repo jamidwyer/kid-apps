@@ -51,7 +51,7 @@ def search(term, submission):
         "[Donate](https://secure.actblue.com/donate/haulmarkforcongress) | "
         "[Facebook](https://www.facebook.com/haulmarkforcongress/) | "
         "[Twitter](https://twitter.com/ChrisHaulmark) \n\n"
-        "Haulmark supports single-payer health care, public schools, affordable college, and campaign finance reform. \n\n\n "
+        "Haulmark supports single-payer health care, public schools, affordable college, campaign finance reform, redistricting reform, and DACA. \n\n\n "
 
         "[**Andrea Ramsey**](http://www.andrearamseyforcongress.com/) is running against Kevin Yoder. \n\n"
         "[Donate](https://secure.actblue.com/donate/ramsey) | [Facebook](https://www.facebook.com/AndreaRamseyKS) | [Twitter](https://twitter.com/AndreaRamseyKS) \n\n"
@@ -61,8 +61,12 @@ def search(term, submission):
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -38,14 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['devin nunes', 'rep. nunes', 'congressman nunes', 'Republicans Trying to Discredit Mueller Investigation', 'rep nunes', 'House panel subpoenas Justice Dept. and FBI', 'House Republican subpoenas Justice and FBI seeking dossier information', 'Nunes vents anger at Sessions over subpoena']
+            terms = ['devin nunes', 'rep. nunes', 'congressman nunes', 'California could flip the House, and these 13 races will make the difference', 'More smoking guns than Bonnie and Clyde', 'Republican attempt to deflect Trump-Russia probes', 'Republicans Trying to Discredit Mueller Investigation', 'rep nunes', 'House panel subpoenas Justice Dept. and FBI', 'House Republican subpoenas Justice and FBI seeking dossier information', 'Nunes vents anger at Sessions over subpoena']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+
             "[**Andrew Janz**](http://andrewjanzforcongress.org/) is running against Devin Nunes. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/andrew-janz) | "
             "[Facebook](https://www.facebook.com/andrewjanzforcongress/) | "
@@ -58,6 +60,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/ricojfranco) \n\n"
             "Franco supports universal health care and renewable energy. \n\n\n"
 
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 22](https://www.govtrack.us/congress/members/CA/22) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")

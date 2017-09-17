@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("michigan.dat", "r")
+local_subs = open("california.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,30 +39,23 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['trott', 'frustrations may doom their majority', 'GOP worries as state Dems outperform in special elections', 'Mercurial Trump Rattles Republican Party Ahead of Midterms', '2018 as 3rd House Republican Says He', 'Michigan Republican congressman won\'t seek re-election', 'Congressional GOP Retirement Surge']
+            terms = ['Rackauckas', 'todd spitzer', 'orange county da ', 'orange county d.a.', 'orange county district attorney']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
-            "[**Haley Stevens**](https://haleystevensforcongress.com/) is running to represent Michigan's 11th U.S. Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/HaleyStevensForCongress/) | "
-            "[Twitter](https://twitter.com/haleylive) | "
-            "[Donate](https://secure.actblue.com/contribute/page/hs_website) \n\n"
-            "Stevens supports single-payer health care, affordable college, and DACA. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by October 21, 2018 \n\n"
+        "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
 
-            "[**Fayrouz Saad**](https://www.fayrouzsaad.com/) is running to represent Michigan's 11th U.S. Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/FayrouzSaadForCongress/) | "
-            "[Twitter](https://twitter.com/saadforcongress) | "
-            "[Donate](https://www.fayrouzsaad.com/contribute/) \n\n"
-            "Saad supports public schools, paid family leave, equal pay for equal work, and DACA. \n\n\n"
+        "No progressive is running for Orange County District Attorney in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/26474-orange-county-district-attorney-public-administrator/interest_form)? \n\n"
 
-            "[Map of Michigan District 11](https://www.govtrack.us/congress/members/MI/11) \n\n"
+         "General Election: November 6, 2018 \n\n"
+        "[Map of Orange County](https://www.google.com/maps/place/Orange+County,+CA/data=!4m2!3m1!1s0x80dc925c54d5f7cf:0xdea6c3618ff0d607?sa=X&ved=0ahUKEwid0ujk46XWAhXDLmMKHbz6AcwQ8gEIJTAA) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

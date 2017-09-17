@@ -41,7 +41,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['luther strange', 'al-sen', 'roy moore', 'Alabama GOP primary', 'alabama senate showdown', 'alabama senate primaries', 'interviews for Senate seat were a sham', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'Alabama Senate candidate', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'alabama sen. candidate', 'alabama senate race']
+            terms = ['luther strange', 'al-sen', 'roy moore', 'Alabama GOP primary', 'alabama senate showdown', 'alabama senate primaries', 'Can the GOP survive Trump', 'interviews for Senate seat were a sham', 'Strange Has Alabama Conservatives Reeling', 'alabama senate poll', 'sen. strange', 'senator strange', 'the perfect alabama candidate', 'special election in alabama', 'alabama special election', 'Alabama Senate candidate', 'alabama senate race', 'Senate Seat in Alabama', 'How Roy Moore Won Alabama', 'Alabama Senate: Special Election', 'trump voters in alabama', 'back down from questioning Obama', 'alabama gop senate race', '\'Maybe Putin is right\': Republican Senate frontrunner on Russian leader', 'Trump-Backed Candidate in Alabama', 'alabama sen. candidate']
             for term in terms:
                  search(term, submission);
 

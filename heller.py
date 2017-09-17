@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['^(?!.*hellerweather).*heller.*$', 'Bannon plotting primaries against slate of GOP incumbents', 'health care after trump threats', 'Congress resumes health care fight', 'Congress face packed September agenda', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
+            terms = ['^(?!.*hellerweather).*heller.*$', 'Healthcare Bill Nears 50 Votes of Support', 'Wynn to rally field troops Wednesday in Vegas', 'As Candidates Line Up, Questions Grow', 'The last GOP health plan left standing, explained', 'Republicans have exactly 18 days to repeal Obamacare', 'desperate Hail Mary to repeal Obamacare', 'Bannon plotting primaries against slate of GOP incumbents', 'health care after trump threats', 'Congress resumes health care fight', 'Congress face packed September agenda', '7 Senate seats most likely to flip in 2018', 'endangered republicans stick with trump', 'Moderate Rep savior up for re-election']
             for term in terms:
                  search(term, submission);
 
@@ -55,7 +55,11 @@ def search(term, submission):
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

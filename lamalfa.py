@@ -46,7 +46,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+
             "[**Dennis Duncan**](https://www.dennis2018.com/) is running against Doug LaMalfa. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/dennis2018) | "
             "[Facebook](https://www.facebook.com/Dennis4district1/) | "
@@ -58,12 +60,17 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/Jessica-Holcombe-for-Congress-1775710765779809/) \n\n "
             "Holcombe supports universal health care, living wages, public schools, college affordability, and renewable energy.\n\n\n"
 
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 1](https://www.govtrack.us/congress/members/CA/1) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
 
         # Store the current id into our list

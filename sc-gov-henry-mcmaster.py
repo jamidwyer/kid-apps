@@ -32,7 +32,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=200):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -50,8 +50,8 @@ def search(term, submission):
         "No progressive candidate is running for Governor of South Carolina in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/48352-south-carolina-governor/interest_form)? \n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -46,19 +46,26 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search("steve knight", submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+
             "[**Katie Hill**](http://www.katiehillforcongress.com/) is running against Steve Knight. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/katie-hill-for-congress-1) | "
             "[Facebook](https://www.facebook.com/KatieHillforCongress/) |"
-            "[Twitter](https://twitter.com/KatieHill4CA) \n\n"
+            "[Twitter](https://twitter.com/KatieHill4CA) | "
+            "[Donate](https://secure.actblue.com/contribute/page/katie-hill-for-congress-1) \n\n"
             "Hill supports single-payer health care, renewable energy, living wages, campaign finance reform, net neutrality, and affordable higher education. \n\n\n"
 
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 25](https://www.govtrack.us/congress/members/CA/25) \n\n "
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

@@ -32,7 +32,9 @@ subs.extend(ssubs)
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
+
             "[**Ryan Huffman**](http://www.huffmanforcongress.com/) is running against Peter Roskam. \n\n"
             "[Facebook](https://www.facebook.com/HuffmanForIL6/) | "
             "[Twitter](https://twitter.com/HuffmanForIL6) \n\n"
@@ -53,9 +55,10 @@ def search(term, submission):
             "Howland supports single-payer health care, renewable energy, the Paris Climate Agreement,"
              "and affordable college.\n\n"
 
+            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Illinois District 6](https://www.govtrack.us/congress/members/IL/6) \n\n "
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -76,7 +79,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['roskam', 'il-6', 'il-06', 'GOP outraged after Trump refuses to consider Lois Lerner prosecution', 'GOP request to reopen case against former IRS official Lois Lerner']
+            terms = ['roskam', 'il-6', 'il-06', 'House GOP Worries About', 'GOP outraged after Trump refuses to consider Lois Lerner prosecution', 'GOP request to reopen case against former IRS official Lois Lerner']
             for term in terms:
                  search(term, submission);
 

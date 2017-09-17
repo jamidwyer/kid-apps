@@ -72,9 +72,7 @@ def search(term, submission, include_green):
             disclaimer=myfile.read().replace('\n', '')
 
         text = '\n'.join([vote_link, election_date, green, dems, disclaimer])
-
         print("Bot replying to : ", submission.title)
-
         try:
             submission.reply(text)
         except Exception:
