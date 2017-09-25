@@ -23,13 +23,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("northcarolina.dat", "r")
+local_subs = open("florida.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top values from our subreddit
+# Get the top 500 values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=100):
@@ -39,26 +39,30 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['virginia foxx', 'rep. foxx', 'Representative foxx', 'congresswoman foxx', 'rep foxx', '5th congressional district of NC', 'nc-05']
+            terms = ['daniel anthony perez', 'jose felix diaz', 'mayaudon', 'FL HD-116', 'florida state house district 116', 'florida state house of representatives district 116']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
-            "[**Jenny Marshall**](http://www.marshallforhouse.org/) is running to represent North Carolina District 5. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marshallforhouse) | "
-            "[Facebook](https://www.facebook.com/marshallforhouse/) |"
-            "[Twitter](https://twitter.com/Marshall4House) \n\n"
-            "Marshall supports universal health care, public schools, living wages, paid family and sick leave, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://registration.elections.myflorida.com/CheckVoterStatus) \n\n"
 
-            "[Map of North Carolina District 5](https://www.govtrack.us/congress/members/NC/5) \n\n "
+        "[**Gabriela Mayaudon**](http://gabrielamayaudon.com/) is running to represent Florida State House District 116. \n\n"
+        "[Facebook](https://www.facebook.com/GabrielaMayaudon) | "
+        "[Twitter](https://twitter.com/gabymayaudon) | "
+        "[Volunteer](http://gabrielamayaudon.com/volunteer/) | "
+        "[Donate](http://gabrielamayaudon.com/donate/) \n\n "
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        "[Map of Florida State House District 116](https://ballotpedia.org/File:FL_HD_116.JPG) \n\n"
 
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

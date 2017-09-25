@@ -85,7 +85,7 @@ def search(term, submission, include_green):
             "[Twitter](https://twitter.com/nanwhaley) \n\n"
             "Whaley supports LGBTQ equality and universal pre-K. \n\n\n")
 
-        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         text = '\n'.join([vote_link, green, dems, disclaimer])
 

@@ -43,28 +43,33 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.sos.state.or.us/orestar/vr/register.do) \n\n"
-                    "[**Ross Wordhouse**](http://rosswordhouse.com/washington-table-flipper/) is running against Greg Walden. \n\n"
-                    "[Donate](https://secure.actblue.com/donate/wordhouse) | "
-                    "[Facebook](https://www.facebook.com/wordhouseforcongress/) \n\n "
-                    "Wordhouse supports universal health care, public schools, affordable college, equal pay for equal work, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.sos.state.or.us/orestar/vr/register.do) \n\n"
+            "[**Ross Wordhouse**](http://rosswordhouse.com/washington-table-flipper/) is running against Greg Walden. \n\n"
+            "[Donate](https://secure.actblue.com/donate/wordhouse) | "
+            "[Facebook](https://www.facebook.com/wordhouseforcongress/) \n\n "
+            "Wordhouse supports universal health care, public schools, affordable college, equal pay for equal work, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
 
-                    "[**Jim Crary**](https://crary4congress.com/) is running against Greg Walden. \n\n"
-                    "[Donate](https://secure.actblue.com/contribute/page/crary2018) | "
-                    "[Facebook](https://www.facebook.com/crary4congress) | "
-                    "[Twitter](https://twitter.com/crary4congress) \n\n"
-                    "Crary supports universal health care, protecting Social Security, renewable energy, campaign finance reform, LGBTQ equality, and DACA. \n\n\n"
+            "[**Jim Crary**](https://crary4congress.com/) is running against Greg Walden. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/crary2018) | "
+            "[Facebook](https://www.facebook.com/crary4congress) | "
+            "[Twitter](https://twitter.com/crary4congress) \n\n"
+            "Crary supports universal health care, protecting Social Security, renewable energy, campaign finance reform, LGBTQ equality, and DACA. \n\n\n"
 
-                    "[Map of Oregon District 2](https://www.govtrack.us/congress/members/OR/2) \n\n"
+            "[Map of Oregon District 2](https://www.govtrack.us/congress/members/OR/2) \n\n"
 
-                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-                print("Bot replying to : ", submission.title)
-                submission.reply(text)
+            # This disclaimer works
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

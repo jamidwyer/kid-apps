@@ -29,7 +29,7 @@ subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the top 500 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -39,21 +39,32 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['larry hogan', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate']
+            terms = ['larry hogan', 'ben jealous', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType) by June 5, 2018 \n\n"
+            "[Sign up to vote by mail](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1) \n\n\n"
+
+            "[**Rich Madaleno**](http://www.madalenoformaryland.com/our-issues/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](http://www.madalenoformaryland.com/) | "
+            "[Donate](https://secure.actblue.com/donate/jim-shea-for-maryland-1) | "
+            "[Facebook](https://www.facebook.com/richardmadaleno/) | "
+            "[Twitter](https://twitter.com/richmadaleno) \n\n"
+            "Madaleno supports universal health care, public schools, affordable college, a living wage, renewable energy, and LGBTQ equality. \n\n\n"
+
             "[**Jim Shea**](https://www.jimshea.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://www.jimshea.com/get-involved) | "
             "[Donate](https://secure.actblue.com/donate/jim-shea-for-maryland-1) | "
             "[Facebook](https://www.facebook.com/sheaforMD/) | "
             "[Twitter](https://twitter.com/sheaformd) \n\n"
             "Shea supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n\n"
 
             "[**Ben Jealous**](https://benjealous.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://benjealous.com/) | "
             "[Donate](https://secure.actblue.com/donate/bj1706) | "
             "[Reddit](https://www.reddit.com/r/BenJealous/) | "
             "[Facebook](https://www.facebook.com/benjealous/) | "
@@ -61,11 +72,13 @@ def search(term, submission):
             "Jealous supports single-payer health care, renewable energy, and LGBTQ equality. \n\n\n"
 
             "[**Krishanti Vignarajah**](http://krishformaryland.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](http://krishformaryland.com/volunteer/) | "
             "[Donate](https://www.crowdpac.com/campaigns/323377/krish-for-maryland) | "
             "[Facebook](https://www.facebook.com/krishformaryland) | "
             "[Twitter](https://twitter.com/KrishForMD) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "Primary Election: June 26, 2018 | General Election: November 6, 2018 \n\n"
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will vote in the interests of working-class people.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

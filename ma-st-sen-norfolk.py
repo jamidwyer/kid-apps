@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("northcarolina.dat", "r")
+local_subs = open("massachusetts.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,26 +38,34 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['virginia foxx', 'rep. foxx', 'Representative foxx', 'congresswoman foxx', 'rep foxx', '5th congressional district of NC', 'nc-05']
+            terms = ['paul feeney', '@PaulieFeeney', 'james timilty', 'Michael Berry', 'Jacob Ventura', 'Harry Brousaides', 'Tim Hempton', 'Joe Shortsleeve', 'Election Night September 19th']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
-            "[**Jenny Marshall**](http://www.marshallforhouse.org/) is running to represent North Carolina District 5. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marshallforhouse) | "
-            "[Facebook](https://www.facebook.com/marshallforhouse/) |"
-            "[Twitter](https://twitter.com/Marshall4House) \n\n"
-            "Marshall supports universal health care, public schools, living wages, paid family and sick leave, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sec.state.ma.us/OVR/) by September 27, 2017 \n\n"
+            "General Election: October 17, 2017 \n\n"
+            "[Find your polling place](http://www.sec.state.ma.us/WhereDoIVoteMA/bal/MyElectionInfo.aspx)\n\n"
 
-            "[Map of North Carolina District 5](https://www.govtrack.us/congress/members/NC/5) \n\n "
+            "[**Paul Feeney**](http://www.votefeeney.com/) is running to represent the Bristol & Norfolk District. \n\n"
+            "[Facebook](https://www.facebook.com/PaulFeeneyforStateSenate/) | "
+            "[Twitter](https://twitter.com/PaulieFeeney) | "
+            "[Volunteer](http://www.votefeeney.com/join) | "
+            "[Donate](https://secure.actblue.com/contribute/page/votefeeney) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "Feeney supports renewable energy, public schools, affordable college, universal pre-K, a living wage, and equal pay for equal work. \n\n\n"
 
+            "[Map of Bristol & Norfolk District](https://statisticalatlas.com/state-upper-legislative-district/Massachusetts/Bristol-and-Norfolk-District/Overview) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

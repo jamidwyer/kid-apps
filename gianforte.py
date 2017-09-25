@@ -38,19 +38,31 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['gianforte']
+            terms = ['gianforte', 'Kier, a Democrats']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://sos.mt.gov/elections/vote/index) \n\n"
-            "[**John Heenan**](http://www.heenanforcongress.com/issues/) is running against Greg Gianforte. \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://sos.mt.gov/elections/vote/index) by May 7, 2018 \n\n"
+           "[Sign up to vote by mail](https://sos.mt.gov/elections/absentee) \n\n\n"
+
+           "[**John Heenan**](http://www.heenanforcongress.com/issues/) is running against Greg Gianforte. \n\n"
+            "[Volunteer](http://www.heenanforcongress.com/page/volunteer/) | "
             "[Donate](https://secure.actblue.com/entity/fundraisers/52906) | "
             "[Facebook](https://www.facebook.com/HeenanForCongress/) | "
             "[Twitter](https://twitter.com/JohnForMontana) \n\n"
             "Heenan supports Medicare for all, renewable energy, campaign finance reform, and protecting Social Security. \n\n\n"
+
+            "[**Grant Kier**](https://kierforcongress.com/) is running against Greg Gianforte. \n\n"
+            "[Volunteer](https://docs.google.com/forms/d/e/1FAIpQLSdYS_RIcn4QekQpZT1n4vY-oQ347RL5XYSSY_7r8oAZt5QC8w/viewform) | "
+            "[Donate](https://secure.actblue.com/donate/kier4mt) | "
+            "[Facebook](https://www.facebook.com/kierforcongress/) | "
+            "[Twitter](https://twitter.com/kierforcongress) \n\n"
+            "Kier supports universal health care. \n\n\n"
+
+            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

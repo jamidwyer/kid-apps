@@ -50,6 +50,7 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
         "Ken Paxton is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/14444-texas-attorney-general/interest_form)? \n\n"
 
+        # This disclaimer works
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)

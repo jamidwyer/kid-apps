@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'dis cruz', 'Cruz Bill Eases Revocations of U.S. Citizenship Without Due Process', 'states like Texas to request federal assistance after Harvey', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
+            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'guts Obamacare even more', 'But They Just Might, Anyway', 'Al Franken keeps jabbing at Ted Cruz', 'outlines four-step plan to Medicare for all', 'pass this final test before it can come to a vote', 'GOP takes heavy fire over pre-existing conditions', 'insurer bailout could turn Texas blue', 'PolitiFact: Cruz and O', 'dis cruz', 'Cruz Bill Eases Revocations of U.S. Citizenship Without Due Process', 'states like Texas to request federal assistance after Harvey', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
             for term in terms:
                 search(term, submission);
 

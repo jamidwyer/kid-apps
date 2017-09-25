@@ -52,6 +52,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/JamesThompsonKS) \n\n"
             "Thompson supports Medicare for all, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
 
+            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Kansas District 4](https://www.govtrack.us/congress/members/KS/4) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")

@@ -58,6 +58,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/scholten4iowa) \n\n"
             "Scholten supports universal health care and DACA. \n\n\n"
 
+            # This disclaimer works
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)

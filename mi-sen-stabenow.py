@@ -45,14 +45,16 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) by October 7, 2018 \n\n"
             "[**Debbie Stabenow**](http://www.stabenowforsenate.com/) is running to represent Michigan in the United States Senate. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/debbiestabenow) | "
             "[Facebook](https://www.facebook.com/stabenow) | "
             "[Twitter](https://twitter.com/stabenow) \n\n"
             "Stabenow supports universal health care, public schools, protecting Social Security and Medicare, renewable energy, LGBTQ equality, and voting rights. \n\n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "Election Date: November 6, 2018 \n\n"
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
+            "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

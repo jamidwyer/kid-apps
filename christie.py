@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'guadagno', 'new jersey governor', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
+            terms = ['chris christie', 'guadagno', 'n.j. governor', 'new jersey governor', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":

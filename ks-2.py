@@ -45,11 +45,15 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) by July 17, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.kssos.org/forms/elections/AV1.pdf) \n\n\n"
+
             "[**Paul Davis**](https://www.davisforkansas.com/) is running to represent Kansas District 2 in the U.S. House of Representatives. \n\n"
             "[Donate](https://secure.actblue.com/donate/davishomepage) | "
             "[Facebook](https://www.facebook.com/PaulDavisKS/) | "
             "[Twitter](https://twitter.com/pauldavisks) \n\n"
+
+            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)

@@ -47,19 +47,25 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
-        "[**Michael Hepburn**](http://www.michaelhepburn.com/) is running against Ileana Ros-Lehtinen. \n\n"
+        "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
+
+        "[**Michael Hepburn**](http://www.michaelhepburn.com/) is running to represent Florida District 27 in the United States House of Representatives. \n\n"
         "[Donate](https://secure.actblue.com/contribute/page/hepburnforcongress) | "
         "[Facebook](https://www.facebook.com/VoteHepburn/) | "
         "[Twitter](https://twitter.com/VOTEHEPBURN) \n\n"
         "Hepburn supports universal health care, a living wage, college affordability, renewable energy, and campaign finance reform. \n\n\n "
 
-        "Map of Florida District 27: https://www.govtrack.us/congress/members/FL/27 \n\n"
+        "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
+        "[Map of Florida District 27](https://www.govtrack.us/congress/members/FL/27) \n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

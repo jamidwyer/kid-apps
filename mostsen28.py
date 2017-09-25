@@ -31,7 +31,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -56,8 +56,12 @@ def search(term, submission):
             "Map of [Missouri State Senate District 28](https://ballotpedia.org/Missouri_State_Senate_District_28#/media/File%3AMO_SD_28.JPG) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

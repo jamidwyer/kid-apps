@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Richard McArthur', 'tony smith', 'tony smith', '250 in my campaign for NV Assembly', 'Candidate for Local Office in Nevada Fights Big Money by Voluntarily Refusing Any Donation', 'Democratic Candidate for NV Assembly is Refusing Any Donation Over', 'Why Am I Capping Donations to My Campaign']
+            terms = ['Richard McArthur', 'tony smith', 'tony smith', 'fighting at the State level to protect our online privacy', '250 in my campaign for NV Assembly', 'Candidate for Local Office in Nevada Fights Big Money by Voluntarily Refusing Any Donation', 'Democratic Candidate for NV Assembly is Refusing Any Donation Over', 'Why Am I Capping Donations to My Campaign']
             for term in terms:
                  search(term, submission);
 

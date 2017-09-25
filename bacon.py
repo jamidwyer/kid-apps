@@ -49,7 +49,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/karaforcongress) \n\n"
             "Eastman supports universal health care coverage, renewable energy, campaign finance reform, net neutrality, and college affordability. \n\n\n"
 
-            "Map of Nebraska District 2: https://www.govtrack.us/congress/members/NE/2 \n\n"
+            "Map of Nebraska District 2: https://www.govtrack.us/congress/members/NE/2 \n\n")
 
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')

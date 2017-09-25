@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) by July 8, 2018 \n\n"
             "[**Elissa Slotkin**](https://elissaforcongress.com/) is running against Mike Bishop. \n\n"
             "[Donate](https://secure.actblue.com/donate/slotkinforcongress) | "
             "[Facebook](https://www.facebook.com/elissaslotkinforcongress) | "
@@ -53,10 +53,16 @@ def search(term, submission):
 
             "[Map of Michigan District 11](https://www.govtrack.us/congress/members/MI/8) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
+            "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n")
+
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

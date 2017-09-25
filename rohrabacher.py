@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'Congressman calls Charlottesville protest', 'GOP Congressman Sought Trump Deal on WikiLeaks, Russia', 'GOP Rep Goes Full Crazy And Claims Charlottesville Nazis', 'White Nationalist Rally Was a Left-Wing Set-Up', 'left-wingers manipulating Civil War reenactors', 'pro-assange gop congressman', 'Republican congressman praises ISIS attack in Iran', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'one of our local Members of Congress...', 'GOP lawmaker setting up meeting to share Assange info on DNC hack with Trump', 'Democrats exploit GOP ethics woes in battle for the House', 'rhorabacher']
+            terms = ['rohrabacher', 'michael kotick', '@danarohrabacher', 'rohrabracher', 'This M.F. Has To Go!', 'Congressman calls Charlottesville protest', 'GOP Congressman Sought Trump Deal on WikiLeaks, Russia', 'GOP Rep Goes Full Crazy And Claims Charlottesville Nazis', 'White Nationalist Rally Was a Left-Wing Set-Up', 'left-wingers manipulating Civil War reenactors', 'pro-assange gop congressman', 'Republican congressman praises ISIS attack in Iran', 'Republican Congressman Meets With WikiLeaks Founder Julian Assange', 'Paid by Putin Meets With WikiLeaks Founder Julian Assange', 'pro-putin california congressman', 'Pro-Russia GOP Rep.', 'Putin\'s congressman', 'Assange meets U.S. congressman', 'one of our local Members of Congress...', 'GOP lawmaker setting up meeting to share Assange info on DNC hack with Trump', 'Democrats exploit GOP ethics woes in battle for the House', 'rhorabacher']
             for term in terms:
                  search(term, submission);
 
@@ -83,6 +83,7 @@ def search(term, submission):
             "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 48](https://www.govtrack.us/congress/members/CA/48) \n\n"
 
+            # This disclaimer works
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)

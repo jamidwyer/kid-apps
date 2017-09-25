@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'Democrats Must Take a Shot at Texas', 'Federal Judge Blocks Texas', 'rolando pablos', 'Texas Republican turns down donated blankets', 'Judge blocks provisions in Texas law punishing \'sanctuary cities\'', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'Texas crackdown on sanctuary cities', 'sb-4', 'sb4', 'sb 4', 'Senate Bill 4', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
+            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'Texas Is No Longer Feeling Miraculous', 'The Racist Map Wins', 'Democrats Must Take a Shot at Texas', 'Federal Judge Blocks Texas', 'rolando pablos', 'Texas Republican turns down donated blankets', 'Judge blocks provisions in Texas law punishing \'sanctuary cities\'', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'Texas crackdown on sanctuary cities', 'sb-4', 'sb4', 'sb 4', 'Senate Bill 4', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
             for term in terms:
                 blend_in = 0
                 if subreddit == "twoxchromosomes":
@@ -69,6 +69,7 @@ def search(term, submission, blend_in, fb_link, twitter_link, donate_link):
             "[Twitter](https://twitter.com/Jeffrey4Texas) \n\n"
             "Payne supports renewable energy, public schools, living wages, equal pay for equal work, and LGBTQ equality. \n\n\n")
 
+        # This disclaimer works
         disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         text = '\n'.join([vote_link, dems, disclaimer])

@@ -47,7 +47,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) by July 17, 2018 \n\n"
+            "[Sign up to vote by mail](http://www.kssos.org/forms/elections/AV1.pdf) \n\n\n"
+
             "[**Robb Ryerse**](http://robb2018.com) is running against Steve Womack. \n\n"
 
             "[Donate](https://www.crowdpac.com/campaigns/244359/robb-ryerse-for-congress) | "
@@ -61,6 +63,7 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/mahonyarkansas/) | "
             "[Twitter](https://twitter.com/joshuamahony?lang=en) \n\n\n"
 
+            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Arkansas District 3](https://www.govtrack.us/congress/members/AR/3) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")

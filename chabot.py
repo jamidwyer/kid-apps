@@ -57,8 +57,12 @@ def search(term, submission):
         "[Map of Ohio District 1](https://www.govtrack.us/congress/members/OH/1) \n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

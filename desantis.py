@@ -47,17 +47,24 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
+            "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
+
             "[**Nancy Soderberg**](https://soderbergforcongress.com/) is running against Ron DeSantis. \n\n"
             "[Donate](https://act.myngp.com/Forms/-8933655054907471104) | "
             "[Facebook](https://www.facebook.com/SoderbergforCongress/) |"
             "[Twitter](https://twitter.com/nancysoderberg) \n\n"
 
+            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Florida District 6](https://www.govtrack.us/congress/members/FL/6) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

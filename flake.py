@@ -39,7 +39,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['^(?!.*snowflake).*flake.*$', 'Vulnerable GOP senator callously admits repeal bill', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
             for term in terms:
                  search(term, submission);
 

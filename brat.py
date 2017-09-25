@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by October 15, 2018. \n\n"
             "[**Eileen Bedell**](https://www.bedellforvirginia.com/issues) is running against Dave Brat. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/bedell-for-virginia--inc-1) | "
             "[Facebook](https://www.facebook.com/EileenBedellforVirginia/) | "
@@ -60,11 +60,17 @@ def search(term, submission):
 
             "Spanberger supports public schools, funding the State Department to promote international diplomacy, and net neutrality.  \n\n"
 
+            "Primary Election: June 12, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Virginia District 7](https://www.govtrack.us/congress/members/VA/7) \n\n"
+            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

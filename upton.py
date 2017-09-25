@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['amash', 'mi-03', 'mi-3', 'michigan\'s 3rd District', 'Republicans Begrudgingly Swallow Fiscal Deal', 'voted no on the emergency Harvey relief']
+            terms = ['fred upton', 'mi-06', 'mi-6', 'michigan\'s 6th District', 'rep. upton', 'rep upton', 'representative upton', 'congressman upton']
             for term in terms:
                  search(term, submission);
 
@@ -46,13 +46,27 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) by July 8, 2018 \n\n"
-            "[**Jeff Thomas**](https://www.jeffforthethird.com/) is running to represent Michigan District 3. \n\n"
-            "[Donate](https://secure.actblue.com/donate/jtmain) | "
-            "[Facebook](https://www.facebook.com/jeffforthethird) | "
-            "[Twitter](https://twitter.com/jeffforthethird/) \n\n"
-            "Jeff Thomas supports a \"Medicare For All\" single-payer health care system, paid family leave, protecting Social Security, equal pay for equal work, LGBTQ equality, DACA, net neutrality, and relief for hurricane victims. \n\n\n"
+            "[**Paul Clements**](http://www.clementsforcongress.com/) is running to represent Michigan District 6. \n\n"
+            "[Facebook](https://www.facebook.com/ClementsForCongress/) | "
+            "[Twitter](https://twitter.com/Clem4Congress) | "
+            "[Volunteer](http://www.clementsforcongress.com/volunteer/) | "
+            "[Donate](https://secure.actblue.com/donate/fromcfcwebsite) \n\n"
+            "Clements supports Medicare for all (HR 676), a living wage, public schools, affordable college, protecting Social Security, renewable energy, campaign finance reform, voting rights, LGBTQ equality, and net neutrality. \n\n\n"
 
-            "[Map of Michigan District 3](https://www.govtrack.us/congress/members/MI/3) \n\n"
+            "[**Eponine Garrod**](http://garrod4thehouse.com/homepage/) is running to represent Michigan District 6. \n\n"
+            "[Facebook](https://www.facebook.com/garrodforthehouse) | "
+            "[Twitter](https://twitter.com/garrod4thehouse) | "
+            "[Donate](https://secure.actblue.com/entity/fundraisers/50599) \n\n"
+            "Garrod supports Medicare for all (HR 676), a living wage, public schools, renewable energy, LGBTQ equality, police body cameras, and legalizing marijuana. \n\n\n"
+
+            "[**David Benac**](http://www.clementsforcongress.com/) is running to represent Michigan District 6. \n\n"
+            "[Facebook](https://www.facebook.com/jeffforthethird) | "
+            "[Twitter](https://twitter.com/David_Benac) | "
+            "[Volunteer](https://benacforcongress.com/organize/) | "
+            "[Donate](https://www.crowdpac.com/campaigns/235937/i-am-running-for-office-in-michigans-cd6-currently-held-by-fred-upton-with-medicare-for-all-as-one-of-my-core-issues-please-help-me-get-to-washington-dc-and-i-will-be-your-champion-for-health-care) \n\n"
+            "Benac supports Medicare for all (HR 676), a living wage, protecting Social Security, affordable college, and voting rights. \n\n\n"
+
+            "[Map of Michigan District 6](https://www.govtrack.us/congress/members/MI/6) \n\n"
 
             "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"

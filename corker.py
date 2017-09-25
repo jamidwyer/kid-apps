@@ -23,7 +23,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['clarksville', 'tennessee', 'enoughtrumpspam', 'unbubbledpolitics', 'nashville', 'knoxville', 'chattanooga', 'thenewsrightnow', 'political_revolution', 'bluemidterm2018', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'politicalrevolutionca', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+local_subs = open("tennessee.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -35,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['bob corker', 'sen. corker', 'senator corker', 'senate foreign relations committee chairman', 'Senate votes down bipartisan push for new']
+            terms = ['bob corker', 'sen. corker', 'senator corker', 'Republicans vs. Economists', 'debt. Republicans have a plan to make it worse', 'White House plan for tax cuts moves forward', '1.5 Trillion Tax Cut', 'senate foreign relations committee chairman', 'GOP tentatively agrees to $1.5 trillion plan on tax cuts', 'Senate votes down bipartisan push for new']
             for term in terms:
                  search(term, submission);
 
@@ -51,7 +55,11 @@ def search(term, submission):
         "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
         "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
@@ -64,3 +72,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

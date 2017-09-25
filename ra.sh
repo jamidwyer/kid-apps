@@ -1,5 +1,8 @@
 #!/bin/sh
 
+python fl-st-sen-40.py
+python fl-st-hd-116.py
+python ma-st-sen-norfolk.py
 python strange.py
 python christie.py
 python va-st-hd-50.py
@@ -49,6 +52,9 @@ python brat.py
 python chabot.py
 python bishop.py
 python love.py
+python upton.py
+python cruz.py
+python poe.py
 python amash.py
 python nunes.py
 python lamarsmith.py
@@ -107,6 +113,7 @@ python txgovgregabbott.py
 python ia-gov.py
 python tx-ag-paxton.py
 python sc-gov-henry-mcmaster.py
+python pa-st-hd-10.py
 python gianforte.py
 python brownback.py
 python nc-st-hd-67-justin-burr.py

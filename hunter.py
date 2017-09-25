@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'medical marijuana. Will Congress listen?', 'GOP lawmaker gives profane tribute to Trump', 'House GOP blocks vote protecting medical', 'House to vote on an amendment that would bar the Justice Department from pursuing states that have legalized medical marijuana', 'House GOP Blocks Vote For Protecting Medical Cannabis', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
+            terms = ['duncan hunter', 'rep. hunter', 'congressman hunter', 'rep hunter', 'ca-50', 'GOP lawmaker calls for preemptive strike on North Korea', 'medical marijuana. Will Congress listen?', 'GOP lawmaker gives profane tribute to Trump', 'House GOP blocks vote protecting medical', 'House to vote on an amendment that would bar the Justice Department from pursuing states that have legalized medical marijuana', 'House GOP Blocks Vote For Protecting Medical Cannabis', 'our a--hole', 'our asshole', 'California congressman lauds Trump with profane comment']
             for term in terms:
                  search(term, submission);
 
@@ -51,8 +51,16 @@ def search(term, submission):
             "[**Pierre (Pete) Beauregard**](http://beauregard4congress.com/) is running against Duncan Hunter. \n\n"
             "[Facebook](https://www.facebook.com/Beauregard4Congress/) | "
             "[Twitter](https://twitter.com/BeauregardCA50) | "
+            "[Volunteer](http://beauregard4congress.com/mainpage.beauregard4congress.com/) | "
             "[Donate](https://secure.actblue.com/contribute/page/pete-beauregard-1) \n\n"
             "Beauregard supports universal health care, living wages, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
+
+            "[**Josh Butner**](https://joshbutnerforcongress.com/) is running against Duncan Hunter. \n\n"
+            "[Facebook](https://www.facebook.com/JoshButnerCA50/) | "
+            "[Twitter](https://twitter.com/JoshButnerCA50) | "
+            "[Volunteer](https://joshbutnerforcongress.com/) | "
+            "[Donate](https://secure.actblue.com/contribute/page/butner-homepage) \n\n"
+            "Butner supports DACA. \n\n\n"
 
             "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of California District 50](https://www.govtrack.us/congress/members/CA/50) \n\n"

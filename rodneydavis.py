@@ -48,7 +48,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/davidgill2018) \n\n"
             "Gill supports universal health care, public schools, living wages, affordable college, renewable energy, standing with our international allies, LGBTQ equality, and background checks on every gun sale. \n\n\n"
 
-            "Map of Illinois District 13: https://www.govtrack.us/congress/members/IL/13 \n\n"
+            "[Map of Illinois District 13](https://www.govtrack.us/congress/members/IL/13) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
             "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")

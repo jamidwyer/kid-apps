@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("northcarolina.dat", "r")
+local_subs = open("pennsylvania.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,33 +32,35 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['virginia foxx', 'rep. foxx', 'Representative foxx', 'congresswoman foxx', 'rep foxx', '5th congressional district of NC', 'nc-05']
+            terms = ['aaron bernstine', 'rep. bernstine', 'rep bernstine', 'representative bernstine', 'congressman bernstine', 'Run over St. Louis Protesters with Car', 'Republican lawmaker vows to run over protesters who block highways']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
-            "[**Jenny Marshall**](http://www.marshallforhouse.org/) is running to represent North Carolina District 5. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marshallforhouse) | "
-            "[Facebook](https://www.facebook.com/marshallforhouse/) |"
-            "[Twitter](https://twitter.com/Marshall4House) \n\n"
-            "Marshall supports universal health care, public schools, living wages, paid family and sick leave, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) by October 5, 2018 \n\n"
+        "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n"
 
-            "[Map of North Carolina District 5](https://www.govtrack.us/congress/members/NC/5) \n\n "
+        "Aaron Bernstine is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/36087-state-representative-pa-10/interest_form)? \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        "General Election: November 6, 2018 \n\n"
+        "[Map of Pennsylvania State House District 10](https://www2.census.gov/geo/maps/dc10map/SLD2014_RefMap/lower/st42_pa/sldl42010/PP14SLDL42010_001.pdf) \n\n"
 
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

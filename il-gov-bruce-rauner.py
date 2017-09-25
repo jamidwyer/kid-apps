@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rauner', 'IL gubernatorial', '@govrauner', 'biss', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'running mate who lost son to Chicago gun violence', 'Illinois House passes school funding bill on second try', 'il governor\'s']
+            terms = ['rauner', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'unpaid bill backlog hits a record', 'running mate who lost son to Chicago gun violence', 'Illinois House passes school funding bill on second try', 'il governor\'s']
             for term in terms:
                  search(term, submission);
 
@@ -63,14 +63,14 @@ def search(term, submission):
             "[Donate](https://secure.actblue.com/contribute/page/biss1) \n\n"
             "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, LGBTQ equality, DACA, and the Paris Climate Agreement. \n\n\n"
 
-            "[**Chris Kennedy**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
+            "[**Chris Kennedy**](https://kennedyforillinois.com/) is running to be Governor of Illinois. \n\n"
             "[Facebook](https://www.facebook.com/KennedyforIllinois/) | "
             "[Twitter](https://twitter.com/kennedyforIL) | "
             "[Volunteer](https://kennedyforillinois.com/get-involved/) | "
             "[Donate](https://secure.actblue.com/donate/kennedy-joy-launch) \n\n"
             "Kennedy supports Medicare for All, public schools, living wages, paid family and sick leave, equal pay for equal work, LGBTQ equality, and DACA. \n\n\n"
 
-            "[**JB Pritzker**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
+            "[**JB Pritzker**](https://www.jbpritzker.com/) is running to be Governor of Illinois. \n\n"
             "[Facebook](https://www.facebook.com/jbpritzker) | "
             "[Twitter](https://twitter.com/jbpritzker) | "
             "[Volunteer](https://www.jbpritzker.com/volunteer/) \n\n"

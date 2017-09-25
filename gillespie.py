@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ed gillespie', '^(?!.*west virginia governor).*virginia governor.*$', 'virginia contest a referendum and bellwether', 'va. gubernatorial race', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial', 'GOP Senate Candidate Calls Out CNN For Exploiting Heather Heyer\'s Death', 'Virginia candidates responded to the white nationalist rally', 'Virginia has left Southwest Virginia behind', 'VA GOP makes very thinly veiled tweets implying Northam a race traitor', 'Virginia GOP Attacks Dem For Betraying', 'The Latest: Virginia GOP apologizes for tweet about Democrat', 'Virginia GOP Calls Democratic Candidate a Race Traitor for Wanting Confederate Statues Removed', '^(?!.*northampton).*northam.*$', 'Virginia GOP apologizes for \'heritage\' tweets']
+            terms = ['^(?!.*west virginia governor).*virginia governor.*$', 'mcauliffe', 'Ed Gillespie', 'final Virginia Pride appearance', 'Democratic Candidate Leads by 10 in Virginia Gubernatorial', 'Reminder: the second gubernatorial debate', 'virginia contest a referendum and bellwether', 'va. gubernatorial race', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial', '^(?!.*northampton).*northam.*$']
             for term in terms:
                  search(term, submission);
 
@@ -54,7 +54,7 @@ def search(term, submission):
             "[Reddit](https://www.reddit.com/r/RalphNortham/) | "
             "[Facebook](https://www.facebook.com/ralph.northam) | "
             "[Twitter](https://twitter.com/RalphNortham) \n\n"
-            "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, LGBT equality, and common-sense gun safety laws. \n\n\n"
+            "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, and LGBT equality. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
