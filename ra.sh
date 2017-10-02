@@ -1,21 +1,22 @@
 #!/bin/sh
 
-python fl-st-sen-40.py
-python fl-st-hd-116.py
+python pr.py
+python ms-st-hd-102.py
 python ma-st-sen-norfolk.py
 python strange.py
 python christie.py
 python va-st-hd-50.py
-python va-st-hd-67-lemunyon.py
-python va-st-hd-42.py
 python va-st-hd-51.py
-python valtgov.py
+python va-st-hd-67-lemunyon.py
 python gillespie.py
-python va-st-hd-12.py
-python chaffetz.py
+python valtgov.py
 python va-st-hd-3.py
-python va-st-hd-58.py
+python va-st-hd-12.py
 python va-st-hd-8.py
+python va-st-hd-58.py
+python va-st-hd-13.py
+python va-st-hd-42.py
+python chaffetz.py
 python curbelo.py
 python valadao.py
 python paulsen.py
@@ -40,6 +41,7 @@ python balart.py
 python handel.py
 python bacon.py
 python scotttaylor.py
+python flake.py
 python davidyoung.py
 python blum.py
 python hultgren.py
@@ -52,6 +54,7 @@ python brat.py
 python chabot.py
 python bishop.py
 python love.py
+python tx-22-olson.py
 python upton.py
 python cruz.py
 python poe.py
@@ -63,6 +66,7 @@ python ryan.py
 python poliquin.py
 python pittenger.py
 python johncarter.py
+python markwalker.py
 python bost.py
 python hunter.py
 python andybarr.py
@@ -80,13 +84,14 @@ python farenthold.py
 python goodlatte.py
 python gowdy.py
 python corker.py
-python tx-26-burgess.py
+python tn-gov.py
 python ks-4-ron-estes.py
 python steveking.py
 python hensarling.py
 python meadows.py
 python womack.py
 python johnjduncan.py
+python mullin.py
 python babin.py
 python dougcollins.py
 python tx-01-louie-gohmert.py
@@ -120,7 +125,6 @@ python nc-st-hd-67-justin-burr.py
 python id-st-hd-33b-zollinger.py
 python wy-gov.py
 python ga-st-hd-180.py
-python va-st-hd-3.py
 python roslehtinen.py
 python coffman.py
 python reichert.py
@@ -131,3 +135,4 @@ python az-5.py
 python jasonlewis.py
 python nc-st-hd-03-michael-speciale.py
 python nd-st-hd-39-keith-kempenich.py
+python nvstsen20.py

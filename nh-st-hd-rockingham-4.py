@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("california.dat", "r")
+local_subs = open("newhampshire.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,45 +31,35 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kevin mccarthy', 'rep. mccarthy', 'congressman mccarthy', 'rep mccarthy', 'McCarthy backs Trump', 'A Senate Republcan leader backs Trump', 'help take down a well-known GOP member of the House']
+            terms = ['polewarczyk', 'kari lerner', 'james headd']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx)\n\n"
+            "[**Kari Lerner**](http://www.karilernerfornewhampshire.com/) is running to represent District Rockingham 4 in the New Hampshire House of Representatives. \n\n"
+            "[Volunteer](http://www.karilernerfornewhampshire.com/GetInvolved.aspx) | "
+            "[Donate](https://secure.actblue.com/donate/FriendsOfKariLerner) \n\n"
 
-            "[**Wendy Reed**](http://wendyreedforcongress.com/issues/) is running against Kevin McCarthy. \n\n"
-            "[Facebook](https://www.facebook.com/wendyreedforcongress/) | "
-            "[Twitter](https://twitter.com/wendyreedtweet) \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/reed2018) \n\n"
-            "Reed supports universal health care. \n\n\n"
+            "[Map of New Hampshire State House District Rockingham County No. 4](https://statisticalatlas.com/state-lower-legislative-district/New-Hampshire/Rockingham-County-No-4-District/Overview) \n\n"
 
-            "[**Tatiana Matta**](http://tatianamatta.com/) is running against Kevin McCarthy. \n\n"
-            "[Facebook](https://www.facebook.com/TatianaMattaForCongress/) | "
-            "[Twitter](https://twitter.com/TatianaMatta_) | "
-            "[Donate](https://secure.actblue.com/donate/tatianamattaforcongress) \n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 23](https://www.govtrack.us/congress/members/CA/23) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
         except Exception:
             print("Error : ", submission.title)
             pass
+
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 

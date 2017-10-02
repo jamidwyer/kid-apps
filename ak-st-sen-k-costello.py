@@ -51,7 +51,7 @@ def search(term, submission):
 
             "[Map of Alaska State Senate District K](https://www.google.com/maps/d/u/2/viewer?ll=61.13412841612596%2C-150.13237623144528&z=10&authuser=2&mid=1hingVvzX3Rs2xnR5bB2EYV_jzOk) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

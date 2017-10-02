@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("florida.dat", "r")
+local_subs = open("southcarolina.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,32 +39,24 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['desantis', 'GOP rep: Congress should set limits for Mueller probe', 'Rider for Spending Bill that Would End Mueller Probe', 'Republicans Ignore the Russia Scandal', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
+            terms = ['henderson myers', 'michael fowler', 'harold mitchell']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) \n\n"
-            "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://www.scvotes.org/south-carolina-voting-information-page) \n\n"
+            "[**Rosalyn Henderson Myers**](http://www.karilernerfornewhampshire.com/) is running to represent District Rockingham 4 in the New Hampshire House of Representatives. \n\n"
+            "[Facebook](https://www.facebook.com/HendersonMyersforSCHouse31/) | "
+            "[Volunteer](http://www.karilernerfornewhampshire.com/GetInvolved.aspx) | "
+            "[Donate](https://secure.actblue.com/donate/FriendsOfKariLerner) \n\n"
 
-            "[**Nancy Soderberg**](https://soderbergforcongress.com/) is running against Ron DeSantis. \n\n"
-            "[Donate](https://act.myngp.com/Forms/-8933655054907471104) | "
-            "[Facebook](https://www.facebook.com/SoderbergforCongress/) |"
-            "[Twitter](https://twitter.com/nancysoderberg) \n\n"
+            "[Map of New Hampshire State House District Rockingham County No. 4](https://statisticalatlas.com/state-lower-legislative-district/New-Hampshire/Rockingham-County-No-4-District/Overview) \n\n"
 
-            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Florida District 6](https://www.govtrack.us/congress/members/FL/6) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

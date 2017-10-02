@@ -46,7 +46,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) by July 30, 2018 \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) by July 30, 2018 \n\n"
         "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
 
         "[**Andrew Learned**](http://andrewlearned.com/) is running to represent Florida House District 15 in the United States Congress. \n\n"

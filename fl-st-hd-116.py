@@ -46,7 +46,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://registration.elections.myflorida.com/CheckVoterStatus) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) \n\n"
 
         "[**Gabriela Mayaudon**](http://gabrielamayaudon.com/) is running to represent Florida State House District 116. \n\n"
         "[Facebook](https://www.facebook.com/GabrielaMayaudon) | "

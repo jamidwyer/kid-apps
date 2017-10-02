@@ -32,14 +32,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=200):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['michael roberson']
+            terms = ['michael roberson', 'Nevada legislative fight', 'Recall campaign propaganda is false, hypocritical and dangerous']
             for term in terms:
                  search(term, submission);
 

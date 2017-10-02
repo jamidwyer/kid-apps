@@ -55,8 +55,9 @@ def search(term, submission):
             "[Map of Michigan District 3](https://www.govtrack.us/congress/members/MI/3) \n\n"
 
             "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
             "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n")
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
 
         print("Bot replying to : ", submission.title)
         try:

@@ -46,7 +46,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by April 13, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
+
             "[**Christian Cano**](http://www.canoforcongress.com/issues.html) is running to represent North Carolina District 9. \n\n"
             "[Donate](https://act.myngp.com/Forms/-1401090150323713536) | "
             "[Facebook](https://www.facebook.com/CanoForCongressNC09/) |"
@@ -59,6 +61,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/McCreadyForNC) \n\n"
             "McReady supports renewable energy. \n\n\n"
 
+            "Primary Election: May 8, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of North Carolina District 9](https://www.govtrack.us/congress/members/NC/9) \n\n "
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")

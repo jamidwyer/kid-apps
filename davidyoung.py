@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['david young', 'Democratic Party Fundraiser Leaders Snub Iowa Candidate']
+            terms = ['david young', 'Progressive Duo for Iowa Governor', 'Monopoly Candidates Are Testing a New Politics in the Midterms', 'Democratic Party Fundraiser Leaders Snub Iowa Candidate']
             for term in terms:
                  search(term, submission);
 
@@ -78,7 +78,7 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/CindyAxneForCongress/) | "
             "[Twitter](https://twitter.com/Axne4Congress) \n\n\n"
 
-            "[Map of Iowa District 3](https://www.govtrack.us/congress/members/IA/3) \n\n"
+            "[Map of Iowa District 3](https://www.govtrack.us/congress/members/IA/3) | [Ballotpedia](https://ballotpedia.org/Iowa%27s_3rd_Congressional_District) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 

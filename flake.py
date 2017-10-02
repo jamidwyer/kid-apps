@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -39,26 +40,29 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'Vulnerable GOP senator callously admits repeal bill', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['^(?!.*snowflake).*flake.*$', 'sinema', 't tearing themselves apart', 'Vulnerable GOP senator callously admits repeal bill', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://servicearizona.com/webapp/evoter/register?execution=e1s2) by July 30, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.vote.org/absentee-ballot/) \n\n\n"
+
             "[**Deedra Abboud**](http://deedra2018.com/) is running against Jeff Flake. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
             "[Facebook](https://www.facebook.com/Deedra2018/) | "
             "[Twitter](https://twitter.com/deedra2018) \n\n"
-            "Abboud supports single-payer health care, public schools, and net neutrality. \n\n\n"
+            "Abboud supports health care for all Americans, public schools, protecting Social Security, LGBTQ equality, and net neutrality. \n\n\n"
 
-            # "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
-            # "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
-            # "[Facebook](https://www.facebook.com/ksinemaaz/) | "
-            # "[Twitter](https://twitter.com/kyrstensinema) \n\n"
-            # "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
+            "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
+            "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
+            "[Facebook](https://www.facebook.com/ksinemaaz/) | "
+            "[Twitter](https://twitter.com/kyrstensinema) \n\n"
+            "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
 
+            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
         print("Bot replying to : ", submission.title)

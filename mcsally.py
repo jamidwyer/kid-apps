@@ -23,36 +23,54 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-subs = ['arizonapolitics', 'arizona', 'political_revolution', 'bluemidterm2018', 'politicaltweets', 'technology', 'autotldr', 'esist', 'keepournetfree', 'democrats', 'thehillauto', 'democracy', 'waexauto', 'unremovable', 'badgovnofreedom', 'thenewcoldwar', 'politicalvideo', 'autonewspaper', 'chapotraphouse', 'sandersforpresident', 'environment', 'keep_track', 'liberal', 'women', 'cornbreadliberals', 'greed', 'watchingcongress', 'restorethefourth', 'libs', 'indivisibleguide', 'goodlongposts', 'theconstitution', 'reddit.com', 'wayofthebern', 'climate', 'cnet_all_rss', 'pancakepalpatine', 'nottheonion', 'skydtech', 'PoliticalVideos', 'huffpoauto']
+local_subs = open("arizona.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
 
-# Get the top 100 values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=1000):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            if re.search("mcsally", submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("Mary Matiella is running against Martha McSally. \n\n"
-                "Campaign site: https://www.matiellaforcongress.com/ \n\n"
-                "Register to vote: https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information \n\n"
-                "Donate: https://secure.actblue.com/donate/matiella-for-congress \n\n"
-                "Facebook: https://www.facebook.com/MatiellaForCongress/ \n\n"
-                "Twitter: https://twitter.com/MaryMatiella \n\n"
-                "Matiella supports single-payer health care.\n\n"
-                "Map of Arizona District 48: https://www.govtrack.us/congress/members/AZ/48 \n\n"
+            terms = ['mcsally']
+            for term in terms:
+                 search(term, submission);
 
-                "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-                "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://servicearizona.com/webapp/evoter/register?execution=e1s2) by July 30, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.vote.org/absentee-ballot/) \n\n\n"
+
+            "[**Mary Matiella**](https://www.matiellaforcongress.com/) is running against Martha McSally. \n\n"
+            "[Facebook](https://www.facebook.com/MatiellaForCongress/) | "
+            "[Twitter](https://twitter.com/MaryMatiella) | "
+            "[Volunteer](https://westbrookforcongress.com/volunteer/) | "
+            "[Donate](https://secure.actblue.com/donate/matiella-for-congress) \n\n"
+            "Matiella supports single-payer health care. \n\n\n"
+
+            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
+            "[Map of Arizona District 48](https://www.govtrack.us/congress/members/AZ/48) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
+
+            print("Bot replying to : ", submission.title)
+            try:
                 submission.reply(text)
-                print("Bot replying to : ", submission.title)
+            except Exception:
+                print("Error : ", submission.title)
+                pass
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+            # Store the current id into our list
+            posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)
@@ -62,3 +80,6 @@ for sub in subs:
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
+
+text_file.close()
+local_subs.close()

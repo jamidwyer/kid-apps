@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("california.dat", "r")
+local_subs = open("northcarolina.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -31,38 +32,34 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kevin mccarthy', 'rep. mccarthy', 'congressman mccarthy', 'rep mccarthy', 'McCarthy backs Trump', 'A Senate Republcan leader backs Trump', 'help take down a well-known GOP member of the House']
+            terms = ['mark walker', 'rep. walker', 'Huge, Exploding Deficits', 'Representative walker', 'congressman walker', 'rep walker']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
 
-            "[**Wendy Reed**](http://wendyreedforcongress.com/issues/) is running against Kevin McCarthy. \n\n"
-            "[Facebook](https://www.facebook.com/wendyreedforcongress/) | "
-            "[Twitter](https://twitter.com/wendyreedtweet) \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/reed2018) \n\n"
-            "Reed supports universal health care. \n\n\n"
+            "[**Ryan Watts**](http://wattsforcongress.com/) is running to represent North Carolina District 6. \n\n"
+            "[Facebook](https://www.facebook.com/WattsforCongress/) | "
+            "[Twitter](https://twitter.com/watts4congress) | "
+            "[Volunteer](https://act.myngp.com/Forms/-860671247869146368) | "
+            "[Donate](https://act.myngp.com/Forms/-4754596075684361472) \n\n"
+            "Watts supports Medicare as a public option for health insurance, equal pay for equal work, and renewable energy. \n\n\n"
 
-            "[**Tatiana Matta**](http://tatianamatta.com/) is running against Kevin McCarthy. \n\n"
-            "[Facebook](https://www.facebook.com/TatianaMattaForCongress/) | "
-            "[Twitter](https://twitter.com/TatianaMatta_) | "
-            "[Donate](https://secure.actblue.com/donate/tatianamattaforcongress) \n\n"
+            "General Election: November 6, 2018 \n\n"
+            "[Map of North Carolina District 6](https://www.govtrack.us/congress/members/NC/6) \n\n "
 
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 23](https://www.govtrack.us/congress/members/CA/23) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         try:
@@ -70,6 +67,7 @@ def search(term, submission):
         except Exception:
             print("Error : ", submission.title)
             pass
+
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 

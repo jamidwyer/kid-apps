@@ -39,20 +39,23 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mark meadows', 'rep. meadows', 'money gets into politics but still not be bothered by it', 'closed until Republicans pass health and tax reform', 'House Crazies Angry At Trump', 'Mistakenly Put on Brief Against Partisan Gerrymandering', 'Trump blasts own party', 'Mean to Sign Brief Against Gerrymandering', 'accidentally asked the Supreme Court to end gerrymandering', 'Inside the Freedom Caucus', 'Deal with Democrats Is Nightmare Come True', 'Freedom Caucus leaders vent to Paul Ryan', 'Meadows: Shutdown possible without border wall funding', 'freedom caucus leader', 'Republicans Are Already Fighting With Each Other Over How To Pass Harvey Disaster Relief Bill', 'Representative meadows', 'congressman meadows', 'rep meadows']
+            terms = ['mark meadows', 'rep. meadows', 'Trump, GOP weigh surtax on wealthy', 'money gets into politics but still not be bothered by it', 'closed until Republicans pass health and tax reform', 'House Crazies Angry At Trump', 'Mistakenly Put on Brief Against Partisan Gerrymandering', 'Trump blasts own party', 'Mean to Sign Brief Against Gerrymandering', 'accidentally asked the Supreme Court to end gerrymandering', 'Inside the Freedom Caucus', 'Deal with Democrats Is Nightmare Come True', 'Freedom Caucus leaders vent to Paul Ryan', 'Meadows: Shutdown possible without border wall funding', 'freedom caucus leader', 'Republicans Are Already Fighting With Each Other Over How To Pass Harvey Disaster Relief Bill', 'Representative meadows', 'congressman meadows', 'rep meadows']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
+            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
+
             "[**Phillip Price**](https://price4wnc.com/visions/) is running to represent North Carolina District 11. \n\n"
             "[Donate](https://price4wnc.com/#donation-form-page-anchor) | "
             "[Facebook](https://www.facebook.com/phillippriceforcongress/) | "
             "[Twitter](https://twitter.com/price4wnc) \n\n"
             "Price supports universal health care, public schools, protecting Social Security, equal pay for equal work, renewable energy, and campaign finance reform. \n\n\n"
 
+            "General Election: November 6, 2018 \n\n"
             "[Map of North Carolina District 11](https://www.govtrack.us/congress/members/NC/11) \n\n "
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")

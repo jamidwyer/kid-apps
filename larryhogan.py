@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['larry hogan', 'ben jealous', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate']
+            terms = ['larry hogan', 'ben jealous', 'kamenetz', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
             for term in terms:
                  search(term, submission);
 
@@ -54,14 +54,14 @@ def search(term, submission):
             "[Donate](https://secure.actblue.com/donate/jim-shea-for-maryland-1) | "
             "[Facebook](https://www.facebook.com/richardmadaleno/) | "
             "[Twitter](https://twitter.com/richmadaleno) \n\n"
-            "Madaleno supports universal health care, public schools, affordable college, a living wage, renewable energy, and LGBTQ equality. \n\n\n"
+            "Madaleno supports universal health care, public schools, affordable college, a living wage, renewable energy, and LGBTQ equality. \n\n"
 
             "[**Jim Shea**](https://www.jimshea.com/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](https://www.jimshea.com/get-involved) | "
             "[Donate](https://secure.actblue.com/donate/jim-shea-for-maryland-1) | "
             "[Facebook](https://www.facebook.com/sheaforMD/) | "
             "[Twitter](https://twitter.com/sheaformd) \n\n"
-            "Shea supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n\n"
+            "Shea supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n"
 
             "[**Ben Jealous**](https://benjealous.com/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](https://benjealous.com/) | "
@@ -69,7 +69,14 @@ def search(term, submission):
             "[Reddit](https://www.reddit.com/r/BenJealous/) | "
             "[Facebook](https://www.facebook.com/benjealous/) | "
             "[Twitter](https://twitter.com/BenJealous) \n\n"
-            "Jealous supports single-payer health care, renewable energy, and LGBTQ equality. \n\n\n"
+            "Jealous supports single-payer health care, renewable energy, and LGBTQ equality. \n\n"
+
+            "[**Kevin Kamenetz**](http://krishformaryland.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://act.myngp.com/Forms/-7197369037305476352) | "
+            "[Donate](https://act.myngp.com/Forms/-7701772195570971904) | "
+            "[Facebook](https://www.facebook.com/KevinKamenetz/) | "
+            "[Twitter](https://twitter.com/kevinkamenetz) \n\n"
+            "Kamenetz supports renewable energy and public schools. \n\n"
 
             "[**Krishanti Vignarajah**](http://krishformaryland.com/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](http://krishformaryland.com/volunteer/) | "

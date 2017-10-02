@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rauner', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'unpaid bill backlog hits a record', 'running mate who lost son to Chicago gun violence', 'Illinois House passes school funding bill on second try', 'il governor\'s']
+            terms = ['rauner', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'unpaid bill backlog hits a record', 'running mate who lost son to Chicago gun violence', 'pritzker', 'Illinois House passes school funding bill on second try', 'il governor\'s']
             for term in terms:
                  search(term, submission);
 
@@ -54,14 +54,14 @@ def search(term, submission):
             "[Twitter](https://twitter.com/Ameya_Pawar_IL) | "
             "[Volunteer](https://www.pawar2018.com/get-involved/) | "
             "[Donate](https://secure.actblue.com/donate/pawar2018-today) \n\n "
-            "Pawar supports universal health care, renewable energy, public schools, living wages, paid family leave, paid sick leave, affordable college, campaign finance reform, LGBTQ equality, DACA, and the Paris Climate Agreement. \n\n\n"
+            "Pawar supports universal health care, renewable energy, public schools, living wages, paid family leave, paid sick leave, affordable college, campaign finance reform, LGBTQ equality, DACA, the Paris Climate Agreement, and legalizing marijuana. \n\n\n"
 
             "[**Daniel Biss**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
             "[Facebook](https://www.facebook.com/DanielBiss/) | "
             "[Twitter](https://twitter.com/danielbiss) | "
             "[Volunteer](https://www.danielbiss.com/take-action/) | "
             "[Donate](https://secure.actblue.com/contribute/page/biss1) \n\n"
-            "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, LGBTQ equality, DACA, and the Paris Climate Agreement. \n\n\n"
+            "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, LGBTQ equality, DACA, the Paris Climate Agreement, and legalizing marijuana. \n\n\n"
 
             "[**Chris Kennedy**](https://kennedyforillinois.com/) is running to be Governor of Illinois. \n\n"
             "[Facebook](https://www.facebook.com/KennedyforIllinois/) | "
@@ -74,7 +74,7 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/jbpritzker) | "
             "[Twitter](https://twitter.com/jbpritzker) | "
             "[Volunteer](https://www.jbpritzker.com/volunteer/) \n\n"
-            "Pritzker supports renewable energy, public schools, universal pre-K, child care assistance, and the Paris Climate Agreement. \n\n\n"
+            "Pritzker supports renewable energy, public schools, universal pre-K, child care assistance, the Paris Climate Agreement, and legalizing marijuana. \n\n\n"
 
             "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
 

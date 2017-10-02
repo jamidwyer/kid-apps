@@ -39,21 +39,33 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['bob corker', 'sen. corker', 'senator corker', 'Republicans vs. Economists', 'debt. Republicans have a plan to make it worse', 'White House plan for tax cuts moves forward', '1.5 Trillion Tax Cut', 'senate foreign relations committee chairman', 'GOP tentatively agrees to $1.5 trillion plan on tax cuts', 'Senate votes down bipartisan push for new']
+            terms = ['bob corker', 'sen. corker', 'mackler', 'corker\'s u.s. senate seat', 'replace corker', 'Berke considering run', 'Budget battles loom on Capitol Hill', 'tax reform will make health care look like', 'peyton manning', 'andy ogles', 'senator corker', 'Corkers seat', '1.5 Trillion Revenue-Losing Tax Cut', 'Republicans vs. Economists', 'debt. Republicans have a plan to make it worse', 'White House plan for tax cuts moves forward', '1.5 Trillion Tax Cut', 'senate foreign relations committee chairman', 'GOP tentatively agrees to $1.5 trillion plan on tax cuts', 'Senate votes down bipartisan push for new']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) \n\n"
-        "[**James Mackler**](https://www.jamesmackler.com/) is running against Bob Corker. \n\n "
-        "[Donate](https://secure.actblue.com/donate/james-mackler-1) | "
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) by July 3, 2018 \n\n"
+        "[**Bill Bailey**](http://www.electbillbailey.com) is running to represent Tennessee in the United States Senate. \n\n "
         "[Facebook](https://www.facebook.com/JamesMacklerForSenate/) | "
-        "[Twitter](https://twitter.com/james_mackler) \n\n "
+        "[Twitter](https://www.twitter.com/officialbbailey) | "
+        "[Volunteer](https://electbillbailey.com/volunteer) | "
+        "[Donate](https://www.crowdpac.com/campaigns/335068/bill-bailey) \n\n"
+        "Bailey supports Medicare for all, protecting Social Security, and affordable college. \n\n\n"
 
-        "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        "[**James Mackler**](https://www.jamesmackler.com/) is running to represent Tennessee in the United States Senate. \n\n "
+        "[Facebook](https://www.facebook.com/JamesMacklerForSenate/) | "
+        "[Twitter](https://twitter.com/james_mackler) | "
+        "[Volunteer](https://www.jamesmackler.com/action/) | "
+        "[Donate](https://secure.actblue.com/donate/james-mackler-1) \n\n"
+        "Mackler supports universal health care, public schools, and affordable college. \n\n\n"
+
+        "Primary Election: August 2, 2018 | General Election: November 6, 2018 \n\n"
+        "[Find your polling place](http://web.go-vote-tn.elections.tn.gov/) \n\n"
+
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

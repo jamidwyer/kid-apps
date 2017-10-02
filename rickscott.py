@@ -39,14 +39,14 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rick scott', 'deletes voicemails from nursing home', 'Florida Nursing Home, Many Calls for Help', 'Voicemail to Governor Deleted', 'Florida hurt sick kids to help big GOP donors', 'governor scott', 'florida governor', 'fla. governor', 'governor of florida', 'Time To Talk About Climate Change']
+            terms = ['rick scott', 'Florida online voter registration finally arrives', 'deletes voicemails from nursing home', 'Florida Nursing Home, Many Calls for Help', 'Voicemail to Governor Deleted', 'Florida hurt sick kids to help big GOP donors', 'governor scott', 'florida governor', 'fla. governor', 'governor of florida', 'Time To Talk About Climate Change']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://dos.myflorida.com/elections/for-voters/voter-registration/register-to-vote-or-update-your-information/) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) \n\n"
             "[**Gwen Graham**](https://gwengraham.com/priorities/) is running to be Florida's Governor. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/graham-for-governor-web) | "
             "[Facebook](https://www.facebook.com/GwenGrahamFL/) |"

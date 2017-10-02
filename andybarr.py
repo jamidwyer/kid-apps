@@ -58,7 +58,7 @@ def search(term, submission):
 
         "[Map of Kentucky District 6](https://www.govtrack.us/congress/members/KY/6) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         try:

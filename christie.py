@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'guadagno', 'n.j. governor', 'new jersey governor', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
+            terms = ['chris christie', 'phil murphy', 'guadagno', 'n.j. governor', 'new jersey governor', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor\'s', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
@@ -60,13 +60,13 @@ def search(term, submission, include_green):
                 "[Reddit](https://www.reddit.com/r/SethKaperDale/) | "
                 "[Facebook](https://www.facebook.com/kaperdaleforgovernor) | "
                 "[Twitter](https://twitter.com/KaperDaleForGov) \n\n"
-                "Kaper-Dale supports single payer Medicare for all, renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, and DACA. \n\n\n")
+                "Kaper-Dale supports single payer Medicare for all, renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, DACA, and legalizing marijuana. \n\n\n")
 
         dems = ("[**Phil Murphy**](https://www.murphy4nj.com/issues) is running to be Governor of New Jersey. \n\n"
             "[Donate](https://act.myngp.com/Forms/2599649002085616384) | "
             "[Facebook](https://www.facebook.com/PhilMurphyNJ) | "
             "[Twitter](https://twitter.com/PhilMurphyNJ) \n\n"
-            "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, and background checks on all gun sales. \n\n\n")
+            "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, background checks on all gun sales, and legalizing marijuana. \n\n\n")
 
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')

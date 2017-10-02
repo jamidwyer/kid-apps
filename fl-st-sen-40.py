@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jose felix diaz', 'taddeo', 'he-man', 'special Florida Senate election ballot', 'schlaerth', 'artiles', 'including FOUR likely pickups', 'Sept 26! Early voting has began', 'florida state senate district 40']
+            terms = ['jose felix diaz', 'taddeo', 'he-man', 'Election Coverage - Multiple Races!', 'special Florida Senate election ballot', 'schlaerth', 'artiles', 'including FOUR likely pickups', 'Sept 26! Early voting has began', 'florida state senate district 40']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
@@ -50,7 +50,7 @@ def searchAndPost(sub):
 def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_info = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://registration.elections.myflorida.com/CheckVoterStatus) \n\n")
+        vote_info = ("[&#9733;&#9733;&#9733; VOTE September 26, 2017 &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) \n\n")
 
         green = ("")
 
