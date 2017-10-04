@@ -40,7 +40,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['^(?!.*snowflake).*flake.*$', 'sinema', 't tearing themselves apart', 'Vulnerable GOP senator callously admits repeal bill', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
+            terms = ['^(?!.*snowflake).*flake.*$', 'sinema', 'Ajit Pai gets 4 more years as head of FCC', 'Ajit Pai gets new term on FCC despite protest', 'Senate Democrats voted to give Ajit Pai another term', 'Ajit Verizon Pai gets new term', 'Senators voted to reconfirm Ajit Pai', 'Senate reconfirms Ajit Pai as FCC chairman', 'Ajit Pai nomination confirmed', 't tearing themselves apart', 'Vulnerable GOP senator callously admits repeal bill', 'Congress Has Always Let Dreamers Down', 'The Republican Plan for a One-Party State', 'Republicans completely own Trump\'s Arpaio pardon', 'empty words against Trump', 'Against Trump, Republicans are all talk and no action']
             for term in terms:
                  search(term, submission);
 

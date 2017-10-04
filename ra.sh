@@ -1,7 +1,7 @@
 #!/bin/sh
 
 python pr.py
-python ms-st-hd-102.py
+python shooting.py
 python ma-st-sen-norfolk.py
 python strange.py
 python christie.py
@@ -126,6 +126,7 @@ python id-st-hd-33b-zollinger.py
 python wy-gov.py
 python ga-st-hd-180.py
 python roslehtinen.py
+python comstock.py
 python coffman.py
 python reichert.py
 python leonardlance.py

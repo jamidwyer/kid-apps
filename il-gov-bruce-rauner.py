@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rauner', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'unpaid bill backlog hits a record', 'running mate who lost son to Chicago gun violence', 'pritzker', 'Illinois House passes school funding bill on second try', 'il governor\'s']
+            terms = ['chris kennedy', 'rauner', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'IL\'s next governor ', 'governor of illinois', 'il gov', 'rage at Rauner', 'unpaid bill backlog hits a record', 'running mate who lost son to Chicago gun violence', 'pritzker', 'Illinois House passes school funding bill on second try', 'il governor\'s']
             for term in terms:
                  search(term, submission);
 
@@ -64,6 +64,7 @@ def search(term, submission):
             "Biss supports universal health care, renewable energy, public schools, living wages, paid family leave, affordable college, equal pay for equal work, campaign finance reform, LGBTQ equality, DACA, the Paris Climate Agreement, and legalizing marijuana. \n\n\n"
 
             "[**Chris Kennedy**](https://kennedyforillinois.com/) is running to be Governor of Illinois. \n\n"
+            "[Reddit](https://www.reddit.com/r/ChrisKennedy) | "
             "[Facebook](https://www.facebook.com/KennedyforIllinois/) | "
             "[Twitter](https://twitter.com/kennedyforIL) | "
             "[Volunteer](https://kennedyforillinois.com/get-involved/) | "

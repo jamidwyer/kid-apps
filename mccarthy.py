@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kevin mccarthy', 'rep. mccarthy', 'congressman mccarthy', 'rep mccarthy', 'McCarthy backs Trump', 'A Senate Republcan leader backs Trump', 'help take down a well-known GOP member of the House']
+            terms = ['kevin mccarthy', 'rep. mccarthy', 'congressman mccarthy', 'rep mccarthy', 'Just After Las Vegas, Republicans Are Voting to Restrict', 'Trump administration backpedals on citizenship', 'Trump Administration supports DACA recipients path to Citizenship', 'McCarthy backs Trump', 'A Senate Republcan leader backs Trump', 'help take down a well-known GOP member of the House']
             for term in terms:
                  search(term, submission);
 
@@ -50,7 +50,7 @@ def search(term, submission):
 
             "[**Wendy Reed**](http://wendyreedforcongress.com/issues/) is running against Kevin McCarthy. \n\n"
             "[Facebook](https://www.facebook.com/wendyreedforcongress/) | "
-            "[Twitter](https://twitter.com/wendyreedtweet) \n\n"
+            "[Twitter](https://twitter.com/wendyreedtweet) | "
             "[Donate](https://secure.actblue.com/contribute/page/reed2018) \n\n"
             "Reed supports universal health care. \n\n\n"
 

@@ -1,9 +1,9 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,11 +23,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
-subs = local_subs.read().split('\n')
-ssubs = text_file.read().split('\n')
-subs.extend(ssubs)
+subs = text_file.read().split('\n')
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,29 +36,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['pete sessions', 'rep. sessions', 'rep sessions', 'representative sessions', 'congressman sessions', 'insurance at risk after Congress fails to renew CHIP', 'GOP leaders prevent votes to ban federal spending at Trump businesses']
+            terms = ['is starting to sound so profane', 'Pat Robertson Blames Las Vegas Massacre', '\"end of everything\" if Trump supports gun controls', 'Trump calls for unity after Las Vegas, then retweets media attacks', 'Trump retweets media attacks by Hannity', 'On gun control, Donald Trump has lost his marbles', 'theres actually zero difference between good', 'Top Trump Ally Met With Putin', 'What happened in Las Vegas is in many ways a miracle', 'Gun Toting Maniacs', 'NRA poured more than', 'Thank you NRA', 'America Used to Be Good at Gun Control', 'Democrats Lament Inability to Pass Gun Restrictions', 'Mass Shootings Are a Bad Way to Understand Gun Violence', 'thoughts and prayers\" is slowly becoming a meme', 'accepted the rage of white men', 'Gun Controls Pose a Greater Threat Than Terrorism', 'Yes, Pat Robertson blamed the Vegas shooting on', 'gerrymandering keeps Congress from passing gun control laws', 'Republican senator blames the culture of', 'Mass Shootings Are Not The Price Of Freedom, They Are The Price Of Stupidity', 'stocks rise after Las Vegas shooting', 'research gun violence because of NRA lobbying', 'Pat Roberson blames Las Vegas massacre on', 'Call for blood donors', 'Pat Robertson: Vegas Attack Is Due To People', 'giving blood can save lives']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-        "[**Colin Allred**](https://www.colinallred.com/) is running against Pete Sessions. \n\n"
-        "[Donate](https://secure.actblue.com/contribute/page/colinallred/) | "
-        "[Facebook](https://www.facebook.com/ColinAllredTX/) | "
-        "[Twitter](https://twitter.com/colinallredtx) \n\n"
-
-        "Allred supports voting rights and universal pre-K.  \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("[Give Blood](http://www.redcross.org/give-blood) | [Contact your state legislator](https://openstates.org/find_your_legislator/)")
         print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
+        submission.reply(text)
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 
@@ -75,4 +59,3 @@ with open("posts_replied_to.txt", "w") as f:
         f.write(post_id + "\n")
 
 text_file.close()
-local_subs.close()
