@@ -51,7 +51,7 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) by May 21, 2018 \n\n"
             "[Find your polling place](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do) \n\n"
 
-            "Merrill is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/43302-alabama-secretary-of-state/interest_form)? \n\n "
+            "Alabama Secretary of State John Merrill is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/43302-alabama-secretary-of-state/interest_form)? \n\n "
 
             "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
 
