@@ -48,19 +48,19 @@ def search(term, submission):
         vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) by October 5, 2018 \n\n"
         "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n")
 
-        dems = ("[**Bob Solomon**](https://www.solomon4pa18.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        dems = ("[**Bob Solomon**](https://www.solomon4pa18.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
         "[Facebook](https://www.facebook.com/SolomonforCongress) | "
         "[Donate](https://secure.actblue.com/donate/solomon4pa18) \n\n"
         "Solomon supports universal health care. \n\n\n"
 
-        "[**Pam Iovino**](https://pamforpa.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        "[**Pam Iovino**](https://pamforpa.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
         "[Facebook](https://www.facebook.com/pamforpa/) | "
         "[Twitter](https://twitter.com/pamforpa) | "
-        "[Volunteer](https://pamforpa.com/take-action/serve-with-pam/) \n\n"
+        "[Volunteer](https://pamforpa.com/take-action/serve-with-pam/) | "
         "[Donate](https://secure.actblue.com/donate/pam-iovino-for-congress-1) \n\n"
         "Iovino supports health care that is affordable and accessible for every American and a living wage. \n\n\n"
 
-        "[**Mike Crossey**](http://crossey4congress.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        "[**Mike Crossey**](http://crossey4congress.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
         "[Facebook](https://www.facebook.com/crossey4congress/) | "
         "[Twitter](https://twitter.com/MC4Congress18) | "
         "[Donate](https://secure.actblue.com/donate/crossey4congress) \n\n"
