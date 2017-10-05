@@ -64,7 +64,7 @@ def search(term, submission):
         "[Facebook](https://www.facebook.com/crossey4congress/) | "
         "[Twitter](https://twitter.com/MC4Congress18) | "
         "[Donate](https://secure.actblue.com/donate/crossey4congress) \n\n"
-        "Crossey supports public schools, renewable energy, affordable college, and universal background checks on every gun sale. \n\n\n")
+        "Crossey supports public schools, renewable energy, affordable college, and background checks on every gun sale. \n\n\n")
 
         election_date = ("General Election: November 6, 2018 \n\n")
         map = ("[Map of Pennsylvania House District 18](https://www.govtrack.us/congress/members/PA/18) \n\n")
