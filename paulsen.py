@@ -47,7 +47,7 @@ def search(term, submission):
 
             "Map of Minnesota District 3: https://www.govtrack.us/congress/members/MN/3 \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

@@ -39,22 +39,42 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['aaron bernstine', 'rep. bernstine', 'rep bernstine', 'representative bernstine', 'congressman bernstine', 'Run over St. Louis Protesters with Car', 'Republican lawmaker vows to run over protesters who block highways']
+            terms = ['tim murphy', 'pa-18']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) by October 5, 2018 \n\n"
-        "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n"
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) by October 5, 2018 \n\n"
+        "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n")
 
-        "Aaron Bernstine is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/36087-state-representative-pa-10/interest_form)? \n\n"
+        dems = ("[**Bob Solomon**](https://www.solomon4pa18.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        "[Facebook](https://www.facebook.com/SolomonforCongress) | "
+        "[Donate](https://secure.actblue.com/donate/solomon4pa18) \n\n"
+        "Solomon supports universal health care. \n\n\n"
 
-        "General Election: November 6, 2018 \n\n"
-        "[Map of Pennsylvania State House District 10](https://www2.census.gov/geo/maps/dc10map/SLD2014_RefMap/lower/st42_pa/sldl42010/PP14SLDL42010_001.pdf) \n\n"
+        "[**Pam Iovino**](https://pamforpa.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        "[Facebook](https://www.facebook.com/pamforpa/) | "
+        "[Twitter](https://twitter.com/pamforpa) | "
+        "[Volunteer](https://pamforpa.com/take-action/serve-with-pam/) \n\n"
+        "[Donate](https://secure.actblue.com/donate/pam-iovino-for-congress-1) \n\n"
+        "Iovino supports health care that is affordable and accessible for every American and a living wage. \n\n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        "[**Mike Crossey**](http://crossey4congress.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
+        "[Facebook](https://www.facebook.com/pamforpa/) | "
+        "[Twitter](https://twitter.com/pamforpa) | "
+        "[Volunteer](https://pamforpa.com/take-action/serve-with-pam/) \n\n"
+        "[Donate](https://secure.actblue.com/donate/crossey4congress) \n\n"
+        "Crossey supports public schools, renewable energy, affordable college, and universal background checks on every gun sale. \n\n\n"
+
+        election_date = ("General Election: November 6, 2018 \n\n")
+        map = ("[Map of Pennsylvania House District 18](https://www.govtrack.us/congress/members/oh/1) \n\n")
+
+        with open('disclaimer.txt', 'r') as myfile:
+            disclaimer=myfile.read().replace('\n', '')
+
+        text = '\n'.join([vote_link, dems, election_date, map, disclaimer])
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
