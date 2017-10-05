@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -62,14 +61,13 @@ def search(term, submission):
         "Iovino supports health care that is affordable and accessible for every American and a living wage. \n\n\n"
 
         "[**Mike Crossey**](http://crossey4congress.com/) is running against to represent Pennsylvania District 18 in the United States Congress. \n\n"
-        "[Facebook](https://www.facebook.com/pamforpa/) | "
-        "[Twitter](https://twitter.com/pamforpa) | "
-        "[Volunteer](https://pamforpa.com/take-action/serve-with-pam/) \n\n"
+        "[Facebook](https://www.facebook.com/crossey4congress/) | "
+        "[Twitter](https://twitter.com/MC4Congress18) | "
         "[Donate](https://secure.actblue.com/donate/crossey4congress) \n\n"
-        "Crossey supports public schools, renewable energy, affordable college, and universal background checks on every gun sale. \n\n\n"
+        "Crossey supports public schools, renewable energy, affordable college, and universal background checks on every gun sale. \n\n\n")
 
         election_date = ("General Election: November 6, 2018 \n\n")
-        map = ("[Map of Pennsylvania House District 18](https://www.govtrack.us/congress/members/oh/1) \n\n")
+        map = ("[Map of Pennsylvania House District 18](https://www.govtrack.us/congress/members/PA/18) \n\n")
 
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')
