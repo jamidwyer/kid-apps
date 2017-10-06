@@ -50,10 +50,10 @@ def search(term, submission):
             "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
 
             "[**Ralph Northam**](http://ralphnortham.com/) is running to be Governor of Virginia. \n\n"
-            "[Donate](https://act.myngp.com/northam/homepage) | "
             "[Reddit](https://www.reddit.com/r/RalphNortham/) | "
             "[Facebook](https://www.facebook.com/ralph.northam) | "
-            "[Twitter](https://twitter.com/RalphNortham) \n\n"
+            "[Twitter](https://twitter.com/RalphNortham) | "
+            "[Donate](https://act.myngp.com/northam/homepage) \n\n "
             "Northam supports universal health care, paid family leave, college affordability, equal pay for equal work, renewable energy, and LGBT equality. \n\n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
