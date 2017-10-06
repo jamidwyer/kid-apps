@@ -81,6 +81,7 @@ python walden.py
 python trent-franks.py
 python mccarthy.py
 python farenthold.py
+python mchenry.py
 python goodlatte.py
 python gowdy.py
 python corker.py

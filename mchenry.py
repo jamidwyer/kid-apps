@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['virginia foxx', 'rep. foxx', 'Representative foxx', 'congresswoman foxx', 'rep foxx']
+            terms = ['mchenry', 'Is Your Representative Setting Us Up for Another Dieselgate']
             for term in terms:
                  search(term, submission);
 
@@ -49,19 +49,23 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
             "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
 
-            "[**Jenny Marshall**](http://www.marshallforhouse.org/) is running to represent North Carolina District 5. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marshallforhouse) | "
-            "[Facebook](https://www.facebook.com/marshallforhouse/) |"
-            "[Twitter](https://twitter.com/Marshall4House) \n\n"
-            "Marshall supports universal health care, public schools, living wages, paid family and sick leave, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+            "[**David Wilson Brown**](https://dwb4congress.com/) is running to represent North Carolina District 10. \n\n"
+            "[Facebook](https://www.facebook.com/DWB4Congress/) |"
+            "[Twitter](https://twitter.com/DWB4Congress) | "
+            "[Donate](https://secure.actblue.com/donate/dwb4congress-1) \n\n"
+            "Brown supports universal health care, public schools, affordable college, renewable energy, backgrounds check on every gun sale, automatic voter registration, and redistricting reform. \n\n\n"
 
             "General Election: November 6, 2018 \n\n"
-            "[Map of North Carolina District 5](https://www.govtrack.us/congress/members/NC/5) \n\n "
+            "[Map of North Carolina District 10](https://www.govtrack.us/congress/members/NC/10) \n\n "
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
