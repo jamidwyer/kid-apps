@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) by October 5, 2018 \n\n"
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) \n\n"
         "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n")
 
         dems = ("[**Bob Solomon**](https://www.solomon4pa18.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
@@ -66,13 +66,12 @@ def search(term, submission):
         "[Donate](https://secure.actblue.com/donate/crossey4congress) \n\n"
         "Crossey supports public schools, renewable energy, affordable college, and background checks on every gun sale. \n\n\n")
 
-        election_date = ("General Election: November 6, 2018 \n\n")
         map = ("[Map of Pennsylvania House District 18](https://www.govtrack.us/congress/members/PA/18) \n\n")
 
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')
 
-        text = '\n'.join([vote_link, dems, election_date, map, disclaimer])
+        text = '\n'.join([vote_link, dems, map, disclaimer])
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

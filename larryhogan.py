@@ -84,11 +84,21 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/krishformaryland) | "
             "[Twitter](https://twitter.com/KrishForMD) \n\n"
 
+            "[**Alec Ross**](https://alecross.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://alecross.com/) | "
+            "[Donate](https://act.alecross.com/page/contribute/default) | "
+            "[Facebook](https://www.facebook.com/Alec4MD/) | "
+            "[Twitter](https://twitter.com/alecjross) \n\n"
+
             "Primary Election: June 26, 2018 | General Election: November 6, 2018 \n\n"
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will vote in the interests of working-class people.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
