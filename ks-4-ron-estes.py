@@ -47,10 +47,17 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) \n\n"
             "[**James Thompson**](http://www.votejamesthompson.com/issues) is running to represent Kansas District 4 in the U.S. House of Representatives. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/thompson2018) | "
             "[Facebook](https://www.facebook.com/votejamesthompson/) | "
-            "[Twitter](https://twitter.com/JamesThompsonKS) \n\n"
+            "[Twitter](https://twitter.com/JamesThompsonKS) | "
+            "[Donate](https://secure.actblue.com/contribute/page/thompson2018) | "
+            "[Donate](https://secure.actblue.com/contribute/page/thompson2018) \n\n"
             "Thompson supports Medicare for all, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
+
+            "[**Laura Lombard**](http://www.votejamesthompson.com/issues) is running to represent Kansas District 4 in the U.S. House of Representatives. \n\n"
+            "[Facebook](https://www.facebook.com/lauraforkansas/) | "
+            "[Twitter](https://twitter.com/lauraforkansas) | "
+            "[Volunteer](https://act.myngp.com/Forms/-933010316883784960) | "
+            "[Donate](https://secure.actblue.com/donate/laura4ks) \n\n"
 
             "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Kansas District 4](https://www.govtrack.us/congress/members/KS/4) \n\n"

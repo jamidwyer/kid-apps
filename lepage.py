@@ -46,22 +46,29 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.maine.gov/sos/cec/elec/voter-info/voterguide.html) \n\n"
+            "[**Betsy Sweet**](http://sweetforgovernor.com/) is running to be Governor of Maine. \n\n"
+            "[Facebook](https://www.facebook.com/sweet4governor/) | "
+            "[Twitter](https://twitter.com/betsysweetmaine) | "
+            "[Volunteer](http://sweetforgovernor.com/#contact) | "
+            "[Donate](https://secure.actblue.com/donate/sweet4governor) \n\n"
+            "Sweet supports single-payer health care and campaign finance reform. \n\n\n"
+
+            "[**Diane Russell**](http://sweetforgovernor.com/) is running to be Governor of Maine. \n\n"
+            "[Facebook](https://www.facebook.com/DianeMarieRussell/) | "
+            "[Twitter](https://twitter.com/misswrite) | "
+            "[Donate](https://secure.actblue.com/donate/splashpage-announcement) \n\n "
+            "Russell supports single-payer health care and legalizing marijuana. \n\n\n"
+
             "[**Adam Cote**](http://www.coteformaine.com/) is running to be Governor of Maine. \n\n"
-            "[Donate](https://coteformaine.ngpvanhost.com/contribute) | "
             "[Facebook](https://www.facebook.com/CoteForMaine/) | "
-            "[Twitter](https://twitter.com/coteformaine) \n\n"
+            "[Twitter](https://twitter.com/coteformaine) | "
+            "[Donate](https://coteformaine.ngpvanhost.com/contribute) \n\n"
             "Cote supports universal health care, public schools, and renewable energy. \n\n\n"
 
             "[**Patrick Eisenhart**](http://www.eisenhartforgovernor.org/issues) is running to be Governor of Maine. \n\n"
-            "[Donate](https://secure.campaigncontributions.net/52810/Contribute-to-I-Like-Ike) | "
-            "[Facebook](https://www.facebook.com/patrick.eisenhart) \n\n"
-            "Eisenhart supports universal health care and public schools. \n\n\n"
-
-            "[**Betsy Sweet**](http://sweetforgovernor.com/) is running to be Governor of Maine. \n\n"
-            "[Donate](https://secure.actblue.com/donate/sweet4governor) | "
-            "[Facebook](https://www.facebook.com/sweet4governor/) | "
-            "[Twitter](https://twitter.com/betsysweetmaine) \n\n"
-            "Sweet supports single-payer health care and campaign finance reform. \n\n\n"
+            "[Facebook](https://www.facebook.com/patrick.eisenhart) | "
+            "[Donate](https://secure.campaigncontributions.net/52810/Contribute-to-I-Like-Ike) \n\n"
+            "Eisenhart supports public schools. \n\n\n"
 
             # This disclaimer works
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
