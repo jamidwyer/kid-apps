@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;]() \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx) \n\n"
             "Steve Scalise is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31312-u-s-representative-la-1/interest_form)? \n\n"
 
             "Map of Louisiana District 1: https://www.govtrack.us/congress/members/LA/1 \n\n"
