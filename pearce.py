@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("newyork.dat", "r")
+local_subs = open("newmexico.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,27 +39,30 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['christine pellegrino']
+            terms = ['pearce', 'nm-2']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
-            "[**Christine Pellegrino**](http://pellegrinoforassembly.com/) is running to represent New York State Assembly District 9. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/friends-of-christine-pellegrino-1) | "
-            "[Reddit](https://www.reddit.com/r/ChristinePellegrino/) | "
-            "[Facebook](https://www.facebook.com/ChristineNY09/) | "
-            "[Twitter](https://twitter.com/ChristineNY09) \n\n"
-            "Pellegrino supports renewable energy and public schools. \n\n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;]() \n\n"
+            "[Sign up to vote by mail]() \n\n\n"
 
-            "[Map of New York State Assembly District 9](https://ballotpedia.org/File:NY_HD_009.JPG) \n\n"
+            "[**Ron Fitzherbert**](http://www.tomohalleran.com/issues) is running to represent New Mexico House District 2 in the United States Congress. \n\n"
+            "[Twitter](https://twitter.com/nmcd22018/with_replies) | "
+            "[Donate](https://www.crowdpac.com/campaigns/216824/running-to-make-new-mexico-blue) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "[Map of Arizona House District 1](https://www.govtrack.us/congress/members/NM/2) \n\n"
+
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

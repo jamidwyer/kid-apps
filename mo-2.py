@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("utah.dat", "r")
+local_subs = open("missouri.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,36 +38,23 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mia love', 'mia b. love', 'rep love', 'rep. love', 'representative love', 'congresswoman love', 'ut-04', 'ut-4', 'Love used campaign funds for Disney World', 'Love wants to morph a Forest Service building', 'love\'s constituent meeting format', 'constituents say they were left off her invite list', 'Love has a new chief of staff', 'Love\'s not on board.', 'better way to talk with constituents']
+            terms = ['jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-            "[**Tom Taylor**](https://www.tomforutah.com/issues.php) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/thomastaylor) | "
-            "[Facebook](https://www.facebook.com/TomForUtah/) | "
-            "[Twitter](https://twitter.com/tomforutah) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) \n\n"
+            "[**Jenna Marie Bourgeois**](http://www.jennamarieformissouri.com/) is running to represent Missouri's 4th Congressional District. \n\n"
+            "[Facebook](https://www.facebook.com/JennaMarieMO4/) | "
+            "[Twitter](https://twitter.com/JennaMarieMO4) | "
+            "[Volunteer](http://www.jennamarieformissouri.com/volunteer) | "
+            "[Donate](https://secure.campaigncontributions.net/58390/Contribute-to-Jenna-Bourgeois) \n\n "
 
-            "Taylor supports Medicare for all, public schools, renewable energy, and campaign finance reform.  \n\n\n"
+            "Bourgeois supports single-payer health care, public schools, a living wage, protecting Social Security, renewable energy, and LGBTQ equality. \n\n\n"
 
-            "[**Darlene McDonald**](https://darlenemcdonald.com/) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/votedarlene) | "
-            "[Facebook](https://www.facebook.com/Darlene4Congress/) | "
-            "[Twitter](https://twitter.com/VoteDarlene) \n\n"
-
-            "McDonald supports universal health care.  \n\n\n"
-
-            "[**Marla Mott-Smith**](http://marla4congress.com/) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marla4congress) | "
-            "[Facebook](https://www.facebook.com/mlmsb/) | "
-            "[Twitter](https://twitter.com/marlamottsmith) \n\n"
-
-            "Mott-Smith supports campaign finance reform and LGBT equality. \n\n\n"
-
-            "[Map of Utah District 4](https://www.govtrack.us/congress/members/UT/4) \n\n"
+            "[Map of Missouri District 4](https://www.govtrack.us/congress/members/MO/4) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)

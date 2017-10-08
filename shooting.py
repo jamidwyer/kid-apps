@@ -45,7 +45,11 @@ def search(term, submission):
         # Reply to the post
         text = ("[Give Blood](http://www.redcross.org/give-blood) | [Contact your state legislator](https://openstates.org/find_your_legislator/)")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 
