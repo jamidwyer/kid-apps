@@ -48,7 +48,7 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx) \n\n"
             "Steve Scalise is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31312-u-s-representative-la-1/interest_form)? \n\n"
 
-            "Map of Louisiana District 1: https://www.govtrack.us/congress/members/LA/1 \n\n"
+            "[Map of Louisiana District 1](https://www.govtrack.us/congress/members/LA/1) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
