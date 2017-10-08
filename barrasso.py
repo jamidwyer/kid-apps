@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("missouri.dat", "r")
+local_subs = open("wyoming.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,29 +38,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ann wagner', 'mo-2']
+            terms = ['barrasso', 'erik prince']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) \n\n"
-            "[**Kelli Dunaway**](http://www.jennamarieformissouri.com/) is running to represent Missouri's 2nd Congressional District. \n\n"
-            "[Twitter](https://twitter.com/kelli4congress) | "
-            "[Donate](https://secure.actblue.com/donate/kelliforcongress) \n\n "
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://soswy.state.wy.us/elections/registeringtovote.aspx) \n\n"
+            "No progressive candidate is running to represent Oklahoma in the United States Senate in 2018. Know someone who should [run](https://www.ok.gov/elections/Candidate_Info/Candidate_Filing/index.html)? \n\n"
 
-            "Dunaway supports Medicare for all. \n\n\n"
-
-            "[Map of Missouri District 2](https://www.govtrack.us/congress/members/MO/2) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        submission.reply(text)
         print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
