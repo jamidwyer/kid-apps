@@ -74,6 +74,7 @@ python desantis.py
 python foxx.py
 python hatch.py
 python ks-2.py
+python pa-hd-18.py
 python lamalfa.py
 python randyweber.py
 python walden.py
@@ -91,7 +92,9 @@ python hensarling.py
 python meadows.py
 python womack.py
 python johnjduncan.py
+python scalise.py
 python mullin.py
+python barrasso.py
 python babin.py
 python dougcollins.py
 python tx-01-louie-gohmert.py

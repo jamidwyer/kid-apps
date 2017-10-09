@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://soswy.state.wy.us/elections/registeringtovote.aspx) \n\n"
-            "No progressive candidate is running to represent Oklahoma in the United States Senate in 2018. Know someone who should [run](https://www.ok.gov/elections/Candidate_Info/Candidate_Filing/index.html)? \n\n"
+            "No progressive candidate is running to represent Wyoming in the United States Senate in 2018. Know someone who should [run](https://www.ok.gov/elections/Candidate_Info/Candidate_Filing/index.html)? \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         submission.reply(text)
