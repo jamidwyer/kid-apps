@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['^(?!.*trotte).*trott.*$', 'frustrations may doom their majority', 'GOP worries as state Dems outperform in special elections', 'Mercurial Trump Rattles Republican Party Ahead of Midterms', '2018 as 3rd House Republican Says He', 'Michigan Republican congressman won\'t seek re-election', 'Congressional GOP Retirement Surge']
+            terms = ['^(?!.*trotte).*trott.*$', 'Gerrymandering complaints lead to ballot campaign', 'frustrations may doom their majority', 'GOP worries as state Dems outperform in special elections', 'Mercurial Trump Rattles Republican Party Ahead of Midterms', '2018 as 3rd House Republican Says He', 'Michigan Republican congressman won\'t seek re-election', 'Congressional GOP Retirement Surge']
             for term in terms:
                  search(term, submission);
 
