@@ -48,7 +48,7 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) by July 3, 2018 \n\n"
         "[**Bill Bailey**](http://www.electbillbailey.com) is running to represent Tennessee in the United States Senate. \n\n "
-        "[Facebook](https://www.facebook.com/JamesMacklerForSenate/) | "
+        "[Facebook](https://www.facebook.com/Bill-Bailey-for-Senate-137311173532373/) | "
         "[Twitter](https://www.twitter.com/officialbbailey) | "
         "[Volunteer](https://electbillbailey.com/volunteer) | "
         "[Donate](https://www.crowdpac.com/campaigns/335068/bill-bailey) \n\n"
