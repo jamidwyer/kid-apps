@@ -57,6 +57,7 @@ def search(term, submission):
         "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
         "[Facebook](https://www.facebook.com/rosenfornevada/) | "
         "[Twitter](https://twitter.com/RosenforNevada) | "
+        "[Volunteer](https://jackyrosen.cp.bsd.net/page/signup/volunteer) | "
         "[Donate](https://secure.actblue.com/donate/rosen-homepage) \n\n"
         "Rosen supports affordable health care for every American, public schools, protecting Social Security and Medicare, renewable energy, net neutrality, and DACA. \n\n\n"
 
