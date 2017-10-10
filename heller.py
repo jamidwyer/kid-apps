@@ -47,10 +47,17 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
+        "[**Jesse Sbaih**](https://jessefornevada.com/) is running against Dean Heller. \n\n "
+        "[Facebook](https://www.facebook.com/jessesbaihsenate) | "
+        "[Twitter](https://twitter.com/JesseSbaih) | "
+        "[Volunteer](http://go.jessefornevada.com/page/s/homepage-volunteer) | "
+        "[Donate](https://secure.actblue.com/contribute/page/jesse-homepage) \n\n"
+        "Sbaih supports Medicare for all, a living wage, equal pay for equal work, protecting Social Security, affordable college, renewable energy, and campaign finance reform. \n\n\n"
+
         "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
-        "[Donate](https://secure.actblue.com/donate/rosen-homepage) | "
         "[Facebook](https://www.facebook.com/rosenfornevada/) | "
-        "[Twitter](https://twitter.com/RosenforNevada) \n\n "
+        "[Twitter](https://twitter.com/RosenforNevada) | "
+        "[Donate](https://secure.actblue.com/donate/rosen-homepage) \n\n"
         "Rosen supports affordable health care for every American, public schools, protecting Social Security and Medicare, renewable energy, net neutrality, and DACA. \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
