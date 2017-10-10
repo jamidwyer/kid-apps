@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['henry mcmaster', 'kevin bryant', 'south carolina governor', 'south carolina a candidate for governor', 'Catherine Templeton', 'Defunding Clinics, GOP Governor']
+            terms = ['archie parnell']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
-        "No progressive candidate is running for Governor of South Carolina in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/48352-south-carolina-governor/interest_form)? \n\n"
+            "[**Archie Parnell**](http://archieparnell.com/) is running to represent South Carolina House District 5 in the United States Congress. \n\n"
+            "[Facebook](https://www.facebook.com/ArchieParnellforCongress) | "
+            "[Twitter](https://twitter.com/Archie4Congress) | "
+            "[Volunteer](http://archieparnell.com/get-involved) | "
+            "[Donate](https://secure.actblue.com/donate/archielaunch) \n\n"
+            "Parnell supports public schools, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
