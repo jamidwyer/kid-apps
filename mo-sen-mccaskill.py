@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ann wagner', 'mo-2']
+            terms = ['hawley']
             for term in terms:
                  search(term, submission);
 
@@ -46,14 +46,15 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) by July 11, 2018 \n\n"
-            "[**Kelli Dunaway**](http://www.jennamarieformissouri.com/) is running to represent Missouri's 2nd Congressional District. \n\n"
-            "[Twitter](https://twitter.com/kelli4congress) | "
-            "[Donate](https://secure.actblue.com/donate/kelliforcongress) \n\n "
+            "[**Claire McCaskill**](http://clairemccaskill.com/) is running to represent Missouri in the United States Senate. \n\n"
+            "[Facebook](https://www.facebook.com/clairemccaskill) | "
+            "[Twitter](https://twitter.com/clairecmc) | "
+            "[Volunteer](http://action.clairemccaskill.com/p/dia/action3/common/public/?action_KEY=10440) | "
+            "[Donate](https://secure.actblue.com/contribute/page/mccaskill-web) \n\n "
 
-            "Dunaway supports Medicare for all. \n\n\n"
+            "McCaskill supports renewable energy, public schools, affordable college, protecting Social Security and Medicare, equal pay for equal work, campaign finance reform, LGBTQ equality, and the DREAM Act. \n\n\n"
 
             "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Missouri District 2](https://www.govtrack.us/congress/members/MO/2) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)

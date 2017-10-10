@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) by July 11, 2018 \n\n"
             "[**Jenna Marie Bourgeois**](http://www.jennamarieformissouri.com/) is running to represent Missouri's 4th Congressional District. \n\n"
             "[Facebook](https://www.facebook.com/JennaMarieMO4/) | "
             "[Twitter](https://twitter.com/JennaMarieMO4) | "
@@ -54,6 +54,7 @@ def search(term, submission):
 
             "Bourgeois supports single-payer health care, public schools, a living wage, protecting Social Security, renewable energy, and LGBTQ equality. \n\n\n"
 
+            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
             "[Map of Missouri District 4](https://www.govtrack.us/congress/members/MO/4) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better.)")

@@ -89,6 +89,7 @@ python tn-gov.py
 python ks-4-ron-estes.py
 python steveking.py
 python hensarling.py
+python bridenstine.py
 python meadows.py
 python womack.py
 python johnjduncan.py
@@ -124,6 +125,7 @@ python tx-ag-paxton.py
 python sc-gov-henry-mcmaster.py
 python sc-hd-5.py
 python pa-st-hd-10.py
+python mo-sen-mccaskill.py
 python gianforte.py
 python brownback.py
 python nc-st-hd-67-justin-burr.py
