@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['tennessee governor', 'tn gubernatorial', 'tennessee gubernatorial candidates', 'governor haslam', 'randy boyd', 'kay white', 'tn governor', 'Diane Black', 'bill lee', 'beth harwell', 'karl dean', 'mae beavers', 'Costs And Benefits Of Medical Marijuana Divide The Candidates']
+            terms = ['tennessee governor', 'tn gubernatorial', 'tennessee gubernatorial candidates', 'governor haslam', 'randy boyd', 'kay white', 'tn governor', 'House Budget chair', 'Diane Black', 'bill lee', 'beth harwell', 'karl dean', 'mae beavers', 'Costs And Benefits Of Medical Marijuana Divide The Candidates']
             for term in terms:
                  search(term, submission);
 
