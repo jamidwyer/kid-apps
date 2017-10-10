@@ -92,6 +92,7 @@ python hensarling.py
 python meadows.py
 python womack.py
 python johnjduncan.py
+python sc-hd-3.py
 python scalise.py
 python mullin.py
 python barrasso.py
