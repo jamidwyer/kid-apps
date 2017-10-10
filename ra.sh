@@ -122,6 +122,7 @@ python txgovgregabbott.py
 python ia-gov.py
 python tx-ag-paxton.py
 python sc-gov-henry-mcmaster.py
+python sc-hd-5.py
 python pa-st-hd-10.py
 python gianforte.py
 python brownback.py
