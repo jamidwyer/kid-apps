@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['daniel donovan', 'dan donovan', 'ny-11', 'rep. donovan', 'rep donovan', 'representative donovan', 'congressman donovan', 'michael grimm']
+            terms = ['daniel donovan', 'dan donovan', 'ny-11', 'rep. donovan', 'rep donovan', 'representative donovan', 'congressman donovan', 'michael grimm', 'GOP incumbent over Grimm']
             for term in terms:
                  search(term, submission);
 
@@ -47,13 +47,15 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
             "[**Brian Flynn**](https://www.brianflynn.us/) is running to represent New York House District 19. \n\n"
-            "[Twitter](https://twitter.com/brianflynnus) \n\n"
+            "[Facebook](https://www.facebook.com/brianflynn.us/) | "
+            "[Twitter](https://twitter.com/brianflynnus) | "
+            "[Volunteer](http://www.brianflynn.us/) | "
             "[Donate](https://secure.actblue.com/contribute/page/brianflynn) \n\n"
-            "Flynn supports Medicare for all. \n\n\n"
+            "Flynn supports Medicare for all, paid family and sick leave, affordable college, equal pay for equal work, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
 
             "[Map of New York House District 19](https://www.govtrack.us/congress/members/NY/19) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         try:
