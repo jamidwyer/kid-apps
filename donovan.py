@@ -46,14 +46,28 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
-            "[**Brian Flynn**](https://www.brianflynn.us/) is running to represent New York House District 19. \n\n"
-            "[Facebook](https://www.facebook.com/brianflynn.us/) | "
-            "[Twitter](https://twitter.com/brianflynnus) | "
-            "[Volunteer](http://www.brianflynn.us/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/brianflynn) \n\n"
-            "Flynn supports Medicare for all, paid family and sick leave, affordable college, equal pay for equal work, renewable energy, campaign finance reform, and LGBTQ equality. \n\n\n"
+            "[**Mike DeCillis**](http://mikedecillis.com/) is running to represent New York House District 11. \n\n"
+            "[Facebook](https://www.facebook.com/mikedecillis/) | "
+            "[Twitter](https://twitter.com/Mike_DeCillis) | "
+            "[Volunteer](http://mikedecillis.com/join.php) | "
+            "[Donate](https://secure.actblue.com/donate/mike-decillis-for-congress-1) \n\n"
+            "DeCillis supports single-payer health care, public schools, a living wage, paid family leave, affordable child care, equal pay for equal work, renewable energy, LGBTQ equality, DACA, public transportation, and community policing. \n\n\n"
 
-            "[Map of New York House District 19](https://www.govtrack.us/congress/members/NY/19) \n\n"
+            "[**Michael DeVito**](https://www.devitoforcongress.com/) is running to represent New York House District 11. \n\n"
+            "[Facebook](https://www.facebook.com/michaeldevitojr/) | "
+            "[Twitter](https://twitter.com/mdevitojr) | "
+            "[Volunteer](https://www.devitoforcongress.com/get-involved) | "
+            "[Donate](https://secure.actblue.com/donate/devitoforcongress) \n\n"
+            "DeVito supports single-payer health care, public schools, a living wage, protecting Social Security, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
+
+            "[**Omar Vaid**](https://www.omarvaid.com/) is running to represent New York House District 11. \n\n"
+            "[Facebook](https://www.facebook.com/omarvaid) | "
+            "[Twitter](https://twitter.com/omarvaid) | "
+            "[Volunteer](https://www.omarvaid.com/volunteer/) | "
+            "[Donate](https://secure.actblue.com/donate/omarvaid) \n\n"
+            "Vaid supports Medicare for all, public schools, protecting Social Security, renewable energy, and net neutrality. \n\n\n"
+
+            "[Map of New York House District 11](https://www.govtrack.us/congress/members/NY/11) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
