@@ -58,6 +58,7 @@ python cruz.py
 python poe.py
 python amash.py
 python nunes.py
+python donovan.py
 python lamarsmith.py
 python schweikert.py
 python ryan.py
