@@ -46,6 +46,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
+            "[Find your poll site](https://nyc.pollsitelocator.com/search)\n\n"
+
             "[**Mike DeCillis**](http://mikedecillis.com/) is running to represent New York House District 11. \n\n"
             "[Facebook](https://www.facebook.com/mikedecillis/) | "
             "[Twitter](https://twitter.com/Mike_DeCillis) | "

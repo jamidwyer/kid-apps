@@ -46,6 +46,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
+            "[Find your poll site](https://nyc.pollsitelocator.com/search)\n\n"
+
             "[**Christine Pellegrino**](http://pellegrinoforassembly.com/) is running to represent New York State Assembly District 9. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/friends-of-christine-pellegrino-1) | "
             "[Reddit](https://www.reddit.com/r/ChristinePellegrino/) | "

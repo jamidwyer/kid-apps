@@ -46,6 +46,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) \n\n"
+            "[Find your poll site](https://nyc.pollsitelocator.com/search)\n\n"
+
             "[**Brian Flynn**](https://www.brianflynn.us/) is running to represent New York House District 19. \n\n"
             "[Facebook](https://www.facebook.com/brianflynn.us/) | "
             "[Twitter](https://twitter.com/brianflynnus) | "
