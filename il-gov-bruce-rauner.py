@@ -48,14 +48,6 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
             "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
 
-            "[**Ameya Pawar**](https://www.pawar2018.com/issues/) is running to be Governor of Illinois. \n\n"
-            "[Reddit](https://www.reddit.com/r/Pawar2018) | "
-            "[Facebook](https://www.facebook.com/AmeyaPawarIL/) | "
-            "[Twitter](https://twitter.com/Ameya_Pawar_IL) | "
-            "[Volunteer](https://www.pawar2018.com/get-involved/) | "
-            "[Donate](https://secure.actblue.com/donate/pawar2018-today) \n\n "
-            "Pawar supports universal health care, renewable energy, public schools, living wages, paid family leave, paid sick leave, affordable college, campaign finance reform, LGBTQ equality, DACA, the Paris Climate Agreement, and legalizing marijuana. \n\n\n"
-
             "[**Daniel Biss**](https://www.danielbiss.com/the-issues) is running to be Governor of Illinois. \n\n"
             "[Facebook](https://www.facebook.com/DanielBiss/) | "
             "[Twitter](https://twitter.com/danielbiss) | "
