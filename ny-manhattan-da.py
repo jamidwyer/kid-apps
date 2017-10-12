@@ -47,7 +47,7 @@ def search(term, submission):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterreg.dmv.ny.gov/MotorVoter/) by October 13, 2017 \n\n"
             "Election: November 7, 2017 | [Find your poll site](https://nyc.pollsitelocator.com/search)\n\n"
-            "[**Marc Fliedner**] is running to serve as Manhattan's District Attorney. \n\n"
+            "**Marc Fliedner** is running to serve as Manhattan's District Attorney. \n\n"
             "[Facebook](https://www.facebook.com/MarcForDA) | "
             "[Twitter](https://twitter.com/MarcForDA) \n\n"
 
