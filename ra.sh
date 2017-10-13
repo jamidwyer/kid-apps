@@ -4,6 +4,7 @@ python ma-st-sen-norfolk.py
 python wa-st-sen-45.py
 python christie.py
 python va-st-hd-50.py
+python va-st-hd-73.py
 python va-st-hd-51.py
 python va-st-hd-67-lemunyon.py
 python gillespie.py
