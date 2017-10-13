@@ -79,7 +79,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['roskam', 'il-6', 'il-06', 'Tax Plan Cuts Rates for Individuals and Corporations and Eliminates Many Deductions', 'House GOP Worries About', 'GOP outraged after Trump refuses to consider Lois Lerner prosecution', 'GOP request to reopen case against former IRS official Lois Lerner']
+            terms = ['roskam', 'il-6', 'il-06', 'Suburban Chicago Republican congressmen back Trump', 'Tax Plan Cuts Rates for Individuals and Corporations and Eliminates Many Deductions', 'House GOP Worries About', 'GOP outraged after Trump refuses to consider Lois Lerner prosecution', 'GOP request to reopen case against former IRS official Lois Lerner']
             for term in terms:
                  search(term, submission);
 

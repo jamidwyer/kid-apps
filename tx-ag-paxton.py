@@ -33,14 +33,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ken paxton', 'texas attorney general', 'future of DACA suddenly looks very shaky', 'immigrants in Houston brace for a DACA decision', 'distract from his own felony trial', 'Courts repeatedly chastise Texas for voting-rights violations', 'racist attack on minority voting rights might finally backfire', 'U.S. Supreme Court temporarily blocks ruling against Texas congressional map', 'blocks Texas ban on sanctuary cities', 'A federal judge just blocked Texas', 'Fix Its Discriminatory Voting Laws']
+            terms = ['ken paxton', 'texas attorney general', 'Another reason AG\'s are important in 2018.', 'future of DACA suddenly looks very shaky', 'immigrants in Houston brace for a DACA decision', 'distract from his own felony trial', 'Courts repeatedly chastise Texas for voting-rights violations', 'racist attack on minority voting rights might finally backfire', 'U.S. Supreme Court temporarily blocks ruling against Texas congressional map', 'blocks Texas ban on sanctuary cities', 'A federal judge just blocked Texas', 'Fix Its Discriminatory Voting Laws']
             for term in terms:
                  search(term, submission);
 
