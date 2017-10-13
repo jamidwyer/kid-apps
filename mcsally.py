@@ -62,15 +62,15 @@ def search(term, submission):
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
-            print("Bot replying to : ", submission.title)
-            try:
-                submission.reply(text)
-            except Exception:
-                print("Error : ", submission.title)
-                pass
+        print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-            # Store the current id into our list
-            posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)
