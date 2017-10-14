@@ -36,7 +36,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['saying Merry Christmas', 'war on christmas', 'war-on-christmas']
+            terms = ['Trump could only get doctors to accept \"Merry Christmas', 'saying Merry Christmas', 'war on christmas', 'war-on-christmas']
             for term in terms:
                  search(term, submission);
 
