@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['aurora city council']
             for term in terms:
                  search(term, submission);
 
@@ -48,11 +48,10 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml) \n\n"
-            "[**Levi Tillemann**](https://www.leviforcolorado.com/) is running against Mike Coffman. \n\n"
-
-            "[Donate](https://secure.actblue.com/donate/levi4co) | "
-            "[Facebook](https://www.facebook.com/leviforcolorado/) | "
-            "[Twitter](https://twitter.com/levitd) \n\n"
+            "[**Nicole Johnston**](http://www.nicoleforaurora.com/) is running for Aurora City Council. \n\n"
+            "[Facebook](https://www.facebook.com/nicoleforaurora/) | "
+            "[Twitter](https://twitter.com/nicoleforaurora) | "
+            "[Donate](http://www.nicoleforaurora.com/contributions.html) \n\n"
 
             "Tillemann supports universal health care and renewable energy. \n\n\n"
 
