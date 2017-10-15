@@ -31,14 +31,14 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['^(?!.*west virginia governor).*virginia governor.*$', 'virginia\'s governor race', 'Obama is hitting the campaign trail and heading to Virginia', 'GOP nominee quietly plots with white nationalists', 'Obama to hit campaign trail for first time since leaving office', 'Obama to campaign for Northam', 'Barack Obama will make his first campaign stop since', 'Richmond rally for Northam', 'Obama has scheduled his first campaign event since', 'debate spotlights Democratic problems in rural America', 'Having a hard time deciding who to vote for on Nov 7', 'Latino group launches anti-Trump Virginia campaign ad', 'northam and gillespie', 'mcauliffe', 'gillespie', 'va gov race', 'VA gov candidate', 'Virginia needs a governor', 'va. gubernatorial race', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial']
+            terms = ['^(?!.*west virginia governor).*virginia governor.*$', 'virginia\'s governor race', 'Obama is hitting the campaign trail and heading to Virginia', 'GOP nominee quietly plots with white nationalists', 'Obama to hit campaign trail for first time since leaving office', 'Obama to campaign for Northam', 'Barack Obama will make his first campaign stop since', 'Richmond rally for Northam', 'Obama has scheduled his first campaign event since', 'northam and gillespie', 'mcauliffe', 'gillespie', 'va gov race', 'VA gov candidate', 'Virginia needs a governor', 'va. gubernatorial race', 'gillespe', 'Virginia\'s race for governor', 'virginia gubernatorial']
             for term in terms:
                  search(term, submission);
 
