@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer']
+            terms = ['kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
