@@ -51,6 +51,7 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/AdamDavisUT1/) | "
             "[Twitter](https://twitter.com/@davisforutah) | "
             "[Donate](https://www.crowdpac.com/campaigns/232751/adam-davis) \n\n"
+            "Davis supports universal health care. \n\n"
 
             "[Map of Utah Congressional District 1](https://www.govtrack.us/congress/members/UT/1) \n\n"
 
