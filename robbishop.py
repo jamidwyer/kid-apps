@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rob bishop', 'ut-01', 'Utah Congressman Seeks to Prevent Future Land Gifts', 'bishop\'s decision to move on']
+            terms = ['rob bishop', 'ut-01', 'Community health centers anxiously await congressional action on expired funding', 'Utah Congressman Seeks to Prevent Future Land Gifts', 'bishop\'s decision to move on']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,10 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-            "No progressive is currently running to represent Utah's First Congressional District in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31445-u-s-representative-ut-1/interest_form)? \n\n"
+            "**Adam Davis** is running to represent Utah Congressional District 1. \n\n"
+            "[Facebook](https://www.facebook.com/AdamDavisUT1/) | "
+            "[Twitter](https://twitter.com/@davisforutah) | "
+            "[Donate](https://www.crowdpac.com/campaigns/232751/adam-davis) \n\n"
 
             "[Map of Utah Congressional District 1](https://www.govtrack.us/congress/members/UT/1) \n\n"
 
