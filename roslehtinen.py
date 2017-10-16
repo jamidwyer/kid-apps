@@ -70,6 +70,10 @@ def search(term, submission):
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 
+for sub in subs:
+     print(sub)
+     searchAndPost(sub);
+
 # Write our updated list back to the file
 with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
