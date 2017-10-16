@@ -43,7 +43,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://sos.tn.gov/products/elections/register-vote) \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vrsws.sos.ky.gov/ovrweb/) \n\n"
         "[**Reggie Thomas**](http://www.reggie4ky.com/) is running against Andy Barr. \n\n "
         "[Donate](https://act.myngp.com/Forms/6846395089445325568) | "
         "[Facebook](https://www.facebook.com/ReggieThomasKY/) | "
