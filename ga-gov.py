@@ -39,7 +39,7 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = ['nathan deal', 'georgia governor', 'governor of georgia']
-                 search(term, submission);
+                search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
