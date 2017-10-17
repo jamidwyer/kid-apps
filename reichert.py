@@ -60,7 +60,7 @@ def search(term, submission):
             "Cramer supports Medicare for all, affordable college, and LGBTQ equality.  \n\n"
 
             "[**Kim Schrier**](https://www.drkimschrier.com/) is running to represent Washington's 8th Congressional District. \n\n"
-            "[Facebook]https://www.facebook.com/DrKimSchrier/) | "
+            "[Facebook](https://www.facebook.com/DrKimSchrier/) | "
             "[Twitter](https://twitter.com/DrKimSchrier) | "
             "[Volunteer](https://schrier.bsd.net/page/s/volunteer) | "
             "[Donate](https://secure.actblue.com/donate/kimschrier) \n\n "
