@@ -36,10 +36,9 @@ def searchAndPost(sub):
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
-
             # Do a case insensitive search
             terms = ['nathan deal', 'georgia governor', 'governor of georgia']
-                 search(term, submission);
+            search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
