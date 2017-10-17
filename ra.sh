@@ -121,6 +121,7 @@ python scottwalker.py
 python ak-st-sen-k-costello.py
 python rickscott.py
 python ducey.py
+python ga-gov.py
 python kasich.py
 python txgovgregabbott.py
 python ia-gov.py
