@@ -47,17 +47,41 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) \n\n"
-            "[**Tola Marts**](https://tola.nationbuilder.com/) is running to represent Washington's 8th Congressional District. \n\n"
-            "[Donate](https://secure.anedot.com/marts/donate) | "
-            "[Facebook](https://www.facebook.com/electtolamarts/) | "
-            "[Twitter](https://twitter.com/electtolamarts) \n\n"
+            "[**Robert Hunziker**](http://voteroberthunziker.com/) is running to represent Washington's 8th Congressional District. \n\n"
+            "[Facebook](https://www.facebook.com/VoteRobertHunziker/) | "
+            "[Twitter](https://twitter.com/VoteRobertH) | "
+            "[Volunteer](http://voteroberthunziker.com/volunteer/) | "
+            "[Donate](https://secure.anedot.com/marts/donate) \n\n "
+            "Hunziker supports Medicare for all (HR 676), a living wage, affordable housing, affordable college, renewable energy, campaign finance reform, and automatic voter registration.  \n\n"
 
-            "Marts supports universal health care and affordable college.  \n\n"
+            "[**Tom Cramer**](http://www.tomcramerforcongress.org/) is running to represent Washington's 8th Congressional District. \n\n"
+            "[Volunteer](http://www.tomcramerforcongress.org/volunteer) | "
+            "[Donate](https://tomcramer.nationbuilder.com/donate) \n\n "
+            "Cramer supports Medicare for all, affordable college, and LGBTQ equality.  \n\n"
+
+            "[**Kim Schrier**](https://www.drkimschrier.com/) is running to represent Washington's 8th Congressional District. \n\n"
+            "[Facebook]https://www.facebook.com/DrKimSchrier/) | "
+            "[Twitter](https://twitter.com/DrKimSchrier) | "
+            "[Volunteer](https://schrier.bsd.net/page/s/volunteer) | "
+            "[Donate](https://secure.actblue.com/donate/kimschrier) \n\n "
+            "Schrier supports universal health care with a subsidized Medicare public option, public schools, affordable college, a living wage, campaign finance reform, and DREAM and DACA.  \n\n"
+
+            "[**Brayden Olson**](https://www.braydenforourfuture.com/) is running to represent Washington's 8th Congressional District. \n\n"
+            "[Facebook](https://www.facebook.com/BraydenOlson) | "
+            "[Volunteer](https://www.braydenforourfuture.com/#takeaction) | "
+            "[Donate](https://secure.actblue.com/donate/braydenforcongress) \n\n "
+            "Olson supports universal health care and renewable energy.  \n\n"
+
+            "[**Brian Kostenko**](http://kostenkoforcongress.com/home) is running to represent Washington's 8th Congressional District. \n\n"
+            "[Twitter](https://twitter.com/votekostenko) | "
+            "[Volunteer](http://kostenkoforcongress.com/volunteer) | "
+            "[Donate](http://kostenkoforcongress.com/support) \n\n "
+            "Kostenko supports universal health care and a living wage.  \n\n"
 
             "[**Mona Das**](https://www.electmona.com/more-about-mona) is running to represent Washington's 8th Congressional District. \n\n"
-            "[Donate](https://secure.squarespace.com/commerce/donate?donatePageId=595b20538419c2e81ee2f471) | "
             "[Facebook](https://www.facebook.com/electmona/) | "
-            "[Twitter](https://twitter.com/elect_mona) \n\n"
+            "[Twitter](https://twitter.com/elect_mona) | "
+            "[Donate](https://secure.squarespace.com/commerce/donate?donatePageId=595b20538419c2e81ee2f471) \n\n"
 
             "Das supports universal health care.  \n\n"
 
