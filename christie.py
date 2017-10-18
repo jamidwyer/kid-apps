@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'guadagno', 'n.j. governor', 'new jersey governor', 'nj gubernatorial', 'New Jersey Gubernatorial', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor', 'gubernatorial candidate Murphy', 'Indonesian couple take refuge in candidate', 'Tour of Democrats Supporting Murphy', 'star Democrat to stump for Murphy', 'Gubernatorial Hopeful in New Jersey', 'N.J. lieutenant governor', 'Green Governor Candidate Defies Trump', 'Mark Kelly to Lawmakers Opposing Gun Laws', 'The Independents: New Jersey', 'Do you think this gov election will be a referendum on Trump', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
+            terms = ['chris christie', 'PHIL MURPHY', 'n.j. governor', 'new jersey governor', 'nj gubernatorial', 'New Jersey Gubernatorial', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor', 'gubernatorial candidate Murphy', 'Indonesian couple take refuge in candidate', 'Tour of Democrats Supporting Murphy', 'star Democrat to stump for Murphy', 'Gubernatorial Hopeful in New Jersey', 'N.J. lieutenant governor', 'Green Governor Candidate Defies Trump', 'Mark Kelly to Lawmakers Opposing Gun Laws', 'The Independents: New Jersey', 'Do you think this gov election will be a referendum on Trump', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
@@ -49,7 +49,7 @@ def searchAndPost(sub):
 def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) by October 17, 2017 \n\n")
+//        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n")
         election_date = ("Election: November 7, 2017 | [Sign up to vote by mail](http://www.njelections.org/voting-information-vote-by-mail.html) \n\n")
 
         green = ""
@@ -71,7 +71,7 @@ def search(term, submission, include_green):
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')
 
-        text = '\n'.join([vote_link, election_date, green, dems, disclaimer])
+        text = '\n'.join([election_date, green, dems, disclaimer])
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

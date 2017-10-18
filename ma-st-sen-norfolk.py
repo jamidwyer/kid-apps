@@ -45,8 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sec.state.ma.us/OVR/) by September 27, 2017 \n\n"
-            "General Election: October 17, 2017 \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sec.state.ma.us/OVR/) \n\n"
             "[Find your polling place](http://www.sec.state.ma.us/WhereDoIVoteMA/bal/MyElectionInfo.aspx)\n\n"
 
             "[**Paul Feeney**](http://www.votefeeney.com/) is running to represent the Bristol & Norfolk District. \n\n"
