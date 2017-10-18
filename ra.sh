@@ -15,8 +15,8 @@ python va-st-hd-58.py
 python va-st-hd-13.py
 python va-st-hd-42.py
 python ny-manhattan-da.py
-python strange.py
 python chaffetz.py
+python strange.py
 python valadao.py
 python paulsen.py
 python royce.py
