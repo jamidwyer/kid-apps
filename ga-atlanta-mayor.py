@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jason spencer', 'may go missing', 'GOP Rep Tells Black Attorney', 'Georgia Civil War Statue Row', 'White lawmaker warns black attorney she may']
+            terms = ['Vincent Fort', 'help build a national progressive movement from the ground up']
             for term in terms:
                  search(term, submission);
 
@@ -47,9 +47,12 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-        "Jason Spencer is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/32439-state-representative-ga-180/interest_form)? \n\n"
-
-        "[Map of Georgia State House District 180](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/lower/st13_ga/sldl13180/DC10SLDL13180_001.pdf) \n\n"
+            "[**Vincent Fort**](https://vincentfort.com/) is running to be Mayor of Atlanta. \n\n"
+            "[Facebook](https://www.facebook.com/fortforatlanta) | "
+            "[Twitter](https://twitter.com/fortforatlanta) | "
+            "[Volunteer](http://go.vincentfort.com/page/s/sign-up-today-to-volunteer) | "
+            "[Donate](https://secure.actblue.com/donate/fort_website) \n\n "
+            "Fort supports public schools, a living wage, LGBTQ equality, police body cameras, and decriminalizing marijuana.  \n\n\n"
 
         "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         submission.reply(text)

@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("georgia.dat", "r")
+local_subs = open("wisconsin.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,21 +38,29 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jason spencer', 'may go missing', 'GOP Rep Tells Black Attorney', 'Georgia Civil War Statue Row', 'White lawmaker warns black attorney she may']
+            terms = ['brad schimel']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-        "Jason Spencer is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/32439-state-representative-ga-180/interest_form)? \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
+            "[**Josh Kaul**](https://www.joshkaul.org/) is running to be Wisconsin's Attorney General. \n\n"
+            "[Facebook](https://www.facebook.com/JoshKaulWI/) | "
+            "[Twitter](https://twitter.com/JoshKaulWI) | "
+            "[Volunteer](https://act.myngp.com/Forms/1914403600351103488) | "
+            "[Donate](https://secure.actblue.com/contribute/page/joshkaul) \n\n"
+            "Kaul supports voting rights. \n\n\n"
 
-        "[Map of Georgia State House District 180](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/lower/st13_ga/sldl13180/DC10SLDL13180_001.pdf) \n\n"
+        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
