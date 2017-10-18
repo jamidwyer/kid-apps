@@ -46,7 +46,8 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) by November 7, 2017 \n\n"
+
             "[**Vincent Fort**](https://vincentfort.com/) is running to be Mayor of Atlanta. \n\n"
             "[Facebook](https://www.facebook.com/fortforatlanta) | "
             "[Twitter](https://twitter.com/fortforatlanta) | "
