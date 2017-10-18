@@ -49,7 +49,7 @@ def searchAndPost(sub):
 def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-//        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n")
+#        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n")
         election_date = ("Election: November 7, 2017 | [Sign up to vote by mail](http://www.njelections.org/voting-information-vote-by-mail.html) \n\n")
 
         green = ""
