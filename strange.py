@@ -55,6 +55,7 @@ def search(term, submission):
             "[**Doug Jones**](http://dougjonesforsenate.com/) is running to represent Alabama in the U.S. Senate. \n\n "
             "[Facebook](https://www.facebook.com/dougjonessenate) | "
             "[Twitter](https://twitter.com/gdouglasjones) | "
+            "[Volunteer](https://dougjones.bsd.net/page/s/volunteer) | "
             "[Donate](https://secure.actblue.com/donate/homepage-donate) \n\n "
 
             "Jones supports universal health care, public schools, living wages, protecting Medicare, equal pay for equal work, renewable energy, and LGBTQ equality.  \n\n "
