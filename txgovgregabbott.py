@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'Texas Is No Longer Feeling Miraculous', 'The Racist Map Wins', 'Democrats Must Take a Shot at Texas', 'Federal Judge Blocks Texas', 'rolando pablos', 'Texas Republican turns down donated blankets', 'Judge blocks provisions in Texas law punishing \'sanctuary cities\'', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'Texas crackdown on sanctuary cities', 'sb-4', 'sb4', 'sb 4', 'Senate Bill 4', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
+            terms = ['greg abbott', 'texas governor', 'TX\'s next governor ', 'Abbott Plan to Amend Constitution', 'Texas Is No Longer Feeling Miraculous', 'The Racist Map Wins', 'Democrats Must Take a Shot at Texas', 'Federal Judge Blocks Texas', 'rolando pablos', 'Texas Republican turns down donated blankets', 'Judge blocks provisions in Texas law punishing \'sanctuary cities\'', 'bill restricting insurance coverage of abortion', 'governor of texas', 'tx gov', 'runs for governor in Texas', '@gregabbott_tx', 'Texas crackdown on sanctuary cities', 'sb-4', 'sb4', 'sb 4', 'Senate Bill 4', 'rape insurance', 'Texas\' redistricting fight', 'tx governor\'s']
             for term in terms:
                 blend_in = 0
                 if subreddit == "twoxchromosomes":
