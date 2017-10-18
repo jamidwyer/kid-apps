@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'guadagno', 'n.j. governor', 'new jersey governor', 'nj gubernatorial', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor', 'gubernatorial candidate Murphy', 'star Democrat to stump for Murphy', 'Gubernatorial Hopeful in New Jersey', 'N.J. lieutenant governor', 'Green Governor Candidate Defies Trump', 'Mark Kelly to Lawmakers Opposing Gun Laws', 'The Independents: New Jersey', 'Do you think this gov election will be a referendum on Trump', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
+            terms = ['chris christie', 'guadagno', 'n.j. governor', 'new jersey governor', 'nj gubernatorial', 'New Jersey Gubernatorial', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor', 'gubernatorial candidate Murphy', 'star Democrat to stump for Murphy', 'Gubernatorial Hopeful in New Jersey', 'N.J. lieutenant governor', 'Green Governor Candidate Defies Trump', 'Mark Kelly to Lawmakers Opposing Gun Laws', 'The Independents: New Jersey', 'Do you think this gov election will be a referendum on Trump', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
             for term in terms:
                 include_green = 1
                 if subreddit == "bluemidterm2018":
