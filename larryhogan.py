@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['larry hogan', 'kamenetz', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
+            terms = ['larry hogan', 'kamenetz', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
             for term in terms:
                  search(term, submission);
 
@@ -49,12 +49,27 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType) by June 5, 2018 \n\n"
             "[Sign up to vote by mail](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1) \n\n\n"
 
+            "[**Ben Jealous**](https://benjealous.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://benjealous.com/) | "
+            "[Donate](https://secure.actblue.com/donate/bj1706) | "
+            "[Reddit](https://www.reddit.com/r/BenJealous/) | "
+            "[Facebook](https://www.facebook.com/benjealous/) | "
+            "[Twitter](https://twitter.com/BenJealous) \n\n"
+            "Jealous supports single-payer health care, renewable energy, LGBTQ equality, and the DREAM Act. \n\n"
+
             "[**Rich Madaleno**](http://www.madalenoformaryland.com/our-issues/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](http://www.madalenoformaryland.com/) | "
             "[Donate](https://secure.actblue.com/donate/jim-shea-for-maryland-1) | "
             "[Facebook](https://www.facebook.com/richardmadaleno/) | "
             "[Twitter](https://twitter.com/richmadaleno) \n\n"
-            "Madaleno supports universal health care, public schools, affordable college, a living wage, renewable energy, and LGBTQ equality. \n\n"
+            "Madaleno supports universal health care with a public option, public schools, affordable college, a living wage, renewable energy, and LGBTQ equality. \n\n"
+
+            "[**Alec Ross**](https://alecross.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://alecross.com/) | "
+            "[Donate](https://act.alecross.com/page/contribute/default) | "
+            "[Facebook](https://www.facebook.com/Alec4MD/) | "
+            "[Twitter](https://twitter.com/alecjross) \n\n"
+            "Ross supports universal health care with a public option, public schools, childcare assistance, voting by mail, automatic voter registration, and redistricting reform. \n\n"
 
             "[**Jim Shea**](https://www.jimshea.com/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](https://www.jimshea.com/get-involved) | "
@@ -63,13 +78,19 @@ def search(term, submission):
             "[Twitter](https://twitter.com/sheaformd) \n\n"
             "Shea supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n"
 
-            "[**Ben Jealous**](https://benjealous.com/) is running to be Governor of Maryland. \n\n"
-            "[Volunteer](https://benjealous.com/) | "
-            "[Donate](https://secure.actblue.com/donate/bj1706) | "
-            "[Reddit](https://www.reddit.com/r/BenJealous/) | "
-            "[Facebook](https://www.facebook.com/benjealous/) | "
-            "[Twitter](https://twitter.com/BenJealous) \n\n"
-            "Jealous supports single-payer health care, renewable energy, and LGBTQ equality. \n\n"
+            "[**Maya Rockeymoore Cummings**](https://mayaformaryland.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://mayaformaryland.com/) | "
+            "[Donate](https://secure.actblue.com/donate/maya-rockeymoore-cummings-for-maryland-1) | "
+            "[Facebook](https://www.facebook.com/MayaForMaryland/) | "
+            "[Twitter](https://twitter.com/MayaForMaryland) \n\n"
+            "Rockeymoore Cummings supports universal health care and paid sick leave. \n\n"
+
+            "[**Rushern Baker**](http://www.rushernbaker.com/) is running to be Governor of Maryland. \n\n"
+            "[Volunteer](https://rushern.bsd.net/page/s/volunteer-with-rushern) | "
+            "[Donate](https://secure.actblue.com/donate/rb-home) | "
+            "[Facebook](https://www.facebook.com/RushernLBaker/) | "
+            "[Twitter](https://twitter.com/rushernbaker) \n\n"
+            "Baker supports universal health care, public schools, affordable college, renewable energy, and LGBTQ equality. \n\n"
 
             "[**Kevin Kamenetz**](http://krishformaryland.com/) is running to be Governor of Maryland. \n\n"
             "[Volunteer](https://act.myngp.com/Forms/-7197369037305476352) | "
@@ -83,12 +104,6 @@ def search(term, submission):
             "[Donate](https://www.crowdpac.com/campaigns/323377/krish-for-maryland) | "
             "[Facebook](https://www.facebook.com/krishformaryland) | "
             "[Twitter](https://twitter.com/KrishForMD) \n\n"
-
-            "[**Alec Ross**](https://alecross.com/) is running to be Governor of Maryland. \n\n"
-            "[Volunteer](https://alecross.com/) | "
-            "[Donate](https://act.alecross.com/page/contribute/default) | "
-            "[Facebook](https://www.facebook.com/Alec4MD/) | "
-            "[Twitter](https://twitter.com/alecjross) \n\n"
 
             "Primary Election: June 26, 2018 | General Election: November 6, 2018 \n\n"
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will vote in the interests of working-class people.)")
