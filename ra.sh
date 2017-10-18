@@ -1,11 +1,13 @@
 #!/bin/sh
 
+python ga-atlanta-mayor.py
 python wa-st-sen-45.py
+python va-st-hd-67-lemunyon.py
+python va-st-hd-51.py
+python nc-asheville-mayor.py
 python christie.py
 python va-st-hd-50.py
 python va-st-hd-73.py
-python va-st-hd-51.py
-python va-st-hd-67-lemunyon.py
 python gillespie.py
 python valtgov.py
 python va-st-hd-3.py
@@ -117,6 +119,7 @@ python lepage.py
 python az-1.py
 python mi-sen-stabenow.py
 python scottwalker.py
+python wi-ag.py
 python ak-st-sen-k-costello.py
 python rickscott.py
 python ducey.py

@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) \n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](http://ncvoterguide.org/voting/) by November 7, 2017 \n\n"
             "[**Dee Williams**](https://www.dee4avl.com/) is running for Asheville City Council. \n\n"
             "[Facebook](https://www.facebook.com/dee4avl/) | "
             "[Volunteer](https://www.dee4avl.com/volunteer/) | "
