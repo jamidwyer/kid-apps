@@ -1,6 +1,5 @@
 #!/bin/sh
 
-python ma-st-sen-norfolk.py
 python wa-st-sen-45.py
 python christie.py
 python va-st-hd-50.py
