@@ -51,7 +51,7 @@ def search(term, submission):
         dems = ("[**Bob Solomon**](https://www.solomon4pa18.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
         "[Facebook](https://www.facebook.com/SolomonforCongress) | "
         "[Donate](https://secure.actblue.com/donate/solomon4pa18) \n\n"
-        "Solomon supports universal health care. \n\n\n"
+        "Solomon supports single-payer health care, net neutrality, redistricting reform, and medical marijuana. \n\n\n"
 
         "[**Pam Iovino**](https://pamforpa.com/) is running to represent Pennsylvania District 18 in the United States Congress. \n\n"
         "[Facebook](https://www.facebook.com/pamforpa/) | "
