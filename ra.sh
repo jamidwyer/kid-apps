@@ -4,7 +4,7 @@ python ga-atlanta-mayor.py
 python wa-st-sen-45.py
 python va-st-hd-67-lemunyon.py
 python va-st-hd-51.py
-python nc-asheville-mayor.py
+python nc-asheville-city-council.py
 python christie.py
 python va-st-hd-50.py
 python va-st-hd-73.py
