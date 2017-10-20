@@ -47,11 +47,11 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ovr.govote.tn.gov/Registration/#BM) by July 3, 2018 \n\n"
-        "[**Justin Kanew**](http://www.kanewforcongress.com/) is running to represent Tennessee in the United States Senate."
+        "[**Justin Kanew**](http://www.kanewforcongress.com/) is running to represent Tennessee in the United States Senate. \n\n"
 
-        "[Facebook](https://www.facebook.com/KanewforCongress/) | [Twitter](https://twitter.com/kanew) | [Volunteer](http://www.kanewforcongress.com/volunteer) | [Donate](https://secure.actblue.com/donate/kanew-for-congress-1)"
+        "[Facebook](https://www.facebook.com/KanewforCongress/) | [Twitter](https://twitter.com/kanew) | [Volunteer](http://www.kanewforcongress.com/volunteer) | [Donate](https://secure.actblue.com/donate/kanew-for-congress-1) \n\n"
 
-        "Kanew supports Medicare for all, public schools, affordable college, universal pre-K, paid family leave and child care assistance, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, net neutrality, and legalizing medical marijuana."
+        "Kanew supports Medicare for all, public schools, affordable college, universal pre-K, paid family leave and child care assistance, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, net neutrality, and legalizing medical marijuana. \n\n"
 
         "[**Bill Bailey**](http://www.electbillbailey.com) is running to represent Tennessee in the United States Senate. \n\n "
         "[Facebook](https://www.facebook.com/Bill-Bailey-for-Senate-137311173532373/) | "
