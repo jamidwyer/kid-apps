@@ -44,7 +44,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[Project Hope](http://www.projecthope.org/) | [ConPRmetidos](https://www.generosity.com/emergencies-fundraising/maria-puerto-rico-real-time-recovery-fund) | [Direct Relief](https://secure.directrelief.org/site/Donation2) | [Hispanic Federation](https://hispanicfederation.org/unidos/) | [World Central Kitchen](https://www.worldcentralkitchen.org/donate) \n\n"
-        "[^(Charity Navigator)](https://www.charitynavigator.org/index.cfm?compare=4367%2C3626%2C4997&bay=search.compare) \n\n"
+        "[^(Charity Navigator)](https://www.charitynavigator.org/index.cfm?compare=4367%2C3626%2C4997&bay=search.compare) \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
