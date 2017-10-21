@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) by October 30, 2017 \n\n"
-        "Election Date: November 7, 2017"
+        "Election Date: November 7, 2017 \n\n"
 
         "[**Manka Dhingra**](http://www.electmanka.com/) is running to represent Washington's 45th Senate District. \n\n"
         "[Donate](https://act.myngp.com/Forms/1478398861426297344) | "
