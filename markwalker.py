@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mark walker', 'rep. walker', 'Huge, Exploding Deficits', 'Representative walker', 'congressman walker', 'rep walker', 'warns GOP to change course on ObamaCare', 'repealing the Johnson Amendment isn', 'Ignore The Deficit']
+            terms = ['mark walker', 'rep. walker', 'GOP eyes move to lower premiums right before 2018 elections', 'Huge, Exploding Deficits', 'Representative walker', 'congressman walker', 'rep walker', 'warns GOP to change course on ObamaCare', 'repealing the Johnson Amendment isn', 'Ignore The Deficit']
             for term in terms:
                  search(term, submission);
 
