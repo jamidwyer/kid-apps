@@ -7,6 +7,7 @@ python va-st-hd-51.py
 python nc-asheville-city-council.py
 python christie.py
 python va-st-hd-50.py
+python co-aurora-city-council.py
 python va-st-hd-73.py
 python gillespie.py
 python valtgov.py
