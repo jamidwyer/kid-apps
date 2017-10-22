@@ -134,6 +134,7 @@ python pa-st-hd-10.py
 python mo-sen-mccaskill.py
 python gianforte.py
 python brownback.py
+python or-st-sen-1.py
 python nc-st-hd-67-justin-burr.py
 python id-st-hd-33b-zollinger.py
 python wy-gov.py

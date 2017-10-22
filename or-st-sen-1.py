@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("georgia.dat", "r")
+local_subs = open("oregon.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,19 +38,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['betty price', 'wife of tom price', 'out of the woodwork when 45 took office', 'Can HIV patients be quarantined', 'Can people with HIV be', 'quarantine people with HIV', 'quarantine HIV patients', 'tom price\'s wife']
+            terms = ['sen. kruse', 'senator kruse', 'sen kruse', 'inappropriate touching in Capitol']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-        "Betty Price is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/32307-state-representative-ga-48/interest_form)? \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.sos.state.or.us/orestar/vr/register.do) \n\n"
+            "Jeff Kruse has no progressive challenger in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/35950-state-senator-or-1/interest_form)? \n\n"
 
-        "[Map of Georgia State House District 48](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/lower/st13_ga/sldl13048/DC10SLDL13048_001.pdf) \n\n"
+            "[Map of Oregon State Senate District 1](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/upper/st41_or/sldu41001/DC10SLDU41001_001.pdf) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
