@@ -107,9 +107,8 @@ python babin.py
 python dougcollins.py
 python tx-01-louie-gohmert.py
 python nj-st-sen-7.py
+python ga-st-hd-48.py
 python larryhogan.py
-python va-st-hd-67-lemunyon.py
-python va-st-hd-51.py
 python il-gov-bruce-rauner.py
 python az-st-hd-10-clodfelter.py
 python az-st-hd-18-norgaard.py
