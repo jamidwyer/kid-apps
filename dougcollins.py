@@ -52,7 +52,7 @@ def search(term, submission):
             "[Twitter](https://twitter.com/Mccallforall) \n\n"
             "McCall supports universal health care, campaign finance reform, protecting Social Security, and affordable college. \n\n\n"
 
-            "Map of Georgia District 9: https://www.govtrack.us/congress/members/GA/9 \n\n"
+            "[Map of Georgia District 9](https://www.govtrack.us/congress/members/GA/9) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
