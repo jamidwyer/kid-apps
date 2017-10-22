@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['betty price', 'Can people with HIV be', 'quarantine people with HIV', 'quarantine HIV patients', 'tom price\'s wife']
+            terms = ['betty price', 'wife of tom price', 'Can HIV patients be quarantined', 'Can people with HIV be', 'quarantine people with HIV', 'quarantine HIV patients', 'tom price\'s wife']
             for term in terms:
                  search(term, submission);
 
