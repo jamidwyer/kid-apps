@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("southcarolina.dat", "r")
+local_subs = open("georgia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,21 +39,30 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rick quinn', 'sc rep. quinn']
+            terms = ['deborah gonzalez']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
-        "No progressive candidate is running to represent South Carolina State House District 69. Know someone who should [run](https://www.runforoffice.org/elected_offices/36459-state-representative-sc-69/interest_form)? \n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](http://votedeborahgonzalez.com/early-voting/) by November 7, 2018 \n\n"
+            "[**Deborah Gonzalez**](http://votedeborahgonzalez.com/) is running to represent Georgia State House District 117. \n\n"
+            "[Facebook](https://www.facebook.com/DG4GA/) | "
+            "[Twitter](https://twitter.com/DG4GA) | "
+            "[Volunteer](http://votedeborahgonzalez.com/volunteer/) | "
+            "[Donate](https://secure.actblue.com/donate/dg4ga) \n\n"
 
-        "[Map of South Carolina State House District 69](http://www.scstatehouse.gov/maps/house/HD69.pdf) \n\n"
+            "[Map of Georgia State House District 117](https://www2.census.gov/geo/maps/dc10map/SLD_RefMap/lower/st13_ga/sldl13117/DC10SLDL13117_001.pdf) \n\n"
 
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
