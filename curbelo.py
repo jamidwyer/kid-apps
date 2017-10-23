@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['curbelo', 'congressional GOP helped Trump keep tax returns secret', 'register ONLINE to vote in Florida! Spread the news', 'Congress gives Trump a pass on releasing his tax returns', 'Republicans vote against forcing Trump to release tax returns', 'Congress gives Trump pass on his tax returns']
+            terms = ['curbelo', 'Million dollar bracket in the works for GOP tax plan', 'congressional GOP helped Trump keep tax returns secret', 'register ONLINE to vote in Florida! Spread the news', 'Congress gives Trump a pass on releasing his tax returns', 'Republicans vote against forcing Trump to release tax returns', 'Congress gives Trump pass on his tax returns']
             for term in terms:
                  search(term, submission);
 

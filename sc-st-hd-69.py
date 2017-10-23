@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("washington.dat", "r")
+local_subs = open("southcarolina.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,32 +39,22 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['manka dhingra', 'Eastside Democrat into high-stakes Senate race', 'help get Democrats elected November 7th', 'next national special election clash', 'jinyoung', 'Trump fired up female candidacies', 'Race to decide if West Coast keeps its only GOP']
+            terms = ['jim merrill', 'james merrill', 'sc rep. merrill', 'South Carolina Republican pleads guilty to misconduct']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) by October 30, 2017 \n\n"
-        "Election Date: November 7, 2017 \n\n"
+        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
+        "No progressive candidate is running to represent South Carolina State House District 69. Know someone who should [run](https://www.runforoffice.org/elected_offices/36459-state-representative-sc-69/interest_form)? \n\n"
 
-        "[**Manka Dhingra**](http://www.electmanka.com/) is running to represent Washington's 45th Senate District. \n\n"
-        "[Donate](https://act.myngp.com/Forms/1478398861426297344) | "
-        "[Reddit](https://www.reddit.com/r/MankaDhingra/) | "
-        "[Facebook](https://www.facebook.com/electmanka/) | "
-        "[Twitter](https://twitter.com/ElectManka) \n\n"
-        "Dhingra supports public schools. \n\n\n"
+        "[Map of South Carolina State House District 69](http://www.scstatehouse.gov/maps/house/HD69.pdf) \n\n"
 
-        "[Map of Washington State Senate District 45](https://upload.wikimedia.org/wikipedia/commons/4/45/LD_45.pdf) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
+        submission.reply(text)
+
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 
