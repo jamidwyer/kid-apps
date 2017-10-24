@@ -55,7 +55,7 @@ def search(term, submission):
             "Election Date: November 6, 2018 \n\n"
             "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
+            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
 
         print("Bot replying to : ", submission.title)
         try:
