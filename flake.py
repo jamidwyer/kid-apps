@@ -50,13 +50,13 @@ def search(term, submission):
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://servicearizona.com/webapp/evoter/register?execution=e1s2) by July 30, 2018 \n\n"
             "[Sign up to vote by mail](https://www.vote.org/absentee-ballot/) \n\n\n"
 
-            "[**Deedra Abboud**](http://deedra2018.com/) is running against Jeff Flake. \n\n"
+            "[**Deedra Abboud**](http://deedra2018.com/) is running to represent Arizona in the United States Senate. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
             "[Facebook](https://www.facebook.com/Deedra2018/) | "
             "[Twitter](https://twitter.com/deedra2018) \n\n"
             "Abboud supports health care for all Americans, public schools, protecting Social Security, LGBTQ equality, and net neutrality. \n\n\n"
 
-            "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running against Jeff Flake. \n\n"
+            "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running to represent Arizona in the United States Senate. \n\n"
             "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
             "[Facebook](https://www.facebook.com/ksinemaaz/) | "
             "[Twitter](https://twitter.com/kyrstensinema) \n\n"
