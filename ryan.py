@@ -63,7 +63,6 @@ def search(term, submission):
                     "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
 
                 print("Bot replying to : ", submission.title)
-
                 try:
                     submission.reply(text)
                 except Exception:
