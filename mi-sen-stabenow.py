@@ -53,7 +53,7 @@ def search(term, submission):
             "Stabenow supports universal health care, public schools, protecting Social Security and Medicare, renewable energy, LGBTQ equality, and voting rights. \n\n\n"
 
             "Election Date: November 6, 2018 \n\n"
-            "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n")
+            "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n"
 
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
 
