@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['pete sessions', 'rep. sessions', 'rep sessions', 'representative sessions', 'congressman sessions', 'Texas Democrats smell blood in the water for 2018', 'insurance at risk after Congress fails to renew CHIP', 'GOP leaders prevent votes to ban federal spending at Trump businesses']
+            terms = ['pete sessions', 'rep. sessions', 'rep sessions', 'representative sessions', 'congressman sessions', 'The fight over preserving public land', 'No Longer Your Land', 'Texas Democrats smell blood in the water for 2018', 'insurance at risk after Congress fails to renew CHIP', 'GOP leaders prevent votes to ban federal spending at Trump businesses']
             for term in terms:
                  search(term, submission);
 

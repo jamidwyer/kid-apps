@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['lee carter', 'va 50th', 'va-50', 'va50', 'jackson miller', 'Virginia House of Delegates Districts HD-28, HD-50', 'back single-payer healthcare plan in Virginia', 'Socialists Become the Tea Party of the Left', 'Virginia House of Delegates', 'Textbanking for our wonderful Virginia candidates!']
+            terms = ['lee carter', 'va 50th', 'va-50', 'va50', 'jackson miller', 'Virginia House of Delegates Districts HD-28, HD-50', 'back single-payer healthcare plan in Virginia', 'Socialists Become the Tea Party of the Left', 'Textbanking for our wonderful Virginia candidates!']
             for term in terms:
                  search(term, submission);
 
