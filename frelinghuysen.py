@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['frelinghuysen', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners', 'tax plan would end key break for N', 'Houston Sought Funding to Mitigate Floods']
+            terms = ['frelinghuysen', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners', 'tax plan would end key break for N', 'Houston Sought Funding to Mitigate Floods']
             for term in terms:
                  search(term, submission);
 
