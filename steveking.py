@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'The Creepily Influential Trumpist', 'Does Donald Trump Hate Iowa', 'GOP Congressmen Talk Christian Judges', 'Does the GOP Base Love Trump More Than It Hates', 'Left out of meeting, Republicans tweeted Trump', 'Trump stuns Washington with immigration moves', 'GOP Base Love Trump More Than It Hates', 's Base Unleashes Their Anger Over', 'GOP leaders try to reassert control', 'Trump\'s die-hard supporters are fuming', 'diehard supporters are fuming after an apparent about-face', 'live in the shadows', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
+            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'House GOP ignores health care for 9 million kids', 'The Creepily Influential Trumpist', 'Does Donald Trump Hate Iowa', 'GOP Congressmen Talk Christian Judges', 'Does the GOP Base Love Trump More Than It Hates', 'Left out of meeting, Republicans tweeted Trump', 'Trump stuns Washington with immigration moves', 'GOP Base Love Trump More Than It Hates', 's Base Unleashes Their Anger Over', 'GOP leaders try to reassert control', 'Trump\'s die-hard supporters are fuming', 'diehard supporters are fuming after an apparent about-face', 'live in the shadows', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 
