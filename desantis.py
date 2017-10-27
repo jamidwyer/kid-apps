@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['desantis', 'fight over Russia probe budget', 'GOP rep: Congress should set limits for Mueller probe', 'Rider for Spending Bill that Would End Mueller Probe', 'Republicans Ignore the Russia Scandal', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
+            terms = ['desantis', 'Republicans trying to hobble Robert Mueller', 'fight over Russia probe budget', 'GOP rep: Congress should set limits for Mueller probe', 'Rider for Spending Bill that Would End Mueller Probe', 'Republicans Ignore the Russia Scandal', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
             for term in terms:
                  search(term, submission);
 
