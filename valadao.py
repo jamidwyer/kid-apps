@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['valadao', 'House passes 4.2 trillion budget that guts Medicare and Medicaid, gives tax cuts to the rich', 'who controls the House in 2018, especially in California', 'silencer, which the NRA wants to make easier to get']
+            terms = ['valadao', 'Mere weeks after Las Vegas, the GOP is quietly pushing', 'House passes 4.2 trillion budget that guts Medicare and Medicaid, gives tax cuts to the rich', 'who controls the House in 2018, especially in California', 'silencer, which the NRA wants to make easier to get']
             for term in terms:
                  search(term, submission);
 
