@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['orrin hatch', 'sen. hatch', 'senator hatch', 'Trump plans to shrink size of Utah national monuments', 'Trump shrinks national monument sacred to local tribe', 'President Donald Trump is shrinking two national monuments in Utah', 'Trump to shrink Utah national monument', 'Trump to Shrink Two Utah National Monuments', 'Trump says he will shrink Bears Ears National Monument', 'Hatch-authored drug law that may hurt DEA enforcement', 'Corporations to keep tax break lost by millions of Americans', 'sponsored by Hatch', 'Bannon putting Senate majority at risk in 2018', 'no significant benefit for poorest families', 'Congress to hold off on gun silencer legislation', 'jokes that Republican tax-reform plan is', 'Will Hatch run again or retire', 'governor and senator for two different states', 'Wilson would beat Hatch', 'Mitt Romney has politicos asking', 'Bipartisan Push Shakes Up Capitol Hill', 'Hatch has some daunting numbers to overcome', 'hatch: calling trump racist', 'racist bone in his body ', 'shot their wad', 'Meant It the Civil War Way', 'definitively say whether he is breaking promise, running again', 'announcement on his political future has been pushed back']
+            terms = ['orrin hatch', 'sen. hatch', 'senator hatch', 'Trump plans to shrink two national monuments in Utah', 'secret oatmeal cookie president', 'Trump plans to shrink size of Utah national monuments', 'Trump shrinks national monument sacred to local tribe', 'President Donald Trump is shrinking two national monuments in Utah', 'Trump to shrink Utah national monument', 'Trump to Shrink Two Utah National Monuments', 'Trump says he will shrink Bears Ears National Monument', 'Hatch-authored drug law that may hurt DEA enforcement', 'Corporations to keep tax break lost by millions of Americans', 'sponsored by Hatch', 'Bannon putting Senate majority at risk in 2018', 'no significant benefit for poorest families', 'Congress to hold off on gun silencer legislation', 'jokes that Republican tax-reform plan is', 'Will Hatch run again or retire', 'governor and senator for two different states', 'Wilson would beat Hatch', 'Mitt Romney has politicos asking', 'Bipartisan Push Shakes Up Capitol Hill', 'Hatch has some daunting numbers to overcome', 'hatch: calling trump racist', 'racist bone in his body ', 'shot their wad', 'Meant It the Civil War Way', 'definitively say whether he is breaking promise, running again', 'announcement on his political future has been pushed back']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-        "[**Jenny Wilson**](http://wilsonforsenate.com/) is running against Orrin Hatch. \n\n "
+        "[**Jenny Wilson**](http://wilsonforsenate.com/) is running against to represent Utah in the United States Senate. \n\n "
         "[Donate](https://www.crowdpac.com/candidates/58d92c47d9e704560d2afff1/jenny-wilson) | "
         "[Facebook](https://www.facebook.com/WilsonForSenate/) | "
         "[Twitter](https://twitter.com/jennywilsonut) \n\n "

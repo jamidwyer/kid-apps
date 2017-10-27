@@ -45,9 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) \n\n"
-            "General Election: November 7, 2017 \n\n"
-            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
+        text = ("[&#9733;&#9733;&#9733; VOTE &#9733;&#9733;&#9733;](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) November 7, 2017 \n\n"
 
             "[**Ralph Northam**](http://ralphnortham.com/) is running to be Governor of Virginia. \n\n"
             "[Reddit](https://www.reddit.com/r/RalphNortham/) | "
