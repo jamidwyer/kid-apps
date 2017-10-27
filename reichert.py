@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressmen reichert', 'congressman reichert', 'wa-8', 'wa-08', '@davereichert', 'wa\'s 8th district', 'Majority of Democrats Want Bold Leftward Shift', 'Here Come the Republican Retirements', 'Three repub congressman have bailed on 2018 run', 'Reichert announces he will not seek reelection in 2018']
+            terms = ['dave reichert', 'rep. reichert', 'rep reichert', 'representative reichert', 'congressmen reichert', 'congressman reichert', 'wa-8', 'wa-08', '@davereichert', 'wa\'s 8th district', 'How To Heal The Left-Liberal Divide', 'Majority of Democrats Want Bold Leftward Shift', 'Here Come the Republican Retirements', 'Three repub congressman have bailed on 2018 run', 'Reichert announces he will not seek reelection in 2018']
             for term in terms:
                  search(term, submission);
 

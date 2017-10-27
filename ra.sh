@@ -1,7 +1,5 @@
 #!/bin/sh
 
-python pr.py
-python shooting.py
 python ga-atlanta-mayor.py
 python wa-st-sen-45.py
 python va-st-hd-67-lemunyon.py
@@ -155,3 +153,5 @@ python nc-st-hd-03-michael-speciale.py
 python nd-st-hd-39-keith-kempenich.py
 python nvstsen20.py
 python christmas.py
+python pr.py
+python shooting.py
