@@ -55,7 +55,7 @@ def search(term, submission):
             "[Facebook](https://www.facebook.com/KathieAllenMDforCongress/) | "
             "[Twitter](https://twitter.com/kathieallenmd) \n\n"
 
-            "Allen supports universal health care, public schools, living wages, campaign finance reform, and LGBTQIA equality.  \n\n\n"
+            "Allen supports universal health care, public schools, living wages, campaign finance reform, LGBTQIA equality, and medical marijuana.  \n\n\n"
 
             "[Map of Utah District 3](https://www.govtrack.us/congress/members/UT/3) \n\n"
 
