@@ -48,9 +48,17 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-        "[**Jack Gebbia**](https://jackgebbiaforcongress.com/) is running against Rodney Frelinghuysen. \n\n"
-        "[Donate](https://www.crowdpac.com/campaigns/233827/jack-gebbia-for-congress-its-time-for-a-change) | [Facebook](https://www.facebook.com/JackGebbia4Congress/) | [Twitter](https://twitter.com/jack_gebbia) \n\n"
+        "**Jack Gebbia** is running against Rodney Frelinghuysen. \n\n"
+        "[Facebook](https://www.facebook.com/JackGebbia4Congress/) | "
+        "[Twitter](https://twitter.com/jack_gebbia) | "
+        "[Donate](https://www.crowdpac.com/campaigns/233827/jack-gebbia-for-congress-its-time-for-a-change) \n\n"
         "Gebbia supports single-payer health care and LGBTQ equality. \n\n\n "
+
+        "[**Mikie Sherrill**](http://mikiesherrill.com/) is running against Rodney Frelinghuysen. \n\n"
+        "[Facebook](https://www.facebook.com/MikieSherrillForCongress/) | "
+        "[Twitter](https://twitter.com/MikieSherrill) | "
+        "[Donate](https://act.myngp.com/Forms/1917499825094920704) \n\n"
+        "Sherrill supports Planned Parenthood. \n\n\n "
 
         "[Map of New Jersey District 11](https://www.govtrack.us/congress/members/NJ/11) \n\n"
 

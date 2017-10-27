@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chaffetz', 'john curtis', 'kathie allen', 'ut-3', 'ut-03', 'Republicans secretly yearn for a Hillary Clinton presidency', 'Issues Mark 2017 Campaign Season In Utah', '16 in generic Congressional vote', 'new Utah system allows moderates to win', 'The website of the Republican candidate for Utah', 'Seventh Republican retirement', 'Curtis overcome a flood of negative advertising', 'Utah judge rules that third party candidate be allowed on the 2017 special election ballot', 'chaffetz\'s open seat']
+            terms = ['chaffetz', 'john curtis', 'kathie allen', 'ut-3', 'ut-03', 'Republicans secretly yearn for a Hillary Clinton presidency', 'chaffetz\'s open seat']
             for term in terms:
                  search(term, submission);
 
