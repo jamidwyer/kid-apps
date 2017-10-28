@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['lamalfa', 'ca-01', 'cease-and-desist letter from his congressman', 'California GOP congressman gets an earful at town hall', '@replamalfa', 'OFF STAGE during OROVILLE Town Hall']
+            terms = ['lamalfa', 'ca-01', 'GOP congressman just sent a cease and desist letter to a teenager', 'prosecuted for repeated unwanted emails', 'cease-and-desist letter from his congressman', 'California GOP congressman gets an earful at town hall', '@replamalfa', 'OFF STAGE during OROVILLE Town Hall']
             for term in terms:
                  search(term, submission);
 
