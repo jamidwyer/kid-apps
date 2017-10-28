@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-        "[**Jenny Wilson**](http://wilsonforsenate.com/) is running against to represent Utah in the United States Senate. \n\n "
+        "[**Jenny Wilson**](http://wilsonforsenate.com/) is running to represent Utah in the United States Senate. \n\n "
         "[Donate](https://www.crowdpac.com/candidates/58d92c47d9e704560d2afff1/jenny-wilson) | "
         "[Facebook](https://www.facebook.com/WilsonForSenate/) | "
         "[Twitter](https://twitter.com/jennywilsonut) \n\n "
