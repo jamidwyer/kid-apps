@@ -24,7 +24,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open({{state}}, "r")
+local_subs = open({{state_subs}}, "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -40,40 +40,23 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris christie', 'PHIL MURPHY', 'n.j. governor', 'new jersey governor', 'nj gubernatorial', 'New Jersey Gubernatorial', 'NJ\'s next governor ', 'governor of new jersey', 'nj gov', 'nj governor', 'gubernatorial candidate Murphy', 'Obama hits campaign trail for first time since', 'Barack Obama implies Trump has set US back 50 years in first political speech for a year', 'Green Party gubernatorial ticket', 'politics of division', 'Obama urges NJ voters', 'Obama campaigning in Va, NJ', 'marijuana in jersey', 'N.J. continues to use easily hacked voting machines', 'Indonesian couple take refuge in candidate', 'Tour of Democrats Supporting Murphy', 'star Democrat to stump for Murphy', 'Gubernatorial Hopeful in New Jersey', 'N.J. lieutenant governor', 'Green Governor Candidate Defies Trump', 'Mark Kelly to Lawmakers Opposing Gun Laws', 'The Independents: New Jersey', 'Do you think this gov election will be a referendum on Trump', 'close governor\'s beach house during shutdowns', 'loyal enough to Trump after Billy Bush tape', 'Seth Kaper-Dale: Don', '\"Access Hollywood\" tape was a \"litmus test\"', 'response to lewd Trump tape', 'christie\'s secret attorney fee']
+            terms = [{{election_terms}}]
             for term in terms:
-                include_green = 1
-                if subreddit == "bluemidterm2018":
-                    include_green = 0
-
-                search(term, submission, include_green);
+                search(term, submission);
 
 def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-#        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n")
-        election_date = ("Election: November 7, 2017 | [Sign up to vote by mail](http://www.njelections.org/voting-information-vote-by-mail.html) \n\n")
-
-        green = ""
-
-        if include_green:
-            green = ("[**Seth Kaper-Dale**](https://www.kaperdaleforgovernor.com/) is running to be Governor of New Jersey. \n\n"
-                "[Donate](https://www.kaperdaleforgovernor.com/donate/) | "
-                "[Reddit](https://www.reddit.com/r/SethKaperDale/) | "
-                "[Facebook](https://www.facebook.com/kaperdaleforgovernor) | "
-                "[Twitter](https://twitter.com/KaperDaleForGov) \n\n"
-                "Kaper-Dale supports single payer Medicare for all, renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, DACA, and legalizing marijuana. \n\n\n")
-
-        dems = ("[**Phil Murphy**](https://www.murphy4nj.com/issues) is running to be Governor of New Jersey. \n\n"
-            "[Donate](https://act.myngp.com/Forms/2599649002085616384) | "
-            "[Facebook](https://www.facebook.com/PhilMurphyNJ) | "
-            "[Twitter](https://twitter.com/PhilMurphyNJ) \n\n"
-            "Murphy supports renewable energy, public schools, living wages, paid sick leave, affordable college, equal pay for equal work, LGBTQ equality, background checks on all gun sales, and legalizing marijuana. \n\n\n")
+        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;]({{registration_link}})
+        registration_deadline = by {{registration_deadline}} \n\n")
+        election_date = "Election: {{election_date}} |"
+        vote_by_mail = "[Sign up to vote by mail](http://www.njelections.org/voting-information-vote-by-mail.html) \n\n"
+        map = "[]()"
 
         with open('disclaimer.txt', 'r') as myfile:
             disclaimer=myfile.read().replace('\n', '')
 
-        text = '\n'.join([election_date, green, dems, disclaimer])
+        text = '\n'.join([vote_link, registration_deadline, election_date, vote_by_mail, map])
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
