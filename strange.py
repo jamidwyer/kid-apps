@@ -78,4 +78,3 @@ with open("posts_replied_to.txt", "w") as f:
         f.write(post_id + "\n")
 
 text_file.close()
-local_subs.close()
