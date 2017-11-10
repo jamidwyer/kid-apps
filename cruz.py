@@ -23,11 +23,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
-subs = local_subs.read().split('\n')
-ssubs = text_file.read().split('\n')
-subs.extend(ssubs)
+subs = text_file.read().split('\n')
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -75,4 +72,3 @@ with open("posts_replied_to.txt", "w") as f:
         f.write(post_id + "\n")
 
 text_file.close()
-local_subs.close()
