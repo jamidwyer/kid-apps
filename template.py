@@ -24,7 +24,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open({{state_subs}}, "r")
+
+with open('%s.txt' % state, 'r') as myfile:
+    local_subs=myfile.read().replace('\n', '')
+
+local_subs = open('%s_subs.txt' % state, "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -40,11 +44,13 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = [{{election_terms}}]
+            terms = open('%s_terms.txt' % state, "r")
+
+            terms = [terms]
             for term in terms:
                 search(term, submission);
 
-def search(term, submission, include_green):
+def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;]({{registration_link}})
