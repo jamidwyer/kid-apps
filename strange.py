@@ -45,11 +45,8 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action) by Monday, November 27, 2017 \n\n"
-            "General Election: December 12, 2017 \n\n"
-            "[Find your polling place](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("[Registration Deadline](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action): November 27, 2017 \n\n"
+            "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): December 12, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
