@@ -38,27 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['goodlatte', 'House Judiciary chairman', 'U.S. House panels open probe into Justice Department', 'House GOP leaders open probe into FBI', 'latest Republican patsy', 'Lawmakers grapple with warrantless wiretapping program']
+            terms = ['goodlatte', 'wave of Republicans leaving Congress', 'House Judiciary chairman', 'U.S. House panels open probe into Justice Department', 'House GOP leaders open probe into FBI', 'latest Republican patsy', 'Lawmakers grapple with warrantless wiretapping program']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by October 15, 2018. \n\n"
-            "[**Peter Volosin**](http://www.votevolosin.com/) is running against Bob Goodlatte. \n\n"
-            "[Facebook](https://www.facebook.com/votevolosin/) | "
-            "[Twitter](https://twitter.com/votevolosin) | "
-            "[Donate](https://secure.actblue.com/donate/volosin) \n\n"
-
-            "Volosin supports universal health care.  \n\n"
-
-            "Primary Election: June 12, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Virginia District 6](https://www.govtrack.us/congress/members/VA/6) \n\n"
-            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("[&#9733;&#9733;&#9733;
+            "[Voter Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
+            "[Primary Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): June 12, 2018 \n\n"
+            "[General Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): November 6, 2018 \n\n"
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
