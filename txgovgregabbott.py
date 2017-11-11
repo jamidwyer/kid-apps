@@ -57,23 +57,10 @@ def searchAndPost(sub):
 def search(term, submission, blend_in, fb_link, twitter_link, donate_link):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n")
-
-        if blend_in:
-            vote_link = ("[Register To Vote](http://www.votetexas.gov/register-to-vote/where-to-get-an-application-2.html) \n\n")
-
-        dems = ("[**Jeffrey Payne**](http://www.jeffrey4texas.com/) is running to be Governor of Texas. \n\n"
-            "[Donate](https://secure.actblue.com/donate/jeffrey4texas) | "
-            "[Facebook](https://www.facebook.com/Jeffrey4Texas/) | "
-            "[Twitter](https://twitter.com/Jeffrey4Texas) \n\n"
-            "Payne supports renewable energy, public schools, living wages, equal pay for equal work, and LGBTQ equality. \n\n\n")
-
-        # This disclaimer works
-        disclaimer = ("^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
-        text = '\n'.join([vote_link, dems, disclaimer])
-
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

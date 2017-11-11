@@ -45,23 +45,10 @@ def searchAndPost(sub):
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
-        # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) by October 5, 2018 \n\n"
-
-        "[**Letitia Plummer**](https://letitiaplummer2018.com) is running to represent Texas District 22 in the United States Congress. \n\n"
-        "[Facebook](https://www.facebook.com/plummerTX22) | "
-        "[Twitter](https://twitter.com/plummerTX22) | "
-        "[Donate](https://secure.actblue.com/donate/letitiaplummer2018) \n\n"
-
-        "Plummer supports Medicare for all.  \n\n"
-
-        "[Map of Texas District 26](https://www.govtrack.us/congress/members/TX/26) \n\n"
-
-        "General Election: November 6, 2018 \n\n"
-        "[Find your polling place](https://www.rockthevote.com/get-informed/elections/find-your-polling-place/) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

@@ -45,6 +45,11 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
+        text = ("Maine Election 2018 \n\n"
+            "[Voter Registration Deadline](http://www.maine.gov/sos/cec/elec/voter-info/voterguide.html): 2018 \n\n"
+            "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): November 6, 2018 \n\n")
+
+
         text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.maine.gov/sos/cec/elec/voter-info/voterguide.html) \n\n"
             "[**Betsy Sweet**](http://sweetforgovernor.com/) is running to be Governor of Maine. \n\n"
             "[Facebook](https://www.facebook.com/sweet4governor/) | "

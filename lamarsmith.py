@@ -44,25 +44,10 @@ def searchAndPost(sub):
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
-        # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Chris Perri**](https://www.chrisperrifortexas.com/) is running against Lamar Smith. \n\n"
-            "[Facebook](https://www.facebook.com/ChrisPerriforTexas/) | "
-            "[Twitter](https://twitter.com/ChrisPerriTX) | "
-            "[Volunteer](https://www.chrisperrifortexas.com/volunteer/) | "
-            "[Donate](https://secure.actblue.com/donate/chris-perri-for-texas) \n\n"
-            "Perri supports universal health care, public schools, affordable college, living wages, protecting Social Security, renewable energy, campaign finance reform, and DACA. \n\n\n"
-
-            "[**Derrick Crowe**](https://www.electcrowe.com/#issues-home-section) is running against Lamar Smith. \n\n"
-            "[Facebook](https://www.facebook.com/electcrowe) | "
-            "[Twitter](https://twitter.com/electcrowe) | "
-            "[Volunteer](https://www.electcrowe.com/join/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/electcrowe) \n\n"
-            "Crowe supports universal health care, living wages, paid family leave, affordable college, renewable energy, campaign finance reform, LGBTQ equality, and DACA. \n\n\n"
-
-            "[Map of Texas District 21](https://www.govtrack.us/congress/members/TX/21) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

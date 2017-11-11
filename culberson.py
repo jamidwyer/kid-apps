@@ -46,39 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-        "[**Jason Westin**](https://westinforcongress.com/) is running against John Culberson. \n\n"
-        "[Donate](https://secure.actblue.com/contribute/page/nbijw2017) | "
-        "[Facebook](https://www.facebook.com/WestinForCongress) | "
-        "[Twitter](https://twitter.com/DrWestinForTX07) \n\n"
-
-        "Westin supports single-payer health care, public schools, universal pre-K, equal pay for equal work, renewable energy, LGBTQ equality, voting rights, and funding science.  \n\n\n"
-
-        "[**Alex Triantaphyllis**](http://www.alextfortexas.com/index.html) is running against John Culberson. \n\n"
-        "[Donate](https://secure.actblue.com/contribute/page/alexthomepage) | "
-        "[Facebook](https://www.facebook.com/AlexTforTexas/) | "
-        "[Twitter](https://twitter.com/AlexTforTexas) \n\n"
-
-         "Triantaphyllis supports renewable energy, public schools and protecting Social Security and Medicare. \n\n\n"
-
-        "[**James Cargas**](http://www.jamescargas.com/on-the-issues/) is running against John Culberson. \n\n"
-        "[Donate](https://secure.actblue.com/contribute/page/james-cargas-1) | "
-        "[Facebook](https://www.facebook.com/Cargas7/) | "
-        "[Twitter](https://twitter.com/Cargas7) \n\n"
-
-         "Cargas supports public schools, affordable college, universal pre-K, renewable energy, LGBTQ equality, background checks on every gun sale, voting rights, and funding science. \n\n\n"
-
-        "[**Laura Moser**](https://moserforcongress.com/) is running against John Culberson. \n\n"
-        "[Donate](https://secure.actblue.com/contribute/page/moser_website) | "
-        "[Facebook](https://www.facebook.com/lauramosertx) | "
-        "[Twitter](https://twitter.com/@lcmoser) \n\n\n"
-
-        "[Map of Texas District 7](https://www.govtrack.us/congress/members/TX/7) \n\n "
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
-
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
