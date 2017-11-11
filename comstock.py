@@ -45,26 +45,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by October 15, 2018. \n\n"
-            "[**Dan Helmer**](https://www.helmerforcongress.com/home) is running against Barbara Comstock. \n\n"
-            "[Facebook](https://www.facebook.com/HelmerVA10/) | "
-            "[Twitter](https://twitter.com/helmerVA10) | "
-            "[Volunteer](https://docs.google.com/forms/d/e/1FAIpQLSdxM7vySs9WXrjxvBCv82CwUPbWHLMArKXQszntUjiWe3qwCg/viewform) | "
-            "[Donate](https://secure.actblue.com/donate/dan-helmer) \n\n"
-
-            "Helmer supports renewable energy and protecting Social Security and Medicare.  \n\n"
-
-            "[**Jennifer Wexton**](https://jenniferwexton.com/home/) is running against Barbara Comstock. \n\n"
-            "[Facebook](https://www.facebook.com/JenniferTWexton/) | "
-            "[Twitter](https://twitter.com/jenniferwexton) | "
-            "[Volunteer](https://jenniferwexton.com/home/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/wextonforcongress/) \n\n"
-
-            "Primary Election: June 12, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Virginia District 10](https://www.govtrack.us/congress/members/VA/10) \n\n"
-            "[Find your polling place](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
+        text = ("[Voter Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
+            "[Primary Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): June 12, 2018 \n\n"
+            "[General Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): November 6, 2018 \n\n")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
