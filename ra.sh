@@ -1,24 +1,5 @@
 #!/bin/sh
 
-python ga-atlanta-mayor.py
-python wa-st-sen-45.py
-python va-st-hd-67-lemunyon.py
-python va-st-hd-51.py
-python nc-asheville-city-council.py
-python christie.py
-python va-st-hd-50.py
-python co-aurora-city-council.py
-python va-st-hd-73.py
-python gillespie.py
-python valtgov.py
-python va-st-hd-3.py
-python va-st-hd-12.py
-python va-st-hd-8.py
-python va-st-hd-58.py
-python va-st-hd-13.py
-python va-st-hd-42.py
-python ny-manhattan-da.py
-python chaffetz.py
 python strange.py
 python valadao.py
 python paulsen.py

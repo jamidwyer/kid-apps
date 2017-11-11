@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# coding: utf-8
+
 import praw
 import pdb
 import re
@@ -23,11 +25,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
-subs = local_subs.read().split('\n')
-ssubs = text_file.read().split('\n')
-subs.extend(ssubs)
+subs = text_file.read().split('\n')
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'ted. cruz', '5 Republicans who could challenge Trump in 2020', 'Trump feuds endangering tax reform', 'middle-class Americans, including Texans, will see a tax increase', 't Work So Well for F.D.R.', 'Republicans Are Unsure What Trump Wants on Health Care', 'Texas Voters Familiar With Cruz', 'Cruz claims repealing the estate tax', 'Bernie calls GOP tax plan a \'Robin Hood proposal in reverse', 'Sanders, Cruz spar', 'Ted Lies Again', 'tedcruz', 'sanders vs. cruz', 'Bernie Sanders Tax Reform debate MegaThread', 'tries to sell tax reform to Democrats', 'for at Least 3rd Time in Two Months', 'Republicans Worry They\'ll Lose Congress', 'Republicans fear a \'bloodbath\' in midterm elections', 'Cruz: GOP could face', 'Watergate-level blowout', 'Cruz warns Koch donors re', 'CRUZ: MAYBE NEXT YEAR', 'Sanders, Cruz to Square Off Over in a Debate Over GOP', 'except Cruz', 'Cruz, Sanders to debate Trump', 'Cruz town hall debate on taxes', 'Where GOP senators stand on President Trump', 'Austin political consultant worked for Germany', 'Favorite Meme-Maker is Now Helping the Far-Right in Germany', 'Cruz grapples with GOP inaction under Trump', 'what democrats must do', 'morally repugnant and bad economic policy', 'collapse escalates Republican infighting', 'Republicans look to next year for Obamacare repeal', 'GOP already eyeing next chance', 'guts Obamacare even more', 'But They Just Might, Anyway', 'Al Franken keeps jabbing at Ted Cruz', 'outlines four-step plan to Medicare for all', 'pass this final test before it can come to a vote', 'GOP takes heavy fire over pre-existing conditions', 'insurer bailout could turn Texas blue', 'PolitiFact: Cruz and O', 'dis cruz', 'Cruz Bill Eases Revocations of U.S. Citizenship Without Due Process', 'states like Texas to request federal assistance after Harvey', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
+            terms = ['ted cruz', 'sen. cruz', 'senator cruz', 'ted. cruz', '35 and 12th', '5 Republicans who could challenge Trump in 2020', 'Trump feuds endangering tax reform', 'middle-class Americans, including Texans, will see a tax increase', 't Work So Well for F.D.R.', 'Republicans Are Unsure What Trump Wants on Health Care', 'Texas Voters Familiar With Cruz', 'Cruz claims repealing the estate tax', 'Bernie calls GOP tax plan a \'Robin Hood proposal in reverse', 'Sanders, Cruz spar', 'Ted Lies Again', 'tedcruz', 'sanders vs. cruz', 'Bernie Sanders Tax Reform debate MegaThread', 'tries to sell tax reform to Democrats', 'for at Least 3rd Time in Two Months', 'Republicans Worry They\'ll Lose Congress', 'Republicans fear a \'bloodbath\' in midterm elections', 'Cruz: GOP could face', 'Watergate-level blowout', 'Cruz warns Koch donors re', 'CRUZ: MAYBE NEXT YEAR', 'Sanders, Cruz to Square Off Over in a Debate Over GOP', 'except Cruz', 'Cruz, Sanders to debate Trump', 'Cruz town hall debate on taxes', 'Where GOP senators stand on President Trump', 'Austin political consultant worked for Germany', 'Favorite Meme-Maker is Now Helping the Far-Right in Germany', 'Cruz grapples with GOP inaction under Trump', 'what democrats must do', 'morally repugnant and bad economic policy', 'collapse escalates Republican infighting', 'Republicans look to next year for Obamacare repeal', 'GOP already eyeing next chance', 'guts Obamacare even more', 'But They Just Might, Anyway', 'Al Franken keeps jabbing at Ted Cruz', 'outlines four-step plan to Medicare for all', 'pass this final test before it can come to a vote', 'GOP takes heavy fire over pre-existing conditions', 'insurer bailout could turn Texas blue', 'PolitiFact: Cruz and O', 'dis cruz', 'Cruz Bill Eases Revocations of U.S. Citizenship Without Due Process', 'states like Texas to request federal assistance after Harvey', 'Texas Congressmen voted against Sandy relief, now are begging for Harvey relief', 'hypocrisy on Harvey aid', 'Texas Lawmakers Who Voted Against Relief for Hurricane Sandy', 'Texas Republicans voted against aid', 'Socialist After a Natural Disaster', 'Cruz, Cornyn back Texas Gov\'s request for disaster declaration']
             for term in terms:
                 search(term, submission);
 
@@ -75,4 +74,3 @@ with open("posts_replied_to.txt", "w") as f:
         f.write(post_id + "\n")
 
 text_file.close()
-local_subs.close()

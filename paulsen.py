@@ -23,11 +23,8 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("minnesota.dat", "r")
 text_file = open("standardsubs.dat", "r")
-subs = local_subs.read().split('\n')
-ssubs = text_file.read().split('\n')
-subs.extend(ssubs)
+subs = text_file.read().split('\n')
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
