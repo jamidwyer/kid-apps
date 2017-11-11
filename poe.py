@@ -46,21 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) by October 5, 2018 \n\n"
-
-        "[**Todd Litton**](http://toddlitton.com/) is running against Ted Poe. \n\n"
-        "[Facebook](https://www.facebook.com/toddlittonforcongress) | "
-        "[Twitter](https://twitter.com/toddlitton) | "
-        "[Volunteer](http://toddlitton.com/#get-involved) | "
-        "[Donate](https://secure.actblue.com/contribute/page/todd-litton-for-congress-3) \n\n"
-
-        "[Map of Texas District 2](https://www.govtrack.us/congress/members/TX/2) \n\n"
-
-        "General Election: November 6, 2018 \n\n"
-        "[Find your polling place](https://www.rockthevote.com/get-informed/elections/find-your-polling-place/) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

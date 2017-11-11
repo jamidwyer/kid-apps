@@ -46,17 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.votetexas.gov/register-to-vote/) \n\n"
-            "[**Jan McDowell**](https://www.janmcdowell.com/) is running against Kenny Marchant. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/jan-mcdowell-for-congress-1) | "
-            "[Facebook](https://www.facebook.com/JanMcDowellDemocrat) |"
-            "[Twitter](https://twitter.com/JanForCongress) \n\n"
-            "McDowell supports universal health care, paid family leave, protecting Social Security, and equal pay for equal work. \n\n\n"
-
-            "[Map of Texas District 24](https://www.govtrack.us/congress/members/TX/24) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
+        text = ("Texas 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
