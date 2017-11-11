@@ -28,7 +28,7 @@ else:
 local_subs = open("alabama.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
-subs = text_file.read().split('\n')
+ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
 # Get the top values from our subreddit
