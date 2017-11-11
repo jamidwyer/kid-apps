@@ -52,14 +52,6 @@ def search(term, submission):
             "General Election: December 12, 2017 \n\n"
             "[Find your polling place](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do) \n\n"
 
-            "[**Doug Jones**](http://dougjonesforsenate.com/) is running to represent Alabama in the U.S. Senate. \n\n "
-            "[Facebook](https://www.facebook.com/dougjonessenate) | "
-            "[Twitter](https://twitter.com/gdouglasjones) | "
-            "[Volunteer](https://dougjones.bsd.net/page/s/volunteer) | "
-            "[Donate](https://secure.actblue.com/donate/homepage-donate) \n\n "
-
-            "Jones supports universal health care, public schools, living wages, protecting Medicare, equal pay for equal work, renewable energy, and LGBTQ equality.  \n\n "
-
             "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
         print("Bot replying to : ", submission.title)
         try:
