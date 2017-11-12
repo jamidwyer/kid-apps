@@ -22,4 +22,10 @@ python brat.py
 python goodlatte.py
 python comstock.py
 python lepage.py
+python mcsally.py
 python flake.py
+python schweikert.py
+python trent-franks.py
+python az-1.py
+python ducey.py
+python az-5.py

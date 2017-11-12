@@ -46,21 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://servicearizona.com/webapp/evoter/register?execution=e1s2) by July 30, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.vote.org/absentee-ballot/) \n\n\n"
-
-            "[**Tom O'Halleran**](http://www.tomohalleran.com/issues) is running to represent Arizona House District 1 in the United States Congress. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/ohalleran) | "
-            "[Facebook](https://www.facebook.com/ohalleranforaz) | "
-            "[Twitter](https://twitter.com/tomohalleran) \n\n\n"
-
-            "O'Halleran supports public schools, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
-
-            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Arizona House District 1](https://www.govtrack.us/congress/members/AZ/1) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("Arizona 2018 Election \n\n"
+            "[Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): July 30, 2018 \n\n"
+            "[Primary Election](https://www.vote.org/absentee-ballot/): August 28, 2018 \n\n"
+            "[General Election](https://www.vote.org/absentee-ballot/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

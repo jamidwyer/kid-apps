@@ -41,16 +41,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information) \n\n"
-            "[**Garrick McFadden**](https://www.electgarrick.com/) is running against David Schweikert. \n\n"
-            "[Donate](https://www.electgarrick.com/contribute/) | "
-            "[Facebook](https://www.facebook.com/electgm/) | "
-            "[Twitter](https://twitter.com/GMcFaddenEsq) \n\n"
-
-            "Map of Arizona District 6: https://www.govtrack.us/congress/members/AZ/6 \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        text = ("Arizona 2018 Election \n\n"
+            "[Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): July 30, 2018 \n\n"
+            "[Primary Election](https://www.vote.org/absentee-ballot/): August 28, 2018 \n\n"
+            "[General Election](https://www.vote.org/absentee-ballot/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
