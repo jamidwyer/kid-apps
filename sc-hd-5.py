@@ -46,18 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
-            "[**Archie Parnell**](http://archieparnell.com/) is running to represent South Carolina House District 5 in the United States Congress. \n\n"
-            "[Facebook](https://www.facebook.com/ArchieParnellforCongress) | "
-            "[Twitter](https://twitter.com/Archie4Congress) | "
-            "[Volunteer](http://archieparnell.com/get-involved) | "
-            "[Donate](https://secure.actblue.com/donate/archielaunch) \n\n"
-            "Parnell supports public schools, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
-
-            "General Election: November 6, 2018 \n\n"
-            "[Map of South Carolina District 5](https://www.govtrack.us/congress/members/SC/5) \n\n "
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("South Carolina 2018 Election \n\n"
+            "[Voter Registration Deadline](https://info.scvotes.sc.gov/eng/ovr/start.aspx): May 13, 2018 \n\n"
+            "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n"
+            "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
