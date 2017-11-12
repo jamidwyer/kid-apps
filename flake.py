@@ -44,24 +44,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://servicearizona.com/webapp/evoter/register?execution=e1s2) by July 30, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.vote.org/absentee-ballot/) \n\n\n"
-
-            "[**Deedra Abboud**](http://deedra2018.com/) is running to represent Arizona in the United States Senate. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/deedra-2018) | "
-            "[Facebook](https://www.facebook.com/Deedra2018/) | "
-            "[Twitter](https://twitter.com/deedra2018) \n\n"
-            "Abboud supports health care for all Americans, public schools, protecting Social Security, LGBTQ equality, and net neutrality. \n\n\n"
-
-            "[**Kyrsten Sinema**](http://kyrstensinema.com/) is running to represent Arizona in the United States Senate. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/kyrstensinema) | "
-            "[Facebook](https://www.facebook.com/ksinemaaz/) | "
-            "[Twitter](https://twitter.com/kyrstensinema) \n\n"
-            "Sinema supports renewable energy, increasing the minimum wage, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
-
-            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+            text = ("Arizona 2018 Election \n\n"
+                "[Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): July 30, 2018 \n\n"
+                "[Primary Election](https://www.vote.org/absentee-ballot/): August 28, 2018 \n\n"
+                "[General Election](https://www.vote.org/absentee-ballot/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
