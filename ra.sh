@@ -22,3 +22,4 @@ python brat.py
 python goodlatte.py
 python comstock.py
 python lepage.py
+python flake.py
