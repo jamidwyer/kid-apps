@@ -47,22 +47,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://nvsos.gov/sosvoterservices/Registration/step1.aspx) \n\n"
-        "[**Jesse Sbaih**](https://jessefornevada.com/) is running against Dean Heller. \n\n "
-        "[Facebook](https://www.facebook.com/jessesbaihsenate) | "
-        "[Twitter](https://twitter.com/JesseSbaih) | "
-        "[Volunteer](http://go.jessefornevada.com/page/s/homepage-volunteer) | "
-        "[Donate](https://secure.actblue.com/contribute/page/jesse-homepage) \n\n"
-        "Sbaih supports Medicare for all, a living wage, equal pay for equal work, protecting Social Security, affordable college, renewable energy, and campaign finance reform. \n\n\n"
-
-        "[**Jacky Rosen**](https://www.rosenfornevada.com/) is running against Dean Heller. \n\n "
-        "[Facebook](https://www.facebook.com/rosenfornevada/) | "
-        "[Twitter](https://twitter.com/RosenforNevada) | "
-        "[Volunteer](https://jackyrosen.cp.bsd.net/page/signup/volunteer) | "
-        "[Donate](https://secure.actblue.com/donate/rosen-homepage) \n\n"
-        "Rosen supports affordable health care for every American, public schools, protecting Social Security and Medicare, renewable energy, net neutrality, and DACA. \n\n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Nevada 2018 Election \n\n"
+            "[Voter Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): May 15, 2018 \n\n"
+            "[Primary Election](https://nvsos.gov/votersearch/index.aspx): June 12, 2018 \n\n"
+            "[General Election](https://nvsos.gov/votersearch/index.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

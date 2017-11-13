@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -39,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
+            terms = ['Democrats with recipe for Latino vote in 2018']
             for term in terms:
                  search(term, submission);
 
