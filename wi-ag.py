@@ -45,16 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Josh Kaul**](https://www.joshkaul.org/) is running to be Wisconsin's Attorney General. \n\n"
-            "[Facebook](https://www.facebook.com/JoshKaulWI/) | "
-            "[Twitter](https://twitter.com/JoshKaulWI) | "
-            "[Volunteer](https://act.myngp.com/Forms/1914403600351103488) | "
-            "[Donate](https://secure.actblue.com/contribute/page/joshkaul) \n\n"
-            "Kaul supports voting rights. \n\n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+                text = ("Wisconsin 2018 Election \n\n"
+                    "[Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+                    "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
+                    "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

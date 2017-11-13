@@ -37,3 +37,7 @@ python trent-franks.py
 python az-1.py
 python ducey.py
 python az-5.py
+python ryan.py
+python wisconsin.py
+python scottwalker.py
+python wi-ag.py

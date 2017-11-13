@@ -1,9 +1,9 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("wisconsin.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,33 +32,33 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted poe', 'H.R. 620', 'hr 620', 'Republicans are deciding they want no part of the 2018 elections', 'Americans with Disabilities Act is Under Attack', 'Attack on the ADA', 'oppose the ADA Education Reform', 'tx-02', 'rep poe', 'representative poe', 'congressman poe', 'rep. poe']
+            terms = ['sensible center of American politics needs to step up']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
-    if re.search(term, submission.title, re.IGNORECASE):
-        # Reply to the post
-        text = ("Texas 2018 Election \n\n"
-            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
-            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
-        print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
+            if re.search(term, submission.title, re.IGNORECASE):
+                # Reply to the post
+                text = ("Wisconsin 2018 Election \n\n"
+                    "[Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+                    "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
+                    "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
+                print("Bot replying to : ", submission.title)
+                try:
+                    submission.reply(text)
+                except Exception:
+                    print("Error : ", submission.title)
+                    pass
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+                # Store the current id into our list
+                posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

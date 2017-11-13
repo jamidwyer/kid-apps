@@ -45,21 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-            "[**Andy Gronik**](https://www.andygronik.com) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/donate/gronik-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/AndyGronik) | "
-            "[Twitter](https://twitter.com/AndyGronik) \n\n"
-            "Gronik supports universal health care, public schools, affordable college, equal pay for equal work, and voting rights. \n\n\n"
-
-            "[**Bob Harlow**](https://bobharlow.net/) is running to be Governor of Wisconsin. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/harlow-for-wisconsin) | "
-            "[Facebook](https://www.facebook.com/HarlowForWisconsin/) | "
-            "[Twitter](https://twitter.com/bobharlow_) \n\n"
-            "Harlow supports universal health care and public schools. \n\n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+                text = ("Wisconsin 2018 Election \n\n"
+                    "[Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+                    "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
+                    "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

@@ -46,22 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
             if re.search(term, submission.title, re.IGNORECASE):
                 # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://myvote.wi.gov/en-us/registertovote) \n\n"
-                    "[**Randy Bryce**](https://randybryceforcongress.com/) is running against Paul Ryan. \n\n"
-                    "[Donate](https://secure.actblue.com/donate/randy-bryce-for-congress-1) | "
-                    "[Reddit](https://www.reddit.com/r/RandyBryce) | "
-                    "[Facebook](https://www.facebook.com/RandyBryce2018) | "
-                    "[Twitter](https://twitter.com/IronStache) \n\n"
-                    "Bryce supports universal health care, living wages, protecting Social Security and Medicare, affordable college, renewable energy, campaign finance reform, and DACA. \n\n\n"
-
-                    "[**Cathy Myers**](https://cathymyersforcongress.com/) is running against Paul Ryan. \n\n"
-                    "[Donate](https://secure.actblue.com/donate/cathy-for-congress-1?refcode=website) | "
-                    "[Facebook](https://www.facebook.com/cathymyersforcongress/) \n\n"
-
-                    "[Map of Wisconsin District 1](https://www.govtrack.us/congress/members/WI/1) \n\n"
-
-                    "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+                text = ("Wisconsin 2018 Election \n\n"
+                    "[Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+                    "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
+                    "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
                 print("Bot replying to : ", submission.title)
                 try:
                     submission.reply(text)
