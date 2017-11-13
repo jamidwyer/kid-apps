@@ -18,6 +18,7 @@ python mccaul.py
 python sc-hd-3.py
 python sc-gov-henry-mcmaster.py
 python sc-hd-5.py
+python scotttaylor.py
 python brat.py
 python goodlatte.py
 python comstock.py
