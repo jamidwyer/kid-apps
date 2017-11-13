@@ -38,23 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scott taylor', 'rep. taylor', 'congressman taylor', 'rep taylor']
+            terms = ['scott taylor', 'rep. taylor', 'congressman taylor', 'rep taylor', 'Ralph Northam won in 2 Republican']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://vote.elections.virginia.gov/Registration/Eligibility) by Monday, October 16, 2017. \n\n"
-            "[**Dave Belote**](https://votebelote.com/) is running against Scott Taylor. \n\n"
-            "[Donate](https://act.myngp.com/Forms/9136122881237124864) | "
-            "[Facebook](https://www.facebook.com/votebelote/) | "
-            "[Twitter](https://twitter.com/votebelote) \n\n"
-
-            "Map of Virginia District 2: https://www.govtrack.us/congress/members/VA/2 \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        text = ("Virginia 2018 Election \n\n"
+            "[Voter Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
+            "[Primary Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): June 12, 2018 \n\n"
+            "[General Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): November 6, 2018 \n\n")
         submission.reply(text)
         print("Bot replying to : ", submission.title)
 
