@@ -45,20 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) \n\n"
-        "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n")
-
-        dems = ("[**Jess King**](http://jesskingforcongress.com/) is running to represent Pennsylvania District 16 in the United States Congress. \n\n"
-        "[Twitter](https://twitter.com/jessforcongress) | "
-        "[Donate](https://secure.actblue.com/donate/jesskingforcongress) \n\n"
-        "King supports universal health care. \n\n\n"
-
-        map = ("[Map of Pennsylvania House District 16](https://www.govtrack.us/congress/members/PA/16) \n\n")
-
-        with open('disclaimer.txt', 'r') as myfile:
-            disclaimer=myfile.read().replace('\n', '')
-
-        text = '\n'.join([vote_link, dems, map, disclaimer])
+        text = ("Pennsylvania 2018 Election \n\n"
+            "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): April 16, 2018 \n\n"
+            "[Primary Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): May 15, 2018 \n\n"
+            "[General Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

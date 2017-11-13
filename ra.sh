@@ -15,6 +15,10 @@ python babin.py
 python txgovgregabbott.py
 python tx-ag-paxton.py
 python mccaul.py
+python sc-hd-7.py
+python costello.py
+python smucker.py
+python pa-hd-18.py
 python sc-hd-3.py
 python sc-gov-henry-mcmaster.py
 python sc-hd-5.py

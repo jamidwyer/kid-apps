@@ -45,29 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) \n\n"
-        "[Find your polling place](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx) \n\n")
-
-        dems = ("[**Molly Sheehan**](https://mollysheehan.org/) is running to represent Pennsylvania District 7 in the United States Congress. \n\n"
-        "[Facebook](https://www.facebook.com/sheehanforcongress/) | "
-        "[Twitter](https://twitter.com/pennsymolly) | "
-        "[Volunteer](https://mollysheehan.org/take-action/) | "
-        "[Donate](https://secure.actblue.com/donate/molly-sheehan) \n\n"
-        "Sheehan supports single-payer health care, public schools, paid family leave, renewable energy, campaign finance reform, LGBTQ equality, vote by mail, and automatic voter registration. \n\n\n"
-
-        "[**Paul Perry**](http://perryforpa.com/) is running to represent Pennsylvania District 7 in the United States Congress. \n\n"
-        "[Facebook](https://www.facebook.com/PaulPerryforCongress/) | "
-        "[Twitter](https://twitter.com/PerryForPA) | "
-        "[Volunteer](http://perryforpa.com/volunteer/) | "
-        "[Donate](https://secure.actblue.com/donate/paulperry2018) \n\n"
-        "Perry supports Medicare for all, a living wage, paid family leave, renewable energy, campaign finance reform, police de-escalation training, and automatic voter registration. \n\n\n"
-
-        map = ("[Map of Pennsylvania House District 7](https://www.govtrack.us/congress/members/PA/7) \n\n")
-
-        with open('disclaimer.txt', 'r') as myfile:
-            disclaimer=myfile.read().replace('\n', '')
-
-        text = '\n'.join([vote_link, dems, map, disclaimer])
+        text = ("Pennsylvania 2018 Election \n\n"
+            "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): April 16, 2018 \n\n"
+            "[Primary Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): May 15, 2018 \n\n"
+            "[General Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
