@@ -23,18 +23,25 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
+local_subs = open("pennsylvania.dat", "r")
+text_file = open("standardsubs.dat", "r")
+subs = local_subs.read().split('\n')
+ssubs = text_file.read().split('\n')
+subs.extend(ssubs)
+
 # Get the top values from our subreddit
-subreddit = reddit.subreddit('philadelphia')
-for submission in subreddit.hot(limit=50):
-    #print(submission.title)
+def searchAndPost(sub):
+    subreddit = reddit.subreddit(sub)
+    for submission in subreddit.hot(limit=50):
+        #print(submission.title)
 
-    # If we haven't replied to this post before
-    if submission.id not in posts_replied_to:
+        # If we haven't replied to this post before
+        if submission.id not in posts_replied_to:
 
-            # Do a case insensitive search
-            terms = ['ryan costello', 'Democrats back military veterans as candidates']
-            for term in terms:
-                 search(term, submission);
+                # Do a case insensitive search
+                terms = ['ryan costello', 'Democrats back military veterans as candidates']
+                for term in terms:
+                     search(term, submission);
 
 def search(term, submission):
     if re.search("costello", submission.title, re.IGNORECASE):
