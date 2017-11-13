@@ -46,20 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-            "[**Dotty Nygard**](https://www.dottynygardforcongress.com/) is running against Jeff Denham. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/dottyforcongress) | "
-            "[Facebook](https://www.facebook.com/DottyForCongressCD10/) | "
-            "[Twitter](https://twitter.com/Dotty4Congress) \n\n"
-            "Nygard supports Medicare for all/single-payer health care, renewable energy, campaign finance reform, net neutrality, and college affordability.\n\n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 10](https://www.govtrack.us/congress/members/CA/10) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

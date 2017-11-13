@@ -46,20 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search("steve knight", submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-            "[**Katie Hill**](http://www.katiehillforcongress.com/) is running against Steve Knight. \n\n"
-            "[Facebook](https://www.facebook.com/KatieHillforCongress/) |"
-            "[Twitter](https://twitter.com/KatieHill4CA) | "
-            "[Donate](https://secure.actblue.com/contribute/page/katie-hill-for-congress-1) \n\n"
-            "Hill supports single-payer health care, renewable energy, living wages, campaign finance reform, net neutrality, and affordable higher education. \n\n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 25](https://www.govtrack.us/congress/members/CA/25) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

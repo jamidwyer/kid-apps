@@ -45,28 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-            "[**Pierre (Pete) Beauregard**](http://beauregard4congress.com/) is running against Duncan Hunter. \n\n"
-            "[Facebook](https://www.facebook.com/Beauregard4Congress/) | "
-            "[Twitter](https://twitter.com/BeauregardCA50) | "
-            "[Volunteer](http://beauregard4congress.com/mainpage.beauregard4congress.com/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/pete-beauregard-1) \n\n"
-            "Beauregard supports universal health care, living wages, renewable energy, campaign finance reform, and net neutrality. \n\n\n"
-
-            "[**Josh Butner**](https://joshbutnerforcongress.com/) is running against Duncan Hunter. \n\n"
-            "[Facebook](https://www.facebook.com/JoshButnerCA50/) | "
-            "[Twitter](https://twitter.com/JoshButnerCA50) | "
-            "[Volunteer](https://joshbutnerforcongress.com/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/butner-homepage) \n\n"
-            "Butner supports DACA. \n\n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 50](https://www.govtrack.us/congress/members/CA/50) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

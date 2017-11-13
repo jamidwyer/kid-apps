@@ -43,32 +43,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-            "[**Mai Khanh Tran**](https://doctran2018.com/) is running against Ed Royce. \n\n"
-            "[Donate](https://secure.actblue.com/donate/drtranforcongress) | "
-            "[Facebook](https://www.facebook.com/DocTran2018/) | "
-            "[Twitter](https://twitter.com/DocTran2018) \n\n"
-            "Tran supports universal health care coverage and Planned Parenthood. \n\n\n"
-
-            "[**Andy Thorburn**](https://www.thorburnforcongress.com/) is running against Ed Royce. \n\n"
-            "[Donate](https://secure.actblue.com/donate/andythorburnca?refcode=website) | "
-            "[Facebook](https://www.facebook.com/AndyThorburnCA) | "
-            "[Twitter](https://twitter.com/AndyThorburnCA) \n\n"
-            "Thorburn supports universal health care coverage. \n\n\n"
-
-            "[**Phil Janowicz**](http://philforhouse.com/#issues) is running against Ed Royce. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/phil) | "
-            "[Facebook](https://www.facebook.com/philforhouse) | "
-            "[Twitter](https://twitter.com/PhilforHouse) \n\n"
-            "Janowicz supports renewable energy, living wages, LGBTQ equality, equal pay for equal work, and increasing funding for science.\n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 39](https://www.govtrack.us/congress/members/CA/39) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

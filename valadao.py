@@ -45,20 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-        "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-        "[**Emilio Huerta**](http://www.huertaforcongress.com/) is running against David Valadao. \n\n "
-        "[Facebook](https://www.facebook.com/huertaforcongress/) | "
-        "[Twitter](https://twitter.com/huerta4congress/) | "
-        "[Donate](https://secure.actblue.com/donate/huerta/) \n\n"
-
-        "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-        "[Map of California District 21](https://www.govtrack.us/congress/members/CA/21) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

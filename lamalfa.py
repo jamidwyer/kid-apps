@@ -46,25 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://registertovote.ca.gov/) by May 16, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply) \n\n\n"
-
-            "[**Dennis Duncan**](https://www.dennis2018.com/) is running against Doug LaMalfa. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/dennis2018) | "
-            "[Facebook](https://www.facebook.com/Dennis4district1/) | "
-            "[Twitter](https://twitter.com/DennisCD01) \n\n"
-            "Duncan supports Medicare for all, living wages, college affordability, renewable energy, and campaign finance reform.\n\n\n"
-
-            "[**Jessica Holcombe**](https://jessicaforcongress.org/) is running against Doug LaMalfa. \n\n"
-            "[Donate](https://www.crowdpac.com/campaigns/245830/progress-for-californias-1st-congressional-district) | "
-            "[Facebook](https://www.facebook.com/Jessica-Holcombe-for-Congress-1775710765779809/) \n\n "
-            "Holcombe supports universal health care, living wages, public schools, college affordability, and renewable energy.\n\n\n"
-
-            "Primary Election: June 5, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of California District 1](https://www.govtrack.us/congress/members/CA/1) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

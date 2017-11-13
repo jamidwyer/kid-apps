@@ -25,6 +25,7 @@ python sc-hd-5.py
 python heller.py
 python nv-gov.py
 python nevada.py
+python issa.py
 python scotttaylor.py
 python brat.py
 python goodlatte.py
