@@ -45,18 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-            "[**Peter Jacob**](http://www.jacob2018.com/) is running against Leonard Lance. \n\n"
-            "[Reddit](https://www.reddit.com/r/JacobForCongress/) | "
-            "[Facebook](https://www.facebook.com/PeterJacobNJ/) | "
-            "[Twitter](https://twitter.com/peterjacobnj) | "
-            "[Donate](https://act.myngp.com/Forms/-2881380105674945792) \n\n "
-            "Jacob supports Medicare for all, a living wage, equal pay for equal work, renewable energy, and campaign finance reform.\n\n\n"
-
-            "[Map of New Jersey District 7](https://www.govtrack.us/congress/members/NJ/7) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("New Jersey 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.state.nj.us/state/elections/voting-information.html): May 13, 2018 \n\n"
+            "[Primary Election](http://www.njelections.org/voting-information-vote-by-mail.html): June 5, 2018 \n\n"
+            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

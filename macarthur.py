@@ -42,17 +42,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-        "[**Andy Kim**](https://www.andykimforcongress.com/) is running against Tom Macarthur. \n\n"
-        "[Donate](https://secure.actblue.com/donate/andykim) | "
-        "[Reddit](https://www.reddit.com/r/AndyKim2018/) | "
-        "[Facebook](https://www.facebook.com/AndyKimNJ) | "
-        "[Twitter](https://twitter.com/AndyKimNJ) \n\n\n"
-
-        "[Map of New Jersey District 3](https://www.govtrack.us/congress/members/NJ/3) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-        "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        text = ("New Jersey 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.state.nj.us/state/elections/voting-information.html): May 13, 2018 \n\n"
+            "[Primary Election](http://www.njelections.org/voting-information-vote-by-mail.html): June 5, 2018 \n\n"
+            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

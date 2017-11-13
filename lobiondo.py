@@ -43,19 +43,17 @@ def searchAndPost(sub):
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-                    "Frank Lobiondo is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31366-u-s-representative-nj-2/interest_form)? \n\n"
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("New Jersey 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.state.nj.us/state/elections/voting-information.html): May 13, 2018 \n\n"
+            "[Primary Election](http://www.njelections.org/voting-information-vote-by-mail.html): June 5, 2018 \n\n"
+            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
-                    "[Map of New Jersey District 2](https://www.govtrack.us/congress/members/NJ/2) \n\n"
-
-                    "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-                print("Bot replying to : ", submission.title)
-                submission.reply(text)
-
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)

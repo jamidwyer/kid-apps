@@ -40,30 +40,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['frelinghuysen', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners', 'tax plan would end key break for N', 'Houston Sought Funding to Mitigate Floods']
+            terms = ['frelinghuysen', 'New Jersey election results could be bad omen for', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners', 'tax plan would end key break for N', 'Houston Sought Funding to Mitigate Floods']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.state.nj.us/state/elections/voting-information.html) \n\n"
-        "**Jack Gebbia** is running against Rodney Frelinghuysen. \n\n"
-        "[Facebook](https://www.facebook.com/JackGebbia4Congress/) | "
-        "[Twitter](https://twitter.com/jack_gebbia) | "
-        "[Donate](https://www.crowdpac.com/campaigns/233827/jack-gebbia-for-congress-its-time-for-a-change) \n\n"
-        "Gebbia supports single-payer health care and LGBTQ equality. \n\n\n "
-
-        "[**Mikie Sherrill**](http://mikiesherrill.com/) is running against Rodney Frelinghuysen. \n\n"
-        "[Facebook](https://www.facebook.com/MikieSherrillForCongress/) | "
-        "[Twitter](https://twitter.com/MikieSherrill) | "
-        "[Donate](https://act.myngp.com/Forms/1917499825094920704) \n\n"
-        "Sherrill supports Planned Parenthood. \n\n\n "
-
-        "[Map of New Jersey District 11](https://www.govtrack.us/congress/members/NJ/11) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("New Jersey 2018 Election \n\n"
+            "[Voter Registration Deadline](http://www.state.nj.us/state/elections/voting-information.html): May 13, 2018 \n\n"
+            "[Primary Election](http://www.njelections.org/voting-information-vote-by-mail.html): June 5, 2018 \n\n"
+            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
