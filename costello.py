@@ -44,7 +44,7 @@ def searchAndPost(sub):
                      search(term, submission);
 
 def search(term, submission):
-    if re.search("costello", submission.title, re.IGNORECASE):
+    if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Pennsylvania 2018 Election \n\n"
             "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): April 16, 2018 \n\n"
