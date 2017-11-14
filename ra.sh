@@ -18,7 +18,10 @@ python txgovgregabbott.py
 python tx-ag-paxton.py
 python mccaul.py
 python 2018-11-06-nc.py
+python pittenger.py
 python markwalker.py
+python foxx.py
+python mchenry.py
 python meadows.py
 python sc-hd-7.py
 python costello.py
