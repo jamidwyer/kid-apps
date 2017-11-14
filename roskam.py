@@ -32,42 +32,20 @@ subs.extend(ssubs)
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
+        text = ("Illinois 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://ova.elections.il.gov/Step0.aspx): February 20, 2018 \n\n"
+            "[Primary Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): March 20, 2018 \n\n"
+            "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
 
-            "[**Ryan Huffman**](http://www.huffmanforcongress.com/) is running against Peter Roskam. \n\n"
-            "[Facebook](https://www.facebook.com/HuffmanForIL6/) | "
-            "[Twitter](https://twitter.com/HuffmanForIL6) \n\n"
-            "[Volunteer](http://www.huffmanforcongress.com/volunteer.html) | "
-            "[Donate](https://secure.actblue.com/donate/ryanhuffman) | "
-            "Huffman supports Medicare for all, public schools, affordable college, living wages, paid family leave, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, DACA, and background checks on every gun sale.\n\n"
+         print("Bot replying to : ", submission.title)
+            try:
+                submission.reply(text)
+            except Exception:
+                print("Error : ", submission.title)
+                pass
 
-            "[**Kelly Mazeski**](http://www.kellymazeski.com/) is running against Peter Roskam. \n\n"
-            "[Facebook](https://www.facebook.com/kellymazeskiforcongress/) | "
-            "[Twitter](https://twitter.com/KellyMazeski) \n\n"
-            "[Volunteer](https://www.kellymazeski.com/get-involved/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/kelly-mazeski-website) | "
-            "Mazeski supports universal health care, public schools, affordable college, living wages, paid family leave, protecting Social Security, equal pay for equal work, renewable energy, and DACA.\n\n"
-
-            "[**Amanda Howland**](http://www.amandahowlandforcongress.com/) is running against Peter Roskam. \n\n"
-            "[Facebook](https://www.facebook.com/howlandforcongress) | "
-            "[Twitter](https://twitter.com/amandahowland06) \n\n"
-            "Howland supports single-payer health care, renewable energy, the Paris Climate Agreement,"
-             "and affordable college.\n\n"
-
-            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Illinois District 6](https://www.govtrack.us/congress/members/IL/6) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-        print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
-
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+            # Store the current id into our list
+            posts_replied_to.append(submission.id)
 
 # Get the top values from our subreddit
 def searchAndPost(sub):

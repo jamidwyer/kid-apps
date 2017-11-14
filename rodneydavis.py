@@ -38,45 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rodney davis', 'davis\'s seat', 'All 6 Missouri Republicans in House vote against Trump']
+            terms = ['rodney davis', 'davis\'s seat', 'Justice Dems Announces FOUR NEW Candidates', 'All 6 Missouri Republicans in House vote against Trump']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
-
-            "[**David Gill**](https://www.davidgill2018.com/platform) is running against Rodney Davis. \n\n"
-            "[Facebook](https://www.facebook.com/DavidGill2018/) | "
-            "[Twitter](https://twitter.com/davidgill2018) | "
-            "[Volunteer](https://www.davidgill2018.com/get-involved) | "
-            "[Donate](https://secure.actblue.com/contribute/page/doctorgillforcongress) \n\n"
-            "Gill supports universal health care, public schools, living wages, affordable college, renewable energy, standing with our international allies, LGBTQ equality, and background checks on every gun sale. \n\n\n"
-
-            "[**Jon Ebel**](http://www.jonebel.com/) is running against Rodney Davis. \n\n"
-            "[Facebook](https://www.facebook.com/Friends-of-Jonathan-Ebel-229030640931027/) | "
-            "[Twitter](https://twitter.com/jonathan_ebel) | "
-            "[Volunteer](http://www.jonebel.com/get-involved/) | "
-            "[Donate](https://contributions.jonebel.com/) \n\n"
-
-            "[**Betsy Dirksen Londrigan**](http://www.betsydirksenlondrigan.com/) is running against Rodney Davis. \n\n"
-            "[Facebook](https://www.facebook.com/BetsyDirksenLondrigan/) | "
-            "[Twitter](https://twitter.com/BetsyforIL) | "
-            "[Volunteer](http://betsydirksenlondrigan.com/index.php/volunteer) | "
-            "[Donate](https://secure.actblue.com/donate/betsydirksenlondriganforillinois) \n\n"
-
-            "[**Erik Jones**](https://erikjonesforcongress.com/) is running against Rodney Davis. \n\n"
-            "[Facebook](https://www.facebook.com/ErikJones4IL/) | "
-            "[Twitter](https://twitter.com/ErikJones4IL) | "
-            "[Donate](https://secure.actblue.com/donate/erikjones) \n\n"
-
-            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Illinois District 13](https://www.govtrack.us/congress/members/IL/13) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know if I can do better. It's a lot of "
-            "work to add all this info, but if you prefer a different candidate, let me know, and I'll add them.)")
+        text = ("Illinois 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://ova.elections.il.gov/Step0.aspx): February 20, 2018 \n\n"
+            "[Primary Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): March 20, 2018 \n\n"
+            "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

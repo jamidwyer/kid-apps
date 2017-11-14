@@ -45,23 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://ova.elections.il.gov/Step0.aspx) by February 20, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx) \n\n\n"
-
-            "[**Dean Pruitt**](http://www.deanforcongress.org/issues.htm) is running against Mike Bost. \n\n"
-            "[Donate](http://www.deanforcongress.org/donate.htm) | "
-            "[Facebook](https://www.facebook.com/deanforcongress) | "
-            "Pruitt supports universal health care, protecting Social Security and Medicare, the Voting Rights Act, and universal pre-K. \n\n\n"
-
-            "[**Brendan Kelly**](https://brendan4southernil.com/) is running against Mike Bost. \n\n"
-            "[Donate](https://secure.actblue.com/donate/kelly-donate) | "
-            "[Facebook](https://www.facebook.com/Brendan4SouthernIllinois/) | "
-            "[Twitter](https://twitter.com/Kelly4SouthrnIL) \n\n"
-
-            "Primary Election: March 20, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Illinois District 12](https://www.govtrack.us/congress/members/IL/12) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Illinois 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://ova.elections.il.gov/Step0.aspx): February 20, 2018 \n\n"
+            "[Primary Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): March 20, 2018 \n\n"
+            "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
 
         print("Bot replying to : ", submission.title)
         submission.reply(text)

@@ -46,9 +46,9 @@ def search(term, submission, include_green):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Ohio 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://olvr.sos.state.oh.us/): 2018 \n\n"
-            "[Primary Election](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
+            "[Primary Voter Registration Deadline](https://olvr.sos.state.oh.us/): April 9, 2018 \n\n"
+            "[Primary Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): May 8, 2018 \n\n"
+            "[General Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): November 6, 2018 \n\n")
 
         print("Bot replying to : ", submission.title)
         try:
