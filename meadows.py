@@ -46,20 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
-
-            "[**Phillip Price**](https://price4wnc.com/visions/) is running to represent North Carolina District 11. \n\n"
-            "[Donate](https://price4wnc.com/#donation-form-page-anchor) | "
-            "[Facebook](https://www.facebook.com/phillippriceforcongress/) | "
-            "[Twitter](https://twitter.com/price4wnc) \n\n"
-            "Price supports universal health care, public schools, protecting Social Security, equal pay for equal work, renewable energy, and campaign finance reform. \n\n\n"
-
-            "General Election: November 6, 2018 \n\n"
-            "[Map of North Carolina District 11](https://www.govtrack.us/congress/members/NC/11) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("North Carolina 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ncsbe.gov/Voters/Registering-to-Vote): April 13, 2018 \n\n"
+            "[Primary Election](https://www.ncsbe.gov/Voting-Options): May 8, 2018 \n\n"
+            "[General Election](https://www.ncsbe.gov/Voting-Options): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
