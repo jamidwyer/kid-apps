@@ -17,6 +17,7 @@ python babin.py
 python txgovgregabbott.py
 python tx-ag-paxton.py
 python mccaul.py
+python 2018-11-06-nc.py
 python markwalker.py
 python meadows.py
 python sc-hd-7.py
