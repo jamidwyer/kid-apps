@@ -45,7 +45,6 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        https://services.okelections.us/voterSearch.aspx
         text = ("Oklahoma Special Election \n\n"
             "[Vote November 14, 2018](https://services.okelections.us/voterSearch.aspx) \n\n")
         print("Bot replying to : ", submission.title)
