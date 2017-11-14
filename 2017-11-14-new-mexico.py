@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['tim keller', 'Time Keller', '@tk4abq']
+            terms = ['tim keller', 'Time Keller', '@tk4abq', 'albuquerque mayor', 'albuquerque runoff', 'Albuquerque will soon have a mayor most of the voters elected']
             for term in terms:
                  search(term, submission);
 
