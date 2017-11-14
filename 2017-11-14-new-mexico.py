@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -22,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("oklahoma.dat", "r")
+local_subs = open("newmexico.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,17 +39,21 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['election day in oklahoma!']
+            terms = ['tim keller', 'Time Keller', '@tk4abq']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Oklahoma Special Election \n\n"
-            "[Vote November 14, 2017](https://services.okelections.us/voterSearch.aspx) \n\n")
+        text = ("Albuquerque Runoff Election \n\n"
+            "[Vote November 14, 2017](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election) \n\n")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
