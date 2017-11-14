@@ -43,6 +43,7 @@ python scotttaylor.py
 python brat.py
 python goodlatte.py
 python comstock.py
+python larryhogan.py
 python lepage.py
 python mcsally.py
 python flake.py
