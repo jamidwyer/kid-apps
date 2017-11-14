@@ -38,30 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'reason for Republicans to start panicking about 2018', 'Republican congressman from the state wants to withhold federal dollars to test these kits', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['buddy carter', 'lisa ring', 'reason for Republicans to start panicking about 2018', 'Republican congressman from the state wants to withhold federal dollars to test these kits', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Lisa Ring**](http://www.lisaringforcongress.com/) is running against Buddy Carter. \n\n"
-            "[Donate](https://secure.actblue.com/donate/lisaringforcongress) | "
-            "[Facebook](https://www.facebook.com/LisaRingGA/) | "
-            "[Twitter](https://twitter.com/lisaringga) \n\n"
-            "Ring supports Medicare for all and living wages. \n\n\n"
-
-            "[**Steve Jarvis**](http://www.electstevejarvis.com/) is running against Buddy Carter. \n\n"
-            "[Donate](http://www.electstevejarvis.com/make-a-donation/) | "
-            "[Facebook](https://www.facebook.com/WinIn2018/) | "
-            "[Twitter](https://twitter.com/ElectSteve2018) \n\n"
-            "Jarvis supports campaign finance reform, protecting Social Security and Medicare, and equal pay for equal work. \n\n\n"
-
-            "Map of Georgia District 1: https://www.govtrack.us/congress/members/GA/1 \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("Georgia 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
+            "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
+            "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

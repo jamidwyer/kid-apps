@@ -26,6 +26,7 @@ python meadows.py
 python sc-hd-7.py
 python costello.py
 python smucker.py
+python pennsylvania.py
 python pa-hd-18.py
 python sc-hd-3.py
 python sc-gov-henry-mcmaster.py

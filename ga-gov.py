@@ -44,22 +44,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Stacey Abrams**](https://staceyabrams.com/) is running to be Georgia's Governor. \n\n"
-            "[Facebook](https://www.facebook.com/stacey.abrams.77/) | "
-            "[Twitter](https://twitter.com/staceyabrams) | "
-            "[Volunteer](https://staceyabrams.com/action/) | "
-            "[Donate](https://secure.actblue.com/donate/donate-to-stacey) \n\n "
-            "Abrams supports renewable energy, public schools, affordable college, a living wage, paid sick leave, and LGBTQ equality. \n\n\n"
-
-            "[**Stacey Evans**](https://staceyevans.com/) is running to be Georgia's Governor. \n\n"
-            "[Facebook](https://www.facebook.com/StaceyEvansGA/) | "
-            "[Twitter](https://twitter.com/EvansforGeorgia) | "
-            "[Volunteer](https://go.staceyevans.com/page/s/homepage-volunteer) | "
-            "[Donate](https://secure.actblue.com/donate/ms_evans_fr_homepage) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("Georgia 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
+            "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
+            "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

@@ -45,17 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n"
-            "[**Joshua McCall**](https://mccallforall.com/) is running against Doug Collins. \n\n"
-            "[Donate](https://secure.actblue.com/donate/mccall) | "
-            "[Facebook](https://www.facebook.com/groups/1017264461740177/) | "
-            "[Twitter](https://twitter.com/Mccallforall) \n\n"
-            "McCall supports universal health care, campaign finance reform, protecting Social Security, and affordable college. \n\n\n"
-
-            "[Map of Georgia District 9](https://www.govtrack.us/congress/members/GA/9) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("Georgia 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
+            "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
+            "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
