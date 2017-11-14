@@ -46,20 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
-
-            "[**Jenny Marshall**](http://www.marshallforhouse.org/) is running to represent North Carolina District 5. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marshallforhouse) | "
-            "[Facebook](https://www.facebook.com/marshallforhouse/) |"
-            "[Twitter](https://twitter.com/Marshall4House) \n\n"
-            "Marshall supports universal health care, public schools, living wages, paid family and sick leave, protecting Social Security and Medicare, affordable college, equal pay for equal work, renewable energy, and LGBTQ equality. \n\n\n"
-
-            "General Election: November 6, 2018 \n\n"
-            "[Map of North Carolina District 5](https://www.govtrack.us/congress/members/NC/5) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("North Carolina 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ncsbe.gov/Voters/Registering-to-Vote): April 13, 2018 \n\n"
+            "[Primary Election](https://www.ncsbe.gov/Voting-Options): May 8, 2018 \n\n"
+            "[General Election](https://www.ncsbe.gov/Voting-Options): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

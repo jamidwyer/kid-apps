@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("northcarolina.dat", "r")
+local_subs = open("oklahoma.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,17 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['pittenger', 'Trump ignored the world\'s Chicken Littles', 'Does new version of the AHCA protect coverage for pre-existing conditions?', 'absolutely does not eliminate protections for pre-existing conditions']
+            terms = ['election day in oklahoma!']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("North Carolina 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.ncsbe.gov/Voters/Registering-to-Vote): April 13, 2018 \n\n"
-            "[Primary Election](https://www.ncsbe.gov/Voting-Options): May 8, 2018 \n\n"
-            "[General Election](https://www.ncsbe.gov/Voting-Options): November 6, 2018 \n\n")
+        https://services.okelections.us/voterSearch.aspx
+        text = ("Oklahoma Special Election \n\n"
+            "[Vote November 14, 2018](https://services.okelections.us/voterSearch.aspx) \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

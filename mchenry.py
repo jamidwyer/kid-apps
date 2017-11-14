@@ -46,20 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ncsbe.gov/Voters/Registering-to-Vote) by October 12, 2018 \n\n"
-            "[Sign up to vote by mail](https://www.ncsbe.gov/Portals/0/Forms/NCAbsenteeBallotRequestForm.pdf) \n\n\n"
-
-            "[**David Wilson Brown**](https://dwb4congress.com/) is running to represent North Carolina District 10. \n\n"
-            "[Facebook](https://www.facebook.com/DWB4Congress/) |"
-            "[Twitter](https://twitter.com/DWB4Congress) | "
-            "[Donate](https://secure.actblue.com/donate/dwb4congress-1) \n\n"
-            "Brown supports universal health care, public schools, affordable college, renewable energy, backgrounds check on every gun sale, automatic voter registration, and redistricting reform. \n\n\n"
-
-            "General Election: November 6, 2018 \n\n"
-            "[Map of North Carolina District 10](https://www.govtrack.us/congress/members/NC/10) \n\n "
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("North Carolina 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ncsbe.gov/Voters/Registering-to-Vote): April 13, 2018 \n\n"
+            "[Primary Election](https://www.ncsbe.gov/Voting-Options): May 8, 2018 \n\n"
+            "[General Election](https://www.ncsbe.gov/Voting-Options): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

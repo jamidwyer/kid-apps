@@ -1,5 +1,6 @@
 #!/bin/sh
 
+python 2017-11-14-oklahoma.py
 python strange.py
 python petesessions.py
 python culberson.py
@@ -15,6 +16,8 @@ python babin.py
 python txgovgregabbott.py
 python tx-ag-paxton.py
 python mccaul.py
+python markwalker.py
+python meadows.py
 python sc-hd-7.py
 python costello.py
 python smucker.py
