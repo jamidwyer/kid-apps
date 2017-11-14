@@ -1,9 +1,9 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
+
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("newmexico.dat", "r")
+local_subs = open("northcarolina.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,22 +32,24 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['keller maintains healthy lead', 'dan lewis thug life', 'tim keller', 'Time Keller', '@tk4abq', 'albuquerque mayor', 'albuquerque runoff', 'Albuquerque will soon have a mayor most of the voters elected']
+            terms = ['ken romley']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Albuquerque Runoff Election \n\n"
-            "[Vote November 14, 2017](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election) \n\n")
+        text = ("North Carolina 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ncsbe.gov/Voters/Registering-to-Vote): April 13, 2018 \n\n"
+            "[Primary Election](https://www.ncsbe.gov/Voting-Options): May 8, 2018 \n\n"
+            "[General Election](https://www.ncsbe.gov/Voting-Options): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
