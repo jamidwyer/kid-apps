@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("virginia.dat", "r")
+local_subs = open("illinois.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,23 +38,20 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['dave brat', 'rep. brat', 'congressman brat', 'rep brat', 'representative brat', 'first Dem to win key Virginia county in 56 years', 'Conservatives drop demands for bigger spending cuts to get to tax reform', 'GOP Congressmen Call For Mueller Hearings', 'Republicans in Congress Cheered', 'Freedom Caucus endorses GOP tax plan']
+            terms = ['Illinois democrats being primaried']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Virginia 2018 General Election \n\n"
-            "[Voter Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
-            "[Primary Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): June 12, 2018 \n\n"
-            "[General Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): November 6, 2018 \n\n")
+        text = ("Illinois 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://ova.elections.il.gov/Step0.aspx): February 20, 2018 \n\n"
+            "[Primary Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): March 20, 2018 \n\n"
+            "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
+
         print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
+        submission.reply(text)
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)
