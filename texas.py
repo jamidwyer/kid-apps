@@ -42,7 +42,7 @@ def searchAndPost(sub):
             for term in terms:
                 search(term);
 
-def search(term, submission, blend_in, fb_link, twitter_link, donate_link):
+def search(term):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Texas 2018 Election \n\n"
