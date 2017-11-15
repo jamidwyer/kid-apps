@@ -36,9 +36,11 @@ def searchAndPost(sub):
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
+
             # Do a case insensitive search
             terms = ['be persuaded on climate change. So now what']
-            search(term);
+            for term in terms:
+                search(term);
 
 def search(term, submission, blend_in, fb_link, twitter_link, donate_link):
     if re.search(term, submission.title, re.IGNORECASE):
