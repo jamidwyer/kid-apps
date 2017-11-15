@@ -45,12 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/) \n\n"
-            "No progressive candidate is running to represent Oklahoma District 1 in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31398-u-s-representative-ok-1/interest_form)? \n\n"
-
-            "[Map of Oklahoma District 1](https://www.govtrack.us/congress/members/OK/1) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Oklahoma 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 2, 2018 \n\n")
+            "[Primary Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): June 26, 2018
+            "[General Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): November 6, 2018
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

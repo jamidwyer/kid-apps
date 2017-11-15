@@ -45,17 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/) \n\n"
-
-            "[**Jason Nichols**](http://nichols4congress.com/) is running to represent Oklahoma House District 2 in the United States Congress. \n\n"
-            "[Facebook](https://www.facebook.com/nichols4congress) | "
-            "[Twitter](https://twitter.com/jn4ush) | "
-            "[Volunteer](https://nichols4congress.nationbuilder.com/volunteer) | "
-            "[Donate](https://nichols4congress.nationbuilder.com/donate) \n\n"
-
-            "[Map of Oklahoma District 2](https://www.govtrack.us/congress/members/OK/2) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
+        text = ("Oklahoma 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 2, 2018 \n\n")
+            "[Primary Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): June 26, 2018
+            "[General Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): November 6, 2018
         print("Bot replying to : ", submission.title)
         submission.reply(text)
         # Store the current id into our list

@@ -1,4 +1,3 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wisconsin.dat", "r")
+local_subs = open("oklahoma.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,33 +31,29 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['If you can hold it, you can shoot it', 'Voter Suppression Won Trump Wisconsin', 'GOP Resurrects Bill Exempting Rent', 'sensible center of American politics needs to step up']
+            terms = ['says ou wants students to have abortions']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
-            if re.search(term, submission.title, re.IGNORECASE):
-                # Reply to the post
-                text = ("Wisconsin 2018 Election \n\n"
-                    "[Primary Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
-                    "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
-                    "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
-                print("Bot replying to : ", submission.title)
-                try:
-                    submission.reply(text)
-                except Exception:
-                    print("Error : ", submission.title)
-                    pass
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("Oklahoma 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 2, 2018 \n\n")
+            "[Primary Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): June 26, 2018
+            "[General Election Date:](https://services.okelections.us/voterSearch.aspx) \n\n"): November 6, 2018
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
 
-                # Store the current id into our list
-                posts_replied_to.append(submission.id)
+        # Store the current id into our list
+        posts_replied_to.append(submission.id)
 
 for sub in subs:
      print(sub)
