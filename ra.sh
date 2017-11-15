@@ -37,6 +37,9 @@ python sc-gov-henry-mcmaster.py
 python sc-hd-5.py
 python 2018-11-06-nj.py
 python frelinghuysen.py
+python macarthur.py
+python leonardlance.py
+python lobiondo.py
 python heller.py
 python nv-gov.py
 python nevada.py
