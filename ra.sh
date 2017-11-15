@@ -48,6 +48,12 @@ python goodlatte.py
 python comstock.py
 python larryhogan.py
 python lepage.py
+python yoder.py
+python ks-2.py
+python ks-4-ron-estes.py
+python womack.py
+python frenchhill.py
+python brownback.py
 python mcsally.py
 python flake.py
 python schweikert.py

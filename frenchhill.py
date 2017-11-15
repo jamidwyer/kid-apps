@@ -33,7 +33,7 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
+    for submission in subreddit.hot(limit=50):
         #print(submission.title)
 
         # If we haven't replied to this post before
@@ -47,25 +47,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.sos.arkansas.gov/elections/Documents/ArkansasVoterRegistrationApplication.pdf) by April 23, 2018 \n\n"
-            "[Find your polling place](https://www.voterview.ar-nova.org/VoterView/Home.do) \n\n\n"
-
-            "[**Gwendolyn Combs**](https://combsforarkansas.com/) is running to represent Arkansas House District 2. \n\n"
-            "[Facebook](https://www.facebook.com/CombsforAR/) | "
-            "[Twitter](https://twitter.com/GwenCombs) | "
-            "[Donate](https://secure.actblue.com/contribute/page/combsforar) \n\n"
-            "Combs supports the DREAM Act. \n\n\n"
-
-            "[**Josh Mahony**](https://joshuamahony.com/) is running to represent Arkansas House District 2. \n\n"
-            "[Facebook](https://www.facebook.com/mahonyarkansas/) | "
-            "[Twitter](https://twitter.com/joshuamahony) | "
-            "[Donate](https://secure.actblue.com/donate/mahony) \n\n"
-
-            "Primary Election: May 22, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Arkansas District 3](https://www.govtrack.us/congress/members/AR/3) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
+        text = ("Kansas 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.kdor.ks.gov/apps/voterreg/default.aspx): July 17, 2018 \n\n"
+            "[Primary Election](http://www.kssos.org/forms/elections/AV1.pdf): August 7, 2018 \n\n"
+            "[General Election](http://www.kssos.org/forms/elections/AV1.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

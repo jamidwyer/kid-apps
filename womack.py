@@ -47,27 +47,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.sos.arkansas.gov/elections/Documents/ArkansasVoterRegistrationApplication.pdf) by April 23, 2018 \n\n"
-            "[Find your polling place](https://www.voterview.ar-nova.org/VoterView/Home.do) \n\n\n"
-
-            "[**Robb Ryerse**](http://robb2018.com) is running against Steve Womack. \n\n"
-
-            "[Donate](https://www.crowdpac.com/campaigns/244359/robb-ryerse-for-congress) | "
-            "[Facebook](https://www.facebook.com/robb2018/) | "
-            "[Twitter](https://twitter.com/robb2018) \n\n"
-
-            "Ryerse supports universal health care, renewable energy, LGBTQ equality, and affordable college. \n\n\n"
-
-            "[**Josh Mahony**](https://joshuamahony.com/) is running against Steve Womack. \n\n"
-            "[Donate](https://secure.actblue.com/donate/mahony) | "
-            "[Facebook](https://www.facebook.com/mahonyarkansas/) | "
-            "[Twitter](https://twitter.com/joshuamahony?lang=en) \n\n\n"
-
-            "Primary Election: May 22, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Arkansas District 3](https://www.govtrack.us/congress/members/AR/3) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
-
+        text = ("Kansas 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.kdor.ks.gov/apps/voterreg/default.aspx): July 17, 2018 \n\n"
+            "[Primary Election](http://www.kssos.org/forms/elections/AV1.pdf): August 7, 2018 \n\n"
+            "[General Election](http://www.kssos.org/forms/elections/AV1.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

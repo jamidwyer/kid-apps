@@ -46,30 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.kdor.ks.gov/apps/voterreg/default.aspx) by July 17, 2018 \n\n"
-            "[Sign up to vote by mail](http://www.kssos.org/forms/elections/AV1.pdf) \n\n\n"
-
-            "[**Jim Ward**](https://kansasforward.com) is running to be Governor of Kansas. \n\n"
-            "[Donate](https://secure.actblue.com/donate/kansasforward) | "
-            "[Facebook](https://www.facebook.com/RepJimWard/) | "
-            "[Twitter](https://twitter.com/repjimward) \n\n"
-            "Ward supports universal health care, public schools, LGBTQ equality, protecting Medicare, and voting rights. \n\n\n"
-
-            "[**Joshua Svaty**](https://joshuasvaty.com/) is running to be Governor of Kansas. \n\n"
-            "[Donate](https://joshuasvaty.com/donate/) | "
-            "[Facebook](https://www.facebook.com/SvatyforKansas/) | "
-            "[Twitter](https://twitter.com/JoshuaSvaty) \n\n"
-            "Svaty supports renewable energy. \n\n\n"
-
-            "[**Carl Brewer**](https://www.brewerforkansas.com/issues) is running to be Governor of Kansas. \n\n"
-            "[Donate](https://www.brewerforkansas.com/donate) | "
-            "[Facebook](https://www.facebook.com/BrewerforKansas/) | "
-            "[Twitter](https://twitter.com/BrewerForKansas) \n\n"
-            "Brewer supports public schools. \n\n\n"
-
-            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Kansas 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.kdor.ks.gov/apps/voterreg/default.aspx): July 17, 2018 \n\n"
+            "[Primary Election](http://www.kssos.org/forms/elections/AV1.pdf): August 7, 2018 \n\n"
+            "[General Election](http://www.kssos.org/forms/elections/AV1.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
