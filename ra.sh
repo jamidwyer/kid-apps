@@ -1,7 +1,5 @@
 #!/bin/sh
 
-python 2017-11-14-oklahoma.py
-python 2017-11-14-new-mexico.py
 python strange.py
 python petesessions.py
 python culberson.py
