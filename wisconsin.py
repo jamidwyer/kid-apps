@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['sensible center of American politics needs to step up']
+            terms = ['Voter Suppression Won Trump Wisconsin', 'GOP Resurrects Bill Exempting Rent', 'sensible center of American politics needs to step up']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,7 @@ def search(term, submission):
             if re.search(term, submission.title, re.IGNORECASE):
                 # Reply to the post
                 text = ("Wisconsin 2018 Election \n\n"
-                    "[Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+                    "[Primary Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
                     "[Primary Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): August 14, 2018 \n\n"
                     "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): November 6, 2018 \n\n")
                 print("Bot replying to : ", submission.title)
