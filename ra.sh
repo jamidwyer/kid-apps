@@ -25,7 +25,6 @@ python markwalker.py
 python foxx.py
 python mchenry.py
 python meadows.py
-python sc-hd-7.py
 python costello.py
 python smucker.py
 python pennsylvania.py
