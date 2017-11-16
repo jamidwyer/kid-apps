@@ -42,6 +42,7 @@ python nv-gov.py
 python nevada.py
 python issa.py
 python scotttaylor.py
+python virginia.py
 python brat.py
 python goodlatte.py
 python comstock.py
