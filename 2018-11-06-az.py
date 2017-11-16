@@ -40,7 +40,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['Dangerous Slopes Ahead for GOP in Arizona']
+            terms = ['Dangerous Slopes Ahead for GOP in Arizona', 'Arizona is in violation of National Voter Registration Act']
             for term in terms:
                  search(term, submission);
 
