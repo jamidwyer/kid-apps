@@ -45,31 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-            "[**Tom Taylor**](https://www.tomforutah.com/issues.php) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/thomastaylor) | "
-            "[Facebook](https://www.facebook.com/TomForUtah/) | "
-            "[Twitter](https://twitter.com/tomforutah) \n\n"
-
-            "Taylor supports Medicare for all, public schools, renewable energy, and campaign finance reform.  \n\n\n"
-
-            "[**Darlene McDonald**](https://darlenemcdonald.com/) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/votedarlene) | "
-            "[Facebook](https://www.facebook.com/Darlene4Congress/) | "
-            "[Twitter](https://twitter.com/VoteDarlene) \n\n"
-
-            "McDonald supports universal health care.  \n\n\n"
-
-            "[**Marla Mott-Smith**](http://marla4congress.com/) is running against Mia Love. \n\n"
-            "[Donate](https://secure.actblue.com/contribute/page/marla4congress) | "
-            "[Facebook](https://www.facebook.com/mlmsb/) | "
-            "[Twitter](https://twitter.com/marlamottsmith) \n\n"
-
-            "Mott-Smith supports campaign finance reform and LGBT equality. \n\n\n"
-
-            "[Map of Utah District 4](https://www.govtrack.us/congress/members/UT/4) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Utah 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://secure.utah.gov/voterreg/index.html): June 19, 2018 \n\n"
+            "[Primary Election](https://elections.utah.gov/Media/Default/Documents/Elections%20Resources/Absentee%20Ballot%20Application.pdf): June 26, 2018 \n\n"
+            "[General Election](https://elections.utah.gov/Media/Default/Documents/Elections%20Resources/Absentee%20Ballot%20Application.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

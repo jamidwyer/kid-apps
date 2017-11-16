@@ -46,13 +46,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://secure.utah.gov/voterreg/index.html) \n\n"
-        "[**Jenny Wilson**](http://wilsonforsenate.com/) is running to represent Utah in the United States Senate. \n\n "
-        "[Donate](https://www.crowdpac.com/candidates/58d92c47d9e704560d2afff1/jenny-wilson) | "
-        "[Facebook](https://www.facebook.com/WilsonForSenate/) | "
-        "[Twitter](https://twitter.com/jennywilsonut) \n\n "
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Utah 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://secure.utah.gov/voterreg/index.html): June 19, 2018 \n\n"
+            "[Primary Election](https://elections.utah.gov/Media/Default/Documents/Elections%20Resources/Absentee%20Ballot%20Application.pdf): June 26, 2018 \n\n"
+            "[General Election](https://elections.utah.gov/Media/Default/Documents/Elections%20Resources/Absentee%20Ballot%20Application.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
