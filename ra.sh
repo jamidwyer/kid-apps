@@ -49,6 +49,9 @@ python goodlatte.py
 python comstock.py
 python larryhogan.py
 python lepage.py
+python love.py
+python hatch.py
+python robbishop.py
 python yoder.py
 python ks-2.py
 python ks-4-ron-estes.py
