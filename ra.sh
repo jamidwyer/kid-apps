@@ -1,6 +1,7 @@
 #!/bin/sh
 
 python strange.py
+python 2018-02-13-oklahoma.py
 python petesessions.py
 python culberson.py
 python marchant.py
