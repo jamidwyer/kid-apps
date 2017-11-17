@@ -17,6 +17,7 @@ python virginia.py
 python brat.py
 python goodlatte.py
 python comstock.py
+python 2018-11-06-oklahoma.py
 python larryhogan.py
 python lepage.py
 python 2018-11-06-ut.py
