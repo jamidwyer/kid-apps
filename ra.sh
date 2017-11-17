@@ -1,7 +1,7 @@
 #!/bin/sh
 
 python strange.py
-python 2018-02-13-oklahoma.py
+python 2018-02-13-ok.py
 python 2018-11-06-tx.py
 python illinois.py
 python 2018-11-06-nc.py
@@ -17,7 +17,7 @@ python virginia.py
 python brat.py
 python goodlatte.py
 python comstock.py
-python 2018-11-06-oklahoma.py
+python 2018-11-06-ok.py
 python larryhogan.py
 python lepage.py
 python 2018-11-06-ut.py
