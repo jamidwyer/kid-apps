@@ -21,6 +21,7 @@ python larryhogan.py
 python lepage.py
 python 2018-11-06-ut.py
 python robbishop.py
+python 2018-11-06-mi.py
 python yoder.py
 python ks-2.py
 python ks-4-ron-estes.py
