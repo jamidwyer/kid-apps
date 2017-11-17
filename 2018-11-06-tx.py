@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ted poe', 'H.R. 620', 'hr 620', 'Republicans are deciding they want no part of the 2018 elections', 'Americans with Disabilities Act is Under Attack', 'Attack on the ADA', 'oppose the ADA Education Reform', 'tx-02', 'rep poe', 'representative poe', 'congressman poe', 'rep. poe']
+            terms = ['pete sessions', 'rep. sessions', 'rep sessions', 'representative sessions', 'congressman sessions', '13 polls in GOP-held House districts conducted', 'john culberson', 'rep. culberson', '@congculberson', 'congressman culberson', 'rep culberson', 'GOP strategists worry incumbents aren', 'kenny marchant', 'rep. marchant', 'Rep (Marchant)', 'congressman marchant', 'rep marchant', 'letitia plummer', 'pete olson', 'rep. olson', 'rep olson', 'representative olson', 'congressman olson', 'tx-22', 'tx22', 'ted poe', 'H.R. 620', 'hr 620', 'Republicans are deciding they want no part of the 2018 elections', 'tx-02', 'rep poe', 'representative poe', 'congressman poe', 'rep. poe', '^(?!.*anthony lamar smith).*lamar smith.*$', 'Where All 533 Members of Congress Stand on Bump Stocks', 'house science committee chair', 'tx-21', 'tx21', 'john carter', 'disaster funds cut to finance wall', 'tx-31', 'House DACA deal won\'t need Democratic votes', 'farenthold', 'tx-27', 'Congress plays by different rules on sexual harassment and misconduct', 'hensarling', 'Senate kills new rule allowing class-action lawsuits', 'telling you to move', 'Naming and Shaming', '2 represent dallas suburbs', 'Four Texas House Members Voted Against Harvey Relief', 'Texas Republican vows to fight for flood insurance overhaul', 'The House just passed the massive Trump-Pelosi-Schumer deal', 'Harvey aid package to Trump despite objections from conservatives', 'Texas Republicans voted against Harvey relief', 'gohmert', 'tx-01']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Texas 2018 Election \n\n"
-            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
+            "[Primary Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
             "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
             "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
@@ -56,7 +56,6 @@ def search(term, submission):
         except Exception:
             print("Error : ", submission.title)
             pass
-
         # Store the current id into our list
         posts_replied_to.append(submission.id)
 

@@ -2,16 +2,7 @@
 
 python strange.py
 python 2018-02-13-oklahoma.py
-python petesessions.py
-python culberson.py
-python marchant.py
-python tx-22-olson.py
-python poe.py
-python lamarsmith.py
-python johncarter.py
-python farenthold.py
-python hensarling.py
-python tx-01-louie-gohmert.py
+python 2018-11-06-tx.py
 python babin.py
 python txgovgregabbott.py
 python tx-ag-paxton.py
