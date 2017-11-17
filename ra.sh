@@ -26,10 +26,7 @@ python markwalker.py
 python foxx.py
 python mchenry.py
 python meadows.py
-python costello.py
-python smucker.py
 python pennsylvania.py
-python pa-hd-18.py
 python sc-hd-3.py
 python sc-gov-henry-mcmaster.py
 python sc-hd-5.py
