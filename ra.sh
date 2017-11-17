@@ -16,10 +16,7 @@ python babin.py
 python txgovgregabbott.py
 python tx-ag-paxton.py
 python mccaul.py
-python roskam.py
-python rodneydavis.py
-python bost.py
-python il-gov-bruce-rauner.py
+python illinois.py
 python 2018-11-06-nc.py
 python pittenger.py
 python markwalker.py
