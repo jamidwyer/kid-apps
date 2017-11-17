@@ -3,17 +3,8 @@
 python strange.py
 python 2018-02-13-oklahoma.py
 python 2018-11-06-tx.py
-python babin.py
-python txgovgregabbott.py
-python tx-ag-paxton.py
-python mccaul.py
 python illinois.py
 python 2018-11-06-nc.py
-python pittenger.py
-python markwalker.py
-python foxx.py
-python mchenry.py
-python meadows.py
 python pennsylvania.py
 python sc-hd-3.py
 python sc-gov-henry-mcmaster.py
@@ -26,7 +17,7 @@ python lobiondo.py
 python heller.py
 python nv-gov.py
 python nevada.py
-python issa.py
+python 2018-11-06-ca.py
 python scotttaylor.py
 python virginia.py
 python brat.py

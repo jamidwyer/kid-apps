@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("california.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,24 +32,24 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=100):
-        #print(submission.title)
+    for submission in subreddit.hot(limit=50):
+        #print(submission.selftext)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['michael burgess', 'rep. burgess', 'rep burgess', 'representative burgess', 'congressman burgess', 'tx-26', 'tx26', 'will fisher']
+            terms = ['Most California GOP House members vote to pass tax bill', 'darrell issa', 'rep. issa', 'rep issa', 'Decision Desk 2018 House ratings', '13 new candidates', 'Thirteen New Candidates', 'Justice Democrats launched 13 new candidates', 'Mike Pence pitches tax reform in Rancho Cordova', 'single-payer healthcare becomes a pivotal issue', 'Last California Republicans', 'states that will lose under Cassidy-Graham', 'Issa told to pay challenger for legal expenses in lawsuit', 's hottest congressional races, ranked', 'the california gop\'s last gasp', 'Republicans booed top White House officials']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Texas 2018 Election \n\n"
-            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
-            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
+        text = ("California 2018 Election \n\n"
+            "[Voter Registration Deadline](http://registertovote.ca.gov/): May 16, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n"
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
