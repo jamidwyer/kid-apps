@@ -45,20 +45,10 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.dmv.org/mi-michigan/voter-registration.php) by July 8, 2018 \n\n"
-            "[**Jeff Thomas**](https://www.jeffforthethird.com/) is running to represent Michigan District 3. \n\n"
-            "[Donate](https://secure.actblue.com/donate/jtmain) | "
-            "[Facebook](https://www.facebook.com/jeffforthethird) | "
-            "[Twitter](https://twitter.com/jeffforthethird/) \n\n"
-            "Jeff Thomas supports a \"Medicare For All\" single-payer health care system, paid family leave, protecting Social Security, equal pay for equal work, LGBTQ equality, DACA, net neutrality, and relief for hurricane victims. \n\n\n"
-
-            "[Map of Michigan District 3](https://www.govtrack.us/congress/members/MI/3) \n\n"
-
-            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-            "[Find your polling place](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx) \n\n")
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)"
-
+        text = ("Michigan 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](http://www.dmv.org/mi-michigan/voter-registration.php): July 8, 2018 \n\n"
+            "[Primary Election](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx): August 7, 2018 \n\n"
+            "[General Election](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
