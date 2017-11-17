@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['archie parnell']
+            terms = ['jeff duncan', 'GOP tries to make mass shootings even easier after Vegas massacre', 'Gun Lobby Wants to Deregulate Gun Silencers', 'archie parnell', 'henry mcmaster', 'kevin bryant', 'south carolina governor', 'south carolina a candidate for governor', 'Catherine Templeton', 'Steve Bannon tells Republicans in South Carolina', 'Defunding Clinics, GOP Governor']
             for term in terms:
                  search(term, submission);
 
@@ -50,6 +50,7 @@ def search(term, submission):
             "[Voter Registration Deadline](https://info.scvotes.sc.gov/eng/ovr/start.aspx): May 13, 2018 \n\n"
             "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n"
             "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 6, 2018 \n\n")
+        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 

@@ -6,14 +6,8 @@ python 2018-11-06-tx.py
 python illinois.py
 python 2018-11-06-nc.py
 python pennsylvania.py
-python sc-hd-3.py
-python sc-gov-henry-mcmaster.py
-python sc-hd-5.py
+python 2018-11-06-sc.py
 python 2018-11-06-nj.py
-python frelinghuysen.py
-python macarthur.py
-python leonardlance.py
-python lobiondo.py
 python heller.py
 python nv-gov.py
 python nevada.py
@@ -25,8 +19,7 @@ python goodlatte.py
 python comstock.py
 python larryhogan.py
 python lepage.py
-python love.py
-python hatch.py
+python 2018-11-06-ut.py
 python robbishop.py
 python yoder.py
 python ks-2.py

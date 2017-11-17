@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['nj-07']
+            terms = ['thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', 'representative macarthur', 'congressman macarthur', 'lobiondo', 'leonard lance', 'nj-7', 'nj-07', 'frelinghuysen', 'New Jersey election results could be bad omen for', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners']
             for term in terms:
                  search(term, submission);
 
