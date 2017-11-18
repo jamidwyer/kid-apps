@@ -38,20 +38,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['scalise', 'Congressman injured in mass shooting']
+            terms = ['derrick edwards']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx) \n\n"
-            "Steve Scalise is currently unopposed in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31312-u-s-representative-la-1/interest_form)? \n\n"
-
-            "[Map of Louisiana District 1](https://www.govtrack.us/congress/members/LA/1) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("Louisiana Special and Municipal Election \n\n"
+            "[Vote TODAY!](https://voterportal.sos.la.gov/Home/VoterLogin) \n\n"
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
