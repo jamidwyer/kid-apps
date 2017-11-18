@@ -40,7 +40,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['Dangerous Slopes Ahead for GOP in Arizona', 'Arizona is in violation of National Voter Registration Act']
+            terms = ['mcsally', 'early money haul stuns GOP', '12 Districts as Democrats Gain Momentum', 'Cook Political Report shifts 11 House races towards Democrats', 'missteps are giving Democrats a better shot at winning back the House', 'House Ratings changes in 12 districts as Democrats gain candidates', '^(?!.*snowflake).*flake.*$', '@jeffflake', 'sinema', 'Kelli Ward', 'No Reason To Think Republicans Will Be In Better Shape', 'Most and Least Popular Senators', 'GOP senators dismiss calls for bill to protect Mueller from Trump', 'Congress can stop Trump from starting World War', 'Millennials will shape future of GOP', 'Conservatives to Trump critic McSally', 'Democrats are split on whether to support Trump', 'thank you for saying mean things to the bad man', 'fake things true and true things fake', 'The Happy Hooker Conservatives', 'Republicans won\'t quit Trump', 'GOP braces for what’s next amid Corker, Flake tumult', 'Republicans Need a Better Response Besides Quitting', 'Republican senators attacks on Donald Trump', 'Welcome to the Senate Mr. Arpaio', 'Female candidates are targeting 3 key Senate seats in 2018', 'As midterms approach, GOP', 'Dangerous Slopes Ahead for GOP in Arizona', 'Arizona is in violation of National Voter Registration Act']
             for term in terms:
                  search(term, submission);
 
