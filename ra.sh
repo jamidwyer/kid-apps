@@ -20,9 +20,6 @@ python 2018-11-06-ut.py
 python 2018-11-06-mi.py
 python 2018-11-06-ks.py
 python 2018-11-06-az.py
-python schweikert.py
 python trent-franks.py
-python az-1.py
 python ducey.py
-python az-5.py
 python 2018-11-06-wi.py
