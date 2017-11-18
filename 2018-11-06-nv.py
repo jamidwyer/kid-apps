@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -23,7 +24,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("ohio.dat", "r")
+local_subs = open("nevada.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,24 +40,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All']
+            terms = ['^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP candidate criticizes', 'Anyone Who Supports Donald Trump Jeopardizes Their Own', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://olvr.sos.state.oh.us/) \n\n"
-        "[**Sam Ronan**](https://www.ronanforcongress.com/issues) is running against Steve Chabot. \n\n"
-        "[Donate](https://donorbox.org/sam-ronan-for-congress) | "
-        "[Facebook](https://www.facebook.com/RonanForCongress/) | "
-        "[Twitter](https://twitter.com/ronan4progress) \n\n"
-
-        "Ronan supports universal health care, public schools, living wages, paid family leave, affordable college, equal pay for equal work, renewable energy, campaign finance reform, LGBTQ equality, net neutrality, and a background check on every gun sale.  \n\n"
-
-        "[Map of Ohio District 1](https://www.govtrack.us/congress/members/OH/1) \n\n"
-
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Nevada 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): May 15, 2018 \n\n"
+            "[Primary Election](https://nvsos.gov/votersearch/index.aspx): June 12, 2018 \n\n"
+            "[General Election](https://nvsos.gov/votersearch/index.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
