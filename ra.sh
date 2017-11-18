@@ -12,10 +12,7 @@ python 2018-11-06-nj.py
 python 2018-11-06-nv.py
 python nevada.py
 python 2018-11-06-ca.py
-python scotttaylor.py
 python virginia.py
-python brat.py
-python goodlatte.py
 python comstock.py
 python 2018-11-06-ok.py
 python larryhogan.py
