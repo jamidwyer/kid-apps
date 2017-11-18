@@ -3,7 +3,7 @@
 python strange.py
 python 2018-02-13-ok.py
 python 2018-11-06-tx.py
-python illinois.py
+python 2018-11-06-il.py
 python 2018-11-06-oh.py
 python 2018-11-06-nc.py
 python pennsylvania.py
@@ -19,7 +19,6 @@ python lepage.py
 python 2018-11-06-ut.py
 python 2018-11-06-mi.py
 python 2018-11-06-ks.py
+python 2018-11-06-wa.py
 python 2018-11-06-az.py
-python trent-franks.py
-python ducey.py
 python 2018-11-06-wi.py

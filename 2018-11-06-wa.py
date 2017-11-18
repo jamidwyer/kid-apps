@@ -39,34 +39,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR) by July 30, 2018 \n\n"
-
-            "[**Dorothy Gasque**](http://dorothyforcongress.com/) is running to represent Washington's 3rd Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/Dorothy4Congress) | "
-            "[Twitter](https://twitter.com/dorothy4house) | "
-            "[Volunteer](http://dorothyforcongress.com/volunteer/) | "
-            "[Donate](https://secure.actblue.com/contribute/page/dorothy4congress) \n\n"
-            "Gasque supports single-payer health care, a living wage, renewable energy, and campaign finance reform. \n\n"
-
-            "[**David McDevitt**](http://mcdevittforcongress.com/home/issues/) is running to represent Washington's 3rd Congressional District. \n\n"
-            "[Facebook](https://www.facebook.com/McDevittMBAJD/) | "
-            "[Twitter](https://twitter.com/@McDevittMBAJD/) | "
-            "[Volunteer](http://mcdevittforcongress.com/get-involved/volunteer/) | "
-            "[Donate](http://mcdevittforcongress.com/get-involved/donate/) \n\n"
-            "McDevitt supports single-payer health care, public schools, affordable college, a living wage, protecting Social Security, equal pay for equal work, campaign finance reform, LGBTQ equality, net neutrality, and decriminalizing marijuana. \n\n"
-
-            "Primary Election: August 7, 2018 | General Election: November 6, 2018"
-            "[Map of Washington District 3](https://www.govtrack.us/congress/members/WA/3) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people.)")
-
+        text = ("Washington 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR): July 30, 2018 \n\n"
+            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): August 7, 2018 \n\n"
+            "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
