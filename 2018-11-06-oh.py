@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['bill o\'neill', ''steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All'', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor', 'should quit bench before running for governor']
+            terms = ['bill o\'neill', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All'', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor', 'should quit bench before running for governor']
             for term in terms:
                 search(term, submission, include_green);
 
