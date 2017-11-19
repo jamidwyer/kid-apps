@@ -50,7 +50,6 @@ def search(term, submission):
             "[Voter Registration Deadline](https://info.scvotes.sc.gov/eng/ovr/start.aspx): May 13, 2018 \n\n"
             "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n"
             "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 6, 2018 \n\n")
-        "^(I'm a bot and I'm learning. Let me know how I can do better.)")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
