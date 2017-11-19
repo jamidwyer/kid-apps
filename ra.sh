@@ -1,6 +1,5 @@
 #!/bin/sh
 
-python 2017-11-18-la.py
 python strange.py
 python 2018-02-13-ok.py
 python 2018-11-06-tx.py
