@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Pennsylvania 2018 Election \n\n"
+        text = ("Pennsylvania District 18 Special Election \n\n"
             "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): February 15, 2018 \n\n"
             "[Election Day](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): March 13, 2018 \n\n")
         print("Bot replying to : ", submission.title)
