@@ -38,25 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mccaskill', 'Billionaire pharma owner fueled the opioid epidemic with bribery scheme', 'Vulnerable Dem senators', 'recruit huddles with Koch network in New York', 'top 10 Senate races of 2018']
+            terms = ['mccaskill', 'Billionaire pharma owner fueled the opioid epidemic with bribery scheme', 'Vulnerable Dem senators', 'recruit huddles with Koch network in New York', 'top 10 Senate races of 2018', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) by July 11, 2018 \n\n"
-            "[**Claire McCaskill**](http://clairemccaskill.com/) is running to represent Missouri in the United States Senate. \n\n"
-            "[Facebook](https://www.facebook.com/clairemccaskill) | "
-            "[Twitter](https://twitter.com/clairecmc) | "
-            "[Volunteer](http://action.clairemccaskill.com/p/dia/action3/common/public/?action_KEY=10440) | "
-            "[Donate](https://secure.actblue.com/contribute/page/mccaskill-web) \n\n "
-
-            "McCaskill supports renewable energy, public schools, affordable college, protecting Social Security and Medicare, equal pay for equal work, campaign finance reform, LGBTQ equality, and the DREAM Act. \n\n\n"
-
-            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Missouri Special Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): July 11, 2018 \n\n"
+            "[Primary Election Date](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): August 7, 2018 \n\n"
+            "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): December 12, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

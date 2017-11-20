@@ -38,24 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ann wagner', 'mo-2']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sos.mo.gov/elections/goVoteMissouri/register) by July 11, 2018 \n\n"
-            "[**Kelli Dunaway**](http://www.jennamarieformissouri.com/) is running to represent Missouri's 2nd Congressional District. \n\n"
-            "[Twitter](https://twitter.com/kelli4congress) | "
-            "[Donate](https://secure.actblue.com/donate/kelliforcongress) \n\n "
-
-            "Dunaway supports Medicare for all. \n\n\n"
-
-            "Primary Election: August 7, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Missouri District 2](https://www.govtrack.us/congress/members/MO/2) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Missouri Special Election \n\n"
+            "[Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): January 10, 2018 \n\n"
+            "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): February 2, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
