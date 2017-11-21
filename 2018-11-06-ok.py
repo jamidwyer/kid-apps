@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['medical marijuana state question 788', 'Oklahoma House of Representatives and State Senate', 'any opinions on our 2018 gubernatorial election', 'Oklahoma Tried the GOP', 'Voter Registration by County', 'says ou wants students to have abortions']
+            terms = ['mary fallin', 'Oklahoma House of Representatives and State Senate', 'any opinions on our 2018 gubernatorial election', 'Oklahoma Tried the GOP', 'Voter Registration by County', 'says ou wants students to have abortions']
             for term in terms:
                  search(term, submission);
 
