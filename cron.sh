@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python running_against_bot/strange.py
+cd running_against_bot && python strange.py
 python 2018-02-06-mo.py
 python 2018-02-13-ok.py
 python 2018-03-13-pa.py
