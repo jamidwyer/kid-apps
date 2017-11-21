@@ -1,5 +1,4 @@
 #!/bin/sh
-
 python strange.py
 python 2018-02-06-mo.py
 python 2018-02-13-ok.py
