@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python strange.py
+python /home/ubuntu/running_against_bot/strange.py
 python 2018-02-06-mo.py
 python 2018-02-13-ok.py
 python 2018-03-13-pa.py
