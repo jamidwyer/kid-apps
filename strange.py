@@ -20,7 +20,7 @@ if not os.path.isfile("posts_replied_to.txt"):
 # If we have run the code before, load the list of posts we have replied to
 else:
     # Read the file into a list and remove any empty values
-    with open("posts_replied_to.txt", "r") as f:
+    with open("/home/ubuntu/running-against-bot/posts_replied_to.txt", "r") as f:
         posts_replied_to = f.read()
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
@@ -67,7 +67,7 @@ for sub in subs:
      searchAndPost(sub);
 
 # Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
+with open("/home/ubuntu/running-against-bot/posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
 
