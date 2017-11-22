@@ -49,7 +49,7 @@ def search(term, submission):
             "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): February 15, 2018 \n\n"
             "[Election Day](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): March 13, 2018 \n\n"
 
-            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/)."
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
