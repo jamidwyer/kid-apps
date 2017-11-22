@@ -47,7 +47,9 @@ def search(term, submission):
         # Reply to the post
         text = ("Missouri Special Election \n\n"
             "[Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): January 10, 2018 \n\n"
-            "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): February 2, 2018 \n\n")
+            "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): February 2, 2018 \n\n"
+
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/)."
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

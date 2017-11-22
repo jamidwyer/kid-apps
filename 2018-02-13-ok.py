@@ -47,7 +47,9 @@ def search(term, submission):
         # Reply to the post
         text = ("Oklahoma Special Election \n\n"
             "[Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): January 20, 2018 \n\n"
-            "[Election](https://services.okelections.us/voterSearch.aspx): February 13, 2018 \n\n")
+            "[Election](https://services.okelections.us/voterSearch.aspx): February 13, 2018 \n\n"
+
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/)."
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
