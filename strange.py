@@ -53,7 +53,7 @@ def search(term, submission):
             "[Non-Military Absentee Postmark Date](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action): December 11, 2017 \n\n"
             "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): December 12, 2017 \n\n"
 
-            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/)."
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
