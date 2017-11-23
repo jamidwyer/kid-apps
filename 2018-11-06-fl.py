@@ -49,9 +49,7 @@ def search(term, submission):
         text = ("Florida 2018 Election \n\n"
             "[Primary Voter Registration Deadline](https://registertovoteflorida.gov/en/Registration/Eligibility): 2018 \n\n"
             "[Primary Election](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/): August 28, 2018 \n\n"
-            "[General Election](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/): November 6, 2018 \n\n"
-
-            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
+            "[General Election](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
