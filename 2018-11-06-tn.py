@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("nebraska.dat", "r")
+local_subs = open("tennessee.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,27 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
+            terms = ['marsha blackburn', 'tn-7', 'tn-07']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        vote_link = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.nebraska.gov/apps-sos-voter-registration/) \n\n")
-        dems = ("[**Kara Eastman**](http://eastmanforcongress.com/) is running against Don Bacon. \n\n"
-            "[Donate](https://secure.actblue.com/donate/eastmanforcongress) | "
-            "[Facebook](https://www.facebook.com/eastmanforcongress/) | "
-            "[Twitter](https://twitter.com/karaforcongress) \n\n"
-            "Eastman supports universal health care coverage, renewable energy, campaign finance reform, net neutrality, and college affordability. \n\n\n"
-
-            "[Map of Nebraska District 2](https://www.govtrack.us/congress/members/NE/2) \n\n")
-
-        with open('disclaimer.txt', 'r') as myfile:
-            disclaimer=myfile.read().replace('\n', '')
-
-        text = '\n'.join([vote_link, dems, disclaimer])
-
+        text = ("Tennessee 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://ovr.govote.tn.gov/Registration/#BM): July 3, 2018 \n\n"
+            "[Primary Election](http://web.go-vote-tn.elections.tn.gov/): August 2, 2018 \n\n"
+            "[General Election](http://web.go-vote-tn.elections.tn.gov/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

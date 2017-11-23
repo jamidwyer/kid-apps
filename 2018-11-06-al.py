@@ -1,8 +1,11 @@
 #!/usr/bin/python
+# coding: utf-8
+
 import praw
 import pdb
 import re
 import os
+
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -22,7 +25,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wyoming.dat", "r")
+local_subs = open("alabama.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,19 +41,25 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['barrasso', 'erik prince', 'Senate Environment Committee Approves Toxic EPA Nominee', 'Senate Committee Advances Controversial Trump EPA Nominee', 'Pushing Ahead with a Health Care Deal']
+            terms = ['al-gov', 'alabama governor', 'ala. gov', 'too poor to vote', 'Alabama Secretary of State', 'John Merrill', 'top election official learn from monitoring Russian election', 'Alabama election officials remain confused']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://soswy.state.wy.us/elections/registeringtovote.aspx) \n\n"
-            "No progressive candidate is running to represent Wyoming in the United States Senate in 2018. Know someone who should [run](https://www.ok.gov/elections/Candidate_Info/Candidate_Filing/index.html)? \n\n"
+        text = ("Alabama 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action): May 21, 2018 \n\n"
+            "[Primary Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): June 5, 2018 \n\n"
+            "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): November 6, 2018 \n\n"
 
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-        submission.reply(text)
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         posts_replied_to.append(submission.id)

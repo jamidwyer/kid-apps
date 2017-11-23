@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python strange.py
+python 2017-12-12-al.py
 python 2018-02-06-mo.py
 python 2018-02-13-ok.py
 python 2018-03-13-pa.py
@@ -13,15 +13,17 @@ python 2018-11-06-sc.py
 python 2018-11-06-nj.py
 python 2018-11-06-nv.py
 python 2018-11-06-ca.py
+python 2018-11-06-al.py
 python virginia.py
 python 2018-11-06-ok.py
 python larryhogan.py
 python 2018-11-06-me.py
-python 2018-11-06-ny.py
 python 2018-11-06-ut.py
-python 2018-11-06-mi.py
+python 2018-11-06-tn.py
+python 2018-11-06-ut.py
 python 2018-11-06-mo.py
 python 2018-11-06-ks.py
 python 2018-11-06-wa.py
 python 2018-11-06-az.py
 python 2018-11-06-wi.py
+python 2018-11-06-ny.py

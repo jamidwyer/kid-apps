@@ -13,7 +13,7 @@ reddit = praw.Reddit('bot1')
 #reddit.login(REDDIT_USERNAME, REDDIT_PASS)
 
 # Have we run this code before? If not, create an empty list
-if not os.path.isfile("/home/ubuntu/running-against-bot/posts_replied_to.txt"):
+if not os.path.isfile("posts_replied_to.txt"):
     posts_replied_to = []
 
 # If we have run the code before, load the list of posts we have replied to
@@ -66,7 +66,7 @@ for sub in subs:
      searchAndPost(sub);
 
 # Write our updated list back to the file
-with open("/home/ubuntu/running-against-bot/posts_replied_to.txt", "w") as f:
+with open("posts_replied_to.txt", "w") as f:
     for post_id in posts_replied_to:
         f.write(post_id + "\n")
 

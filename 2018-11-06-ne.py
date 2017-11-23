@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("florida.dat", "r")
+local_subs = open("nebraska.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,26 +39,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['desantis', 'Republicans trying to hobble Robert Mueller', 'fight over Russia probe budget', 'GOP rep: Congress should set limits for Mueller probe', 'Rider for Spending Bill that Would End Mueller Probe', 'Republicans Ignore the Russia Scandal', 'Republican floats measure to kill Mueller probe', 'Proposal To Kill Mueller Probe']
+            terms = ['don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://registertovoteflorida.gov/en/Registration/Eligibility) \n\n"
-            "[Sign up to vote by mail](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/) \n\n\n"
+        text = ("Nebraska 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): 2018 \n\n"
+            "[Primary Election](): 2018 \n\n"
+            "[General Election](): November 6, 2018 \n\n"
 
-            "[**Nancy Soderberg**](https://soderbergforcongress.com/) is running against Ron DeSantis. \n\n"
-            "[Donate](https://act.myngp.com/Forms/-8933655054907471104) | "
-            "[Facebook](https://www.facebook.com/SoderbergforCongress/) |"
-            "[Twitter](https://twitter.com/nancysoderberg) \n\n"
-
-            "Primary Election: August 28, 2018 | General Election: November 6, 2018 \n\n"
-            "[Map of Florida District 6](https://www.govtrack.us/congress/members/FL/6) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
