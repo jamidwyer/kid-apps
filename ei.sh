@@ -26,4 +26,5 @@ python 2018-11-06-ks.py
 python 2018-11-06-wa.py
 python 2018-11-06-az.py
 python 2018-11-06-wi.py
+python 2018-11-06-nh.py
 python 2018-11-06-ny.py
