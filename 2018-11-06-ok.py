@@ -53,7 +53,7 @@ def search(term, submission):
         submission.reply(text)
 
         # Write our updated list back to the file
-        with open("posts_replied_to.txt", "w") as f:
+        with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
 for sub in subs:
