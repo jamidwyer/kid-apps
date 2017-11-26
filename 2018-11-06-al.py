@@ -51,7 +51,7 @@ def search(term, submission):
         text = ("Alabama 2018 Election \n\n"
             "[Primary Voter Registration Deadline](https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action): May 21, 2018 \n\n"
             "[Primary Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): June 5, 2018 \n\n"
-            "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): November 6, 2018 \n\n"
+            "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
