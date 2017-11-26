@@ -56,17 +56,13 @@ def search(term, submission):
         except Exception:
             print("Error : ", submission.title)
             pass
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+        # Write our updated list back to the file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
      searchAndPost(sub);
-
-# Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
-    for post_id in posts_replied_to:
-        f.write(post_id + "\n")
 
 text_file.close()
 local_subs.close()
