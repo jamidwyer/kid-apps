@@ -14,7 +14,7 @@ python 2018-11-06-nj.py
 python 2018-11-06-nv.py
 python 2018-11-06-ca.py
 python 2018-11-06-al.py
-python virginia.py
+python 2018-11-06-va.py
 python 2018-11-06-ok.py
 python larryhogan.py
 python 2018-11-06-me.py
