@@ -39,14 +39,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['keller maintains healthy lead', 'dan lewis thug life', 'tim keller', 'Time Keller', '@tk4abq', 'albuquerque mayor', 'albuquerque runoff', 'Albuquerque will soon have a mayor most of the voters elected']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Albuquerque Runoff Election \n\n"
+        text = ("Wisconsin 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
+            "[Primary Election](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election): August 14, 2018 \n\n"
+            "[General Election](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election): November 6, 2018 \n\n")
+
             "[Vote November 14, 2017](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election) \n\n")
         print("Bot replying to : ", submission.title)
         try:
@@ -55,17 +59,13 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+        # Write the post id to the tracking file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
      searchAndPost(sub);
-
-# Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
-    for post_id in posts_replied_to:
-        f.write(post_id + "\n")
 
 text_file.close()
 local_subs.close()
