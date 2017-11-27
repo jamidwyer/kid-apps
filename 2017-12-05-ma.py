@@ -38,27 +38,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paul feeney', '@PaulieFeeney', 'james timilty', 'Michael Berry', 'Jacob Ventura', 'Harry Brousaides', 'Tim Hempton', 'Joe Shortsleeve', 'Election Night September 19th']
+            terms = ['Charlene DiCalogero']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register to Vote &#9733;&#9733;&#9733;](https://www.sec.state.ma.us/OVR/) \n\n"
-            "[Find your polling place](http://www.sec.state.ma.us/WhereDoIVoteMA/bal/MyElectionInfo.aspx)\n\n"
-
-            "[**Paul Feeney**](http://www.votefeeney.com/) is running to represent the Bristol & Norfolk District. \n\n"
-            "[Facebook](https://www.facebook.com/PaulFeeneyforStateSenate/) | "
-            "[Twitter](https://twitter.com/PaulieFeeney) | "
-            "[Volunteer](http://www.votefeeney.com/join) | "
-            "[Donate](https://secure.actblue.com/contribute/page/votefeeney) \n\n"
-
-            "Feeney supports renewable energy, public schools, affordable college, universal pre-K, a living wage, and equal pay for equal work. \n\n\n"
-
-            "[Map of Bristol & Norfolk District](https://statisticalatlas.com/state-upper-legislative-district/Massachusetts/Bristol-and-Norfolk-District/Overview) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Worcester & Middlesex Senatorial District Special Election \n\n"
+            "[General Election](http://www.sec.state.ma.us/WhereDoIVoteMA/bal/MyElectionInfo.aspx): December 5, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
