@@ -58,7 +58,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our updated list back to the file
+        # Write our post id to the tracking file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
