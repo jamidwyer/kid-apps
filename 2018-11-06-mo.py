@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Missouri Special Election \n\n"
+        text = ("Missouri 2018 Election \n\n"
             "[Primary Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): July 11, 2018 \n\n"
             "[Primary Election Date](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): August 7, 2018 \n\n"
             "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): December 12, 2017 \n\n")
