@@ -40,26 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml) \n\n"
-            "[**Levi Tillemann**](https://www.leviforcolorado.com/) is running against Mike Coffman. \n\n"
-
-            "[Donate](https://secure.actblue.com/donate/levi4co) | "
-            "[Facebook](https://www.facebook.com/leviforcolorado/) | "
-            "[Twitter](https://twitter.com/levitd) \n\n"
-
-            "Tillemann supports universal health care and renewable energy. \n\n\n"
-
-            "[Map of Colorado District 6](https://www.govtrack.us/congress/members/CO/6) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
-
+        text = ("Colorado 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): June 18, 2018 \n\n"
+            "[Primary Election Date](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): June 26, 2018 \n\n"
+            "[General Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): October 29, 2018 \n\n"
+            "[General Election](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
