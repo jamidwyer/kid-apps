@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,39 +23,40 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wyoming.dat", "r")
+local_subs = open("minnesota.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("Minnesota 2018 Election \n\n"
+            "Primary \n\n"
+            "[Register](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx) by: August 14, 2018 | [Vote](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx) by: August 14, 2018 \n\n"
+            "General Election \n\n"
+            "[Register](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx) by: November 6, 2018 | [Vote](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx) by: November 6, 2018 \n\n")
+
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Write our post id to the tracking file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
+
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
-        #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['matt mead', 'wyoming governor', 'mary throne', 'barrasso', 'erik prince', 'Senate Environment Committee Approves Toxic EPA Nominee', 'Senate Committee Advances Controversial Trump EPA Nominee', 'Pushing Ahead with a Health Care Deal']
+            terms = ['plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
             for term in terms:
                  search(term, submission);
-
-def search(term, submission):
-    if re.search(term, submission.title, re.IGNORECASE):
-        # Reply to the post
-        text = ("Wyoming 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](http://soswy.state.wy.us/elections/registeringtovote.aspx): 2018 \n\n"
-            "[Primary Election](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
-        submission.reply(text)
-        print("Bot replying to : ", submission.title)
-
-        # Store the current id into our list
-        with open("posts_replied_to.txt", "a") as f:
-            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
