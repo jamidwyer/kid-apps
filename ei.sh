@@ -27,6 +27,7 @@ python 2018-11-06-ut.py
 python 2018-11-06-mo.py
 python 2018-11-06-ks.py
 python 2018-11-06-wa.py
+python 2018-11-06-fl.py
 python 2018-11-06-az.py
 python 2018-11-06-mn.py
 python 2018-11-06-wi.py
