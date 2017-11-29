@@ -3,6 +3,7 @@ cd /home/ubuntu/running-against-bot
 python 2017-12-05-ma.py
 python 2017-12-12-al.py
 python 2018-02-06-mo.py
+python 2018-05-22-ar.py
 python 2018-02-13-ok.py
 python 2018-03-13-pa.py
 python 2018-11-06-tx.py
