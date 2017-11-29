@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("ohio.dat", "r")
+local_subs = open("colorado.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,17 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['2018 elections in Ohio', 'representative latta', 'Ohio members of Congress', 'Ohio court justice deletes Facebook post', 'Representative Bill Johnson', 'bill o\'neill', '50 very attractive females', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
+            terms = []
             for term in terms:
-                search(term, submission);
+                 search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Ohio 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://olvr.sos.state.oh.us/): April 9, 2018 \n\n"
-            "[Primary Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): May 8, 2018 \n\n"
-            "[General Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): November 6, 2018 \n\n")
+        text = ("Indiana 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](): 2018 \n\n"
+            "[Primary Election Date](): 2018 \n\n"
+            "[General Election Registration Deadline](): 2018 \n\n"
+            "[General Election](): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
