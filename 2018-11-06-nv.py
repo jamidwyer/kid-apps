@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Tax reform will harm Nevada', 'programs providing pro bono legal assistance to veterans', 'Democrats have had success promoting Universal Basic Income', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP candidate criticizes', 'Anyone Who Supports Donald Trump Jeopardizes Their Own', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
+            terms = ['sisolak', 'Tax reform will harm Nevada', 'programs providing pro bono legal assistance to veterans', 'Democrats have had success promoting Universal Basic Income', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP candidate criticizes', 'Anyone Who Supports Donald Trump Jeopardizes Their Own', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
             for term in terms:
                  search(term, submission);
 
@@ -48,8 +48,9 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Nevada 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): May 15, 2018 \n\n"
+            "[Primary Election Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): May 15, 2018 \n\n"
             "[Primary Election](https://nvsos.gov/votersearch/index.aspx): June 12, 2018 \n\n"
+            "[General Election Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): October 7, 2018 \n\n"
             "[General Election](https://nvsos.gov/votersearch/index.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
