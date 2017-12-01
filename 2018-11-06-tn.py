@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['marsha blackburn', 'tn-7', 'tn-07']
+            terms = ['come join our fight for Net Neutrality!', 'marsha blackburn', 'tn-7', 'tn-07']
             for term in terms:
                  search(term, submission);
 
