@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['CEO who oversaw a mine where 29 workers were killed']
             for term in terms:
                  search(term, submission);
 
@@ -48,10 +48,10 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("West Virginia 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](): 2018 \n\n"
-            "[Primary Election Date](): 2018 \n\n"
-            "[General Election Registration Deadline](): 018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
+            "[Primary Voter Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): April 10, 2018 \n\n"
+            "[Primary Election Date](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): May 8, 2018 \n\n"
+            "[General Election Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): October 16, 2018 \n\n"
+            "[General Election](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -59,7 +59,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our updated list back to the file
+        # Write our post id back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
