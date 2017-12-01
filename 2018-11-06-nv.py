@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Partisan recalls thrust a quiet Las Vegas', 'michael roberson', 'Nevada legislative fight', 'Richard McArthur', 'tony smith', 'sisolak', 'Tax reform will harm Nevada', 'programs providing pro bono legal assistance to veterans', 'Democrats have had success promoting Universal Basic Income', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP candidate criticizes', 'Anyone Who Supports Donald Trump Jeopardizes Their Own', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
+            terms = ['State Senate Recall', 'Carson City School Board facing', 'Partisan recalls thrust a quiet Las Vegas', 'michael roberson', 'Nevada legislative fight', 'Richard McArthur', 'tony smith', 'sisolak', 'Tax reform will harm Nevada', 'programs providing pro bono legal assistance to veterans', 'Democrats have had success promoting Universal Basic Income', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP candidate criticizes', 'Anyone Who Supports Donald Trump Jeopardizes Their Own', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s', 'Marijuana clubs are a bad idea']
             for term in terms:
                  search(term, submission);
 

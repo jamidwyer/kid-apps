@@ -49,8 +49,12 @@ def search(term, submission):
             "[Primary Voter Registration Deadline](http://soswy.state.wy.us/elections/registeringtovote.aspx): 2018 \n\n"
             "[Primary Election](): 2018 \n\n"
             "[General Election](): November 6, 2018 \n\n")
-        submission.reply(text)
         print("Bot replying to : ", submission.title)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Store the current id into our list
         with open("posts_replied_to.txt", "a") as f:
