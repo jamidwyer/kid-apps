@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jim renacci', 'dave joyce', 'This is your Rep from the 2nd Congressional District', 'discuss Ohio politics and candidates', '2018 elections in Ohio', 'representative latta', 'Ohio members of Congress', 'Ohio court justice deletes Facebook post', 'Representative Bill Johnson', 'bill o\'neill', '50 very attractive females', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
+            terms = ['I heard him call his constituents idiots and he hung up on me', 'jim renacci', 'dave joyce', 'This is your Rep from the 2nd Congressional District', 'discuss Ohio politics and candidates', '2018 elections in Ohio', 'representative latta', 'Ohio members of Congress', 'Ohio court justice deletes Facebook post', 'Representative Bill Johnson', 'bill o\'neill', '50 very attractive females', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-1', 'oh-01', 'Republican county in Ohio just flipped nine seats blue', '136 Democrats support Medicare-For-All', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
             for term in terms:
                 search(term, submission);
 
