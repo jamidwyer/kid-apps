@@ -48,7 +48,7 @@ def search(term, submission):
         text = ("Georgia 2018 Election \n\n"
             "[Primary Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
             "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
-            "[General Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): 2018 \n\n"
+            "[General Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): October 9, 2018 \n\n"
             "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
