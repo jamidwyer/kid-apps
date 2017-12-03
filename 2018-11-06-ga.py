@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['buddy carter', 'lisaringga', 'lisa ring', 'reason for Republicans to start panicking about 2018', 'Republican congressman from the state wants to withhold federal dollars to test these kits', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
+            terms = ['jeffares' 'buddy carter', 'lisaringga', 'lisa ring', 'reason for Republicans to start panicking about 2018', 'Republican congressman from the state wants to withhold federal dollars to test these kits', 'withhold federal funding to test rape kits', '@repbuddycarter', 'Senate opponents of Trumpcare should be beaten', 'another round of anger over health care', 'fantasizes about beating up a female Republican Senator', 'snatch a knot']
             for term in terms:
                  search(term, submission);
 
@@ -46,23 +46,24 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Georgia 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
+            "[Primary Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 23, 2018 \n\n"
             "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
+            "[General Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): 2018 \n\n"
             "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+        # Write our post id to the tracking file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
      searchAndPost(sub);
-
-# Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
-    for post_id in posts_replied_to:
-        f.write(post_id + "\n")
 
 text_file.close()
 local_subs.close()
