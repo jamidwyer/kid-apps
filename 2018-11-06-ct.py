@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open(".dat", "r")
+local_subs = open("ct.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -47,11 +47,11 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("2018 Election \n\n"
-            "[Primary Voter Registration Deadline](): 2018 \n\n"
-            "[Primary Election Date](): 2018 \n\n"
-            "[General Election Registration Deadline](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
+        text = ("Connecticut 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): August 14, 2018 \n\n"
+            "[Primary Election Date](http://www.dir.ct.gov/sots/LookUp.aspx): August 14, 2018 \n\n"
+            "[General Election Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): November 6, 2018 \n\n"
+            "[General Election](http://www.dir.ct.gov/sots/LookUp.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
