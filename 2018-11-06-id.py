@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("louisiana.dat", "r")
+local_subs = open("idaho.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,16 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['most incarcerated state', 'scalise', 'this nation to the telecom lobby for the low, low price', 'clay higgins', 'Louisiana Prison Percentage Full by Month']
+            terms = ['exactly the opposite of what they say they are for. I just do not understand republicans']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Louisiana 2018 Election \n\n"
-            "[Voter Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): October 9, 2018 \n\n"
-            "[General Election](https://voterportal.sos.la.gov/Home/VoterLogin): November 6, 2018 \n\n")
+        text = ("Idaho 2018 Election \n\n"
+            "[Primary Election Registration Deadline](http://www.idahovotes.gov/VoterReg/voter_registration.pdf): May 15, 2018 \n\n"
+            "[Primary Election Date](https://idahovotes.gov/absentee-voter-information/): May 15, 2018 \n\n"
+            "[General Election Registration Deadline](http://www.idahovotes.gov/VoterReg/voter_registration.pdf): November 6, 2018 \n\n"
+            "[General Election](https://idahovotes.gov/absentee-voter-information/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
