@@ -33,8 +33,6 @@ subs.extend(ssubs)
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
-        #print(submission.title)
-
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
