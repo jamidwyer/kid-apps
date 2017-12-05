@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = []
+            terms = ['kaniela']
             for term in terms:
                  search(term, submission);
 
@@ -48,10 +48,10 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Hawaii 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](): 2018 \n\n"
-            "[Primary Election Date](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): 2018 \n\n"
-            "[General Election Registration Deadline](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
+            "[Primary Voter Registration Deadline](https://olvr.hawaii.gov/register.aspx): August 4, 2018 \n\n"
+            "[Primary Election Date](http://elections.hawaii.gov/wp-content/uploads/2016/02/VR-PAB-English.pdf): August 11, 2018 \n\n"
+            "[General Election Registration Deadline](https://olvr.hawaii.gov/register.aspx): October 31, 2018 \n\n"
+            "[General Election](http://elections.hawaii.gov/wp-content/uploads/2016/02/VR-PAB-English.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
