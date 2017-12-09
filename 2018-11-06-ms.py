@@ -46,26 +46,25 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx) \n\n"
-            "No progressive is currently running to represent Mississippi's Third Congressional District in 2018. Know someone who should [run](https://www.runforoffice.org/elected_offices/31345-u-s-representative-ms-3/interest_form)? \n\n"
-
-            "[Map of Mississippi Congressional District 3](https://www.govtrack.us/congress/members/MS/3) \n\n"
-
-            "^(I'm a bot and I'm learning. Let me know how I can do better.)")
+        text = ("Mississippi 2018 Election \n\n"
+            "[Primary Election Registration Deadline](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx): 2018 \n\n"
+            "[Primary Election](): 2018 \n\n"
+            "[General Election Registration Deadline](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx): 2018 \n\n"
+            "[General Election](): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+        # Write our updated list back to the file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
      searchAndPost(sub);
-
-# Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
-    for post_id in posts_replied_to:
-        f.write(post_id + "\n")
 
 text_file.close()
 local_subs.close()
