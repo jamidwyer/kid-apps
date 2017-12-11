@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("missouri.dat", "r")
+local_subs = open("oregon.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,17 +38,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['discuss Montana politics and candidates', 'Public defenders say they\'re overworked and underfunded', 'KC based protests over Net Neutrality', 'kathy ellis', '\'Approved demonstration area\'', 'bigly tax giveaway speech for the rich', 'Focusing on St. Louis', 'mccaskill', 'Billionaire pharma owner fueled the opioid epidemic with bribery scheme', 'Vulnerable Dem senators', 'recruit huddles with Koch network in New York', 'top 10 Senate races of 2018', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
+            terms = ['how much money they got from ISPs', 'greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden', 'but a bill to log 10,000 acres of the land is', 'Fund CHIP With Cuts To Medicare And Public Health', 'Net neutrality billboard targets Walden']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Missouri 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): July 11, 2018 \n\n"
-            "[Primary Election Date](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): August 7, 2018 \n\n"
-            "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): November 6, 2018 \n\n")
+        text = ("Oregon 2018 Election \n\n"
+            "[Primary Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): April 24, 2018 \n\n"
+            "[Primary Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): May 15, 2018 \n\n"
+            "[General Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): October 16, 2018 \n\n"
+            "[General Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,9 +57,10 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our updated list back to the file
+        # Store the current id into our list
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
+
 
 for sub in subs:
      print(sub)
