@@ -49,7 +49,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Alabama Senate Special Election\n\n"
-            "[Vote Today!](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do), December 12, 2017 \n\n")
+            "[Vote Today!](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do) (Tuesday, December 12, 2017) \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
