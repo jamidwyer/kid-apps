@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['discuss Montana politics and candidates', 'Public defenders say they\'re overworked and underfunded', 'KC based protests over Net Neutrality', 'kathy ellis', '\'Approved demonstration area\'', 'bigly tax giveaway speech for the rich', 'Focusing on St. Louis', 'mccaskill', 'Billionaire pharma owner fueled the opioid epidemic with bribery scheme', 'Vulnerable Dem senators', 'recruit huddles with Koch network in New York', 'top 10 Senate races of 2018', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
+            terms = ['Louis Cops Lead Nation in Rate of Police Shootings', 'Public defenders say they\'re overworked and underfunded', 'KC based protests over Net Neutrality', 'kathy ellis', '\'Approved demonstration area\'', 'bigly tax giveaway speech for the rich', 'Focusing on St. Louis', 'mccaskill', 'Billionaire pharma owner fueled the opioid epidemic with bribery scheme', 'Vulnerable Dem senators', 'recruit huddles with Koch network in New York', 'top 10 Senate races of 2018', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
             for term in terms:
                  search(term, submission);
 
