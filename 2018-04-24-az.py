@@ -1,9 +1,9 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("arizona.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,32 +38,32 @@ def searchAndPost(sub):
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
+
             # Do a case insensitive search
-            terms = ['randy weber', 'rep. weber', 'Representative weber', 'congressman weber', 'rep weber', 'Congressman prays for forgiveness for allowing gay marriage and abortion', 'GOP congressman Wept As He Begged God To Forgive']
+            terms = ['pressured female subordinates to bear his surrogate children', 'trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Texas 2018 Election \n\n"
-            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): February 5, 2018 \n\n"
-            "[Primary Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): March 6, 2018 \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
+        text = ("Arizona 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): July 30, 2018 \n\n"
+            "[Primary Election](https://www.vote.org/absentee-ballot/): August 28, 2018 \n\n"
+            "[General Election](https://www.vote.org/absentee-ballot/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-        # Store the current id into our list
-        posts_replied_to.append(submission.id)
+        # Write our post id to the tracking file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
      searchAndPost(sub);
 
-# Write our updated list back to the file
-with open("posts_replied_to.txt", "w") as f:
-    for post_id in posts_replied_to:
-        f.write(post_id + "\n")
-
 text_file.close()
-local_subs.close()
