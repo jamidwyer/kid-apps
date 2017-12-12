@@ -38,28 +38,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['steve king', 'rep. king', 'rep king', 'representative king', 'House GOP ignores health care for 9 million kids', 'The Creepily Influential Trumpist', 'Does Donald Trump Hate Iowa', 'GOP Congressmen Talk Christian Judges', 'Does the GOP Base Love Trump More Than It Hates', 'Left out of meeting, Republicans tweeted Trump', 'Trump stuns Washington with immigration moves', 'GOP Base Love Trump More Than It Hates', 's Base Unleashes Their Anger Over', 'GOP leaders try to reassert control', 'Trump\'s die-hard supporters are fuming', 'diehard supporters are fuming after an apparent about-face', 'live in the shadows', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
+            terms = ['rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'Democrats Could Win 50 House Seats', 'Democratic Groups Come out Swinging Against Trump', 'Why should I pay...', 'steve king', 'rep. king', 'rep king', 'representative king', 'House GOP ignores health care for 9 million kids', 'The Creepily Influential Trumpist', 'Does Donald Trump Hate Iowa', 'GOP Congressmen Talk Christian Judges', 'Does the GOP Base Love Trump More Than It Hates', 'Left out of meeting, Republicans tweeted Trump', 'Trump stuns Washington with immigration moves', 'GOP Base Love Trump More Than It Hates', 's Base Unleashes Their Anger Over', 'GOP leaders try to reassert control', 'Trump\'s die-hard supporters are fuming', 'diehard supporters are fuming after an apparent about-face', 'live in the shadows', 'After 16 Futile Years', 'Republican suicide', 'congressman king', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("[&#9733;&#9733;&#9733; Register To Vote &#9733;&#9733;&#9733;](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration) \n\n"
-            "[**Leanne Jacobsen**](https://www.leannjacobsen.com/) is running against Steve King. \n\n"
-            "[Donate](https://secure.actblue.com/donate/leann-for-iowa) | "
-            "[Facebook](https://www.facebook.com/LeannforIowa) | "
-            "[Twitter](https://twitter.com/LeannforIowa) \n\n"
-            "Jacobsen supports universal health care, renewable energy, public schools, protecting Medicare, and DACA. \n\n\n"
-
-            "[**J.D. Scholten**](http://www.scholten4iowa.com/) is running against Steve King. \n\n"
-            "[Donate](http://www.scholten4iowa.com/Contribute) | "
-            "[Facebook](https://www.facebook.com/Scholten4Iowa/) | "
-            "[Twitter](https://twitter.com/scholten4iowa) \n\n"
-            "Scholten supports universal health care and DACA. \n\n\n"
-
-            # This disclaimer works
-            "^(I'm a bot and I'm learning. Let me know how I can do better. I'll add candidates who will represent working-class people instead of billionaire political donors.)")
+        text = ("Iowa 2018 Election \n\n"
+            "[Primary Election Registration Deadline](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration): July 26, 2018 \n\n"
+            "[Primary Election](https://sos.iowa.gov/elections/pdf/absenteeballotapp.pdf): June 5, 2018 \n\n"
+            "[General Election Registration Deadline](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration): October 27, 2018 \n\n")
+            "[General Election](https://sos.iowa.gov/elections/pdf/absenteeballotapp.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
