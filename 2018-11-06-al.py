@@ -41,7 +41,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['every single county shifted toward the Democrats', '2017 Alabamian election results', 'Alabama is a red state', 'Black voters in Alabama are getting blocked from voting at polls', 'Alabama\'s Secretary of State', 'poverty in rural Alabama', 'Alabama worst poverty in the world', 'Alabama Has The Worst Poverty', 'U.N. officials touring rural Alabama', 'UN poverty official touring Alabama', '\"poverty official\" touring Alabama', 'United Nations official visiting Alabama to investigate', 'Congressman Brooks town hall', 'al-gov', 'alabama governor', 'ala. gov', 'too poor to vote', 'Alabama Secretary of State', 'John Merrill', 'top election official learn from monitoring Russian election', 'Alabama election officials remain confused']
+            terms = ['Republicans At Roy Moore\'s Party', 'every single county shifted toward the Democrats', '2017 Alabamian election results', 'Alabama is a red state', 'Black voters in Alabama are getting blocked from voting at polls', 'Alabama\'s Secretary of State', 'poverty in rural Alabama', 'Alabama worst poverty in the world', 'Alabama Has The Worst Poverty', 'U.N. officials touring rural Alabama', 'UN poverty official touring Alabama', '\"poverty official\" touring Alabama', 'United Nations official visiting Alabama to investigate', 'Congressman Brooks town hall', 'al-gov', 'alabama governor', 'ala. gov', 'too poor to vote', 'Alabama Secretary of State', 'John Merrill', 'top election official learn from monitoring Russian election', 'Alabama election officials remain confused']
             for term in terms:
                  search(term, submission);
 
