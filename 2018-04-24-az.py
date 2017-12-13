@@ -47,7 +47,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Arizona 2018 Election \n\n"
+        text = ("Arizona Special Election \n\n"
             "[Primary Election Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): January 29, 2018 \n\n"
             "[Primary Election](https://www.vote.org/absentee-ballot/): February 27, 2018 \n\n"
             "[General Election Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): March 26, 2018 \n\n"
