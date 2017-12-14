@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("florida.dat", "r")
+local_subs = open("tennessee.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,16 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['end the Republican supermajority in Tallahassee by flipping this seat', 'HD 58 Special Election', 'Jose Vazquez']
+            terms = ['s eight state legislative special elections', '3 flippable state special elections coming up on December 19th', 'Mary Alice Carfi', 'mae beavers']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Florida State HD 58 Special Election \n\n"
-            "[Early Voting](https://www.votehillsborough.org/About-Voting/Three-Ways-to-Vote/Early-Voting): December 9 - 16, 2017 \n\n"
-            "[Election Day](https://www.votehillsborough.org/Portals/Hillsborough/Documents/2017%20HD58%20Special%20Election/2017%20HD58-Temple%20Terrace%20Polling%20Place%20Locations.pdf): December 19, 2017 \n\n")
+        text = ("Tennessee State Senate District 17 Special Election \n\n"
+            "[Early Voting](https://static.wixstatic.com/media/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.jpg/v1/fill/w_584,h_960,al_c,q_85/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.webp): December 14, 2017 \n\n"
+            "[General Election](http://web.go-vote-tn.elections.tn.gov/): December 19, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,7 +55,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id to the tracking file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
