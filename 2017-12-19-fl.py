@@ -48,7 +48,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Florida State HD 58 Special Election \n\n"
             "[Early Voting](https://www.votehillsborough.org/About-Voting/Three-Ways-to-Vote/Early-Voting): December 9 - 16, 2017 \n\n"
-            "[Election Day](http://dos.myflorida.com/elections/for-voters/voting/absentee-voting/): December 19, 2017 \n\n")
+            "[Election Day](https://www.votehillsborough.org/Portals/Hillsborough/Documents/2017%20HD58%20Special%20Election/2017%20HD58-Temple%20Terrace%20Polling%20Place%20Locations.pdf): December 19, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
