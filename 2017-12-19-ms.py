@@ -39,18 +39,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['nearby Mississippi is 37', 'gregg harper', 'rep. harper', 'rep harper', 'congressman harper', 'representative harper', 'states brace for Russian hacking fight']
+            terms = ['joel carter', 'sean tindell', 'Mississippi State Senate District 49', 'dan carr', 'ron meyers']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Mississippi 2018 Election \n\n"
-            "[Primary Election Registration Deadline](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx): May 7, 2018 \n\n"
-            "[Primary Election](http://www.sos.ms.gov/pollingplace/Pages/default.aspx): June 5, 2018 \n\n"
-            "[General Election Registration Deadline](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx): October 8, 2018 \n\n"
-            "[General Election](http://www.sos.ms.gov/pollingplace/Pages/default.aspx): November 6, 2018 \n\n")
+        text = ("Mississippi State Senate District 49 Special Election \n\n"
+            "[Election Day](http://www.sos.ms.gov/pollingplace/Pages/default.aspx): December 19, 2017 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
