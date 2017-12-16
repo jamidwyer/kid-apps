@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("newyork.dat", "r")
+local_subs = open(".dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,18 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['barely disguised reward for billionaire donors', 'GOP tax plan the result of a runaway campaign finance system', 'peter king', 'Net Neutrality Supporters At NYC Verizon Store', 'House Seats Democrats Are Hoping to Win in 2018', 'GOP Tax Bill Displays American Oligarchy', 'katko', '^(?!.*burkina faso).*faso.*$', 'daniel donovan', 'dan donovan', 'ny-11', 'rep. donovan', 'rep donovan', 'representative donovan', 'congressman donovan', 'michael grimm', 'GOP incumbent over Grimm']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-
-        text = ("New York 2018 Election \n\n"
-            "[Primary Election Date:](https://nyc.pollsitelocator.com/search): June 26, 2018 \n\n"
-            "[General Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): October 12, 2018 \n\n"
-            "[General Election Date:](https://nyc.pollsitelocator.com/search): November 6, 2018")
+        text = ("2018 Election \n\n"
+            "[Primary Voter Registration Deadline](): 2018 \n\n"
+            "[Primary Election Date](): 2018 \n\n"
+            "[General Election Registration Deadline](): 2018 \n\n"
+            "[General Election](): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
