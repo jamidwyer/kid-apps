@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['female Democratic lawmakers ask House to investigate Trump', 'Templeton comes out guns blazing', 'mal hyman', 'gowdy', 'Congressional Russia Inquiries as Parties Clash', 'Fear Him', 'Republicans who obsessed over Benghazi', 'The Republican Plan to Use the Steele Dossier to Attack James Comey', 'rep. joe wilson', 'jeff duncan', 'GOP tries to make mass shootings even easier after Vegas massacre', 'Gun Lobby Wants to Deregulate Gun Silencers', 'archie parnell', 'henry mcmaster', 'kevin bryant', 'south carolina governor', 'south carolina a candidate for governor', 'Catherine Templeton', 'Steve Bannon tells Republicans in South Carolina', 'Defunding Clinics, GOP Governor']
+            terms = ['SC law keeps sexual harassment', 'female Democratic lawmakers ask House to investigate Trump', 'Templeton comes out guns blazing', 'mal hyman', 'gowdy', 'Congressional Russia Inquiries as Parties Clash', 'Fear Him', 'Republicans who obsessed over Benghazi', 'The Republican Plan to Use the Steele Dossier to Attack James Comey', 'rep. joe wilson', 'jeff duncan', 'GOP tries to make mass shootings even easier after Vegas massacre', 'Gun Lobby Wants to Deregulate Gun Silencers', 'archie parnell', 'henry mcmaster', 'kevin bryant', 'south carolina governor', 'south carolina a candidate for governor', 'Catherine Templeton', 'Steve Bannon tells Republicans in South Carolina', 'Defunding Clinics, GOP Governor']
             for term in terms:
                  search(term, submission);
 
