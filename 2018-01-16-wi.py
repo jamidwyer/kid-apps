@@ -1,9 +1,9 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,35 +23,32 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("wv.dat", "r")
+local_subs = open("wisconsin.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Dire Impressions From His Report On Poverty In U.S.', 'dead because of this coal baron', 'CEO who oversaw a mine where 29 workers were killed']
+            terms = ['Schachtner', 'jarchow', 'harsdorf', 'Gundrum', 'Brian Corriea', 'special election for the Wisconsin state senate in less than a month']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("West Virginia 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): April 10, 2018 \n\n"
-            "[Primary Election Date](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): May 8, 2018 \n\n"
-            "[General Election Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): October 16, 2018 \n\n"
-            "[General Election](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): November 6, 2018 \n\n")
+        text = ("Wisconsin Special Election \n\n"
+            "[Registration Deadline](https://myvote.wi.gov/en-us/registertovote): January 16, 2018 \n\n"
+            "[Election Day](https://myvote.wi.gov/en-us/FindMyPollingPlace): January 16, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -59,7 +56,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
