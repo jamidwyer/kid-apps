@@ -43,3 +43,4 @@ python 2018-11-06-wi.py
 python 2018-11-06-nh.py
 python 2018-11-06-la.py
 python 2018-11-06-ny.py
+python 2020-11-03-tx.py
