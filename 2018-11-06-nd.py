@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open(".dat", "r")
+local_subs = open("nd.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -47,11 +47,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("2018 Election \n\n"
-            "[Primary Voter Registration Deadline](): 2018 \n\n"
-            "[Primary Election Date](): 2018 \n\n"
-            "[General Election Registration Deadline](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n")
+        text = ("North Dakota 2018 Election \n\n"
+            "[Primary Election Date](https://vip.sos.nd.gov/absentee/default.aspx): June 12, 2018 \n\n"
+            "[General Election](https://vip.sos.nd.gov/absentee/default.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
