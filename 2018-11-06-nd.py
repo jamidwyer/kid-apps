@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = []
+            terms = ['Can humane prisons work in America']
             for term in terms:
                  search(term, submission);
 
