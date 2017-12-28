@@ -46,8 +46,9 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Virginia 2018 General Election \n\n"
-            "[Primary Voter Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
+            "[Primary Election Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): May 21, 2018 \n\n"
             "[Primary Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): June 12, 2018 \n\n"
+            "[General Election Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): October 15, 2018 \n\n"
             "[General Election](http://www.elections.virginia.gov/voter-outreach/where-to-vote.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
