@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['GOP fight bolsters Democratic Senate hopes', 'roger wicker', 'nearby Mississippi is 37', 'gregg harper', 'rep. harper', 'rep harper', 'congressman harper', 'representative harper', 'states brace for Russian hacking fight']
+            terms = ['four years without trial in a Mississippi jail', 'GOP fight bolsters Democratic Senate hopes', 'roger wicker', 'nearby Mississippi is 37', 'gregg harper', 'rep. harper', 'rep harper', 'congressman harper', 'representative harper', 'states brace for Russian hacking fight']
             for term in terms:
                  search(term, submission);
 
