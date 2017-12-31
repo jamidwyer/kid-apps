@@ -47,9 +47,9 @@ def search(term, submission):
         # Reply to the post
         text = ("Ohio 2018 Election \n\n"
             "[Primary Election Registration Deadline](https://olvr.sos.state.oh.us/): April 9, 2018 \n\n"
-            "[Primary Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): May 8, 2018 \n\n"
+            "[Primary Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): May 8, 2018 \n\n"
             "[General Election Registration Deadline](https://olvr.sos.state.oh.us/): October 9, 2018 \n\n"
-            "[General Election](http://autoform.sos.state.oh.us/absentee_autoform.aspx): November 6, 2018 \n\n")
+            "[General Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
