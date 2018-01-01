@@ -20,6 +20,7 @@ python 2018-11-06-ga.py
 python 2018-11-06-pa.py
 python 2018-11-06-ms.py
 python 2018-11-06-mt.py
+python 2018-11-06-nm.py
 python 2018-11-06-sc.py
 python 2018-11-06-nj.py
 python 2018-11-06-nv.py
@@ -39,6 +40,7 @@ python 2018-11-06-wa.py
 python 2018-11-06-fl.py
 python 2018-11-06-az.py
 python 2018-11-06-hi.py
+python 2018-11-06-ma.py
 python 2018-11-06-mn.py
 python 2018-11-06-wi.py
 python 2018-11-06-nh.py
