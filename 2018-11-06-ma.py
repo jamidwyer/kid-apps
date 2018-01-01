@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("newhampshire.dat", "r")
+local_subs = open("massachusetts.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,17 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['New Hampshire Lawmakers', 'New Hampshire voter fraud claim']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("New Hampshire 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx):August 30, 2018 \n\n"
-            "[Primary Election](https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx): September 11, 2018 \n\n"
-            "[General Election](https://app.sos.nh.gov/Public/PollingPlaceSearch.aspx): November 6, 2018 \n\n")
+        text = ("Massachusetts 2018 Election \n\n"
+            "[Primary Voter Registration Deadline](https://www.sec.state.ma.us/OVR/): August 29, 2018 \n\n"
+            "[Primary Election Date](http://www.sec.state.ma.us/wheredoivotema/bal/MyElectionInfo.aspx): September 18, 2018 \n\n"
+            "[General Election Registration Deadline](https://www.sec.state.ma.us/OVR/): October 17, 2018 \n\n"
+            "[General Election](http://www.sec.state.ma.us/wheredoivotema/bal/MyElectionInfo.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

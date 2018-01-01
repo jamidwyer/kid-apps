@@ -46,12 +46,11 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Wisconsin 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://myvote.wi.gov/en-us/registertovote): August 14, 2018 \n\n"
-            "[Primary Election](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election): August 14, 2018 \n\n"
-            "[General Election](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election): November 6, 2018 \n\n")
-
-            "[Vote November 14, 2017](http://www.cabq.gov/voting-elections/election-information/voting-locations-2017-election) \n\n")
+        text = ("New Mexico 2018 Election \n\n"
+            "[Primary Election Registration Deadline](http://www.sos.state.nm.us/Voter_Information/Voter_Registration_Information.aspx): May 8, 2018 \n\n"
+            "[Primary Election](http://www.sos.state.nm.us/Voter_Information/Absentee_and_Early_Voting.aspx): June 5, 2018 \n\n"
+            "[General Election Registration Deadline](http://www.sos.state.nm.us/Voter_Information/Voter_Registration_Information.aspx): October 9, 2018 \n\n"
+            "[General Election](http://www.sos.state.nm.us/Voter_Information/Absentee_and_Early_Voting.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
