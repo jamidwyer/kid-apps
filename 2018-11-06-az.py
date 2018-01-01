@@ -50,6 +50,7 @@ def search(term, submission):
         text = ("Arizona 2018 Election \n\n"
             "[Primary Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): July 30, 2018 \n\n"
             "[Primary Election](https://www.vote.org/absentee-ballot/): August 28, 2018 \n\n"
+            "[Primary Voter Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): October 09, 2018 \n\n"
             "[General Election](https://www.vote.org/absentee-ballot/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
