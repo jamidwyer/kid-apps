@@ -1,9 +1,9 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
+
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("maryland.dat", "r")
+local_subs = open(".dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,18 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['gov. hogan', 'Medicare for All will be a big win for Maryland', 's main newspaper, front page.', 'seats in Anne Arundel County', 'Baltimore Students Offer Solutions', 'second partisan gerrymandering case', 'second gerrymandering case', 's third congressional district', 'andy harris', 'Russian ads placed in Maryland', 'ben jealous', 'larry hogan', 'maya for maryland', 'kamenetz', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', '9 Democratic primaries to watch in 2018', 'DSA candidates and Justice Democrats running in these 2018 primaries', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Maryland 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType): June 5, 2018 \n\n"
-            "[Primary Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): June 26, 2018 \n\n"
-            "[General Election Registration Deadline](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType): October 16, 2018 \n\n"
-            "[General Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): November 6, 2018 \n\n")
+        text = ("2018 Election \n\n"
+            "[Primary Voter Registration Deadline](): 2018 \n\n"
+            "[Primary Election Date](): 2018 \n\n"
+            "[General Election Registration Deadline](): 2018 \n\n"
+            "[General Election](): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
