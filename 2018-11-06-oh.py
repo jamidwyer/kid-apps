@@ -45,7 +45,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Ohio 2018 Election \n\n"
+        text = ("Ohio Special Election \n\n"
             "[Primary Election Registration Deadline](https://olvr.sos.state.oh.us/): April 9, 2018 \n\n"
             "[Primary Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): May 8, 2018 \n\n"
             "[General Election Registration Deadline](https://olvr.sos.state.oh.us/): July 8, 2018 \n\n"
