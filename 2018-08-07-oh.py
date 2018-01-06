@@ -50,7 +50,7 @@ def search(term, submission):
             "[Primary Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): May 8, 2018 \n\n"
             "[General Election Registration Deadline](https://olvr.sos.state.oh.us/): July 8, 2018 \n\n"
             "[General Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): August 7, 2018 \n\n")
-     print("Bot replying to : ", submission.title)
+        print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
         except Exception:
