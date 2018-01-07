@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Elderly Couple Stopped In Nebraska', 'don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
+            terms = ['Costco Wants to Build the Largest Chicken Factory Farm in America', 'Elderly Couple Stopped In Nebraska', 'don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
             for term in terms:
                  search(term, submission);
 
@@ -47,11 +47,10 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Nebraska 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): 2018 \n\n"
-            "[Primary Election](): 2018 \n\n"
-            "[General Election](): November 6, 2018 \n\n"
-
-            "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
+            "[Primary Election Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): May 4, 2018 \n\n"
+            "[Primary Election](http://www.sos.ne.gov/elec/voter_info.html#early): May 15, 2018 \n\n"
+            "[General Election Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): October 26, 2018 \n\n"
+            "[General Election](http://www.sos.ne.gov/elec/voter_info.html#early): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

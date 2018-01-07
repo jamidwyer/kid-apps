@@ -18,6 +18,7 @@ python 2018-11-06-wv.py
 python 2018-11-06-nc.py
 python 2018-11-06-ga.py
 python 2018-11-06-pa.py
+python 2018-11-06-ne.py
 python 2018-11-06-ms.py
 python 2018-11-06-mt.py
 python 2018-11-06-nm.py
