@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['unkept promises on Dreamers, CHIP', 'State Where Everyone Wants to Be Governor', 'Colorado city moves ahead with muni broadband', 'CO is spending it\'s MJ tax revenue', 'Time to Nationalize the Internet', 'Doug Lamborn', 'ken buck', 'Voters can preserve net neutrality for their communities by authorizing municipal broadband', 'fight against Fort Collins municipal broadband', 'Colorado\'s investment in IUDs', 'former GOP party chairman in Colorado', 'steve curtis', 's Republican Party found guilty of voter fraud', 'Colorado becomes first in the nation to secure election system', 'Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['Colorado Might Gain a Congressional Seat', 'unkept promises on Dreamers, CHIP', 'State Where Everyone Wants to Be Governor', 'Colorado city moves ahead with muni broadband', 'CO is spending it\'s MJ tax revenue', 'Time to Nationalize the Internet', 'Doug Lamborn', 'ken buck', 'Voters can preserve net neutrality for their communities by authorizing municipal broadband', 'fight against Fort Collins municipal broadband', 'Colorado\'s investment in IUDs', 'former GOP party chairman in Colorado', 'steve curtis', 's Republican Party found guilty of voter fraud', 'Colorado becomes first in the nation to secure election system', 'Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
             for term in terms:
                  search(term, submission);
 
