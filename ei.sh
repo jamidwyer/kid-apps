@@ -4,6 +4,7 @@ python 2018-01-09-ct.py
 python 2018-02-06-mo.py
 python 2018-01-16-wi.py
 python 2018-02-13-fl.py
+python 2018-01-23-or.py
 python 2018-02-17-la.py
 python 2018-03-20-il.py
 python 2018-04-24-az.py
