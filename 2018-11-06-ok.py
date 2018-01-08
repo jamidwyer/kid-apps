@@ -50,9 +50,13 @@ def search(term, submission):
             "[Primary Election Date:](https://services.okelections.us/voterSearch.aspx): June 26, 2018 \n\n"
             "[General Election Date:](https://services.okelections.us/voterSearch.aspx): November 6, 2018")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
-        # Write our updated list back to the file
+        # Write the post id back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
