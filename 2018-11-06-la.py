@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Arrested for Asking Why the Superintendent Got a Raise', 'We are doing the work, we are number 6 or 7 in the state', 'Vermilion school board', 'arrested for asking why superintendent received raise', 'Vermilion parish', 'How politics screwed Puerto Rico out of billions in disaster aid', 'Louisiana district over school prayer', 'Reclaiming The New South', 'Prayers, Proselytizing by Louisiana School District', 'll Stop When Someone Makes Me Stop', 'Louisiana superintendent refuses', 'The end of American prison visits', 'most incarcerated state', 'scalise', 'this nation to the telecom lobby for the low, low price', 'clay higgins', 'Louisiana Prison Percentage Full by Month']
+            terms = ['Arrested for Asking Why the Superintendent Got a Raise', 'We are doing the work, we are number 6 or 7 in the state', 'Vermilion school board', 'Vermillion school board', 'arrested for asking why superintendent received raise', 'Vermilion parish', 'How politics screwed Puerto Rico out of billions in disaster aid', 'Louisiana district over school prayer', 'Reclaiming The New South', 'Prayers, Proselytizing by Louisiana School District', 'll Stop When Someone Makes Me Stop', 'Louisiana superintendent refuses', 'The end of American prison visits', 'most incarcerated state', 'scalise', 'this nation to the telecom lobby for the low, low price', 'clay higgins', 'Louisiana Prison Percentage Full by Month']
             for term in terms:
                  search(term, submission);
 
