@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['GA House of Representatives', 'Georgia\'s Election System', 'Dozens of People Arrested for Less Than an Ounce of Weed', 'arrests of over 60 Georgia partygoers', 'Police arrested 63 people at a house party', 'Poverty Is Both a Political and a Moral Choice Made By the Powerful', 'Journalist found guilty of obstruction of justice after suing Sheriff Candidate', 'In Georgia, battle of the \'Staceys\'', 'jeffares' 'buddy carter', 'lisaringga', 'lisa ring', '@repbuddycarter']
+            terms = ['female political activism that could shift the course of US politics', 'GA House of Representatives', 'Georgia\'s Election System', 'Dozens of People Arrested for Less Than an Ounce of Weed', 'arrests of over 60 Georgia partygoers', 'Police arrested 63 people at a house party', 'Poverty Is Both a Political and a Moral Choice Made By the Powerful', 'Journalist found guilty of obstruction of justice after suing Sheriff Candidate', 'In Georgia, battle of the \'Staceys\'', 'jeffares' 'buddy carter', 'lisaringga', 'lisa ring', '@repbuddycarter']
             for term in terms:
                  search(term, submission);
 
