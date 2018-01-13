@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Colorado Just Had Its 3rd Warmest Year Ever', 'Colorado Might Gain a Congressional Seat', 'unkept promises on Dreamers, CHIP', 'State Where Everyone Wants to Be Governor', 'Colorado city moves ahead with muni broadband', 'CO is spending it\'s MJ tax revenue', 'Time to Nationalize the Internet', 'Doug Lamborn', 'ken buck', 'Voters can preserve net neutrality for their communities by authorizing municipal broadband', 'fight against Fort Collins municipal broadband', 'Colorado\'s investment in IUDs', 'former GOP party chairman in Colorado', 'steve curtis', 's Republican Party found guilty of voter fraud', 'Colorado becomes first in the nation to secure election system', 'Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['Colorado Cities Keep Voting To Build Their Own Broadband Networks', 'Colorado Just Had Its 3rd Warmest Year Ever', 'Colorado Might Gain a Congressional Seat', 'unkept promises on Dreamers, CHIP', 'State Where Everyone Wants to Be Governor', 'Colorado city moves ahead with muni broadband', 'CO is spending it\'s MJ tax revenue', 'Time to Nationalize the Internet', 'Doug Lamborn', 'ken buck', 'Voters can preserve net neutrality for their communities by authorizing municipal broadband', 'fight against Fort Collins municipal broadband', 'Colorado\'s investment in IUDs', 'former GOP party chairman in Colorado', 'steve curtis', 's Republican Party found guilty of voter fraud', 'Colorado becomes first in the nation to secure election system', 'Colorado CHIP notice letters sent out', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
             for term in terms:
                  search(term, submission);
 
@@ -48,7 +48,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Colorado 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): June 18, 2018 \n\n"
+            "[Party Precinct Caucus](https://www.sos.state.co.us/pubs/elections/Candidates/FAQs/caucuses.html): March 6, 2018"
+            "[Primary Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): June 18, 2018 \n\n"
             "[Primary Election Date](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): June 26, 2018 \n\n"
             "[General Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): October 29, 2018 \n\n"
             "[General Election](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): November 6, 2018 \n\n")
