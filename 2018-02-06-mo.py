@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = []
+            terms = ["jim scaggs"]
             for term in terms:
                  search(term, submission);
 
@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Missouri Special Election \n\n"
-            "[Voter Registration Deadline](https://www.sos.mo.gov/elections/goVoteMissouri/register): January 10, 2018 \n\n"
             "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): February 2, 2018 \n\n"
 
             "If you like visiting web sites without worrying about how much extra it will cost you, please contact your Senators and Representatives to [protect net neutrality](https://www.battleforthenet.com/).")
