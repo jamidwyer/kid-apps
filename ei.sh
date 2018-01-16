@@ -42,6 +42,7 @@ python 2018-11-06-fl.py
 python 2018-11-06-az.py
 python 2018-11-06-hi.py
 python 2018-11-06-de.py
+python 2018-11-06-vt.py
 python 2018-11-06-ma.py
 python 2018-11-06-mn.py
 python 2018-11-06-wi.py
