@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Aurora Election Commission', 'Cook County voters', 'Cook County ballot in March']
+            terms = ['DuPage County voters to decide several ballot questions', 'Aurora Election Commission', 'Cook County voters', 'Cook County ballot in March']
             for term in terms:
                  search(term, submission);
 
