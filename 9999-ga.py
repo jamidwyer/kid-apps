@@ -38,14 +38,14 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Florida. Bring apathetic people', 'Keisha Lance Bottoms', 'Mary Norwood']
+            terms = ['georgia special election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Georgia Election, December 5, 2017 \n\n"
+        text = ("Georgia Special Election \n\n"
             "[Find your polling place](https://www.mvp.sos.ga.gov/MVP/mvp.do) \n\n")
         print("Bot replying to : ", submission.title)
         try:
