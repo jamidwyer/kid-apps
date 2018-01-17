@@ -36,17 +36,16 @@ def searchAndPost(sub):
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
-
             # Do a case insensitive search
-            terms = ['jeanne mcneill',  'survey and information about upcoming elections here', 's eight state legislative special elections']
+            terms = ['austin davis', 'davisfor35th', 'davisforpa.com', 'Hold Opportunity in Next Week\'s PA House 35 Special Election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Pennsylvania House District 133 Special Election \n\n"
-            "[VOTE](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): December 5, 2017 \n\n")
+        text = ("Pennsylvania House District 35 Special Election \n\n"
+            "[VOTE](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): January 23, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
