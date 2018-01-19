@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Parkway School Board 2018 Election \n\n"
-            "[General Election Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): March 7, 2018 \n\n"
+            "[Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): March 7, 2018 \n\n"
             "[Election Day](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): April 3, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
