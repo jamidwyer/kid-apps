@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("oklahoma.dat", "r")
+local_subs = open("pennsylvania.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,17 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['State road projects on hold because of Congress budget battle', 'Oklahoma among nation', 'You\'re awesome, Tulsa', 'march in OKC today', 'Drew Edmondson', '72yo Grandma Shot Dead as SWAT Raided Her Home To Arrest Her Son For Marijuana', 'cash seized, forfeited by Oklahoma law enforcement', 'Ballot Effort to Remove Legislature from Redistricting Process', 'medical cannabis look like in Oklahoma', 'A preview of the US without pensions', 'Oklahoma Poised To Cut Off 20,000 Disabled and Elderly People', 'Oklahoma City mayor', 'GOP rep from Oklahoma', 'rep. tom cole', 'NativeVote18', 'Tax Bill Blowback Rally today', 'Oklahoma opponents of federal income tax bills', 'Tulsa forum to focus on medical marijuana', 'Gov Fallin', 'This is my governor. She', 'markwayne', 'ok-02', 'ok-2', 'oklahoma\'s 2nd District', 'Native American Candidates for Congress', 'bridenstine', 'ok-01', 'ok-1', 'oklahoma\'s 1st District', 'My Congressman Directly Opposes Net Neutrality', 'Budget Crisis in Oklahoma', 'steve russell', 'Oklahoma Democrats open door', 'mary fallin', 'Oklahoma House of Representatives and State Senate', 'any opinions on our 2018 gubernatorial election', 'Oklahoma Tried the GOP', 'Voter Registration by County', 'says ou wants students to have abortions']
+            terms = ['Republican seeking Pittsburgh']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Oklahoma 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 2, 2018 \n\n"
-            "[Primary Election Date](https://services.okelections.us/voterSearch.aspx): June 26, 2018 \n\n"
-            "[General Election Date](https://services.okelections.us/voterSearch.aspx): November 6, 2018")
+        text = ("8th Pittsburgh Council District Special Election \n\n"
+            "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): February 5, 2018 \n\n"
+            "[Election Day](https://alleghenycounty.us/uploadedFiles/Allegheny_Home/Dept-Content/Elections/Docs/8th%20Pittsburgh%20Council%20Polling%20Place%20Addresses.pdf): March 6, 2018 \n\n")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
