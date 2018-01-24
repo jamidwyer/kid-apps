@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['s special election on health care taxes', 'Oregon Special Election, January 23rd']
+            terms = ['Yes on Measure 101', 's special election on health care taxes', 'Oregon Special Election, January 23rd']
             for term in terms:
                  search(term, submission);
 
