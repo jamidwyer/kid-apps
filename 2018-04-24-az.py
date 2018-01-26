@@ -40,7 +40,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['Start Electing the Working-Class to Congress', 'westbrook', 'Trump of 2018 bloodbath', 'pressured female subordinates to bear his surrogate children', 'trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks']
+            terms = ['Start Electing the Working-Class to Congress', '^(?!.*sell westbrook).*westbrook.*$', 'Trump of 2018 bloodbath', 'pressured female subordinates to bear his surrogate children', 'trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks']
             for term in terms:
                  search(term, submission);
 
