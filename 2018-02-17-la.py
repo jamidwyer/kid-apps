@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Louisiana District 86 Special Election \n\n"
-            "[Voter Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): January 27, 2018 \n\n"
             "[Election Day](https://voterportal.sos.la.gov/): February 17, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
