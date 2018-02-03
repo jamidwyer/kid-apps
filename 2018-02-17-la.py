@@ -38,15 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['chris broadwater']
+            terms = ['Budget Crisis Proves State House Leadership Cares More About Politics Than Governing', 'chris broadwater']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Louisiana District 86 Special Election \n\n"
-            "[Election Day](https://voterportal.sos.la.gov/): February 17, 2018 \n\n")
+        text = ("Louisiana District 86 Special Election (Tangipahoa Parish only) \n\n"
+            "[Primary Election](https://voterportal.sos.la.gov/): February 17, 2018 \n\n"
+            "[General Election Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): March 3, 2018 \n\n"
+            "[General Election](https://voterportal.sos.la.gov/): March 24, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
