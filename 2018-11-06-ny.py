@@ -47,9 +47,9 @@ def search(term, submission):
         # Reply to the post
 
         text = ("New York 2018 Election \n\n"
-            "[Primary Election Date:](https://nyc.pollsitelocator.com/search): June 26, 2018 \n\n"
+            "[Primary Election Date:](https://voterlookup.elections.state.ny.us/votersearch.aspx): June 26, 2018 \n\n"
             "[General Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): October 12, 2018 \n\n"
-            "[General Election Date:](https://nyc.pollsitelocator.com/search): November 6, 2018")
+            "[General Election Date:](https://voterlookup.elections.state.ny.us/votersearch.aspx): November 6, 2018")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
