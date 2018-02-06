@@ -40,7 +40,7 @@ def searchAndPost(sub):
 
 
             # Do a case insensitive search
-            terms = ['Sign of Change for Politicians in Arizona', 'Start Electing the Working-Class to Congress', '^(?!.*sell westbrook).*westbrook.*$', 'Trump of 2018 bloodbath', 'pressured female subordinates to bear his surrogate children', 'trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks']
+            terms = ['New Arizona Tracking Poll', 'Sign of Change for Politicians in Arizona', 'Start Electing the Working-Class to Congress', '^(?!.*sell westbrook).*westbrook.*$', 'Trump of 2018 bloodbath', 'pressured female subordinates to bear his surrogate children', 'trent franks', 'rep. franks', 'rep franks', 'congressman franks', 'representative franks']
             for term in terms:
                  search(term, submission);
 
@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Arizona Special Election \n\n"
-            "[Primary Election Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): January 29, 2018 \n\n"
             "[Primary Election](https://www.vote.org/absentee-ballot/): February 27, 2018 \n\n"
             "[General Election Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): March 26, 2018 \n\n"
             "[General Election](https://www.vote.org/absentee-ballot/): April 24, 2018 \n\n")
