@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("pennsylvania.dat", "r")
+local_subs = open("ohio.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,16 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Republican seeking Pittsburgh']
+            terms = ['Congressional redistricting plan passes Ohio House, will appear on May ballot']
             for term in terms:
-                 search(term, submission);
+                search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("8th Pittsburgh Council District Special Election \n\n"
-            "[Election Day](https://alleghenycounty.us/uploadedFiles/Allegheny_Home/Dept-Content/Elections/Docs/8th%20Pittsburgh%20Council%20Polling%20Place%20Addresses.pdf): March 6, 2018 \n\n")
-
+        text = ("Ohio 2018 Election \n\n"
+            "[Primary Election Registration Deadline](https://olvr.sos.state.oh.us/): April 9, 2018 \n\n"
+            "[Primary Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): May 8, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -55,7 +55,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
