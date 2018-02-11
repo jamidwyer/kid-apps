@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,43 +23,37 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("newyork.dat", "r")
+local_subs = open("minnesota.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
+def search(term, submission):
+    if re.search(term, submission.title, re.IGNORECASE):
+        # Reply to the post
+        text = ("Minnesota Special Elections \n\n"
+            "[General Election Date](http://pollfinder.sos.state.mn.us/): Monday, February 12, 2018 \n\n")
+
+        print("Bot replying to : ", submission.title)
+        submission.reply(text)
+
+        # Write our post id to the tracking file
+        with open("posts_replied_to.txt", "a") as f:
+            f.write(submission.id + "\n")
+
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
-        #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['NY to Run Candidate in State House Special Election in April']
+            terms = ['Special elections in Minnesota are TOMORROW', 'melissa wagner', 'Karla Bigham', 'justin eichorn', 'MN State Senate 54', 'MN State House 23B']
             for term in terms:
                  search(term, submission);
-
-def search(term, submission):
-    if re.search(term, submission.title, re.IGNORECASE):
-        # Reply to the post
-
-        text = ("New York Special Elections \n\n"
-            "[General Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): April 14, 2018 \n\n"
-            "[General Election Date:](https://voterlookup.elections.state.ny.us/votersearch.aspx): April 24, 2018")
-        print("Bot replying to : ", submission.title)
-        try:
-            submission.reply(text)
-        except Exception:
-            print("Error : ", submission.title)
-            pass
-
-        # Write our updated list back to the file
-        with open("posts_replied_to.txt", "a") as f:
-            f.write(submission.id + "\n")
 
 for sub in subs:
      print(sub)
