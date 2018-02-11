@@ -22,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("pennsylvania.dat", "r")
+local_subs = open("newyork.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -38,17 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Texas And Pennsylvania Elections Are Soon', 'Republicans panic in southwest Pennsylvania', 'Pennsylvania Supreme Court throws out state', 'The PA Supreme Court just ruled by a 4-3 vote that PA', 'Pennsylvania Supreme Court Appears Open To Striking Down Gerrymandered Map', 'Updated Flips Map', 'Democrats have now won 34 Republican state legislative seats', 'a test of Trump in western Pennsylvania', 'Pennsylvania Residents And NORML', 'Rick Saccone', 'Western Pa. special election', 'conor lamb', 'Pennsylvania Special Election', 'could portend a Democratic wave', 'PA 18th District', 'see an opening in Pennsylvania', 'tim murphy', 'pa18', 'pa-18', 'bob solomon', 'congressman to resign after report alleged he asked woman to have an abortion', 'Congressman Resigns After Allegedly Urging Mistress to Get an Abortion']
+            terms = []
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Pennsylvania District 18 Special Election \n\n"
-            "[Voter Registration Deadline](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx): February 12, 2018 \n\n"
-            "[Election Day](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): March 13, 2018 \n\n")
 
+        text = ("New York Special Elections \n\n"
+            "[General Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): April 14, 2018 \n\n"
+            "[General Election Date:](https://voterlookup.elections.state.ny.us/votersearch.aspx): April 24, 2018")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,7 +56,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
