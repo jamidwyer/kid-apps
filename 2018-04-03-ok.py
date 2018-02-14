@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Oklahoma City Mayoral Election \n\n"
-            "[Primary Election Date](https://www.ok.gov/elections/Voter_Info/Online_Voter_Tool/index.html): February 13, 2018 \n\n"
             "[General Election Date](https://services.okelections.us/AbsenteeApplication/): April 3, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
