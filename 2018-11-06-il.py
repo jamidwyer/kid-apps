@@ -47,9 +47,8 @@ def search(term, submission):
         # Reply to the post
         text = ("Illinois 2018 Election \n\n"
             "[Primary Election Early Voting Begins](https://www.elections.il.gov/VotingInformation/EarlyVotingLocations.aspx): February 8, 2018 \n\n"
-            "[Primary Election Registration Deadline](https://ova.elections.il.gov/Step0.aspx): February 20, 2018 \n\n"
             "[Primary Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): March 20, 2018 \n\n"
-            "[General Election Registration Deadline](https://ova.elections.il.gov/Step0.aspx): October 21, 2018 \n\n"
+            "[General Election Pre-Registration Deadline](https://ova.elections.il.gov/Step0.aspx): October 21, 2018 \n\n"
             "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
