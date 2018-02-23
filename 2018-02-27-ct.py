@@ -40,16 +40,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Connecticut House of Representatives District 15', 'Is there an upcoming election in your state', 'David Baram', 'Bobby Gibson', 'Joseph Suggs']
+            terms = ['bill cabral', 'Laura Hoydick']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Connecticut House of Representatives District 15 Special Election \n\n"
-            "[Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): January 9, 2018 \n\n"
-            "[Election Day](http://www.dir.ct.gov/sots/LookUp.aspx): January 9, 2018 \n\n")
+        text = ("Connecticut House of Representatives District 120 Special Election \n\n"
+            "[Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): February 27, 2018 \n\n"
+            "[Election Day](http://www.dir.ct.gov/sots/LookUp.aspx): February 27, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
