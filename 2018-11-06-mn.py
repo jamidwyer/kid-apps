@@ -39,7 +39,11 @@ def search(term, submission):
             "[General Election Date](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): November 6, 2018 \n\n")
 
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
 
         # Write our post id to the tracking file
         with open("posts_replied_to.txt", "a") as f:
