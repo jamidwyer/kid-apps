@@ -7,6 +7,7 @@ python 2018-02-27-nh.py #2-27
 python 2018-04-24-az.py #2-27
 python 2018-03-24-la.py #3-3
 python 2018-03-06-pa.py #3-6
+python 2018-03-06-vt.py #3-6
 python 2018-03-13-pa.py #3-13
 python 2018-03-20-il.py #3-20
 python 2018-05-01-tn.py #4-2
