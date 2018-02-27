@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['sq 788', ' The Marijuana Question', 'Oklahoma Will Vote on Medical Marijuana in June', 'say yes to 788', 'Is this the year we legalize Medical Marijauna', 'Mother calls Fallin a', '72yo Woman Shot Dead as SWAT Raided Her Home To Arrest Her Son For Cannabis', 'Oklahomans support medical marijuana measure', 'Oklahoma Medical Marijuana Access Initiative', 'Gov. Fallin sets June 26 election']
+            terms = ['Oklahoma lawmakers taking shot at medical marijuana regulations before vote', 'sq 788', ' The Marijuana Question', 'Oklahoma Will Vote on Medical Marijuana in June', 'say yes to 788', 'Is this the year we legalize Medical Marijauna', 'Mother calls Fallin a', '72yo Woman Shot Dead as SWAT Raided Her Home To Arrest Her Son For Cannabis', 'Oklahomans support medical marijuana measure', 'Oklahoma Medical Marijuana Access Initiative', 'Gov. Fallin sets June 26 election']
             for term in terms:
                  search(term, submission);
 
