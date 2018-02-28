@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Arizona Special Election \n\n"
-            "[Primary Election](https://www.vote.org/absentee-ballot/): February 27, 2018 \n\n"
             "[General Election Registration Deadline](https://servicearizona.com/webapp/evoter/register?execution=e1s2): March 26, 2018 \n\n"
             "[General Election](https://www.vote.org/absentee-ballot/): April 24, 2018 \n\n")
         print("Bot replying to : ", submission.title)
