@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['vermont gov', 'vermont senate voted', 'Burlington VT to protest a Patriot Front', 'Vermont Legalizes Recreational Marijuana', 'West Virginia, Lowest in Vermont', 'Vermont is the first state to legalize marijuana', 'Vermont Becomes the Ninth State to Legalize Adult Marijuana', 'Vermont has officially legalized cannabis', 'Governor Scott sticks it to the taxpayers', 'GOP in Vermont']
+            terms = ['vermont gov', 'vermont senate', 'Burlington VT to protest a Patriot Front', 'Vermont Legalizes Recreational Marijuana', 'West Virginia, Lowest in Vermont', 'Vermont is the first state to legalize marijuana', 'Vermont Becomes the Ninth State to Legalize Adult Marijuana', 'Vermont has officially legalized cannabis', 'Governor Scott sticks it to the taxpayers', 'GOP in Vermont']
             for term in terms:
                  search(term, submission);
 
