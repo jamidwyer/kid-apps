@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Oregon House passes net neutrality bill', 'Oregon moves toward state net-neutrality law', 'Oregon constitutional amendment on universal care', 'sen. kruse', 'senator kruse', 'sen kruse', 'A few pictures from the Indigenous Women', 'Portland Women\'s March', 'National March for Impeachment in Downtown Portland', 'Oregon\'s Senate Rules Committee', 'Portland Women\'s March', 'youth detention conditions in The Dalles', 'how much money they got from ISPs', 'greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden', 'but a bill to log 10,000 acres of the land is', 'Fund CHIP With Cuts To Medicare And Public Health', 'Net neutrality billboard targets Walden']
+            terms = ['Oregon moves toward state net', 'Oregon House passes net neutrality bill', 'Oregon moves toward state net-neutrality law', 'Oregon constitutional amendment on universal care', 'sen. kruse', 'senator kruse', 'sen kruse', 'A few pictures from the Indigenous Women', 'Portland Women\'s March', 'National March for Impeachment in Downtown Portland', 'Oregon\'s Senate Rules Committee', 'Portland Women\'s March', 'youth detention conditions in The Dalles', 'how much money they got from ISPs', 'greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden', 'but a bill to log 10,000 acres of the land is', 'Fund CHIP With Cuts To Medicare And Public Health', 'Net neutrality billboard targets Walden']
             for term in terms:
                  search(term, submission);
 
