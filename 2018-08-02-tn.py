@@ -38,16 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['s eight state legislative special elections', '3 flippable state special elections coming up on December 19th', 'Mary Alice Carfi', 'mae beavers']
+            terms = ['nashville mayor']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Tennessee State Senate District 17 Special Election \n\n"
-            "[Early Voting](https://static.wixstatic.com/media/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.jpg/v1/fill/w_584,h_960,al_c,q_85/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.webp): December 14, 2017 \n\n"
-            "[Election Day](http://web.go-vote-tn.elections.tn.gov/): December 19, 2017 \n\n")
+        text = ("Tennessee Local Elections \n\n"
+            "[Voter Registration Deadline](https://static.wixstatic.com/media/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.jpg/v1/fill/w_584,h_960,al_c,q_85/a43344_2458fc06cc4d4e80afec9832cf3dae95~mv2.webp): July 3, 2018 \n\n"
+            "[Election Day](http://web.go-vote-tn.elections.tn.gov/): August 2, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
