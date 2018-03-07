@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("oregon.dat", "r")
+local_subs = open("alaska.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,18 +40,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['20-year-old sues dick', 'oregon senate', 'dallas heard', 'Oregon moves toward state net3l ', 'Oregon House passes', 'Oregon moves toward state net-neutrality law', 'Oregon constitutional amendment on universal care', 'sen. kruse', 'senator kruse', 'sen kruse', 'A few pictures from the Indigenous Women', 'Portland Women\'s March', 'National March for Impeachment in Downtown Portland', 'Oregon\'s Senate Rules Committee', 'Portland Women\'s March', 'youth detention conditions in The Dalles', 'how much money they got from ISPs', 'greg walden', '@repgregwalden', 'rep. walden', 'congressman walden', 'rep walden', 'but a bill to log 10,000 acres of the land is', 'Fund CHIP With Cuts To Medicare And Public Health', 'Net neutrality billboard targets Walden']
+            terms = ['transgender bathroom bill just turned up in']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Oregon 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): April 24, 2018 \n\n"
-            "[Primary Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): May 15, 2018 \n\n"
-            "[General Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): October 16, 2018 \n\n"
-            "[General Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): November 6, 2018 \n\n")
+        text = ("Anchorage Election \n\n"
+            "[Return Ballots By](https://muniorg.maps.arcgis.com/apps/webappviewer/index.html?id=218a434eff2c42b49e06932d56d2e862): April 3, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -57,10 +56,9 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Store the current id into our list
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
-
 
 for sub in subs:
      print(sub)
