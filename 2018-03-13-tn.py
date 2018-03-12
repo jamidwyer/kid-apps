@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 import praw
 import pdb
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("pennsylvania.dat", "r")
+local_subs = open("tennessee.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -33,22 +32,19 @@ subs.extend(ssubs)
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
-        #print(submission.title)
-
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['PA CD 18', 'sacchone', 'PA\'s 18th Congressional', 'Saccone', 'Western Pa. special election', 'Pennsylvania Special Election', 'PA 18th District', 'tim murphy', 'pa-18', 'bob solomon', 'congressman to resign after report alleged he asked woman to have an abortion', 'Congressman Resigns After Allegedly Urging Mistress to Get an Abortion']
+            terms = ['gayle jordan', 'win public office in tennessee', 'state Representative for tennessee']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Pennsylvania District 18 Special Election \n\n"
-            "[Election Day](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): March 13, 2018 \n\n")
-
+        text = ("Tennessee State Senate District 14 Special Election \n\n"
+            "[Election Day](http://web.go-vote-tn.elections.tn.gov/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,7 +52,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
