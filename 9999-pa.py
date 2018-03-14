@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 import praw
 import pdb
@@ -36,16 +37,18 @@ def searchAndPost(sub):
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
+
             # Do a case insensitive search
-            terms = ['austin davis', 'davisfor35th', 'davisforpa.com', 'Hold Opportunity in Next Week\'s PA House 35 Special Election']
+            terms = ['come out and vote against the gop', 'PA CD 18', 'sacchone', 'PA\'s 18th Congressional', 'Saccone', 'Western Pa. special election', 'Pennsylvania Special Election', 'PA 18th District', 'tim murphy', 'pa-18', 'bob solomon', 'congressman to resign after report alleged he asked woman to have an abortion', 'Congressman Resigns After Allegedly Urging Mistress to Get an Abortion']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Pennsylvania House District 35 Special Election \n\n"
-            "[VOTE](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): January 23, 2018 \n\n")
+        text = ("Pennsylvania District 18 Special Election \n\n"
+            "[Election Day](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): March 13, 2018 \n\n")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -53,7 +56,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our updated list back to the file
+        # Write the post id back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
