@@ -58,7 +58,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['keith ellison', 'approval ratings down significantly in minnesota', 'minnesota doctors embrace gun control', 'climate views could sway 10 house elections', 'pretend to be from minnesota', 'minnesota high school walkout', 'Salvadorans, a family in Minnesota', 'Billboard in Hampton, MN', 'Spotted in Hampton, Minnesota', 'angie craig', 'MeToo Movement Is Coming to the Ballot Box This Month', 'all-in on defense in Minnesota', 'michele bachmann', 'Poison a Minnesota Wilderness', 'Am I Being Called to Do This Now', 'adam jennings', 'Pro-Trump Republican Rep Just Deleted Her Twitter', 'mary franson', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
+            terms = ['bombing of minnesota mosque', 'keith ellison', 'approval ratings down significantly in minnesota', 'minnesota doctors embrace gun control', 'climate views could sway 10 house elections', 'pretend to be from minnesota', 'minnesota high school walkout', 'Salvadorans, a family in Minnesota', 'Billboard in Hampton, MN', 'Spotted in Hampton, Minnesota', 'angie craig', 'MeToo Movement Is Coming to the Ballot Box This Month', 'all-in on defense in Minnesota', 'michele bachmann', 'Poison a Minnesota Wilderness', 'Am I Being Called to Do This Now', 'adam jennings', 'Pro-Trump Republican Rep Just Deleted Her Twitter', 'mary franson', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
             for term in terms:
                  search(term, submission);
 
