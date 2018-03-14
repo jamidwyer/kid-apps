@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['md. lawmakers', 'gerrymandering in maryland', 'benjealous', 'Maryland Single-Payer Bill', 'Baltimore cops kept toy guns', 'ben cardin', 'chelsea manning', 'md-gov', 'gov. hogan', 'andy harris', 'ben jealous', 'larry hogan', 'maya for maryland', 'kamenetz', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', '9 Democratic primaries to watch in 2018', 'DSA candidates and Justice Democrats running in these 2018 primaries', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
+            terms = ['maryland may put a cannabis', 'md. lawmakers', 'gerrymandering in maryland', 'benjealous', 'Maryland Single-Payer Bill', 'Baltimore cops kept toy guns', 'ben cardin', 'chelsea manning', 'md-gov', 'gov. hogan', 'andy harris', 'ben jealous', 'larry hogan', 'maya for maryland', 'kamenetz', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', '9 Democratic primaries to watch in 2018', 'DSA candidates and Justice Democrats running in these 2018 primaries', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
             for term in terms:
                  search(term, submission);
 
