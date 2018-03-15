@@ -51,8 +51,13 @@ def search(term, submission):
             "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n"
             "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
-        submission.reply(text)
-        # Write our updated list back to the file
+        try:
+            submission.reply(text)
+        except Exception:
+            print("Error : ", submission.title)
+            pass
+
+        # Write our post id to the tracking file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
