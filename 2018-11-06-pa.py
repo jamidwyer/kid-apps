@@ -1,4 +1,4 @@
-r#!/usr/bin/python
+#!/usr/bin/python
 import praw
 import pdb
 import re
