@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Seattle Democratic Socialists of America', 'shot itself in the foot on net Neutrality', 'washington state\'s net Neutrality law', 'washington state has now passed', 'Washington becomes first state', 'First State-Level Net Neutrality Law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'States Are Writing Their Own Net Neutrality Laws', 't whore out my internet', 'matt manweller', 'Democrats dominate again in Washington state', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['March March Olympia, WA', 'Seattle Democratic Socialists of America', 'shot itself in the foot on net Neutrality', 'washington state\'s net Neutrality law', 'washington state has now passed', 'Washington becomes first state', 'First State-Level Net Neutrality Law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'States Are Writing Their Own Net Neutrality Laws', 't whore out my internet', 'matt manweller', 'Democrats dominate again in Washington state', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
             for term in terms:
                  search(term, submission);
 
