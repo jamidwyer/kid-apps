@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Las Vegas City Council candidates']
+            terms = ['Las Vegas City Council candidate']
             for term in terms:
                  search(term, submission);
 
@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Las Vegas City Council Special Election \n\n"
-            "[Early Voting](https://www.lasvegasnevada.gov/cs/groups/public/documents/document/chjk/mdg1/~edisp/prd085147.pdf): March 22-23, 2018 \n\n"
             "[General Election](https://www.lasvegasnevada.gov/cs/groups/public/documents/document/chjk/mdgy/~edisp/prd082155.pdf): March 27, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:

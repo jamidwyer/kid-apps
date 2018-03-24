@@ -1,8 +1,8 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-03-27-nv.py #3-22
-python 2018-03-27-al.py #3-27
 python 2018-03-24-la.py #3-24
+python 2018-03-27-al.py #3-27
+python 2018-03-27-nv.py #3-27
 python 2018-04-24-az.py #3-26
 python 2018-05-01-tn.py #4-2
 python 2018-04-03-mo.py #4-3
