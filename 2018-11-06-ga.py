@@ -50,7 +50,7 @@ def search(term, submission):
             "[Primary Election Early Voting Starts](https://www.mvp.sos.ga.gov/MVP/mvp.do): April 30, 2018 \n\n"
             "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 22, 2018 \n\n"
             "[General Election Registration Deadline](https://www.mvp.sos.ga.gov/MVP/mvp.do): October 9, 2018 \n\n"
-            "[General Election Early Voting Starts](https://www.mvp.sos.ga.gov/MVP/mvp.do): October 15, 2018 \n\n")
+            "[General Election Early Voting Starts](https://www.mvp.sos.ga.gov/MVP/mvp.do): October 15, 2018 \n\n"
             "[General Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
