@@ -58,4 +58,5 @@ python 2018-11-06-nh.py #9-11
 python 2018-11-06-tx.py #10-9
 python 2018-11-06-la.py #10-9
 python 2018-11-06-il.py #10-21
-python 2020-11-03-tx.py
+python 2020-11-03-ky.py #10-5-2020
+python 2020-11-03-tx.py #10-6-2020
