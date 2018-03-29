@@ -1,9 +1,9 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,35 +23,32 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("colorado.dat", "r")
+local_subs = open("wisconsin.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Mike Pence\'s hometown', 'March for Our Lives in Indianapolis', 'stephen chancellor', 'in09', 'Indiana Senate', 'Medicaid work requirements for Indiana', 'Illegal Guns From Indiana', 'Indiana Eyes Medical Marijuana Legalization', 'Laid-off factory workers feel betrayed by Trump', 'Indiana Green Party', 'in-09', 'pelath', 'Joe Donnelly', '2018 elections in Indiana', 'Better Know a State: Indiana']
+            terms = ['Scott Walker calls for special election June 12 after denied request to delay election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Indiana 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://indianavoters.in.gov/PublicSite/OVR/Introduction.aspx): April 9, 2018 \n\n"
-            "[Primary Election Date](https://indianavoters.in.gov/PublicSite/Public/FT1/PublicLookupMain.aspx?Link=Polling): May 8, 2018 \n\n"
-            "[General Election Registration Deadline](https://indianavoters.in.gov/PublicSite/OVR/Introduction.aspx): October 9, 2018 \n\n"
-            "[General Election](https://indianavoters.in.gov/PublicSite/Public/FT1/PublicLookupMain.aspx?Link=Polling): November 6, 2018 \n\n")
+        text = ("Wisconsin 2018 Election \n\n"
+            "[General Election Registration Deadline](https://myvote.wi.gov/en-us/registertovote): June 12, 2018 \n\n"
+            "[General Election](https://myvote.wi.gov/en-us/FindMyPollingPlace): June 12, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
