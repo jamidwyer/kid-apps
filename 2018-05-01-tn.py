@@ -44,7 +44,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Tennessee County Primary Elections \n\n"
-            "[Primary Election Registration Deadline](https://ovr.govote.tn.gov/Registration/#BM): April 2, 2018 \n\n"
             "[Primary Election](http://web.go-vote-tn.elections.tn.gov/): May 1, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
