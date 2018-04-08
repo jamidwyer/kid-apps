@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Mike Ryhal']
+            terms = ['SC voters to answer the question']
             for term in terms:
                  search(term, submission);
 
@@ -47,9 +47,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("South Carolina Special Election \n\n"
-            "[Voter Registration Deadline](https://info.scvotes.sc.gov/eng/ovr/start.aspx): May 13, 2018 \n\n"
-            "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n"
-            "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 6, 2018 \n\n")
+            "[Primary Voter Registration Deadline](https://info.scvotes.sc.gov/eng/ovr/start.aspx): May 13, 2018 \n\n"
+            "[Primary Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): June 12, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
         # Write our updated list back to the file
