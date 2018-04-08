@@ -16,8 +16,9 @@ python 2018-11-06-or.py #4-24
 python 2018-05-01-tn.py #5-1
 python 2018-11-06-ne.py #5-4
 python 2018-11-06-ms.py #5-7
-python 2018-11-06-mt.py
-python 2018-11-06-nm.py
+python 2018-11-06-mt.py #5-7
+python 2018-11-06-nm.py #5-8
+python 2018-05-13-sc.py #5-13
 python 2018-11-06-nj.py #5-13
 python 2018-11-06-sc.py #5-13
 python 2018-11-06-sd.py #5-13
@@ -33,6 +34,7 @@ python 2018-11-06-nd.py #6-12
 python 2018-11-06-ut.py #6-19
 python 2018-11-06-ny.py #6-26
 python 2018-11-06-co.py #6-26
+python 2018-08-02-tn.py #7-3
 python 2018-11-06-tn.py #7-3
 python 2018-11-06-mi.py #7-9
 python 2018-11-06-mo.py #7-11
