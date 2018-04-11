@@ -38,16 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = []
+            terms = ['mayor briley', 'megan barry', 'nashville mayor']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Tennessee Local Elections \n\n"
-            "[Voter Registration Deadline](https://ovr.govote.tn.gov/): July 3, 2018 \n\n"
-            "[Election Day](http://web.go-vote-tn.elections.tn.gov/): August 2, 2018 \n\n")
+        text = ("Nashville Special Election \n\n"
+            "[Voter Registration Deadline](https://ovr.govote.tn.gov/): April 2018 \n\n"
+            "[Election Day](http://web.go-vote-tn.elections.tn.gov/): May 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
