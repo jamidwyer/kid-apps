@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("West Virginia 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): April 10, 2018 \n\n"
             "[Primary Election Date](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): May 8, 2018 \n\n"
             "[General Election Registration Deadline](https://ovr.sos.wv.gov/Register/Landing#Qualifications): October 16, 2018 \n\n"
             "[General Election](https://services.sos.wv.gov/Elections/Voter/FindMyPollingPlace): November 6, 2018 \n\n")
