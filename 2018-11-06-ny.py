@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['this happened', 'crazy jew', 'new york may legalize marijuana soon', 'trump tower fire', 'had Trump made the decision to retrofit with sprinklers', 'The Trump Tower floor where a man was killed', 'well built building', 'cynthia nixon', 'fire at trump tower', 'ny-24', 'n.y. passes bill', 'kurt schlickter', 'green party of new york', 'nra-backed n.y. pols', '9/11 first responders', 'tenney', 'NY State bill', 'ny-21', 'Billionaires Row', 'ny-19', 'Alexandria Ocasio-Cortez', 'ny19', 'new york lawmakers', 'Governor Cuomo', 'New York gov', 'ny27', 'New York City\'s fossil fuel divestment could spur global shift', 'New York City Declares War on the Oil Industry', 'New York Finally Consider Legalizing Cannabis', 'New York Police Union Sues to Stop Release of Body Camera Videos', 'Fund Early Voting', 'Republicans Poised for Collapse in New York', 'sara idleman', 'New York introduces its own net neutrality bill', 'barely disguised reward for billionaire donors', 'GOP tax plan the result of a runaway campaign finance system', 'peter king', 'Net Neutrality Supporters At NYC Verizon Store', 'House Seats Democrats Are Hoping to Win in 2018', 'GOP Tax Bill Displays American Oligarchy', 'katko', '^(?!.*burkina faso).*faso.*$', 'daniel donovan', 'dan donovan', 'ny-11', 'rep. donovan', 'rep donovan', 'representative donovan', 'congressman donovan', 'michael grimm', 'GOP incumbent over Grimm']
+            terms = ['cynthianixon', 'crazy jew', 'new york may legaliz', 'trump tower fire', 'well built building', 'cynthia nixon', 'fire at trump tower', 'ny-24', 'n.y. passes bill', 'kurt schlickter', 'green party of new york', 'nra-backed n.y. pols', '9/11 first responders', 'tenney', 'NY State bill', 'ny-21', 'Billionaires Row', 'ny-19', 'Alexandria Ocasio-Cortez', 'ny19', 'new york lawmakers', 'Governor Cuomo', 'New York gov', 'ny27', 'New York City\'s fossil fuel divestment could spur global shift', 'New York City Declares War on the Oil Industry', 'New York Finally Consider Legalizing Cannabis', 'New York Police Union Sues to Stop Release of Body Camera Videos', 'Fund Early Voting', 'Republicans Poised for Collapse in New York', 'sara idleman', 'New York introduces its own net neutrality bill', 'barely disguised reward for billionaire donors', 'GOP tax plan the result of a runaway campaign finance system', 'peter king', 'Net Neutrality Supporters At NYC Verizon Store', 'House Seats Democrats Are Hoping to Win in 2018', 'GOP Tax Bill Displays American Oligarchy', 'katko', '^(?!.*burkina faso).*faso.*$', 'daniel donovan', 'dan donovan', 'ny-11', 'rep. donovan', 'rep donovan', 'representative donovan', 'congressman donovan', 'michael grimm', 'GOP incumbent over Grimm']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,8 @@ def search(term, submission):
         # Reply to the post
 
         text = ("New York 2018 Election \n\n"
-            "[Primary Election Date](https://voterlookup.elections.state.ny.us/votersearch.aspx): June 26, 2018 \n\n"
+            "[Federal Primary Election Date](https://voterlookup.elections.state.ny.us/votersearch.aspx): June 26, 2018 \n\n"
+            "[State Primary Election Date](https://voterlookup.elections.state.ny.us/votersearch.aspx): September 13, 2018 \n\n"
             "[General Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): October 12, 2018 \n\n"
             "[General Election Date](https://voterlookup.elections.state.ny.us/votersearch.aspx): November 6, 2018")
         print("Bot replying to : ", submission.title)
