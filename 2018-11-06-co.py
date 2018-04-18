@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['colorado fracking company', 'COLORADO teachers walk out', 'Colorado Teachers Walk-out', 'action by colorado teachers', 'great sand dunes national park', 'co-gov' 'dsA denver', 'colorado bill', 'Republican political group in Colorado', 'colorado state senate', 'cynthia coffman', 'colorado governor', 'colorado poll', 'colorado voters', 'emily sirota', 'jared polis', 'Doug Lamborn', 'ken buck', 'steve curtis', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['So the Oil Company Chose a Poorer School', 'colorado fracking company', 'COLORADO teachers walk out', 'Colorado Teachers Walk-out', 'action by colorado teachers', 'great sand dunes national park', 'co-gov' 'dsA denver', 'colorado bill', 'Republican political group in Colorado', 'colorado state senate', 'cynthia coffman', 'colorado governor', 'colorado poll', 'colorado voters', 'emily sirota', 'jared polis', 'Doug Lamborn', 'ken buck', 'steve curtis', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
             for term in terms:
                  search(term, submission);
 
