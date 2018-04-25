@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Oregon 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): April 24, 2018 \n\n"
             "[Primary Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): May 15, 2018 \n\n"
             "[General Election Registration Deadline](https://secure.sos.state.or.us/orestar/vr/register.do): October 16, 2018 \n\n"
             "[General Election](http://sos.oregon.gov/voting/Pages/drop-box-locator.aspx): November 6, 2018 \n\n")
