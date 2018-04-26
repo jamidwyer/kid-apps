@@ -13,7 +13,6 @@ python 2018-11-06-nc.py #5-8
 python 2018-11-06-nm.py #5-8
 python 2018-11-06-wv.py #5-8
 python 2018-11-06-in.py #5-8
-python 2018-05-13-sc.py #5-13
 python 2018-11-06-nj.py #5-13
 python 2018-11-06-sc.py #5-13
 python 2018-11-06-sd.py #5-13
