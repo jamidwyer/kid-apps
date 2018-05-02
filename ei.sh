@@ -21,6 +21,7 @@ python 2018-11-06-or.py #5-15
 python 2018-11-06-ca.py #5-16
 python 2018-11-06-al.py #5-21
 python 2018-11-06-va.py #5-21
+python 2018-11-06-tx.py #5-22
 python 2018-11-06-ar.py #5-22
 python 2018-11-06-ky.py #5-22
 python 2018-11-06-ia.py #5-25
@@ -52,7 +53,6 @@ python 2018-11-06-mn.py #8-14
 python 2018-11-06-ct.py #8-14
 python 2018-11-06-wi.py
 python 2018-11-06-nh.py #9-11
-python 2018-11-06-tx.py #10-9
 python 2018-11-06-la.py #10-9
 python 2018-11-06-il.py #10-21
 python 2020-11-03-ky.py #10-5-2020
