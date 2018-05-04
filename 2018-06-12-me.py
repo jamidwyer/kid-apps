@@ -1,10 +1,8 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -24,13 +22,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("kentucky.dat", "r")
+local_subs = open("maine.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -40,17 +38,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kentucky house lawmakers', 'kentucky teachers fill streets', 'kentucky dsa', 'sb 151', 'kentucky house passes', 'Kentucky state legislature', 'Deep-Red Kentucky Seat', 'flip kentucky seat', 'Kentucky State House seat', 'murderous rampage last weekend in Kentucky was not exceptional', 'kentucky lawmaker', 'Trump campaign chair in KY', 'Doctors floored by epidemic levels of black lung in Appalachian coal miners', 'state legislature in historic numbers in NKY', 'Do the Poor Deserve Health Care', 'Proposed Kentucky Law', 'ky becomes the first state to deny medical care to those who are poor and unemployed', 'asking people to work with an anchor on their back', 'New Kentucky law', 'policy on how states can stop people from receiving Medicaid', 'states to force Medicaid recipients to work', 'kim davis', 'andy barr', 'rep. barr', 'rep barr', 'representative barr', 'congressman barr', 'kentucky\'s 6th congressional district', 'ky-6', 'ky-06', 'Kentucky\’s 6th Congressional District']
+            terms = ['republican mayor of a maine city', 'nick isgro']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Kentucky 2018 Election \n\n"
-            "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 22, 2018 \n\n"
-            "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 9, 2018 \n\n"
-            "[General Election](https://vrsws.sos.ky.gov/VIC/): November 6, 2018 \n\n")
+        text = ("Waterville Mayor Recall Election \n\n"
+            "[Voter Registration Deadline](http://www.maine.gov/sos/cec/elec/data/voterregcard2016.pdf): June 12, 2018 \n\n"
+            "[Election](http://www.maine.gov/sos/cec/elec/voter-info/index.html): June 12, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -58,7 +55,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 

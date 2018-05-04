@@ -29,6 +29,7 @@ python 2018-06-30-tx.py #5-31
 python 2018-07-15-pa.py #6-1
 python 2018-11-06-ok.py #6-2
 python 2018-11-06-md.py #6-5
+python 2018-06-12-me.py #6-12
 python 2018-11-06-me.py #6-12
 python 2018-11-06-nd.py #6-12
 python 2018-11-06-ut.py #6-19
