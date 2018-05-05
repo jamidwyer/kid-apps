@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Nebraska 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): May 4, 2018 \n\n"
             "[Primary Election](http://www.sos.ne.gov/elec/voter_info.html#early): May 15, 2018 \n\n"
             "[General Election Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): October 26, 2018 \n\n"
             "[General Election](http://www.sos.ne.gov/elec/voter_info.html#early): November 6, 2018 \n\n")
