@@ -8,7 +8,6 @@ python 2018-11-06-oh.py #5-8
 python 2018-11-06-nc.py #5-8
 python 2018-11-06-nm.py #5-8
 python 2018-11-06-wv.py #5-8
-python 2018-11-06-in.py #5-8
 python 2018-11-06-ga.py #4-30
 python 2018-05-21-tn.py #5-4
 python 2018-05-22-ar.py #5-7
@@ -56,6 +55,7 @@ python 2018-11-06-mn.py #8-14
 python 2018-11-06-ct.py #8-14
 python 2018-11-06-wi.py
 python 2018-11-06-nh.py #9-11
+python 2018-11-06-in.py #10-9
 python 2018-11-06-la.py #10-9
 python 2018-11-06-il.py #10-21
 python 2020-11-03-ky.py #10-5-2020
