@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Congressional redistricting plan passes Ohio House, will appear on May ballot']
+            terms = ['Make sure you have your voter ID and know where your polling place is' 'Congressional redistricting plan passes Ohio House, will appear on May ballot']
             for term in terms:
                 search(term, submission);
 
@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Ohio 2018 Election \n\n"
-            "[Primary Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): May 8, 2018 \n\n")
+            "[Primary Election](https://www.sos.state.oh.us/elections/voters/toolkit/polling-location/): May 8, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
