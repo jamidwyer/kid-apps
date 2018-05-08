@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,12 +22,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("indiana.dat", "r")
+local_subs = open("michigan.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
-
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -40,17 +38,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Chicago sees its most violent week', 'In Red State primaries, candidates out-Trump each other', 'trump planning trip to indiana', 'states with lax gun laws ', 'Donald Trump Deserves Nobel Peace Prize, Says GOP Congressman', 'in-9', 'pride parade in mike pence', 'Donnelly has his best fundraising', 'Mike Pence\'s hometown', 'stephen chancellor', 'in09', 'Indiana Senate', 'Medicaid work requirements for Indiana', 'Illegal Guns From Indiana', 'Indiana Green Party', 'in-09', 'pelath', 'Joe Donnelly', '2018 elections in Indiana', 'Better Know a State: Indiana']
+            terms = ['sieting']
             for term in terms:
-                 search(term, submission);
+                search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Indiana 2018 Election \n\n"
-            "[Primary Election Date](https://indianavoters.in.gov/PublicSite/Public/FT1/PublicLookupMain.aspx?Link=Polling): May 8, 2018 \n\n"
-            "[General Election Registration Deadline](https://indianavoters.in.gov/PublicSite/OVR/Introduction.aspx): October 9, 2018 \n\n"
-            "[General Election](https://indianavoters.in.gov/PublicSite/Public/FT1/PublicLookupMain.aspx?Link=Polling): November 6, 2018 \n\n")
+        text = ("Kalkaska Village President Recall Election \n\n"
+            "[VOTE](http://www.kalkaskacounty.net/government/county_clerk/docs/NOTICE%20OF%20ELECTION%20MAY%208%202018.pdf): May 8, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
