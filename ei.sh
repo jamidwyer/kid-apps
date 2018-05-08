@@ -6,6 +6,7 @@ python 2018-05-22-ar.py #5-7
 python 2018-11-06-ms.py #5-7
 python 2018-11-06-mt.py #5-7
 python 2018-05-08-oh.py #5-8
+python 2018-08-07-oh.py #5-8
 python 2018-11-06-oh.py #5-8
 python 2018-11-06-nc.py #5-8
 python 2018-11-06-nm.py #5-8
