@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Kalkaska Village President Recall Election \n\n"
-            "[VOTE](http://www.kalkaskacounty.net/government/county_clerk/docs/NOTICE%20OF%20ELECTION%20MAY%208%202018.pdf): May 8, 2018 \n\n")
+            "[VOTE](https://webapps.sos.state.mi.us/MVIC/votersearch.aspx): May 8, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
