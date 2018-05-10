@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("New Mexico 2018 Election \n\n"
-            "[Primary Election Registration Deadline](http://www.sos.state.nm.us/Voter_Information/Voter_Registration_Information.aspx): May 8, 2018 \n\n"
             "[Primary Election](http://www.sos.state.nm.us/Voter_Information/Absentee_and_Early_Voting.aspx): June 5, 2018 \n\n"
             "[General Election Registration Deadline](http://www.sos.state.nm.us/Voter_Information/Voter_Registration_Information.aspx): October 9, 2018 \n\n"
             "[General Election](http://www.sos.state.nm.us/Voter_Information/Absentee_and_Early_Voting.aspx): November 6, 2018 \n\n")
