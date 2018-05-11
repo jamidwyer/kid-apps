@@ -19,6 +19,7 @@ python 2018-11-06-ky.py #5-22
 python 2018-11-06-ia.py #5-25
 python 2018-06-30-tx.py #5-31
 python 2018-07-15-pa.py #6-1
+python 2018-06-26-ok.py #6-2
 python 2018-11-06-ok.py #6-2
 python 2018-11-06-md.py #6-5
 python 2018-11-06-mt.py #6-5
