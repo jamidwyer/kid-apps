@@ -23,12 +23,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("massachusetts.dat", "r")
+local_subs = open("florida.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
-
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -40,18 +39,15 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Green-Rainbow Party of Massachusetts', 'ma-3', 'bob massie', 'boston march for our lives', 'poster left outside the playground at Frog Pond on Boston Common', 'elizabeth warren', 'stop blaming poor people for their poverty', 'new life to unions', 'Boston Globe pre-covers the next mass shooting', 'invited Jackie Hill-Perry', 'Transgender rights are being targeted nationwide with ballot', 'jim mcgovern', 'For those who claim their votes don', 'sanctuary from marijuana prosecution', 'MA voters could register and vote on same day', 'legal marijuana in Massachusetts', 'Cambridge women\'s march looking majestic af', 'Boston PD only required 100 out of 2,000 cops to wear body cams', 'oldest cities what sea-level rise really means', 'alexandra chandler']
+            terms = ['cutthroat special election has managed to stay under the radar', ' Special Elections Tuesday, 5']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Massachusetts 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.sec.state.ma.us/OVR/): August 15, 2018 \n\n"
-            "[Primary Election Date](http://www.sec.state.ma.us/wheredoivotema/bal/MyElectionInfo.aspx): September 4, 2018 \n\n"
-            "[General Election Registration Deadline](https://www.sec.state.ma.us/OVR/): October 17, 2018 \n\n"
-            "[General Election](http://www.sec.state.ma.us/wheredoivotema/bal/MyElectionInfo.aspx): November 6, 2018 \n\n")
+        text = ("Florida Special Election \n\n"
+            "[Election Day](https://registration.elections.myflorida.com/CheckVoterStatus): May 1, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -59,7 +55,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our updated list back to the file
+        # Write the post id to the tracking file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 

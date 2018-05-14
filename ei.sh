@@ -3,10 +3,10 @@ cd /home/ubuntu/running-against-bot
 python 2018-11-06-ga.py #4-30
 python 2018-05-21-tn.py #5-4
 python 2018-05-22-ar.py #5-7
-python 2018-11-06-nj.py #5-13
 python 2018-11-06-sc.py #5-13
 python 2018-11-06-sd.py #5-13
 python 2018-11-06-pa.py #5-15
+python 2018-11-06-nj.py #5-15
 python 2018-11-06-nv.py #5-15
 python 2018-11-06-or.py #5-15
 python 2018-11-06-ne.py #5-15
