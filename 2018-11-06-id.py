@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['paulette jordan', 'aaron swisher', 'GOP Lawmaker Rants At Students Who Drove 300 Miles', 'GOP State Senator Yells ', 'senator dan foreman', 'idaho lawmakers', 'first Native American governor', 'exactly the opposite of what they say they are for. I just do not understand republicans']
+            terms = ['idaho turn-out', 'paulette jordan', 'aaron swisher', 'GOP Lawmaker Rants At Students Who Drove 300 Miles', 'GOP State Senator Yells ', 'senator dan foreman', 'idaho lawmakers', 'first Native American governor', 'exactly the opposite of what they say they are for. I just do not understand republicans']
             for term in terms:
                  search(term, submission);
 
