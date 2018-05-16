@@ -57,5 +57,6 @@ python 2018-11-06-or.py #10-16
 python 2018-11-06-wv.py #10-16
 python 2018-11-06-il.py #10-21
 python 2018-11-06-ne.py #10-26
+python 2018-11-06-ne.py #11-6
 python 2020-11-03-ky.py #10-5-2020
 python 2020-11-03-tx.py #10-6-2020
