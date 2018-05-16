@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['kara eastman', 'rural voters under farm policy', 'nebraskans need to register to vote', 'nebraska greens', 'nebraska senators', 'Farmers are fighting for the right to repair', 'bob krist', 'don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
+            terms = ['brad asslord', 'kara eastman', 'rural voters under farm policy', 'nebraskans need to register to vote', 'nebraska greens', 'nebraska senators', 'Farmers are fighting for the right to repair', 'bob krist', 'don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon', 'Extreme Redistricting Sets the Stage for a Huge Republican Stranglehold', 'Freedom Caucus Chair Warns Congress Not To', 'House Republicans Warn Congress Not To']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Nebraska 2018 Election \n\n"
-            "[Primary Election](http://www.sos.ne.gov/elec/voter_info.html#early): May 15, 2018 \n\n"
             "[General Election Registration Deadline](https://www.nebraska.gov/apps-sos-voter-registration/): October 26, 2018 \n\n"
             "[General Election](http://www.sos.ne.gov/elec/voter_info.html#early): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
