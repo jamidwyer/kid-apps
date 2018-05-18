@@ -23,35 +23,32 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("hi.dat", "r")
+local_subs = open("california.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
-        #print(submission.title)
+        #print(submission.selftext)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['afford middle-class basics', 'Afford Rent, Transportation, Childcare, Cell Phone', 'Hero Stops Lava Flow with Assault Rifle', 'A Hawaiian island got about 50 inches of rain in 24 hours', 'hawaii legislature', 'Hawaii 2018 Ballot', 'gabbard', 'Ending Federal Marijuana Prohibition Act', 'Hawaiian Politician Is Introducing a Bill', 'Hawaii Expects Adult Use Cannabis Legalization', 'kaniela']
+            terms = ['sacramento district attorney', 'stephon clark', 'anne marie schubert', 'all you need to know really.']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Hawaii 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://olvr.hawaii.gov/register.aspx): August 4, 2018 \n\n"
-            "[Primary Election Date](http://elections.hawaii.gov/wp-content/uploads/2016/02/VR-PAB-English.pdf): August 11, 2018 \n\n"
-            "[General Election Registration Deadline](https://olvr.hawaii.gov/register.aspx): October 31, 2018 \n\n"
-            "[General Election](http://elections.hawaii.gov/wp-content/uploads/2016/02/VR-PAB-English.pdf): November 6, 2018 \n\n")
+        text = ("California 2018 Primary \n\n"
+            "[Primary Election Registration Deadline](http://registertovote.ca.gov/): May 21, 2018 \n\n"
+            "[Primary Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): June 5, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
