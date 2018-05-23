@@ -1,6 +1,5 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-11-06-ga.py #4-30
 python 2018-05-21-tn.py #5-4
 python 2018-05-22-ar.py #5-7
 python 2018-06-05-ca.py #5-21
@@ -50,6 +49,7 @@ python 2018-11-06-ct.py #8-14
 python 2018-11-06-wi.py
 python 2018-11-06-nh.py #9-11
 python 2018-11-06-pa.py #10-7
+python 2018-11-06-ga.py #10-9
 python 2018-11-06-oh.py #10-9
 python 2018-11-06-in.py #10-9
 python 2018-11-06-la.py #10-9
