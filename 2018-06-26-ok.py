@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['the marijuana question', 'Authors of medical marijuana measure', 'sq788', 'state question 788', 'sq 788', ' The Marijuana Question', 'Oklahoma Will Vote on Medical Marijuana in June', 'say yes to 788', 'Is this the year we legalize Medical Marijauna', 'Mother calls Fallin a', '72yo Woman Shot Dead as SWAT Raided Her Home To Arrest Her Son For Cannabis', 'Oklahomans support medical marijuana measure', 'Oklahoma Medical Marijuana Access Initiative', 'Gov. Fallin sets June 26 election']
+            terms = ['Medical Cannabis Conference and Expo coming to Oklahoma City', 'the marijuana question', 'Authors of medical marijuana measure', 'sq788', 'state question 788', 'sq 788', ' The Marijuana Question', 'Oklahoma Will Vote on Medical Marijuana in June', 'say yes to 788', 'Is this the year we legalize Medical Marijauna', 'Mother calls Fallin a', '72yo Woman Shot Dead as SWAT Raided Her Home To Arrest Her Son For Cannabis', 'Oklahomans support medical marijuana measure', 'Oklahoma Medical Marijuana Access Initiative', 'Gov. Fallin sets June 26 election']
             for term in terms:
                  search(term, submission);
 
@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Oklahoma 2018 Primary Election \n\n"
-            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 2, 2018 \n\n"
+            "[Primary Voter Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/): June 1, 2018 \n\n"
             "[Primary Election Date](https://services.okelections.us/voterSearch.aspx): June 26, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
