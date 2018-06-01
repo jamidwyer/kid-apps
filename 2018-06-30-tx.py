@@ -44,8 +44,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Texas 2018 Election \n\n"
-            "[Voter Registration Deadline](http://www.votetexas.gov/register-to-vote/): May 31, 2018 \n\n"
+        text = ("Texas 2018 Special Election \n\n"
             "[Early Voting Begins](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): June 13, 2018 \n\n"
             "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): June 30, 2018 \n\n")
         print("Bot replying to : ", submission.title)
