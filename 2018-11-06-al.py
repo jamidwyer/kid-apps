@@ -49,7 +49,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Alabama 2018 Election \n\n"
-            "[Primary Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): June 5, 2018 \n\n"
             "[General Election](https://myinfo.alabamavotes.gov/VoterView/PollingPlaceSearch.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:

@@ -1,15 +1,5 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-06-05-ca.py #6-5
-python 2018-11-06-ca.py #6-5
-python 2018-11-06-md.py #6-5
-python 2018-11-06-nj.py #6-5
-python 2018-11-06-ia.py #6-5
-python 2018-11-06-mt.py #6-5
-python 2018-11-06-al.py #6-5
-python 2018-11-06-nm.py #6-5
-python 2018-11-06-ms.py #6-5
-python 2018-11-06-sd.py #6-5
 python 2018-11-06-nv.py #6-12
 python 2018-06-12-me.py #6-12
 python 2018-11-06-me.py #6-12
@@ -19,6 +9,7 @@ python 2018-11-06-nd.py #6-12
 python 2018-06-30-tx.py #6-13
 python 2018-11-06-ut.py #6-19
 python 2018-06-26-ok.py #6-26
+python 2018-11-06-md.py #6-26
 python 2018-11-06-ny.py #6-26
 python 2018-11-06-ok.py #6-26
 python 2018-11-06-co.py #6-26
@@ -43,18 +34,26 @@ python 2018-11-06-ct.py #8-14
 python 2018-11-06-wi.py
 python 2018-11-06-nh.py #9-11
 python 2018-11-06-pa.py #10-7
+python 2018-11-06-ms.py #10-8
 python 2018-11-06-ga.py #10-9
 python 2018-11-06-oh.py #10-9
 python 2018-11-06-tx.py #10-9
 python 2018-11-06-ky.py #10-9
 python 2018-11-06-in.py #10-9
+python 2018-11-06-nm.py #10-9
 python 2018-11-06-ar.py #10-9
 python 2018-11-06-la.py #10-9
 python 2018-11-06-nc.py #10-12
 python 2018-11-06-or.py #10-16
+python 2018-11-06-nj.py #10-16
 python 2018-11-06-wv.py #10-16
 python 2018-11-06-il.py #10-21
+python 2018-11-06-ca.py #10-22
+python 2018-11-06-sd.py #10-22
 python 2018-11-06-ne.py #10-26
+python 2018-11-06-ia.py #10-27
+python 2018-11-06-mt.py #11-6
+python 2018-11-06-al.py #11-6
 python 2018-11-06-ne.py #11-6
 python 2020-11-03-ky.py #10-5-2020
 python 2020-11-03-tx.py #10-6-2020
