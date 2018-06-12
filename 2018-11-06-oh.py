@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ohiogovernment', 'Communities Like This One to Pick Up the Pieces', 'ohio legislat', 'take back ohio', 'rachel crooks', 'melissa ackison', 'oh 73', 'soybean farmers could get slammed', '2018 Marijuana Legalization Ballot Measure - ', 'Trump Infrastructure Speech in Ohio', 'Chaos in Ohio as Republicans turn on each other', 'rick perales', 'kim mccarthy', 'running for office in ohio', 'Ismail Mohamed', 'blueohio2018', 'erin neace', 'Ohio House district 65', 'ohio lawmaker', 'ohio gubernatorial', 'aftab pureval', 'ohio senate passes bill', 'sherrod brown', 'pillich', 'husted v.', 'jon husted', 'robert barr', 'kucinich', 'Ohio Attorney General', 'Ohio purge of voter rolls', 'ohio senate frontrunner', 'ohio senate candidate', 'jay goyal', 'Ohio congressional candidates', 'rick neal', 'Supreme Court to take up Ohio', 'Ohio House and Senate', 'stivers latest', 'Ohio\'s 16th District', 'proposed Ohio ballot initiative', 'Marijuana in Ohio', 'jimmy gould', 'cordray', 'stivers', 'mike turner', 'bob gibbs', 'jim jordan', 'renacci', 'dave joyce', 'Ohio politics and candidates', '2018 elections in Ohio', 'representative latta', 'Ohio members of Congress', 'Representative Bill Johnson', 'bill o\'neill', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-01', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
+            terms = ['ohio\'s voter purge', 'purge voters from the rolls for their failure to vote', 'ohiogovernment', 'Communities Like This One to Pick Up the Pieces', 'ohio legislat', 'take back ohio', 'rachel crooks', 'melissa ackison', 'oh 73', 'soybean farmers could get slammed', '2018 Marijuana Legalization Ballot Measure - ', 'Trump Infrastructure Speech in Ohio', 'Chaos in Ohio as Republicans turn on each other', 'rick perales', 'kim mccarthy', 'running for office in ohio', 'Ismail Mohamed', 'blueohio2018', 'erin neace', 'Ohio House district 65', 'ohio lawmaker', 'ohio gubernatorial', 'aftab pureval', 'ohio senate passes bill', 'sherrod brown', 'pillich', 'husted v.', 'jon husted', 'robert barr', 'kucinich', 'Ohio Attorney General', 'Ohio purge of voter rolls', 'ohio senate frontrunner', 'ohio senate candidate', 'jay goyal', 'Ohio congressional candidates', 'rick neal', 'Supreme Court to take up Ohio', 'Ohio House and Senate', 'stivers latest', 'Ohio\'s 16th District', 'proposed Ohio ballot initiative', 'Marijuana in Ohio', 'jimmy gould', 'cordray', 'stivers', 'mike turner', 'bob gibbs', 'jim jordan', 'renacci', 'dave joyce', 'Ohio politics and candidates', '2018 elections in Ohio', 'representative latta', 'Ohio members of Congress', 'Representative Bill Johnson', 'bill o\'neill', 'steve chabot', 'rep. chabot', 'rep chabot', 'representative chabot', 'congressman chabot', 'oh-01', 'ken harbaugh', 'josh mandel', 'kasich', 'ohio governor', 'oh gov', 'oh governor\'s', 'jerry springer', 'Mary Taylor']
             for term in terms:
                 search(term, submission);
 
@@ -47,7 +47,9 @@ def search(term, submission):
         # Reply to the post
         text = ("Ohio 2018 Election \n\n"
             "[General Election Registration Deadline](https://olvr.sos.state.oh.us/): October 9, 2018 \n\n"
-            "[General Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): November 6, 2018 \n\n")
+            "[General Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): November 6, 2018 \n\n"
+
+            "[Check your registration](https://voterlookup.sos.state.oh.us/voterlookup.aspx) \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
