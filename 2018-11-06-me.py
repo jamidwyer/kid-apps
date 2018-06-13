@@ -46,8 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Maine Election 2018 \n\n"
-            "[Primary Voter Registration Deadline](http://www.maine.gov/sos/cec/elec/data/voterregcard2016.pdf): June 12, 2018 \n\n"
-            "[Primary Election](http://www.maine.gov/sos/cec/elec/voter-info/index.html): June 12, 2018 \n\n"
+            "[Voter Registration Deadline](http://www.maine.gov/sos/cec/elec/data/voterregcard2016.pdf):  October 16, 2018 \n\n"
             "[General Election](http://www.maine.gov/sos/cec/elec/voter-info/index.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:

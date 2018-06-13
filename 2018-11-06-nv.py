@@ -48,8 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Nevada 2018 Election \n\n"
-            "[Early Voting Begins](https://www.nvsos.gov/sos/elections/voters/early-voting-information): May 26, 2018 \n\n"
-            "[Primary Election](https://nvsos.gov/votersearch/index.aspx): June 12, 2018 \n\n"
             "[General Election Voter Registration Deadline](https://nvsos.gov/sosvoterservices/Registration/step1.aspx): October 7, 2018 \n\n"
             "[General Election](https://nvsos.gov/votersearch/index.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
