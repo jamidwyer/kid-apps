@@ -47,6 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Maryland 2018 Election \n\n"
+            "[Primary Early Voting Starts](https://elections.maryland.gov/voting/documents/2018_Early_Voting_Centers_web.pdf): June 14, 2018 \n\n"
             "[Primary Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): June 26, 2018 \n\n"
             "[General Election Registration Deadline](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType): October 16, 2018 \n\n"
             "[General Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): November 6, 2018 \n\n")
