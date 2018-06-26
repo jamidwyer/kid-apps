@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Colorado 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): June 26, 2018 \n\n"
             "[Primary Election Date](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): June 26, 2018 \n\n"
             "[General Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): November 6, 2018 \n\n"
             "[General Election](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): November 6, 2018 \n\n")
