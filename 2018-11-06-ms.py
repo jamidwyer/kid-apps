@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['VOTE ON JUNE 5', 'the mississippi house', 'ms-sen', 'The 4 Biggest Banks Have Already Made', 'Full solidarity with our students protesting today but...', 'christ mcdaniel', 'mississippi sheriff', 'nine poorest states', ' ms senator', ' ms senate', 'Mississippi Senate race', 'Taking Care to Get a Mississippi Scandal Right', 'four years without trial in a Mississippi jail', 'GOP fight bolsters Democratic Senate hopes', 'roger wicker', 'nearby Mississippi is 37', 'gregg harper', 'rep. harper', 'rep harper', 'congressman harper', 'representative harper', 'states brace for Russian hacking fight']
+            terms = ['New York, South Carolina, Oklahoma, Maryland, Mississippi, Colorado and Utah', 'VOTE ON JUNE 5', 'the mississippi house', 'ms-sen', 'The 4 Biggest Banks Have Already Made', 'Full solidarity with our students protesting today but...', 'christ mcdaniel', 'mississippi sheriff', 'nine poorest states', ' ms senator', ' ms senate', 'Mississippi Senate race', 'Taking Care to Get a Mississippi Scandal Right', 'four years without trial in a Mississippi jail', 'GOP fight bolsters Democratic Senate hopes', 'roger wicker', 'nearby Mississippi is 37', 'gregg harper', 'rep. harper', 'rep harper', 'congressman harper', 'representative harper', 'states brace for Russian hacking fight']
             for term in terms:
                  search(term, submission);
 
@@ -47,6 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Mississippi 2018 Election \n\n"
+            "[Primary Election](http://www.sos.ms.gov/pollingplace/Pages/default.aspx): June 26, 2018 \n\n"
             "[General Election Registration Deadline](http://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx): October 8, 2018 \n\n"
             "[General Election](http://www.sos.ms.gov/pollingplace/Pages/default.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
