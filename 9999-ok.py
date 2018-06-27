@@ -38,19 +38,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['amber jensen', 'amber jenson']
+            terms = ['788', 'missing the medical marijuana question for today', 'oklahoma right now', 'Show that you participate....', 'Oklahoma has the chance to make a change', 'medical marijuana evolving']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Oklahoma Special Election \n\n"
-            "[Election Day](https://www.ok.gov/elections/Voter_Info/Online_Voter_Tool/index.html): February 13, 2018 \n\n")
+        text = ("Oklahoma 2018 Primary Election \n\n"
+            "[Primary Election Date](https://services.okelections.us/voterSearch.aspx): June 26, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         submission.reply(text)
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
