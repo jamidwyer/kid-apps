@@ -1,6 +1,5 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-06-30-tx.py #6-13
 python 2018-08-02-tn.py #7-3
 python 2018-11-06-tn.py #7-3
 python 2018-08-07-oh.py #7-8
