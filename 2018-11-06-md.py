@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['need to be curb-stomped', 'call for shooting journalists', 'Sanders congratulates progressive candidates on primary wins', 'md primary', 'New York, South Carolina, Oklahoma, Maryland, Mississippi, Colorado and Utah', 'maryland candidate for governor', 'ben jelous', 'maryland vote', 'Baltimore State\'s Attorney', 'bmoreceasefire', 'Crabbers in Maryland are unable to get the help they need', 'chelsea manning', 'pour money behind Blue Dog Democrats to ensure', 'maryland green party', 'I went to Washington DC for the', 'maryland senate', 'maryland may put a cannabis', 'md. lawmakers', 'gerrymandering in maryland', 'benjealous', 'Maryland Single-Payer Bill', 'Baltimore cops kept toy guns', 'ben cardin', 'md-gov', 'gov. hogan', 'andy harris', 'ben jealous', 'larry hogan', 'maya for maryland', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', '9 Democratic primaries to watch in 2018', 'DSA candidates and Justice Democrats running in these 2018 primaries', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
+            terms = ['Annapolis Newsroom Shooting', 'need to be curb-stomped', 'call for shooting journalists', 'Sanders congratulates progressive candidates on primary wins', 'md primary', 'New York, South Carolina, Oklahoma, Maryland, Mississippi, Colorado and Utah', 'maryland candidate for governor', 'ben jelous', 'maryland vote', 'Baltimore State\'s Attorney', 'bmoreceasefire', 'Crabbers in Maryland are unable to get the help they need', 'chelsea manning', 'pour money behind Blue Dog Democrats to ensure', 'maryland green party', 'I went to Washington DC for the', 'maryland senate', 'maryland may put a cannabis', 'md. lawmakers', 'gerrymandering in maryland', 'benjealous', 'Maryland Single-Payer Bill', 'Baltimore cops kept toy guns', 'ben cardin', 'md-gov', 'gov. hogan', 'andy harris', 'ben jealous', 'larry hogan', 'maya for maryland', 'alec ross', 'maryland governor', 'MD\'s next governor ', 'governor of maryland', 'md gov', 'md governor\'s', 'Maryland governor’s race', 'md. governor', 'maryland gubernatorial candidate', '9 Democratic primaries to watch in 2018', 'DSA candidates and Justice Democrats running in these 2018 primaries', 'Only two African Americans have been elected governor', 'Maryland workers need paid sick leave']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Maryland 2018 Election \n\n"
-            "[General Election Registration Deadline](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/VoterType): October 16, 2018 \n\n"
+            "[General Election Registration Deadline](https://elections.maryland.gov/voter_registration/application.html): October 16, 2018 \n\n"
             "[General Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
