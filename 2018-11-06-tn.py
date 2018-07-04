@@ -44,7 +44,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Tennessee 2018 Election \n\n"
-            "[Primary Election Registration Deadline](https://ovr.govote.tn.gov/Registration/#BM): July 3, 2018 \n\n"
             "[Primary Election](http://web.go-vote-tn.elections.tn.gov/): August 2, 2018 \n\n"
             "[General Election Registration Deadline](https://ovr.govote.tn.gov/Registration/#BM): October 9, 2018 \n\n"
             "[General Election](http://web.go-vote-tn.elections.tn.gov/): November 6, 2018 \n\n")
