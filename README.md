@@ -13,6 +13,22 @@ To run an individual bot, `python 2018-11-06-ca.py`
 
 To run all the bots sequentially, `./ei.sh`
 
+## "Structure" ##
+
+I err perhaps too heavily on the side of code that works over code that is good, and this is my first Python project. Feel free to tell me how awful this code is if it's in the form of a pull request.
+
+Scripts are currently per state, per general election. That is, a special election on May 6, 2018 in West Virginia has its search terms in 2018-05-06-wv.py.
+
+Each state has a file containing state-specific sub-reddits to search, for example, wv.dat for West Virginia. I'm moving toward two-letter abbreviations for the state filenames but haven't completed that yet.
+
+Subs that get searched by every election are in standardsubs.dat.
+
 ## Contributing ##
 
 Please create a new branch and pull request for changes you'd like to make.
+
+Some things I'd love to do:
+1. Check if a given script is already running before starting it.
+2. Use a template instead of 50+ very similar election files.
+3. Move state files to a states folder and election files to an elections folder (and fix all the relevant paths).
+4. Use stream watching rather than searching.
