@@ -1,4 +1,4 @@
-### election_info_bot ###
+# election_info_bot #
 * The bot searches a list of political and local subreddits for mentions of lists of search terms and provides information about relevant elections.
 * Much remains to be done.
 * Version 0.1
