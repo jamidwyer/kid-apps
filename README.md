@@ -23,6 +23,10 @@ Each state has a file containing state-specific sub-reddits to search, for examp
 
 Subs that get searched by every election are in standardsubs.dat.
 
+## Developing ##
+
+I'd rather people didn't run this with their own accounts, as duplicate content will likely get us both banned. I actually can't think of how to test the code you write, but if you submit a PR, I'm happy to give it a try on my account.
+
 ## Contributing ##
 
 Please create a new branch and pull request for changes you'd like to make.
