@@ -32,3 +32,4 @@ Some things I'd love to do:
 2. Use a template instead of 50+ very similar election files.
 3. Move state files to a states folder and election files to an elections folder (and fix all the relevant paths).
 4. Use stream watching rather than searching.
+5. Build and use an API.
