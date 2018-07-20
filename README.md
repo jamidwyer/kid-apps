@@ -3,16 +3,16 @@
 * Much remains to be done.
 * Version 0.1
 
-### Set up ###
+## Set up ##
 
 This post can get you up and running: http://pythonforengineers.com/build-a-reddit-bot-part-1/
 
-### Running a bot ###
+## Running a bot ##
 
 To run an individual bot, `python 2018-11-06-ca.py`
 
 To run all the bots sequentially, `./ei.sh`
 
-### Contributing ###
+## Contributing ##
 
 Please create a new branch and pull request for changes you'd like to make.
