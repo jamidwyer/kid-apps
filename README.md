@@ -37,3 +37,4 @@ Some things I'd love to do:
 3. Move state files to a states folder and election files to an elections folder (and fix all the relevant paths).
 4. Use stream watching rather than searching.
 5. Build and use an API.
+6. Figure out how to make this work for multiple contributors.
