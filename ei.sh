@@ -9,6 +9,7 @@ python 2018-11-06-ks.py #8-7
 python 2018-11-06-mo.py #8-7
 python 2018-11-06-de.py #8-11
 python 2018-11-06-ri.py #8-12
+python 2018-09-13-tn.py #8-13
 python 2018-11-06-vt.py #8-14
 python 2018-11-06-mn.py #8-14
 python 2018-11-06-ct.py #8-14
