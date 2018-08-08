@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['blocked a resolution to have Trump enforce the Russian sanctions', 'use was legal in Hawaii until', 'reef madness', 'afford middle-class basics', 'Afford Rent, Transportation, Childcare, Cell Phone', 'Hero Stops Lava Flow with Assault Rifle', 'A Hawaiian island got about 50 inches of rain in 24 hours', 'hawaii legislature', 'Hawaii 2018 Ballot', 'gabbard', 'Ending Federal Marijuana Prohibition Act', 'Hawaiian Politician Is Introducing a Bill', 'Hawaii Expects Adult Use Cannabis Legalization', 'kaniela']
+            terms = ['at least 5 Justice Dems', 'blocked a resolution to have Trump enforce the Russian sanctions', 'use was legal in Hawaii until', 'reef madness', 'afford middle-class basics', 'Afford Rent, Transportation, Childcare, Cell Phone', 'Hero Stops Lava Flow with Assault Rifle', 'A Hawaiian island got about 50 inches of rain in 24 hours', 'hawaii legislature', 'Hawaii 2018 Ballot', 'gabbard', 'Ending Federal Marijuana Prohibition Act', 'Hawaiian Politician Is Introducing a Bill', 'Hawaii Expects Adult Use Cannabis Legalization', 'kaniela']
             for term in terms:
                  search(term, submission);
 
