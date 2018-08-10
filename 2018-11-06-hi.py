@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Hawaii 2018 Election \n\n"
-            "[Primary Early Voting](https://elections.hawaii.gov/voters/early-voting/): July 30 - August 9, 2018 \n\n"
             "[Primary Election Date](https://elections.hawaii.gov/voters/polling-places/): August 11, 2018 \n\n"
             "[General Election Early Voting](https://elections.hawaii.gov/voters/early-voting/): October 23 - November 3, 2018 \n\n"
             "[General Election Registration Deadline](https://olvr.hawaii.gov/register.aspx): October 31, 2018 \n\n"
