@@ -48,8 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Connecticut 2018 Election \n\n"
-            "[Primary Voter Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): August 13, 2018 \n\n"
-            "[Primary Election Date](http://www.dir.ct.gov/sots/LookUp.aspx): August 14, 2018 \n\n"
             "[General Election Registration Deadline](https://voterregistration.ct.gov/OLVR/welcome.do): November 6, 2018 \n\n"
             "[General Election](http://www.dir.ct.gov/sots/LookUp.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)

@@ -1,11 +1,5 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-11-06-ri.py #8-12
-python 2018-09-13-tn.py #8-13
-python 2018-11-06-vt.py #8-14
-python 2018-11-06-mn.py #8-14
-python 2018-11-06-ct.py #8-14
-python 2018-11-06-wi.py #8-14
 python 2018-11-06-wy.py #8-21
 python 2018-11-06-ak.py #8-21
 python 2018-11-06-az.py #8-28
@@ -13,7 +7,9 @@ python 2018-11-06-fl.py #8-28
 python 2018-11-06-ma.py #8-29
 python 2018-11-06-de.py #9-6
 python 2018-11-06-nh.py #9-11
+python 2018-11-06-ri.py #9-12
 python 2018-11-06-ny.py #9-13
+python 2018-09-13-tn.py #9-13
 python 2018-11-06-pa.py #10-7
 python 2018-11-06-nv.py #10-7
 python 2018-11-06-sc.py #10-7
@@ -46,7 +42,11 @@ python 2018-11-06-ne.py #10-26
 python 2018-11-06-ia.py #10-27
 python 2018-11-06-wa.py #10-29
 python 2018-11-06-ut.py #10-31
+python 2018-11-06-mn.py #11-6
+python 2018-11-06-wi.py #11-6
 python 2018-11-06-co.py #11-6
+python 2018-11-06-vt.py #11-6
+python 2018-11-06-ct.py #11-6
 python 2018-11-06-mt.py #11-6
 python 2018-11-06-al.py #11-6
 python 2018-11-06-ne.py #11-6
