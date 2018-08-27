@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Alaska 2018 Election \n\n"
-            "[Primary Election Date](http://elections.alaska.gov/Core/votingbymail.php): August 21, 2018 \n\n"
             "[General Election Registration Deadline](https://voterregistration.alaska.gov/Registration/RegistrationDetails?haveValidAKDL=true): October 7, 2018 \n\n"
             "[General Election](http://elections.alaska.gov/Core/votingbymail.php): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
