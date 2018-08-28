@@ -47,7 +47,8 @@ def search(term, submission):
         text = ("Texas 2018 Election \n\n"
             "[General Election Registration Deadline](http://www.votetexas.gov/register-to-vote/): October 9, 2018 \n\n"
             "[Early Voting Starts](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): October 22, 2018 \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n"
+            "[Check Your Voter Registration Status](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do)\n\n")
 
 
         print("Bot replying to : ", submission.title)
