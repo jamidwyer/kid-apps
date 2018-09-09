@@ -1,3 +1,6 @@
 .gitignore
 praw.ini
 *.pem
+banned_bot/*
+past_elections/*
+log.*
