@@ -1,11 +1,11 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2018-11-06-pa.py #10-7
 python 2018-11-06-nv.py #10-7
 python 2018-11-06-sc.py #10-7
 python 2018-11-06-ri.py #10-7
 python 2018-11-06-ak.py #10-7
 python 2018-11-06-ms.py #10-8
+python 2018-11-06-pa.py #10-9
 python 2018-11-06-ga.py #10-9
 python 2018-11-06-fl.py #10-9
 python 2018-11-06-az.py #10-9
