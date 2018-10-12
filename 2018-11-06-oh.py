@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Ohio 2018 Election \n\n"
-            "[General Election Registration Deadline](https://olvr.sos.state.oh.us/): October 9, 2018 \n\n"
             "[General Election](https://www.sos.state.oh.us/globalassets/elections/forms/11-a_english.pdf): November 6, 2018 \n\n"
 
             "[Check your registration](https://voterlookup.sos.state.oh.us/voterlookup.aspx) \n\n")
