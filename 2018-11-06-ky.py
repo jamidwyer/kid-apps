@@ -49,7 +49,6 @@ def search(term, submission):
         # Reply to the post
         text = ("Kentucky 2018 Election \n\n"
             "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 9, 2018 \n\n"
-            "[General Election](https://vrsws.sos.ky.gov/VIC/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
