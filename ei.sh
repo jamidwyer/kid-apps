@@ -18,6 +18,7 @@ python 2018-11-06-nv.py #10-20
 python 2018-11-06-il.py #10-21
 python 2018-11-06-ca.py #10-22
 python 2018-11-06-tx.py #10-22
+python 2018-11-06-fl.py #10-22
 python 2018-11-06-sd.py #10-22
 python 2018-11-06-wy.py #10-22
 python 2018-11-06-hi.py #10-23
@@ -25,7 +26,6 @@ python 2018-11-06-ne.py #10-26
 python 2018-11-06-ia.py #10-27
 python 2018-11-06-wa.py #10-29
 python 2018-11-06-ut.py #10-31
-python 2018-11-06-fl.py #11-6
 python 2018-11-06-mo.py #11-6
 python 2018-11-06-az.py #11-6
 python 2018-11-06-in.py #11-6
