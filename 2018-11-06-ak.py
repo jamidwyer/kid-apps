@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['congressman young', 'House Republicans Just Voted to Gut Protections', 'pebble mine', 'arctic national wildlife refuge', 'Alaska Is Crafting a Plan to Fight Climate Change', 'alaska lawmaker', 'transgender bathroom bill just turned up in', 'alaska politicians', 'Bill Wielechowski', 'Alaska among states compromised before 2016 election', 'don young']
+            terms = ['alaska governor', 'congressman young', 'House Republicans Just Voted to Gut Protections', 'pebble mine', 'arctic national wildlife refuge', 'Alaska Is Crafting a Plan to Fight Climate Change', 'alaska lawmaker', 'transgender bathroom bill just turned up in', 'alaska politicians', 'Bill Wielechowski', 'Alaska among states compromised before 2016 election', 'don young']
             for term in terms:
                  search(term, submission);
 
@@ -48,6 +48,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Alaska 2018 Election \n\n"
+            "[Early Voting](http://www.elections.alaska.gov/Core/avolocations.php): October 22-November 5, 2018 \n\n"
             "[General Election](http://elections.alaska.gov/Core/votingbymail.php): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:

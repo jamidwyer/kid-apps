@@ -9,6 +9,7 @@ python 2018-11-06-tx.py #10-22
 python 2018-11-06-fl.py #10-22
 python 2018-11-06-sd.py #10-22
 python 2018-11-06-wy.py #10-22
+python 2018-11-06-ak.py #10-22to11-5
 python 2018-11-06-hi.py #10-23
 python 2018-11-06-ne.py #10-26
 python 2018-11-06-ia.py #10-27
@@ -48,7 +49,6 @@ python 2018-11-06-nm.py #11-6
 python 2018-11-06-ar.py #11-6
 python 2018-11-06-ne.py #11-6
 python 2018-11-06-ky.py #11-6
-python 2018-11-06-ak.py #11-6
 python 2018-11-06-nd.py #6-12
 python 2020-11-03-ky.py #10-5-2020
 python 2020-11-03-tx.py #10-6-2020
