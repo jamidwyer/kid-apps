@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Utah 2018 Election \n\n"
-https://vote.utah.gov/vote/app/earlyVoting/index.html;jsessionid=A76CE3EBA13A346EFABCE4507C6B6D13?ctyId=
             "[Early Voting](https://vote.utah.gov/vote/app/earlyVoting/index.html): October 30-November 5, 2018 \n\n"
             "[Voter Registration Deadline](https://secure.utah.gov/voterreg/login.html?selection=REGISTER): October 31, 2018 \n\n"
             "[General Election](https://elections.utah.gov/Media/Default/Documents/Elections%20Resources/Absentee%20Ballot%20Application.pdf): November 6, 2018 \n\n")
