@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Delaware 2018 Election \n\n"
-            "[General Election Registration Deadline](https://ivote.de.gov/voterregterms.aspx): October 13, 2018 \n\n"
             "[General Election](https://ivote.de.gov/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
