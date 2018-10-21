@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['me-gov', 'Maine Democratic Senate nominee', 'maine vote', 'Maine again backs ranked-choice voting', 'Maine Teacher Could Unseat Millionaire Incumbent Senator', 'Ranked Choice Voting Approved by Maine', 'maine gop', 'maine state house', 'Scarborough superintendent tries to halt student voter registration drive', 'maine election', 'maine house candidate', 'eryn gilchrist', 'skinhead lesbian', 'steve deangelis', 'mainepolitics', 'mainegreens', 'maine gov', 'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage', 'liar lepage', 'lepage blames']
+            terms = ['bid to sway portland election', 'me-gov', 'Maine Democratic Senate nominee', 'maine vote', 'Maine again backs ranked-choice voting', 'Maine Teacher Could Unseat Millionaire Incumbent Senator', 'Ranked Choice Voting Approved by Maine', 'maine gop', 'maine state house', 'Scarborough superintendent tries to halt student voter registration drive', 'maine election', 'maine house candidate', 'eryn gilchrist', 'skinhead lesbian', 'steve deangelis', 'mainepolitics', 'mainegreens', 'maine gov', 'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage', 'liar lepage', 'lepage blames']
             for term in terms:
                  search(term, submission);
 
