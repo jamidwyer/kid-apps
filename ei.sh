@@ -2,7 +2,8 @@
 cd /home/ubuntu/running-against-bot
 python 2018-11-06-ca.py #10-30 house
 python 2018-11-06-ks.py #10-30
-python 2018-11-06-tn.py #10-17to11-1
+python 2018-11-06-tn.py #10-17to11-1 senate
+python 2018-11-06-md.py #10-25to11-1 governor
 python 2018-11-06-ga.py #10-15to11-2
 python 2018-11-06-nv.py #10-20to11-2
 python 2018-11-06-tx.py #10-22to11-2
@@ -31,7 +32,6 @@ python 2018-11-06-mn.py #11-6
 python 2018-11-06-va.py #11-6
 python 2018-11-06-wi.py #11-6
 python 2018-11-06-ny.py #11-6
-python 2018-11-06-md.py #11-6
 python 2018-11-06-co.py #11-6
 python 2018-11-06-vt.py #11-6
 python 2018-11-06-ma.py #11-6
