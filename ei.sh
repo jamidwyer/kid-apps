@@ -15,8 +15,6 @@ python 2018-11-06-ak.py #10-22to11-5
 python 2018-11-06-or.py #10-19to11-6
 python 2018-11-06-me.py #10-7to11-6
 python 2018-11-06-la.py #10-23to10-30
-python 2018-11-06-ne.py #10-26
-python 2018-11-06-ia.py #10-27
 python 2018-11-06-wa.py #10-29
 python 2018-11-06-ut.py #10-30
 python 2018-11-06-ok.py #11-1to11-3
@@ -32,6 +30,7 @@ python 2018-11-06-mn.py #11-6
 python 2018-11-06-va.py #11-6
 python 2018-11-06-wi.py #11-6
 python 2018-11-06-ny.py #11-6
+python 2018-11-06-ia.py #11-6 house
 python 2018-11-06-co.py #11-6
 python 2018-11-06-vt.py #11-6
 python 2018-11-06-ma.py #11-6
