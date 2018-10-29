@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['colorado pot sales', 'colorado legislat', 'purged from the colorado rolls', 'Colorado Democratic candidate', 'boulder county Republican', 'CenterLeftPolitics Starterpack', 'Aurora ICE facility', 'Colorado Springs man who allegedly shot', 'national popular vote', 'Broadway telling people not to sign petitions', 'denver mayor', 'Mueller now, has to prep for NK.', 'rural teachers working second jobs', 'colorado green party', 'thousands and thousands teachers', 'co teachers strike', 'colorado lawmaker', 'colorado teachers are going on strike', 'Colorado must fight to protect net neutrality', 'colorado state rep.', 'So the Oil Company Chose a Poorer School', 'colorado fracking company', 'COLORADO teachers walk out', 'Colorado Teachers Walk-out', 'action by colorado teachers', 'great sand dunes national park', 'co-gov' 'dsA denver', 'colorado bill', 'Republican political group in Colorado', 'colorado state senate', 'cynthia coffman', 'colorado governor', 'colorado poll', 'colorado voters', 'emily sirota', 'jared polis', 'Doug Lamborn', 'ken buck', 'steve curtis', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
+            terms = ['Temple Emanuel for a Community Solidarity Vigil', 'colorado pot sales', 'colorado legislat', 'purged from the colorado rolls', 'Colorado Democratic candidate', 'boulder county Republican', 'CenterLeftPolitics Starterpack', 'Aurora ICE facility', 'Colorado Springs man who allegedly shot', 'national popular vote', 'Broadway telling people not to sign petitions', 'denver mayor', 'Mueller now, has to prep for NK.', 'rural teachers working second jobs', 'colorado green party', 'thousands and thousands teachers', 'co teachers strike', 'colorado lawmaker', 'colorado teachers are going on strike', 'Colorado must fight to protect net neutrality', 'colorado state rep.', 'So the Oil Company Chose a Poorer School', 'colorado fracking company', 'COLORADO teachers walk out', 'Colorado Teachers Walk-out', 'action by colorado teachers', 'great sand dunes national park', 'co-gov' 'dsA denver', 'colorado bill', 'Republican political group in Colorado', 'colorado state senate', 'cynthia coffman', 'colorado governor', 'colorado poll', 'colorado voters', 'emily sirota', 'jared polis', 'Doug Lamborn', 'ken buck', 'steve curtis', 'mike coffman', 'co-06', 'co-6', 'rep. coffman', 'rep coffman', 'representative coffman', 'congressman coffman']
             for term in terms:
                  search(term, submission);
 
@@ -48,8 +48,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Colorado 2018 Election \n\n"
-            "[General Election Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): November 6, 2018 \n\n"
-            "[General Election](https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html): November 6, 2018 \n\n")
+            "[Voter Registration Deadline](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml): November 6, 2018 \n\n"
+            "[Ballots Due](https://www.sos.state.co.us/voter/pages/pub/home.xhtml): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
