@@ -10,6 +10,7 @@ python 2018-11-06-tx.py #10-22to11-2
 python 2018-11-06-wv.py #10-24to11-3 senate
 python 2018-11-06-hi.py #10-23to11-3
 python 2018-11-06-fl.py #10-22to11-4 senate, governor
+python 2018-11-06-nd.py #9-27to11-5 senate
 python 2018-11-06-in.py #10-9to11-5 senate
 python 2018-11-06-il.py #9-27to11-5 governor
 python 2018-11-06-ak.py #10-22to11-5
@@ -48,6 +49,5 @@ python 2018-11-06-wy.py #11-6
 python 2018-11-06-ar.py #11-6
 python 2018-11-06-ne.py #11-6
 python 2018-11-06-ky.py #11-6
-python 2018-11-06-nd.py #6-12
 python 2020-11-03-ky.py #10-5-2020
 python 2020-11-03-tx.py #10-6-2020
