@@ -7,6 +7,7 @@ python 2018-11-06-md.py #10-25to11-1 governor
 python 2018-11-06-ga.py #10-15to11-2
 python 2018-11-06-nv.py #10-20to11-2
 python 2018-11-06-tx.py #10-22to11-2
+python 2018-11-06-wv.py #10-24to11-3 senate
 python 2018-11-06-hi.py #10-23to11-3
 python 2018-11-06-fl.py #10-22to11-4 senate, governor
 python 2018-11-06-in.py #10-9to11-5 senate
@@ -23,7 +24,6 @@ python 2018-11-06-mo.py #11-6 senate
 python 2018-11-06-mi.py #11-6
 python 2018-11-06-oh.py #11-6
 python 2018-11-06-pa.py #11-6
-python 2018-11-06-wv.py #11-6 senate
 python 2018-11-06-sd.py #11-6 governor
 python 2018-11-06-nj.py #11-6
 python 2018-11-06-mn.py #11-6
