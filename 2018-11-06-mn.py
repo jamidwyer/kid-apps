@@ -56,7 +56,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['minnesota gop', 'Minneapolis and St. Paul announce new efforts to combat climate change', 'minnesota moms rise up', 'Chapo Trap House for a full hour on AM950', 'mn-02', 'ilhan omar', 'compared gay people to rapists', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'and view themselves as victims', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'al franken', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
+            terms = ['hennepin county sheriff', 'minnesota gop', 'Minneapolis and St. Paul announce new efforts to combat climate change', 'minnesota moms rise up', 'Chapo Trap House for a full hour on AM950', 'mn-02', 'ilhan omar', 'compared gay people to rapists', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'and view themselves as victims', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'al franken', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
             for term in terms:
                  search(term, submission);
 
