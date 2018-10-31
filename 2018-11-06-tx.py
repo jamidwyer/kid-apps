@@ -45,7 +45,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Texas 2018 Election \n\n"
-            "[Early Voting Starts](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): October 22-November 2, 2018 \n\n"
+            "[Early Voting](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): October 22-November 2, 2018 \n\n"
             "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n"
             "[Check Your Voter Registration Status](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do)\n\n")
 
