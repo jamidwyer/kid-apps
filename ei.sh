@@ -11,10 +11,10 @@ python 2018-11-06-nd.py #9-27to11-5 senate
 python 2018-11-06-in.py #10-9to11-5 senate
 python 2018-11-06-il.py #9-27to11-5 governor
 python 2018-11-06-oh.py #10-10to11-5 governor, house
+python 2018-11-06-sd.py #9-21to11-5 governor
 python 2018-11-06-ks.py #10-17to11-5 house
 python 2018-11-06-ak.py #10-22to11-5
 python 2018-11-06-or.py #10-19to11-6
-python 2018-11-06-me.py #10-7to11-6
 python 2018-11-06-wa.py #10-29
 python 2018-11-06-ut.py #10-30
 python 2018-11-06-ok.py #11-1to11-3
@@ -23,7 +23,7 @@ python 2018-11-06-mo.py #11-6 senate
 python 2018-11-06-tn.py #11-6 senate
 python 2018-11-06-mi.py #11-6
 python 2018-11-06-pa.py #11-6
-python 2018-11-06-sd.py #11-6 governor
+python 2018-11-06-me.py #11-6 governor
 python 2018-11-06-md.py #11-6 governor
 python 2018-11-06-nj.py #11-6
 python 2018-11-06-mn.py #11-6

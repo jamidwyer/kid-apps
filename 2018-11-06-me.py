@@ -45,8 +45,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
+        # Early voting by absentee -- too late
         text = ("Maine Election 2018 \n\n"
-            "[General Election](https://www1.maine.gov/cgi-bin/online/AbsenteeBallot/index.pl): November 6, 2018 \n\n")
+            "[General Election](https://www1.maine.gov/portal/government/edemocracy/voter_lookup.php): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
