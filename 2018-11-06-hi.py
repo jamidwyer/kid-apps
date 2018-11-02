@@ -49,7 +49,6 @@ def search(term, submission):
         # Reply to the post
         text = ("Hawaii 2018 Election \n\n"
             "[General Election Early Voting](https://elections.hawaii.gov/voters/early-voting/): October 23 - November 3, 2018 \n\n"
-            "[General Election Registration Deadline](https://olvr.hawaii.gov/register.aspx): October 31, 2018 \n\n"
             "[General Election](https://elections.hawaii.gov/wp-content/uploads/Voter-Registration-and-Permanent-Absentee-Application_Form-Fillable.pdf): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
