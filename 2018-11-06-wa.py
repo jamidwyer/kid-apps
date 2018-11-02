@@ -47,8 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Washington 2018 Election \n\n"
-            "[General Election Registration Deadline](https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR): October 29, 2018 \n\n"
-            "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 6, 2018 \n\n")
+            "[Ballots Due](https://weiapplets.sos.wa.gov/MyVote/#/login): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

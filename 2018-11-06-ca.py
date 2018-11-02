@@ -48,7 +48,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("California 2018 Election \n\n"
-            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 6, 2018 \n\n")
+            "[General Election](https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-6-2018/): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
