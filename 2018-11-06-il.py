@@ -47,7 +47,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Illinois 2018 Election \n\n"
             "[Early Voting](https://www.elections.il.gov/VotingInformation/EarlyVotingLocations.aspx): September 27-November 5, 2018 \n\n"
-            "[General Election](https://www.elections.il.gov/VotingInformation/VotingByMail.aspx): November 6, 2018 \n\n")
+            "[General Election](https://ova.elections.il.gov/PollingPlaceLookup.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
