@@ -45,8 +45,8 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
+        # Early voting over
         text = ("Oklahoma 2018 Election \n\n"
-            "[Early Voting](https://www.ok.gov/elections/Early_Voting.html): November 1-November 3, 2018\n\n"
             "[General Election Date](https://services.okelections.us/AbsenteeApplication/): November 6, 2018")
         print("Bot replying to : ", submission.title)
         try:

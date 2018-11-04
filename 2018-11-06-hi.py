@@ -47,9 +47,9 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
+        # Early voting over
         text = ("Hawaii 2018 Election \n\n"
-            "[General Election Early Voting](https://elections.hawaii.gov/voters/early-voting/): October 23 - November 3, 2018 \n\n"
-            "[General Election](https://elections.hawaii.gov/wp-content/uploads/Voter-Registration-and-Permanent-Absentee-Application_Form-Fillable.pdf): November 6, 2018 \n\n")
+            "[General Election](https://olvr.hawaii.gov/altpollingplacesearch.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
