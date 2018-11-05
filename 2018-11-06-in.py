@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['tweets of donnelly', 'indiana\'s early vot', 'indiana law', 'liz watson', 'conservative county in indiana', 'indiana congress', 'ag curtis hill', 'Indiana precinct', 'in-sen', 'lizforindiana', 'matt cummings', 'Chicago sees its most violent week', 'states with lax gun laws ', 'in-9', 'pride parade in mike pence', 'Donnelly has his best fundraising', 'Mike Pence\'s hometown', 'stephen chancellor', 'in09', 'Indiana Senate', 'Medicaid work requirements for Indiana', 'Illegal Guns From Indiana', 'Indiana Green Party', 'in-09', 'pelath', 'Joe Donnelly', '2018 elections in Indiana', 'Better Know a State: Indiana']
+            terms = ['Marion County early voting centers', 'tweets of donnelly', 'indiana\'s early vot', 'indiana law', 'liz watson', 'conservative county in indiana', 'indiana congress', 'ag curtis hill', 'Indiana precinct', 'in-sen', 'lizforindiana', 'matt cummings', 'Chicago sees its most violent week', 'states with lax gun laws ', 'in-9', 'pride parade in mike pence', 'Donnelly has his best fundraising', 'Mike Pence\'s hometown', 'stephen chancellor', 'in09', 'Indiana Senate', 'Medicaid work requirements for Indiana', 'Illegal Guns From Indiana', 'Indiana Green Party', 'in-09', 'pelath', 'Joe Donnelly', '2018 elections in Indiana', 'Better Know a State: Indiana']
             for term in terms:
                  search(term, submission);
 
