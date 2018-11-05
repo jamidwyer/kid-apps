@@ -46,6 +46,7 @@ def searchAndPost(sub):
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
+        # Early voting ended Nov. 1
         text = ("Maryland 2018 Election \n\n"
             "[General Election](https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
