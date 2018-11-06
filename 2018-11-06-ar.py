@@ -48,7 +48,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Arkansas 2018 Election \n\n"
-            "[Early Voting](https://www.sos.arkansas.gov/uploads/elections/Revised_County_Clerks_List.pdf): October 22-November 5, 2018 \n\n"
             "[General Election](https://www.voterview.ar-nova.org/VoterView/Home.do): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
