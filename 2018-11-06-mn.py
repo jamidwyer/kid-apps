@@ -33,7 +33,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Minnesota 2018 Election \n\n"
-            "[Early Voting](https://www.sos.state.mn.us/elections-voting/other-ways-to-vote/vote-early-in-person/): September 21-November 5, 2018 \n\n"
             "[General Election Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): November 6, 2018 \n\n"
             "[General Election Date](https://pollfinder.sos.state.mn.us/): November 6, 2018 \n\n")
 
@@ -57,7 +56,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop', 'minnesota moms rise up', 'mn-02', 'ilhan omar', 'compared gay people to rapists', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'and view themselves as victims', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'al franken', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
+            terms = ['I love how civic this state is.', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop', 'minnesota moms rise up', 'mn-02', 'ilhan omar', 'compared gay people to rapists', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'and view themselves as victims', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'al franken', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'plans to gerrymander the Electoral College in three states', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
             for term in terms:
                  search(term, submission);
 

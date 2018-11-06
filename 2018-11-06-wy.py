@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['sage grouse', 'gay panic', 'wyoming protest', 'Yes, you sure are...', 'Overhaul of Endangered Species Act', 'i feel this is a punitive action', 'Trump wants to kill Yellowstone Bison', 'grizzlies under threat from controversial hunting proposal', 'Entire Life Savings, Claiming He Gave It To Them', '91,800 from an innocent man', 'matt mead', 'wyoming governor', 'mary throne', 'barrasso', 'erik prince', 'Senate Environment Committee Approves Toxic EPA Nominee', 'Senate Committee Advances Controversial Trump EPA Nominee', 'Pushing Ahead with a Health Care Deal']
+            terms = ['wyoming for conserving this land', 'sage grouse', 'gay panic', 'wyoming protest', 'Yes, you sure are...', 'Overhaul of Endangered Species Act', 'i feel this is a punitive action', 'Trump wants to kill Yellowstone Bison', 'grizzlies under threat from controversial hunting proposal', 'Entire Life Savings, Claiming He Gave It To Them', '91,800 from an innocent man', 'matt mead', 'wyoming governor', 'mary throne', 'barrasso', 'erik prince', 'Senate Environment Committee Approves Toxic EPA Nominee', 'Senate Committee Advances Controversial Trump EPA Nominee', 'Pushing Ahead with a Health Care Deal']
             for term in terms:
                  search(term, submission);
 
@@ -46,7 +46,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Wyoming 2018 Election \n\n"
-            "[General Election](http://soswy.state.wy.us/Elections/AbsenteeVoting.aspx): November 6, 2018 \n\n")
+            "[General Election](http://soswy.state.wy.us/Elections/PollPlace/Default.aspx): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
