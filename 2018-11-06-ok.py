@@ -47,7 +47,7 @@ def search(term, submission):
         # Reply to the post
         # Early voting over
         text = ("Oklahoma 2018 Election \n\n"
-            "[General Election Date](https://services.okelections.us/AbsenteeApplication/): November 6, 2018")
+            "[General Election Date](https://services.okelections.us/voterSearch.aspx): November 6, 2018")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
