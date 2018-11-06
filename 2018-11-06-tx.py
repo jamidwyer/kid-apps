@@ -45,9 +45,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Texas 2018 Election \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n"
-            "[Check Your Voter Registration Status](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do)\n\n")
-
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 6, 2018 \n\n")
 
         print("Bot replying to : ", submission.title)
         try:
