@@ -49,7 +49,7 @@ def search(term, submission):
         # Reply to the post
         text = ("California 2020 Election \n\n"
             "[Register to Vote](http://registertovote.ca.gov/)  \n\n"
-            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 3, 2018 \n\n")
+            "[General Election](http://www.sos.ca.gov/elections/voter-registration/vote-mail/#apply): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
