@@ -1,5 +1,6 @@
 praw.ini
 wcb.pem
 banned_bot/*
+old/*
 past_elections/*
 log.*
