@@ -1,10 +1,8 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -24,13 +22,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("kentucky.dat", "r")
+local_subs = open("iowa.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -40,18 +38,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['senate majority leader', 'mcconnell']
+            terms = ['big corporate middlemen', 'iowa kickoff speech', 'iowa caucus', 'iowa democrats', 'DACA student killed after being deported to Mexico', 'ICE deports Iowa HS student', 'Iowa student killed after being deported to Mexico', 'iowa\'s medicaid', 'zach wahls', 'iowa abortion ban', 'iowa race as house candidate', 'Burma Refugees Living in Des Moines', 'Bernie Sanders returns to Iowa', 'Iowa representatives', 'NRA president\'s Iowa business', 'ia-03', 'Factory Farming in Iowa', 'kim reynolds', 'Alasandro', 'Iowa\'s 3rd District race', 'austin frerick', 'Iowa Lawmakers', 'nate boulton', 'rob sand', 'Iowa Poll', 'Iowa went big for Trump', 'david young', 'anti-Iowa positions', 'Iowa Candidate', 'Running For Congress In Iowa', 'Trump sinks in Iowa', 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'rep. king', 'rep king', 'representative king', 'Trump Hate Iowa', 'congressman king', 'ia-01', 'ia-4', 'ia-04']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Kentucky 2020 Election \n\n"
-            "[Primary Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): April 20, 2020 \n\n"
-            "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 19, 2020 \n\n")
-            "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 5, 2020 \n\n"
-            "[General Election](https://vrsws.sos.ky.gov/VIC/): November 3, 2020 \n\n")
+        text = ("Iowa 2020 Election \n\n"
+            "[Caucus Voter Registration Deadline](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration): January 24, 2020 \n\n"
+            "Caucus: February 3, 2020 \n\n")
+            "[General Election](https://sos.iowa.gov/elections/voterinformation/index.html): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -59,7 +56,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
