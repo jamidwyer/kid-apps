@@ -49,7 +49,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Kentucky 2020 Election \n\n"
             "[Primary Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): April 20, 2020 \n\n"
-            "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 19, 2020 \n\n")
+            "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 19, 2020 \n\n"
             "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 5, 2020 \n\n"
             "[General Election](https://vrsws.sos.ky.gov/VIC/): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
