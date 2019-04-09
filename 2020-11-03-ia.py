@@ -47,7 +47,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Iowa 2020 Election \n\n"
             "[Caucus Voter Registration Deadline](https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration): January 24, 2020 \n\n"
-            "Caucus: February 3, 2020 \n\n")
+            "Caucus: February 3, 2020 \n\n"
             "[General Election](https://sos.iowa.gov/elections/voterinformation/index.html): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
