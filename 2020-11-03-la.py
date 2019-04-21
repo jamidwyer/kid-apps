@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("washington.dat", "r")
+local_subs = open("louisiana.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,17 +38,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['science is hard for republicans', ' wa dems', 'first state carbon tax', 'nathan choi', 'matt shea', 'wa-05', 'seattle minimum wage', 'wa state primary', 'washington state republican', 'Patriot Prayer', 'mcmorris rogers', 'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', 's up bootlickers', 'a father, a veteran, and an anarchist', 'Seattle-area prosecutor', 'initiative 1600', 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['Louisiana Anti-Protest Law', 'renee fontenot', 'jeff landry', 'district in louisiana', 'david vitter', 'louisiana fall elections', 'twitter troll from baton rouge', 'Higgins campaign', 'louisiana congress', 'deepwater horizon', 'House of Representatives in Louisiana', 'Shreveport mayor', 'Citizens for a New Louisiana', 'louisiana secession', 'louisiana governor', 'la district 3', 'louisiana lawmaker', 'louisiana elect', 'louisiana budget cuts', 'bayou bridge pipeline', 'tom schedler', 'la. house republican', 'louisiana legislat', 'wendy vitter', 'louisiana senators', 'louisiana law', 'louisiana senate', 'la. state senator', 'Dave Langlinais', 'la 3rd', 'LouisianaPolitics', 'Protest in Abbeville', 'deyshia hargrave', 'Vermilion school board', 'Vermillion school board', 'Vermilion parish', 'Louisiana district', 'Louisiana School District', 'Louisiana superintendent', 'most incarcerated state', 'scalise', 'clay higgins', 'Louisiana Prison ']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Washington 2020 Election \n\n"
-            "[Primary Registration Deadline](https://weiapplets.sos.wa.gov/MyVote/#/login): May 18, 2020 \n\n"
-            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): May 26, 2020 \n\n"
-            "[Ballots Due](https://weiapplets.sos.wa.gov/MyVote/#/login): November 3, 2020 \n\n")
+        text = ("Louisiana 2020 Election \n\n"
+            "[Primary Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): February 15, 2020 \n\n"
+            "[Primary Election](https://voterportal.sos.la.gov/Home/VoterLogin): March 7, 2020 \n\n"
+            "[General Election Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): October 13, 2020 \n\n"
+            "[General Election](https://voterportal.sos.la.gov/Home/VoterLogin): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

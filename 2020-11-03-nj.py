@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -23,7 +24,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("washington.dat", "r")
+local_subs = open("newjersey.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -32,24 +33,22 @@ subs.extend(ssubs)
 # Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
-    for submission in subreddit.hot(limit=50):
+    for submission in subreddit.hot(limit=100):
         #print(submission.title)
 
         # If we haven't replied to this post before
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['science is hard for republicans', ' wa dems', 'first state carbon tax', 'nathan choi', 'matt shea', 'wa-05', 'seattle minimum wage', 'wa state primary', 'washington state republican', 'Patriot Prayer', 'mcmorris rogers', 'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', 's up bootlickers', 'a father, a veteran, and an anarchist', 'Seattle-area prosecutor', 'initiative 1600', 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['refusing to ban bad cops', '12 Billion in Aid to Farmers', 'prosecute any weed cases until September', 'sex toys and oils with marijuana', 'Jersey City Set to Decriminalize Marijuana', 'Bedminster', 'Republicans are coming for your 401k', 'nj-11', 'seth grossman', 'Protest against Family Separation in Clifton', 'new jersey passed sweeping', 'murphy set to sign law', 'the more socialister it is', 'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', 'new jersey voters', 'josh gottheimer', 'Representative Chris Smith', 'NJ GOP Candidate', 'Republican Hugin', 'NJ\'s 7th District', 'nj cd-7', 'N.J. congressman', 'keady', 'New Jersey Senat8', 'Congressman Chris Smith', 'NJ State Senator Ron Rice', 'NJ congressmen', 'NJ GOP rep', 'thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', 'representative macarthur', 'congressman macarthur', 'lobiondo', 'leonard lance', 'nj-7', 'nj-07', 'frelinghuysen', 'New Jersey election results could be bad omen for', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Washington 2020 Election \n\n"
-            "[Primary Registration Deadline](https://weiapplets.sos.wa.gov/MyVote/#/login): May 18, 2020 \n\n"
-            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): May 26, 2020 \n\n"
-            "[Ballots Due](https://weiapplets.sos.wa.gov/MyVote/#/login): November 3, 2020 \n\n")
+        text = ("New Jersey 2018 Election \n\n"
+            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
