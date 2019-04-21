@@ -40,15 +40,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['refusing to ban bad cops', '12 Billion in Aid to Farmers', 'prosecute any weed cases until September', 'sex toys and oils with marijuana', 'Jersey City Set to Decriminalize Marijuana', 'Bedminster', 'Republicans are coming for your 401k', 'nj-11', 'seth grossman', 'Protest against Family Separation in Clifton', 'new jersey passed sweeping', 'murphy set to sign law', 'the more socialister it is', 'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', 'new jersey voters', 'josh gottheimer', 'Representative Chris Smith', 'NJ GOP Candidate', 'Republican Hugin', 'NJ\'s 7th District', 'nj cd-7', 'N.J. congressman', 'keady', 'New Jersey Senat8', 'Congressman Chris Smith', 'NJ State Senator Ron Rice', 'NJ congressmen', 'NJ GOP rep', 'thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', 'representative macarthur', 'congressman macarthur', 'lobiondo', 'leonard lance', 'nj-7', 'nj-07', 'frelinghuysen', 'New Jersey election results could be bad omen for', 'Budget vote raises red flag for GOP on tax reform', 'killing your property tax deduction by ending this perk for the rich', 'Republicans are quietly trying to turn churches into dark money havens', 'Republicans just declared they want to kill your property tax deduction', 'tax plan and nj homeowners']
+            terms = ['spotted in middletown nj', 'Bedminster', 'nj-11', 'seth grossman', 'new jersey passed sweeping', 'murphy set to sign law', 'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', 'new jersey voters', 'josh gottheimer', 'Representative Chris Smith', 'NJ GOP Candidate', 'Republican Hugin', 'NJ\'s 7th District', 'nj cd-7', 'N.J. congressman', 'keady', 'New Jersey Senate', 'Congressman Chris Smith', 'NJ State Senator Ron Rice', 'NJ congressmen', 'NJ GOP rep', 'thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', 'representative macarthur', 'congressman macarthur', 'lobiondo', 'leonard lance', 'nj-7', 'nj-07', 'frelinghuysen']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("New Jersey 2018 Election \n\n"
-            "[General Election](http://www.njelections.org/voting-information-vote-by-mail.html): November 6, 2018 \n\n")
+        text = ("New Jersey 2020 Election \n\n"
+            "[Register to Vote](https://www.state.nj.us/state/elections/voter-registration.shtml) \n\n"
+            "[General Election](https://www.state.nj.us/state/elections/vote-by-mail.shtml): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
