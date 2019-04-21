@@ -48,7 +48,7 @@ def search(term, submission):
         # Reply to the post
         text = ("North Carolina 2020 Election \n\n"
             "[Primary Election Voter Registration Deadline](https://www.ncsbe.gov/Portals/0/Forms/NCVoterRegForm06W.pdf): February 7, 2020 \n\n"
-            "[Primary Election](https://www.ncsbe.gov/Voting-Options): March 3, 2020 \n\n")
+            "[Primary Election](https://www.ncsbe.gov/Voting-Options): March 3, 2020 \n\n"
             "[General Election Voter Registration Deadline](https://www.ncsbe.gov/Portals/0/Forms/NCVoterRegForm06W.pdf): October 9, 2020 \n\n"
             "[General Election](https://www.ncsbe.gov/Voting-Options): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
