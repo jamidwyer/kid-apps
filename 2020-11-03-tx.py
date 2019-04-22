@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['fastest-warming cities', 'Eleven-year-old ordered deported without her family', 'demolished for border wall', 'beto will be at texas', 'wind power campaign in texas', 'bridge where refugees and asylum', 'turnout in Dallas', 'blocked a resolution to have Trump enforce the Russian sanctions', 'Bexar County, Texas police']
+            terms = ['texas law', 'fastest-warming cities', 'Eleven-year-old ordered deported without her family', 'demolished for border wall', 'beto will be at texas', 'wind power campaign in texas', 'bridge where refugees and asylum', 'turnout in Dallas', 'blocked a resolution to have Trump enforce the Russian sanctions', 'Bexar County, Texas police']
             for term in terms:
                  search(term, submission);
 
