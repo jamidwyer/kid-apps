@@ -60,7 +60,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['mn state senate', 'fr he is a fuckin babyman', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop', 'minnesota moms rise up', 'mn-02', 'rep. omar', 'ilhan', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
+            terms = ['minnesota house', 'mn state senate', 'fr he is a fuckin babyman', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop', 'minnesota moms rise up', 'mn-02', 'rep. omar', 'ilhan', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
             for term in terms:
                  search(term, submission);
 
