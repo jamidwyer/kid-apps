@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['tx-sen', 'rep. al green', 'lt. gov. patrick', 'cornyn', 'texas law', 'fastest-warming cities', 'Eleven-year-old ordered deported without her family', 'demolished for border wall', 'texas capitol', 'beto will be at texas', 'wind power campaign in texas', 'bridge where refugees and asylum', 'turnout in Dallas', 'Bexar County, Texas police']
+            terms = ['nerds out and the crowds go crazy', 'tx-sen', 'rep. al green', 'lt. gov. patrick', 'cornyn', 'texas law', 'fastest-warming cities', 'Eleven-year-old ordered deported without her family', 'demolished for border wall', 'texas capitol', 'beto will be at texas', 'wind power campaign in texas', 'bridge where refugees and asylum', 'turnout in Dallas', 'Bexar County, Texas police']
             for term in terms:
                  search(term, submission);
 
@@ -47,7 +47,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Texas 2020 Election \n\n"
-            "[Registration Deadline](http://www.votetexas.gov/register-to-vote/): October 6, 2020 \n\n"
+            "[Registration Deadline](http://www.votetexas.gov/register-to-vote/): October 4, 2020 \n\n"
             "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
