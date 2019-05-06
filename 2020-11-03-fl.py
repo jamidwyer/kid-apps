@@ -48,7 +48,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Florida 2020 Election \n\n"
             "[Presidential Preference Primary Registration Deadline](https://registertovoteflorida.gov/en/Registration/Eligibility): February 18, 2020 \n\n"
-            "[Presidential Preference Primary Election](https://dos.myflorida.com/elections/for-voters/quick-facts-presidential-preference-primary/): August 25, 2020 \n\n"
+            "[Presidential Preference Primary Election](https://dos.myflorida.com/elections/for-voters/quick-facts-presidential-preference-primary/): March 17, 2020 \n\n"
             "[Primary Registration Deadline](https://registertovoteflorida.gov/en/Registration/Eligibility): July 27, 2020 \n\n"
             "[Primary Election](https://registration.elections.myflorida.com/CheckVoterStatus): August 25, 2020 \n\n"
             "[General Election Registration Deadline](https://registertovoteflorida.gov/en/Registration/Eligibility): October 5, 2020 \n\n"
