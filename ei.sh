@@ -145,6 +145,18 @@ if pgrep -f "python 2020-11-03-ms.py" &>/dev/null; then
 else
 	python 2020-11-03-ms.py # 2020-11-03
 fi
-python 2020-11-03-wv.py # 2020-11-03
-python 2020-11-03-in.py # 2020-11-03
-python 2020-11-03-ut.py # 2020-11-03
+if pgrep -f "python 2020-11-03-wv.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-wv.py # 2020-11-03
+fi
+if pgrep -f "python 2020-11-03-in.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-in.py # 2020-11-03
+fi
+if pgrep -f "python 2020-11-03-ut.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-ut.py # 2020-11-03
+fi
