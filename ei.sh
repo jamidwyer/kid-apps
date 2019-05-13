@@ -1,7 +1,15 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-python 2019-09-10-nc.py # 2019-08-15
-python 2020-11-03-ny.py # 2019-10-11
+if pidof -x "2019-09-10-nc.py" >/dev/null; then
+    echo "Process already running"
+else
+	python 2019-09-10-nc.py # 2019-08-15
+fi
+if pidof -x "2020-11-03-ny.py" >/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-ny.py # 2019-10-11
+fi
 python 2020-11-03-ia.py # 2020-01-24
 python 2020-11-03-tn.py # 2020-02-02
 python 2020-11-03-nc.py # 2020-02-07
