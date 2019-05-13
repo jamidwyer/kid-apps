@@ -80,6 +80,11 @@ if pgrep -f "python 2020-11-03-ky.py" &>/dev/null; then
 else
 	python 2020-11-03-ky.py # 2020-04-20
 fi
+if pgrep -f "python 2020-11-03-mt.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-mt.py # 2020-05-01
+fi
 if pgrep -f "python 2020-11-03-wa.py" &>/dev/null; then
     echo "Process already running"
 else
