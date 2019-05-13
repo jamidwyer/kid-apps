@@ -45,9 +45,21 @@ if pgrep -f "python 2020-11-03-al.py" &>/dev/null; then
 else
 	python 2020-11-03-al.py # 2020-02-15
 fi
-python 2020-11-03-ca.py # 2020-02-17
-python 2020-11-03-fl.py # 2020-02-18
-python 2020-11-03-az.py # 2020-02-18
+if pgrep -f "python 2020-11-03-ca.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-ca.py # 2020-02-17
+fi
+if pgrep -f "python 2020-11-03-fl.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-fl.py # 2020-02-18
+fi
+if pgrep -f "python 2020-11-03-az.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-az.py # 2020-02-18
+fi
 python 2020-11-03-mn.py # 2020-03-03
 python 2020-11-03-il.py # 2020-03-17
 python 2020-11-03-md.py # 2020-04-07
