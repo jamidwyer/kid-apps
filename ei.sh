@@ -10,11 +10,31 @@ if pgrep -f "python 2020-11-03-ny.py" &>/dev/null; then
 else
 	python 2020-11-03-ny.py # 2019-10-11
 fi
-python 2020-11-03-ia.py # 2020-01-24
-python 2020-11-03-tn.py # 2020-02-02
-python 2020-11-03-nc.py # 2020-02-07
-python 2020-11-03-nh.py # 2020-02-11
-python 2020-11-03-ma.py # 2020-02-12
+if pgrep -f "python 2020-11-03-ia.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-ia.py # 2020-01-24
+fi
+if pgrep -f "python 2020-11-03-tn.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-tn.py # 2020-02-02
+fi
+if pgrep -f "python 2020-11-03-nc.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-nc.py # 2020-02-07
+fi
+if pgrep -f "python 2020-11-03-nh.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-nh.py # 2020-02-11
+fi
+if pgrep -f "python 2020-11-03-ma.py" &>/dev/null; then
+    echo "Process already running"
+else
+	python 2020-11-03-ma.py # 2020-02-12
+fi
 python 2020-11-03-la.py # 2020-02-15
 python 2020-11-03-al.py # 2020-02-15
 python 2020-11-03-ca.py # 2020-02-17
