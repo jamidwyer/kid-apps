@@ -1,11 +1,11 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-if pidof -x "python 2019-09-10-nc.py" >/dev/null; then
+if pgrep "python 2019-09-10-nc.py" >/dev/null 2>&1 ; then
     echo "Process already running"
 else
 	python 2019-09-10-nc.py # 2019-08-15
 fi
-if pidof -x "python 2020-11-03-ny.py" >/dev/null; then
+if pgrep "python 2020-11-03-ny.py" >/dev/null 2>&1 ; then
     echo "Process already running"
 else
 	python 2020-11-03-ny.py # 2019-10-11
