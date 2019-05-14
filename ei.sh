@@ -1,29 +1,11 @@
 #!/bin/sh
-
-import psutil
-import os
-
 cd /home/ubuntu/running-against-bot
-
-def is_running(script):
-    for q in psutil.process_iter():
-        if q.name().startswith('python'):
-            if len(q.cmdline())>1 and script in q.cmdline()[1] and q.pid !=os.getpid():
-                print("'{}' Process is already running".format(script))
-                return True
-
-    return False
-
-
-if not is_running("python 2019-09-10-nc.py"):
-	python 2019-09-10-nc.py # 2019-08-15
-
-if pgrep -f "python 2019-09-10-nc.py" &>/dev/null; then
+if pgrep -f "python 2019-09-10-nc.py" &>/dev/null 2>&1; then
     echo "Process already running"
 else
 	python 2019-09-10-nc.py # 2019-08-15
 fi
-if pgrep -f "[p]ython 2020-11-03-ny.py" &>/dev/null; then
+if pgrep -f "python 2020-11-03-ny.py" &>/dev/null 2>&1; then
     echo "Process already running"
 else
 	python 2020-11-03-ny.py # 2019-10-11
