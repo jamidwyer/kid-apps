@@ -1,11 +1,11 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-if [pgrep -fc "python 2019-09-10-nc.py" &>/dev/null == 0]; then
+if [ pgrep -fc "python 2019-09-10-nc.py" &>/dev/null -eq 0 ]; then
 	python 2019-09-10-nc.py # 2019-08-15
 else
     echo "Process already running"
 fi
-if [pgrep -fc "python 2019-09-10-ny.py" &>/dev/null == 0]; then
+if [ pgrep -fc "python 2019-09-10-ny.py" &>/dev/null == 0 ]; then
 	python 2020-11-03-ny.py # 2019-10-11
 else
     echo "Process already running"
