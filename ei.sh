@@ -1,11 +1,11 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-if pgrep -f pgrep -fl "^(/.*)?${2019-09-10-nc.py}\s" &>/dev/null; then
+if pgrep -fl "^(/.*)?${2019-09-10-nc.py}\s" &>/dev/null; then
     echo "Process already running"
 else
 	python 2019-09-10-nc.py # 2019-08-15
 fi
-if pgrep -f pgrep -fl "^(/.*)?${2019-09-10-ny.py}\s" &>/dev/null; then
+if pgrep -fl "^(/.*)?${2019-09-10-ny.py}\s" &>/dev/null; then
     echo "Process already running"
 else
 	python 2020-11-03-ny.py # 2019-10-11
