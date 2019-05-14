@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-if pidof "python 2019-09-10-nc.py" -gt 0; then
+if pgrep -f "python 2019-09-10-nc.py" -gt 0; then
     echo "Process already running"
 else
 	python 2019-09-10-nc.py # 2019-08-15
