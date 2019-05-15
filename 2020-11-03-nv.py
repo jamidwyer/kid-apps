@@ -49,7 +49,7 @@ def search(term, submission):
         # Reply to the post
         # Early voting ended
         text = ("Nevada 2020 Election \n\n"
-            "[Register to Vote](https://www.registertovotenv.gov/SOSVoterServices/Registration/Step1.aspx)"
+            "[Register to Vote](https://www.registertovotenv.gov/SOSVoterServices/Registration/Step1.aspx) \n\n"
             "[Primary Election](https://www.nvsos.gov/sos/home/showdocument?id=2394): June 9, 2020 \n\n"
             "[General Election](https://www.nvsos.gov/sos/home/showdocument?id=2394): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
