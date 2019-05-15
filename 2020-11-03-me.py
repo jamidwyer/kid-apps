@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['maine lawmaker', 'first state to ban styrofoam', 'wave of clean energy legislation', 'me-gov', 'Maine Democratic Senate', 'maine vot', 'maine gop', 'maine state house', 'maine election', 'maine house candidate', 'eryn gilchrist', 'steve deangelis', 'mainepolitics', 'mainegreens', 'maine gov', 'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage']
+            terms = ['maine lawmaker', 'first state to ban styrofoam', 'wave of clean energy legislation', 'maine senate', 'me-gov', 'Maine Democratic Senate', 'maine vot', 'maine gop', 'maine state house', 'maine election', 'maine house candidate', 'eryn gilchrist', 'steve deangelis', 'mainepolitics', 'mainegreens', 'maine gov', 'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me gov', 'me governor\'s', 'gov. lepage']
             for term in terms:
                  search(term, submission);
 
