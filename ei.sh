@@ -16,6 +16,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-az.py # 2020-02-18
 	python 2020-11-03-mn.py # 2020-03-03
 	python 2020-11-03-il.py # 2020-03-17
+	python 2020-11-03-wi.py # 2020-04-07
 	python 2020-11-03-md.py # 2020-04-07
 	python 2020-11-03-ky.py # 2020-04-20
 	python 2020-11-03-mt.py # 2020-05-01
