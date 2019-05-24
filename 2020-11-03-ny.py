@@ -50,7 +50,9 @@ def search(term, submission):
 
         text = ("New York 2020 Election \n\n"
             "[Primary Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): October 11, 2019 \n\n"
-            "[General Election Date](https://voterlookup.elections.state.ny.us/votersearch.aspx): November 3, 2020")
+            "[Primary Election](https://voterreg.dmv.ny.gov/MotorVoter/): April 28, 2019 \n\n"
+            "[General Election Registration Deadline](https://voterlookup.elections.state.ny.us/votersearch.aspx): October 9, 2020"
+            "[General Election](https://voterlookup.elections.state.ny.us/votersearch.aspx): November 3, 2020")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
