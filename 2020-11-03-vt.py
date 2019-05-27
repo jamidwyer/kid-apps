@@ -23,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("texas.dat", "r")
+local_subs = open("vt.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,16 +40,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['republicans hate governing', 'chip roy', 'Trump falls short on infrastructure', 'Campaign Is Showing Solidarity with Striking Workers Like', 'pipeline in texas', 'san antonio prosecutor', 'migrant boy who died in custody', 'muhlaysia booker', 'As president, I will sign into law a new Voting Rights Act', 'dallas campaign', 'nerds out and the crowds go crazy', 'tx-sen', 'rep. al green', 'lt. gov. patrick', 'cornyn', 'texas law', 'fastest-warming cities', 'Eleven-year-old ordered deported without her family', 'demolished for border wall', 'texas capitol', 'beto will be at texas', 'wind power campaign in texas', 'bridge where refugees and asylum', 'turnout in Dallas', 'Bexar County, Texas police']
+            terms = ['rally on saturday in montpelier', 'sanders rally: montpelier', 'sanders to the military industrial', 'vermont gubernatorial', 'nomination in vermont', 'christine hallquist', 'vermont house', 'vermont legislature', 'governor of vermont', 'vermont gov', 'vermont senate', 'GOP in Vermont']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Texas 2020 Election \n\n"
-            "[Registration Deadline](http://www.votetexas.gov/register-to-vote/): October 4, 2020 \n\n"
-            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 3, 2020 \n\n")
+        text = ("Vermont 2020 Election \n\n"
+            "[Register to Vote](https://olvr.sec.state.vt.us/) \n\n"
+            "[Primary Election](https://mvp.sec.state.vt.us/): August 11, 2020 \n\n"
+            "[General Election](https://mvp.sec.state.vt.us/): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
