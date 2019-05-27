@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 
-
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -23,7 +22,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("southcarolina.dat", "r")
+local_subs = open("virginia.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,16 +38,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['denmarkwatercri', 'campaign team in south carolina', '700-mile border fence', 'stand with south carolina teachers', 'south carolina to seoul', 'teachers marching down bicentennial plaza', 'lindsey fucking graham', 'sc teacher rally', 'lindsey graham', 'first primary in the south', 'bernieinsc', 'supporters in greenville', 'charleston church massacre', 's.c. congress', 'south carolina vote', 'kinder-guardians', 'henrymcmaster', 'charleston church shooting', 's.c. governor', 'southcarolinapolitics', 'Boeing workers in Charleston, South Carolina', 'sc governor', 'benghazi', 'governor in sc', 'SC Democrats kill Senate GOP', 'South Carolina inmates sue', 'south carolina general election', 'south carolina senate', 'sc house votes', 'sc legislat', 'dylann roof', 'SC needs gerrymandering', 'South Carolina party primaries', 'phil noble', 'mal hyman', 'gowdy', 'rep. joe wilson', 'jeff duncan', 'archie parnell', 'henry mcmaster', 'kevin bryant', 'south carolina governor', 'Catherine Templeton', 'Republicans in South Carolina']
+            terms = ['virginia house of delegates', 'crying nazi','election in virginia', 'legalize virginia', 'party of white supremacy', 'marijuana in virginia', '^(?!.*west virginia gop).*virginia gop.*$', 'heather heyer', 'danica roem', 'unite the right', 'jason kessler', 'virginia Congressional Candidate', 'Congressional Candidate In Virginia', 'virginia senate', 'virginiapolitics', 'errymandering in virginia', 'Va. House', 'Virginia Congressional Election']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("South Carolina 2020 Election \n\n"
-            "[Register to Vote](https://info.scvotes.sc.gov/eng/ovr/start.aspx) \n\n"
-            "[General Election](https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo): November 3, 2020 \n\n")
+        # No early voting
+        text = ("Virginia 2019 Election \n\n"
+            "[Primary Election](https://vote.elections.virginia.gov/VoterInformation): June 11, 2019 \n\n"
+            "[General Election Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): October 15, 2019 \n\n"
+            "[General Election](https://vote.elections.virginia.gov/VoterInformation): November 5, 2019 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,7 +57,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write our post id to the tracking file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
