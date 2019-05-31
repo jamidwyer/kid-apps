@@ -9,6 +9,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-tn.py # 2020-02-02
 	python 2020-11-03-nc.py # 2020-02-07
 	python 2020-11-03-nh.py # 2020-02-11
+	python 2020-11-03-mo.py # 2020-02-12
 	python 2020-11-03-ma.py # 2020-02-12
 	python 2020-11-03-la.py # 2020-02-15
 	python 2020-11-03-al.py # 2020-02-15

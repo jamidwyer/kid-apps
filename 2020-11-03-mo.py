@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['hope Clinic for Women', 'Missouri is \'leaking\' sales tax revenue', 'missouri abortion ban', 'rally in missouri', 'rally in Cape Girardeau', 'missouri senate', 'poll shows amendment 2', 'st. louis abortion', 'Red State Victory for Voting Rights', 'yes on amendment 2', 'Missouri industries feel the pain of tariffs', 'hitler was right', 'billy long', 'missouri house primary', 'st. louis prosecutor', 'ferguson reformer', 'missouri election', 'ferguson prosecutor', 'missouri gop', 'wesley bell', 'bob mcculloch', 'right to work in missouri', 'missouri state primary', 'missouri vote', 'missouri 2018 primary', 'j.p johnson', 'mo-7', 'st. louis minimum wage', 'missouri congress', 'michael brown was shot', 'curtiswylde', 'greitens', 'lauren arthur', 'missouripolitics', 'ferguson city council', 'missouri house moves', 'kc voters', 'osmack', 'missouri bill', 'new approach missouri', 'Missouri lawmaker', 'austin petersen', 'Missouri Medical Marijuana Campaign', 'josh hawley', 'courtland sykes', 'US Senate in Missouri', 'MO GOP Senate Nomination', 'snake-filled heads', 'career obsessed banshees', 'Missouri pregnancy mortality', 'sam graves', 'Blaine Luetkemeyer', 'kathy ellis', 'mccaskill', 'top 10 Senate races of 2018', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4', 'How Missouri previewed Democrats']
+            terms = ['hope Clinic for Women', 'Missouri is \'leaking\' sales tax revenue', 'missouri abortion ban', 'rally in missouri', 'rally in Cape Girardeau', 'missouri senat', 'st. louis abortion', 'billy long', 'missouri house', 'st. louis prosecutor', 'ferguson reformer', 'missouri election', 'ferguson prosecutor', 'missouri gop', 'wesley bell', 'bob mcculloch', 'right to work in missouri', 'missouri state primary', 'missouri vote', 'missouri 2020 primary', 'j.p johnson', 'mo-7', 'st. louis minimum wage', 'missouri congress', 'michael brown was shot', 'curtiswylde', 'greitens', 'lauren arthur', 'missouripolitics', 'ferguson city council', 'missouri house moves', 'kc voters', 'osmack', 'missouri bill', 'new approach missouri', 'Missouri lawmaker', 'austin petersen', 'Missouri Medical Marijuana Campaign', 'josh hawley', 'courtland sykes', 'US Senate in Missouri', 'MO GOP Senate Nomination', 'snake-filled heads', 'career obsessed banshees', 'Missouri pregnancy mortality', 'sam graves', 'Blaine Luetkemeyer', 'kathy ellis', 'mccaskill', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4']
             for term in terms:
                  search(term, submission);
 
@@ -46,7 +46,11 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Missouri 2020 Election \n\n"
-            "[Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): March 7, 2018 \n\n"
+            "[Presidential Preference Primary Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): February 12, 2020 \n\n"
+            "[Presidential Preference Primary](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): March 10, 2020 \n\n"
+            "[Primary Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): July 8, 2020 \n\n"
+            "[Primary Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): August 4, 2020 \n\n"
+            "[General Election Registration Deadline](https://s1.sos.mo.gov/votemissouri/request): October 7, 2020 \n\n"
             "[General Election](https://voteroutreach.sos.mo.gov/PRD/VoterOutreach/VOSearch.aspx): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
