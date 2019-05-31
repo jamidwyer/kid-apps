@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Very sad day to be a Louisianian', 'the current state of American liberalism', 'nungesser', 'us children are living below the poverty line', 'louisiana decided to curb mass incarceration', 'louisiana fall elections', 'louisiana governor']
+            terms = ['protest louisiana', 'Very sad day to be a Louisianian', 'the current state of American liberalism', 'nungesser', 'us children are living below the poverty line', 'louisiana decided to curb mass incarceration', 'louisiana fall elections', 'louisiana governor']
             for term in terms:
                  search(term, submission);
 
