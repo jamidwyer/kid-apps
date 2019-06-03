@@ -43,3 +43,4 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-wv.py # 2020-11-03
 	python 2020-11-03-in.py # 2020-11-03
 	python 2020-11-03-ut.py # 2020-11-03
+	python 2020-11-03-ar.py # 2020-11-03
