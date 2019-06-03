@@ -1,9 +1,10 @@
 #!/usr/bin/python
+# coding: utf-8
+
 import praw
 import pdb
 import re
 import os
-
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -23,7 +24,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("washington.dat", "r")
+local_subs = open("newyork.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,17 +40,19 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jayapal', 'washington governor', 'backers find biggest foe in their own backyard', 'west plains could be economic', 'democratic socialist truck driver', 'human composting', 'measles vaccine in wash.', 'washington passes bill', 'extort members of his own right-wing', 'avista wants to raise your rates', 'incarcerated at airway heights', 'congressman caught planning violent attacks', 'washington state senator', 'science is hard for republicans', ' wa dems', 'first state carbon tax', 'nathan choi', 'matt shea', 'wa-05', 'seattle minimum wage', 'wa state primary', 'washington state republican', 'Patriot Prayer', 'mcmorris rogers', 'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', 's up bootlickers', 'a father, a veteran, and an anarchist', 'Seattle-area prosecutor', 'initiative 1600', 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'governor inslee', 'gov. inslee', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['tiffany caban', 'DA candidate Cab', 'new york city is creating jobs', 'Protestors in NYC', 'No Blind People are Going to Live in Trump Tower', 'new york chapter of the proud boys', 'bronx dsa', 'activists in new york', 'taxi driver in debt', 'new york\'s housing crisis', 'marijuana charges in new york', 'new york city dsa', 'Billionaires Row']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Washington 2020 Election \n\n"
-            "[Register to Vote](https://weiapplets.sos.wa.gov/MyVote/#/login) \n\n"
-            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): March 10, 2020 \n\n"
-            "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 3, 2020 \n\n")
+
+        text = ("New York 2019 Election \n\n"
+            "[Primary Election Registration Deadline](https://voterreg.dmv.ny.gov/MotorVoter/): May 31, 2019 \n\n"
+            "[Primary Election](https://voterreg.dmv.ny.gov/MotorVoter/): June 25, 2019 \n\n"
+            "[General Election Registration Deadline](https://voterlookup.elections.state.ny.us/votersearch.aspx): October 11, 2019 \n\n"
+            "[General Election](https://voterlookup.elections.state.ny.us/votersearch.aspx): November 5, 2019")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

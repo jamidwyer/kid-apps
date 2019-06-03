@@ -23,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("washington.dat", "r")
+local_subs = open("alaska.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,17 +40,17 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['jayapal', 'washington governor', 'backers find biggest foe in their own backyard', 'west plains could be economic', 'democratic socialist truck driver', 'human composting', 'measles vaccine in wash.', 'washington passes bill', 'extort members of his own right-wing', 'avista wants to raise your rates', 'incarcerated at airway heights', 'congressman caught planning violent attacks', 'washington state senator', 'science is hard for republicans', ' wa dems', 'first state carbon tax', 'nathan choi', 'matt shea', 'wa-05', 'seattle minimum wage', 'wa state primary', 'washington state republican', 'Patriot Prayer', 'mcmorris rogers', 'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', 's up bootlickers', 'a father, a veteran, and an anarchist', 'Seattle-area prosecutor', 'initiative 1600', 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', 'washington lawmakers', 'washington Legislature', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'governor inslee', 'gov. inslee', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+            terms = ['alaska senate', 'election in alaska', 'alaska governor', 'congressman young', 'pebble mine', 'arctic national wildlife refuge', 'alaska lawmaker', 'alaska politicians', 'Bill Wielechowski', 'don young']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Washington 2020 Election \n\n"
-            "[Register to Vote](https://weiapplets.sos.wa.gov/MyVote/#/login) \n\n"
-            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): March 10, 2020 \n\n"
-            "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 3, 2020 \n\n")
+        text = ("Alaska 2020 Election \n\n"
+            "[Register to Vote](https://voterregistration.alaska.gov/) \n\n"
+            "[Primary Election](http://www.elections.alaska.gov/Core/votingbymail.php): August 18, 2020 \n\n"
+            "[General Election](http://www.elections.alaska.gov/Core/votingbymail.php): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
