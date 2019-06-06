@@ -23,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("utah.dat", "r")
+local_subs = open("ct.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -39,16 +40,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['thousands of phone calls threatening to kill members of Congress', 'Utah Man Arrested After Allegedly Threatening to Kill Members of Congress', 'Utah man accused of threatening to kill members of Congress', 'beginning of the fascist takeover', 'utah judge was suspended', 'police in utah', 'nerds out and the crowds go crazy', 'utah proposition 4', 'steve schmidt', 'House Speaker Greg Hughes', 'alicia colvin', 'utah republican', 'Utah medical marijuana ballot initiative,', 'senate in utah', 'Utah Medical Marijuana Initiative', 'ballot in Utah', 'medical marijuana in utah', 'us congress from utah', 'sheldon kirkham', 'donald trump highway bill', 'the Utah House', 'romney', 'Sittner', 'legalized in Utah', 'utah legislat', 'House Bill 330', 'utah lawmaker', 'rep stewart', 'utah state senate', 'legalize medical marijuana in Utah', 'Hatch\'s Seat', 'jenny wilson', 'Bears Ears Deserves Protection', 'Congressman Stewart', 'bears ears reductions', 'john curtis', 'ut-3', 'ut-03', 'Utah national monument', 'StandWithBearsEars', 'chris stewart', 'rob bishop', 'ut-01', 'orrin hatch', 'sen. hatch', 'senator hatch', 'shrink Bears Ears', 'sponsored by Hatch', 'mia love', 'mia b. love', 'rep love', 'rep. love', 'representative love', 'congresswoman love', 'ut-04', 'ut-4']
+            terms = ['sandy hook case', 'rutigliano', 'no means yes, yes means anal', 'Jahana Hayes', 'sandy hook conspiracy', 'sandy hook shooting', 'ct senate', ' CT Green Party', 'Connecticut lawmaker', 'green party of ct', 'Connecticut legislat', 'elizabeth esty', 'sandy hook victim', 'green party of Connecticut', 'Legislative Seats in CT', 'phil young', 'Connecticut Democrat', 'legislative seats in Connecticut', 'flip GOP-held Connecticut seat', 'philyoungct', 'ned lamont']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Utah 2020 Election \n\n"
-            "[Register to Vote](https://secure.utah.gov/voterreg/login.html?selection=REGISTER) \n\n"
-            "[General Election](https://votesearch.utah.gov/voter-search/search/search-by-address/how-and-where-can-i-vote): November 3, 2020 \n\n")
+        text = ("Connecticut 2020 Election\n\n"
+            "[Register to Vote](https://voterregistration.ct.gov/OLVR/welcome.do)\n\n"
+            "[General Election](http://www.dir.ct.gov/sots/LookUp.aspx): November 3, 2020\n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -56,7 +57,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 
