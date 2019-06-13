@@ -49,6 +49,8 @@ def search(term, submission):
         # Reply to the post
         text = ("Colorado 2020 Election \n\n"
             "[Register to Vote](https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml) \n\n"
+            "[Presidential Primary Election](https://www.sos.state.co.us/voter/pages/pub/home.xhtml): March 3, 2020 \n\n"
+            "[Primary Election](https://www.sos.state.co.us/voter/pages/pub/home.xhtml): June 30, 2020 \n\n"
             "[Ballots Due](https://www.sos.state.co.us/voter/pages/pub/home.xhtml): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
