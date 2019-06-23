@@ -46,6 +46,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Oklahoma 2020 Election \n\n"
+            "[Presidential Primary Election Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html): February 7, 2020 \n\n"
+            "[Presidential Primary Election](https://services.okelections.us/AbsenteeApplication/): March 3, 2020 \n\n"
             "[Primary Election Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html): June 5, 2020 \n\n"
             "[Primary Election](https://services.okelections.us/AbsenteeApplication/): June 30, 2020 \n\n"
             "[General Election Registration Deadline](https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html): October 9, 2020 \n\n"
