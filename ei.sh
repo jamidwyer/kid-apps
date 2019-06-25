@@ -2,6 +2,7 @@
 cd /home/ubuntu/running-against-bot
 	python 2019-11-05-ny.py # 2019-06-25
 	python 2019-11-05-ms.py # 2019-07-08
+	python 2019-08-06-ia.py # 2019-07-26
 	python 2019-09-10-nc.py # 2019-08-15
 	python 2019-11-05-va.py # 2019-10-15
 	python 2019-11-16-la.py # 2019-11-16
