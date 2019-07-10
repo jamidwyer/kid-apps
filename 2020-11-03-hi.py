@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("alaska.dat", "r")
+local_subs = open("hi.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -40,17 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['governor is trying to destroy its universities', '90 degrees in alaska', 'alaska senate', 'election in alaska', 'alaska governor', 'congressman young', 'pebble mine', 'arctic national wildlife refuge', 'alaska lawmaker', 'alaska politicians', 'Bill Wielechowski', 'don young']
+            terms = ['hawaii has decriminalized', 'legal in Hawaii', 'hawaii legislat', 'Hawaii Ballot', 'kaniela']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Alaska 2020 Election \n\n"
-            "[Register to Vote](https://voterregistration.alaska.gov/) \n\n"
-            "[Primary Election](http://www.elections.alaska.gov/Core/votingbymail.php): August 18, 2020 \n\n"
-            "[General Election](http://www.elections.alaska.gov/Core/votingbymail.php): November 3, 2020 \n\n")
+        text = ("Hawaii 2020 Election \n\n"
+            "[Primary Voter Registration Deadline](https://olvr.hawaii.gov/register.aspx): July 9, 2020 \n\n"
+            "[Primary Election](https://elections.hawaii.gov/wp-content/uploads/Voter-Registration-and-Permanent-Absentee-Application_Form-Fillable.pdf): August 8, 2020 \n\n"
+            "[General Voter Registration Deadline](https://olvr.hawaii.gov/register.aspx): October 5, 2020 \n\n"
+            "[General Election](https://elections.hawaii.gov/wp-content/uploads/Voter-Registration-and-Permanent-Absentee-Application_Form-Fillable.pdf): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
