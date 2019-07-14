@@ -49,6 +49,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Michigan 2020 Election \n\n"
             "[Register to Vote](https://www.michigan.gov/documents/MIVoterRegistration_97046_7.pdf) \n\n"
+            "[Primary Election](https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8728-21037--,00.html): March 10, 2020 \n\n")
             "[General Election](https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8728-21037--,00.html): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
