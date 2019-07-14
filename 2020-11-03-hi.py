@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['great pacific garbage patch', 'hawaii has decriminalized', 'legal in Hawaii', 'hawaii legislat', 'Hawaii Ballot', 'kaniela']
+            terms = ['26th state to decriminalize', 'great pacific garbage patch', 'hawaii has decriminalized', 'legal in Hawaii', 'hawaii legislat', 'Hawaii Ballot', 'kaniela']
             for term in terms:
                  search(term, submission);
 
