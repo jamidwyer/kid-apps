@@ -8,6 +8,7 @@ cd /home/ubuntu/running-against-bot
 	python 2019-11-05-va.py # 2019-10-15
 	python 2019-11-16-la.py # 2019-11-16
 	python 2020-11-03-ia.py # 2020-01-24
+	python 2020-11-03-sc.py # 2020-01-30
 	python 2020-11-03-tn.py # 2020-02-02
 	python 2020-11-03-nc.py # 2020-02-07
 	python 2020-11-03-ok.py # 2020-02-07
@@ -38,7 +39,6 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-ak.py # 2020-08-18
 	python 2020-11-03-wy.py # 2020-08-18
 	python 2020-11-03-tx.py # 2020-10-06
-	python 2020-11-03-sc.py # 2020-11-03
 	python 2020-11-03-oh.py # 2020-11-03
 	python 2020-11-03-nj.py # 2020-11-03
 	python 2020-11-03-pa.py # 2020-11-03
