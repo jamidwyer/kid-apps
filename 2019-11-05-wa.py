@@ -1,4 +1,3 @@
-# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -24,13 +23,13 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("kentucky.dat", "r")
+local_subs = open("washington.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
 
-# Get the values from our subreddit
+# Get the top values from our subreddit
 def searchAndPost(sub):
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.hot(limit=50):
@@ -40,18 +39,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Kentucky to Remove Up to 250,000 Inactive Voters', 'the fucking turtle', 'in the Way of Federal Weed Legalization', 'bitch mitch', 'plan for avoiding debt default', 'Threatened, Beat, Tased, And Arrested A Man For Complaining About Being Beaten By him', 'kentucky coal', 'glasses to the homeless is against the law', 'kentucky is a top target', 'Louisville, Kentucky Metro Council', 'kentucky vot', 'trump over escalating tensions', 'Election security bills face GOP buzzsaw', 'war against free and fair elections', 'senate majority bitch', 'Bipartisan marijuana banking bill', 'russian investment in a kentucky', 'ky-sen', 'firefighting jobs with largest federal', 'lives are lost every day to our broken health care system', 'rep. yarmuth', 'kentucky ranks among worst states', 'toyota rebukes trump', '\"2019 Congressional District Census\"', 'remitcha', 'mcconnell']
+            terms = ['poisoning puget sound', 'toxins in the Salish Sea', 'toxics into Puget Sound', 'Progressive Boomers Are Making It Impossible For Cities To Fix The Housing Crisis', 'prime day strike', 'seattle transpride', 'trans pride seattle', '9-an-hour engineers', 'seattle minimum wage', 'the head tax', 's up bootlickers', 'Seattle-area prosecutor', 'Seattle Democratic Socialists of America']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Kentucky 2020 Election \n\n"
-            "[Primary Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): April 20, 2020 \n\n"
-            "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 19, 2020 \n\n"
-            "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 5, 2020 \n\n"
-            "[General Election](https://vrsws.sos.ky.gov/VIC/): November 3, 2020 \n\n")
+        text = ("Washington 2019 Election \n\n"
+            "[Primary Registration Deadline](https://weiapplets.sos.wa.gov/MyVote/#/login): July 29, 2019 \n\n"
+            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): August 6, 2019 \n\n"
+            "[General Registration Deadline](https://weiapplets.sos.wa.gov/MyVote/#/login): October 28, 2019 \n\n"
+            "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 5, 2019 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
@@ -59,7 +58,7 @@ def search(term, submission):
             print("Error : ", submission.title)
             pass
 
-        # Write the post id back to the file
+        # Write our updated list back to the file
         with open("posts_replied_to.txt", "a") as f:
             f.write(submission.id + "\n")
 

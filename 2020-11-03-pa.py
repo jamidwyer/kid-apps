@@ -48,6 +48,7 @@ def search(term, submission):
         # No early voting
         text = ("Pennsylvania 2020 Election \n\n"
             "[Register to Vote](https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx) \n\n"
+            "[Primary Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): April 28, 2020 \n\n"
             "[General Election](https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
