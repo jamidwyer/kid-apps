@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['blue mississippi', 'mississippi is forbidding', 'cut off black farmers', 'mississippi goddam', 'dolphins along the gulf coast', 'equal rights amendment', 'mississippi gov', 'ms-gov', 'infant mortality rate', 'ms christian lawmaker', 'doug mcleod', 'mississippi lawmaker punched wife', 'the mississippi house', 'poorest state']
+            terms = ['minnie cox', 'blue mississippi', 'mississippi is forbidding', 'cut off black farmers', 'mississippi goddam', 'dolphins along the gulf coast', 'equal rights amendment', 'mississippi gov', 'ms-gov', 'infant mortality rate', 'ms christian lawmaker', 'doug mcleod', 'mississippi lawmaker punched wife', 'the mississippi house', 'poorest state']
             for term in terms:
                  search(term, submission);
 
