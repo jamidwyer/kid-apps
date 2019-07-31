@@ -4,6 +4,7 @@ import pdb
 import re
 import os
 
+
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
 
@@ -22,11 +23,12 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("virginia.dat", "r")
+local_subs = open("nd.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
+
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -38,18 +40,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. wexton', 'fake presidential seal']
+            terms = ['trade wars are easy to win', 'andrew sadek', 'voters in north dakota', 'north dakota vote', 'north dakota likely to vote', 'March in Antler, ND', 'North Dakota GOP Candidate', 'North Dakota Democrat', 'nd gop senate candidate', 'North Dakota candidate', 'emineth', 'rep kevin cramer', 'congressman kramer']
             for term in terms:
                  search(term, submission);
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        # No early voting
-        text = ("Virginia 2020 Election \n\n"
-            "[General Election Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): October 15, 2019 \n\n"
-            "[Primary Election](https://vote.elections.virginia.gov/VoterInformation): March 3, 2020 \n\n"
-            "[General Election](https://vote.elections.virginia.gov/VoterInformation): November 3, 2020 \n\n")
+        text = ("North Dakota 2020 Election \n\n"
+            "[Primary Election](https://vip.sos.nd.gov/absentee): June 9, 2020 \n\n"
+            "[General Election](https://vip.sos.nd.gov/absentee): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
