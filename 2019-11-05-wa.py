@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['moms for seattle', 'praxis in the emerald city', 'brendan kolding', 'Take away the last this homeless person has with our new app', 'poisoning puget sound', 'toxins in the Salish Sea', 'toxics into Puget Sound', 'Progressive Boomers Are Making It Impossible For Cities To Fix The Housing Crisis', 'prime day strike', 'seattle transpride', 'trans pride seattle', '9-an-hour engineers', 'seattle minimum wage', 'the head tax', 's up bootlickers', 'Seattle-area prosecutor', 'Seattle Democratic Socialists of America']
+            terms = ['seattle now most expensive city', 'moms for seattle', 'praxis in the emerald city', 'brendan kolding', 'Take away the last this homeless person has with our new app', 'poisoning puget sound', 'toxins in the Salish Sea', 'toxics into Puget Sound', 'Progressive Boomers Are Making It Impossible For Cities To Fix The Housing Crisis', 'prime day strike', 'seattle transpride', 'trans pride seattle', '9-an-hour engineers', 'seattle minimum wage', 'the head tax', 's up bootlickers', 'Seattle-area prosecutor', 'Seattle Democratic Socialists of America']
             for term in terms:
                  search(term, submission);
 
