@@ -40,6 +40,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-or.py # 2020-05-19
 	python 2020-11-03-nv.py # 2020-06-09
 	python 2020-11-03-nd.py # 2020-06-09
+	python 2020-11-03-nm.py # 2020-06-20
 	python 2020-11-03-az.py # 2020-07-06
 	python 2020-11-03-hi.py # 2020-07-09
 	python 2020-11-03-vt.py # 2020-08-11
