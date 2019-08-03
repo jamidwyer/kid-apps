@@ -39,7 +39,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Man dies in front of 11-year-old daughter at US border detention camp', 'deb haaland', 'national popular vote', 'Native American Congresswoman', 'green party of new mexico', 'antoinette sedillo lopez', 'new mexico attorney general', 'clayburn griffin', 'jo anne roake', 'New Mexico vot', 'NM Democra']
+            terms = ['new mexico could be primed for it', 'Man dies in front of 11-year-old daughter at US border detention camp', 'deb haaland', 'national popular vote', 'Native American Congresswoman', 'green party of new mexico', 'antoinette sedillo lopez', 'new mexico attorney general', 'clayburn griffin', 'jo anne roake', 'New Mexico vot', 'NM Democra']
             for term in terms:
                  search(term, submission);
 
