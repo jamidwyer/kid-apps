@@ -36,7 +36,7 @@ def search(term, submission):
             "[Presidential Primary Election Pre-Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): March 3, 2020 \n\n"
             "[Presidential Primary Election](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): March 3, 2020 \n\n"
             "[Primary Election Pre-Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): July 23, 2020 \n\n"
-            "[Primary Election](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): August 13, 2020 \n\n"
+            "[Primary Election](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): August 11, 2020 \n\n"
             "[General Election Pre-Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): November 3, 2020 \n\n"
             "[General Election](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): November 3, 2020 \n\n")
 
