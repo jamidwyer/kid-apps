@@ -47,7 +47,7 @@ def search(term, submission):
         # Reply to the post
         # No early voting
         text = ("Virginia 2020 Election \n\n"
-            "[General Election Registration Deadline](https://vote.elections.virginia.gov/Registration/Eligibility): October 15, 2019 \n\n"
+            "[Register to Vote](https://vote.elections.virginia.gov/Registration/Eligibility) \n\n"
             "[Primary Election](https://vote.elections.virginia.gov/VoterInformation): March 3, 2020 \n\n"
             "[General Election](https://vote.elections.virginia.gov/VoterInformation): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
