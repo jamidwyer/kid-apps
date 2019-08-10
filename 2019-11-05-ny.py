@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['cop walks up to crowd and punches 70 year old', 'AOC promotes local elections', 'NYPD officer', 'eric garner', 'nypd used deadly force', 'rally for Cabán', 'latina backed by aoc', 's policy on Immigration Status.', 'tiffany caban', 'DA candidate Cab', 'new york city is creating jobs', 'Protestors in NYC', 'No Blind People are Going to Live in Trump Tower', 'new york chapter of the proud boys', 'bronx dsa', 'activists in new york', 'taxi driver in debt', 'new york\'s housing crisis', 'marijuana charges in new york', 'new york city dsa', 'Billionaires Row']
+            terms = ['killed for having information that would implicate top government officials', 'cop walks up to crowd and punches 70 year old', 'AOC promotes local elections', 'NYPD officer', 'eric garner', 'nypd used deadly force', 'rally for Cabán', 'latina backed by aoc', 's policy on Immigration Status.', 'tiffany caban', 'DA candidate Cab', 'new york city is creating jobs', 'Protestors in NYC', 'No Blind People are Going to Live in Trump Tower', 'new york chapter of the proud boys', 'bronx dsa', 'activists in new york', 'taxi driver in debt', 'new york\'s housing crisis', 'marijuana charges in new york', 'new york city dsa', 'Billionaires Row']
             for term in terms:
                  search(term, submission);
 
