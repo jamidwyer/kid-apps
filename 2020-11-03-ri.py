@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['ice agent runs over protestors', 'truck into ice protestors', 'protestors in rhode island', 'ri to lobby', 'equality act', 'rhode island bill', 'RI State Senator']
+            terms = ['wyatt detention center', 'ice agent runs over protestors', 'truck into ice protestors', 'protestors in rhode island', 'ri to lobby', 'equality act', 'rhode island bill', 'RI State Senator']
             for term in terms:
                  search(term, submission);
 
@@ -48,7 +48,11 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Rhode Island 2020 Election \n\n"
-            "[Register to Vote](https://vote.sos.ri.gov/) \n\n"
+            "[Presidential Preference Primary Voter Registration Deadline](https://vote.sos.ri.gov/): March 29, 2020 \n\n"
+            "[Presidential Preference Primary Election](https://vote.sos.ri.gov/#general-search): April 28, 2020 \n\n"
+            "[Primary Election Voter Registration Deadline](https://vote.sos.ri.gov/): August 17, 2020 \n\n"
+            "[Primary Election](https://vote.sos.ri.gov/#general-search): September 15, 2020 \n\n"
+            "[General Election Voter Registration Deadline](https://vote.sos.ri.gov/): October 4, 2020 \n\n"
             "[General Election](https://vote.sos.ri.gov/#general-search): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
