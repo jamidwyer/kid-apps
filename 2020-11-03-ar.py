@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['rep. garry smith', 'Well Jason I think that backfired', 'equal rights amendment', 'al gore an apology', 'worker advocates are coming to walmart', 'sen. rapert', 'arkansas republican', 'James M. Hinds', 'french hill', 'ar-02', 'ar-2', 'rep. hill', 'rep hill', 'representative hill', 'congressman hill']
+            terms = ['rally in little rock', 'rep. garry smith', 'Well Jason I think that backfired', 'equal rights amendment', 'al gore an apology', 'worker advocates are coming to walmart', 'sen. rapert', 'arkansas republican', 'James M. Hinds', 'french hill', 'ar-02', 'ar-2', 'rep. hill', 'rep hill', 'representative hill', 'congressman hill']
             for term in terms:
                  search(term, submission);
 
@@ -49,6 +49,8 @@ def search(term, submission):
         # Reply to the post
         text = ("Arkansas 2020 Election \n\n"
             "[Register to Vote](https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information/request-for-a-voter-registration-application) \n\n"
+            "[Presidential Preference Primary Election](https://www.voterview.ar-nova.org/VoterView/Home.do): March 3, 2020 \n\n"
+            "[Primary Election](https://www.voterview.ar-nova.org/VoterView/Home.do): March 31, 2020 \n\n"
             "[General Election](https://www.voterview.ar-nova.org/VoterView/Home.do): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
