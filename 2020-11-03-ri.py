@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Driving Through Never Again Action Protestors', 'protest in ri', 'wyatt detention center', 'ice agent runs over protestors', 'truck into ice protestors', 'protestors in rhode island', 'ri to lobby', 'equality act', 'rhode island bill', 'RI State Senator']
+            terms = ['Driving Through Never Again Action Protestors', 'protest in ri', 'wyatt detention center', 'truck over a group of protestors', 'ice agent runs over protestors', 'truck into ice protestors', 'protestors in rhode island', 'ri to lobby', 'equality act', 'rhode island bill', 'RI State Senator']
             for term in terms:
                  search(term, submission);
 
