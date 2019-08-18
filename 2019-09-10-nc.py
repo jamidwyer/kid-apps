@@ -47,7 +47,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("North Carolina Congressional District 9 Special Election \n\n"
-            "[Voter Registration Deadline](https://www.ncsbe.gov/Portals/0/Forms/NCVoterRegForm06W.pdf): August 16, 2019 \n\n"
             "[General Election](https://www.ncsbe.gov/Voting-Options): September 10, 2019 \n\n")
         print("Bot replying to : ", submission.title)
         try:

@@ -1,7 +1,7 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-	python 2019-09-10-nc.py # 2019-08-15
 	python 2019-11-05-az.py # 2019-08-27
+	python 2019-09-10-nc.py # 2019-09-10
 	python 2019-11-05-ky.py # 2020-10-07
 	python 2019-11-05-ms.py # 2019-10-07
 	python 2019-11-05-ny.py # 2019-10-11
