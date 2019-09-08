@@ -1,5 +1,6 @@
+.gitignore
 praw.ini
-wcb.pem
+*.pem
 banned_bot/*
 old/*
 past_elections/*
