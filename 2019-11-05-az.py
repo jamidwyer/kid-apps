@@ -48,7 +48,6 @@ def search(term, submission):
         # Reply to the post
         text = ("Arizona 2019 Election \n\n"
             "[Register to Vote](https://servicearizona.com/webapp/evoter/register?execution=e1s2)\n\n"
-            "[Primary Election](https://azsos.gov/elections/voting-election/contact-information-county-election-officials): August 27, 2019\n\n"
             "[General Election](https://azsos.gov/elections/voting-election/contact-information-county-election-officials): November 5, 2019 \n\n")
         print("Bot replying to : ", submission.title)
         try:
