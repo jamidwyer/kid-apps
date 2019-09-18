@@ -24,6 +24,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-fl.py # 2020-02-18
 	python 2020-11-03-oh.py # 2020-02-18
 	python 2020-11-03-mn.py # 2020-03-03
+	python 2020-11-03-me.py # 2020-03-03
 	python 2020-11-03-va.py # 2020-03-03
 	python 2020-11-03-ut.py # 2020-03-03
 	python 2020-11-03-co.py # 2020-03-03
@@ -49,7 +50,6 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-ak.py # 2020-08-18
 	python 2020-11-03-wy.py # 2020-08-18
 	python 2020-11-03-nj.py # 2020-11-03
-	python 2020-11-03-me.py # 2020-11-03
 	python 2020-11-03-ks.py # 2020-11-03
 	python 2020-11-03-ms.py # 2020-11-03
 	python 2020-11-03-wv.py # 2020-11-03
