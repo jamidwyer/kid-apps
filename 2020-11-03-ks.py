@@ -46,6 +46,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Kansas 2020 Election \n\n"
             "[Register to Vote](https://www.kdor.ks.gov/Apps/VoterReg/secure/default.aspx) \n\n"
+            "[Primary Election](https://myvoteinfo.voteks.org/VoterView/PollingPlaceSearch.do): August 4, 2020 \n\n"
             "[General Election](https://myvoteinfo.voteks.org/VoterView/PollingPlaceSearch.do): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
