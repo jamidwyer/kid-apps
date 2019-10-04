@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 import praw
 import pdb
@@ -23,12 +24,11 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("vt.dat", "r")
+local_subs = open("nebraska.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
 subs.extend(ssubs)
-
 
 # Get the top values from our subreddit
 def searchAndPost(sub):
@@ -40,17 +40,18 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['this awesome car parks where i do', 'Trust is the culmination of years of consistency', 'terrorizing vermont', 'Ten cities say Trump owes them money', 'mayor of burlington', 'rally on saturday in montpelier', 'sanders rally: montpelier', 'sanders to the military industrial', 'vermont gubernatorial', 'nomination in vermont', 'christine hallquist', 'vermont house', 'congressman rick larsen', 'vermont legislature', 'governor of vermont', 'vermont gov', 'vermont senate', 'GOP in Vermont']
+            terms = ['Firing Away on Fifth Avenue, and We Are Fucked', 'seth rich', 'slain dnc staffer', 'don bacon', 'rep. bacon', 'congressman bacon', 'rep bacon']
             for term in terms:
-                 search(term, submission);
+                search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("Vermont 2020 Election \n\n"
-            "[Register to Vote](https://olvr.sec.state.vt.us/) \n\n"
-            "[Primary Election](https://mvp.sec.state.vt.us/): August 11, 2020 \n\n"
-            "[General Election](https://mvp.sec.state.vt.us/): November 3, 2020 \n\n")
+        text = ("Nebraska 2020 Election \n\n"
+            "[Register to Vote](https://www.nebraska.gov/apps-sos-voter-registration/eligibility/citizen) \n\n"
+            "[Primary Election](https://sos.nebraska.gov/elec/studentvotersnebraskaearlyvotingballots1.html): May 12, 2020 \n\n"
+            "[General Election](https://sos.nebraska.gov/elec/studentvotersnebraskaearlyvotingballots1.html): November 3, 2020 \n\n")
+
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)

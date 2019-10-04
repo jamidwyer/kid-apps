@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['nungesser', 'Hunger Strikes Erupt Nationwide In ICE Detention', 'la-gov', 'louisiana launching medical marijuana', 'Edwards played to strength during Hurricane Barry', 'la. right to life', 'dolphins along the gulf coast', 'louisiana has the highest', 'equal rights amendment', 'keep marriage legal for 15, 16', 'protest louisiana', 'Very sad day to be a Louisianian', 'the current state of American liberalism', 'john bel edwards', 'us children are living below the poverty line', 'louisiana decided to curb mass incarceration', 'louisiana fall elections', 'louisiana gov']
+            terms = ['jeff landry', 'simone champagne', 'simone champange', 'louisiana vot', 'nungesser', 'la-gov', 'louisiana launching medical marijuana', 'la. right to life', 'louisiana has the highest', 'equal rights amendment', 'protest louisiana', 'john bel edwards', 'louisiana fall elections', 'louisiana gov']
             for term in terms:
                  search(term, submission);
 
@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Louisiana 2019 Election \n\n"
-            "[Primary Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): September 21, 2019 \n\n"
             "[Primary Early Voting](https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteEarly/Pages/default.aspx): September 28 - October 5, 2019 \n\n"
             "[Primary Election](https://voterportal.sos.la.gov/Home/VoterLogin): October 12, 2019 \n\n"
             "[General Voter Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): October 26, 2019 \n\n"

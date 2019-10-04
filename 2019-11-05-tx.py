@@ -23,7 +23,7 @@ else:
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
 
-local_subs = open("northcarolina.dat", "r")
+local_subs = open("texas.dat", "r")
 text_file = open("standardsubs.dat", "r")
 subs = local_subs.read().split('\n')
 ssubs = text_file.read().split('\n')
@@ -39,16 +39,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['GOP abandons female House hopeful', 'nc09', 'nc-09', 'candidate mark harris', 'mcrae dowless', 'mccready']
+            terms = ['texas is going to turn blue']
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
-        text = ("North Carolina Congressional Districts 3 and 9 Special Election \n\n"
-            "[Early Voting](https://s3.amazonaws.com/dl.ncsbe.gov/One-Stop_Early_Voting/2019/One-Stop_Sites_September2019.pdf): August 21 - September 6, 2019 \n\n"
-            "[General Election](https://www.ncsbe.gov/Voting-Options): September 10, 2019 \n\n")
+        text = ("Texas 28th Statehouse District Special Election \n\n"
+            "[General Election Registration Deadline](http://www.votetexas.gov/register-to-vote/): October 7, 2019 \n\n"
+            "[General Election](https://teamrv-mvp.sos.texas.gov/MVP/mvp.do): November 3, 2019 \n\n")
         print("Bot replying to : ", submission.title)
         try:
             submission.reply(text)
