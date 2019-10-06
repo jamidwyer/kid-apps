@@ -48,7 +48,7 @@ def search(term, submission):
         # Reply to the post
         text = ("Utah 2020 Election \n\n"
             "[Register to Vote](https://secure.utah.gov/voterreg/login.html?selection=REGISTER) \n\n"
-            "[Primary Election](https://votesearch.utah.gov/voter-search/search/search-by-address/how-and-where-can-i-vote): November 3, 2020 \n\n"
+            "[Primary Election](https://votesearch.utah.gov/voter-search/search/search-by-address/how-and-where-can-i-vote): March 3, 2020 \n\n"
             "[General Election](https://votesearch.utah.gov/voter-search/search/search-by-address/how-and-where-can-i-vote): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
