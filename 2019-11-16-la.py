@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Louisiana 2019 Election \n\n"
-            "[Primary Election](https://voterportal.sos.la.gov/Home/VoterLogin): October 12, 2019 \n\n"
             "[General Voter Registration Deadline](https://voterportal.sos.la.gov/VoterRegistration): October 26, 2019 \n\n"
             "[Early Voting](https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteEarly/Pages/default.aspx): November 2 - November 9, 2019 \n\n"
             "[General Election](https://voterportal.sos.la.gov/Home/VoterLogin): November 16, 2019")
