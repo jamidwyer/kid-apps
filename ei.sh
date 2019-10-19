@@ -1,6 +1,5 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-	python 2020-11-03-ny.py # 2020-10-19
 	python 2019-11-16-la.py # 2019-10-26
 	python 2019-11-05-wa.py # 2019-10-28
 	python 2019-11-05-ky.py # 2020-11-05
@@ -19,6 +18,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-ok.py # 2020-02-07
 	python 2020-11-03-mo.py # 2020-02-12
 	python 2020-11-03-ma.py # 2020-02-12
+	python 2020-11-03-ny.py # 2020-02-14
 	python 2020-11-03-la.py # 2020-02-15
 	python 2020-11-03-al.py # 2020-02-15
 	python 2020-11-03-ca.py # 2020-02-17
