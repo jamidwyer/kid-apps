@@ -39,9 +39,9 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Poverty is still a huge problem in America', 'minnie cox', 'blue mississippi', 'mississippi is forbidding', 'cut off black farmers', 'mississippi goddam', 'dolphins along the gulf coast', 'equal rights amendment', 'governor of mississippi', 'mississippi gov', 'ms-gov', 'infant mortality rate', 'ms christian lawmaker', 'doug mcleod', 'mississippi lawmaker punched wife', 'the mississippi house', 'poorest state']
+            terms = ['trump tells louisiana', 'Poverty is still a huge problem in America', 'minnie cox', 'blue mississippi', 'mississippi is forbidding', 'cut off black farmers', 'mississippi goddam', 'dolphins along the gulf coast', 'equal rights amendment', 'governor of mississippi', 'mississippi gov', 'ms-gov', 'infant mortality rate', 'ms christian lawmaker', 'doug mcleod', 'mississippi lawmaker punched wife', 'the mississippi house', 'poorest state']
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
