@@ -46,6 +46,8 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Georgia 2020 Election \n\n"
+            "[Presidential Primary Election Registration Deadline](https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button): February 24, 2020 \n\n" 
+            "[Presidential Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): March 24, 2020 \n\n"
             "[Primary Election Registration Deadline](https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button): April 20, 2020 \n\n" 
             "[Primary Election](https://www.mvp.sos.ga.gov/MVP/mvp.do): May 19, 2020 \n\n"
             "[General Election Registration Deadline](https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button): October 5, 2020 \n\n" 
