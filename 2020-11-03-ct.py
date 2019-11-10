@@ -40,7 +40,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['now ban ar-15s', 'lamont signs bill', 'infowars', 'sandy hook parent', 'alex jones', 'sandy hook case', 'rutigliano', 'no means yes, yes means anal', 'Jahana Hayes', 'sandy hook conspiracy', 'sandy hook shooting', 'ct senate', ' CT Green Party', 'Connecticut lawmaker', 'green party of ct', 'Connecticut legislat', 'elizabeth esty', 'sandy hook victim', 'green party of Connecticut', 'Legislative Seats in CT', 'phil young', 'Connecticut Democrat', 'legislative seats in Connecticut', 'flip GOP-held Connecticut seat', 'philyoungct', 'ned lamont']
+            terms = ['Unions are encouraging members to run', 'lamont signs bill', 'infowars', 'sandy hook parent', 'alex jones', 'sandy hook case', 'rutigliano', 'no means yes, yes means anal', 'Jahana Hayes', 'sandy hook conspiracy', 'sandy hook shooting', 'ct senate', ' CT Green Party', 'Connecticut lawmaker', 'green party of ct', 'Connecticut legislat', 'elizabeth esty', 'sandy hook victim', 'green party of Connecticut', 'Legislative Seats in CT', 'phil young', 'Connecticut Democrat', 'legislative seats in Connecticut', 'flip GOP-held Connecticut seat', 'philyoungct', 'ned lamont']
             for term in terms:
                  search(term, submission)
 
