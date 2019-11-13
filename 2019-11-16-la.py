@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['Citizens for a New Louisiana', 'jeff landry', 'simone champagne', 'louisiana vot', 'nungesser', 'rispone', 'la-gov', 'louisiana launching medical marijuana', 'la. right to life', 'louisiana has the highest', 'governor edwards', 'protest louisiana', 'john bel edwards', 'louisiana fall elections', 'louisiana gov']
+            terms = ['louisiana rape victim', 'Citizens for a New Louisiana', 'jeff landry', 'simone champagne', 'louisiana vot', 'nungesser', 'rispone', 'la-gov', 'louisiana launching medical marijuana', 'la. right to life', 'louisiana has the highest', 'governor edwards', 'protest louisiana', 'john bel edwards', 'louisiana fall elections', 'louisiana gov']
             for term in terms:
                  search(term, submission)
 
@@ -46,7 +46,6 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Louisiana 2019 Election \n\n"
-            "[Early Voting](https://www.sos.la.gov/ElectionsAndVoting/Vote/VoteEarly/Pages/default.aspx): November 2 - November 9, 2019 \n\n"
             "[General Election](https://voterportal.sos.la.gov/Home/VoterLogin): November 16, 2019")
         print("Bot replying to : ", submission.title)
         try:
