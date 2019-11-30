@@ -38,7 +38,7 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['electable', 'Sanders team accuses media of ignoring', 'nh for beto', 'unhinged display should frighten everyone', 'donald trump is terrified', 'a hit in n.h.', 'new hampshire primary', 'Trump supporter here in North Conway', 'campaign stop in Peterborough', 'new hampshire democrat', 'nh-sen', 'new hampshire rally', 'nh pride parade', 'Spending The Day On The Trail With Andrew Yang', 'town hall in londonderry', 'throw their rear ends in jail', 'nh poll', 'new hampshire supreme court', 'dinesh d', 'nhpolitics', 'New Hampshire seat in Trump district', 'spagnuolo', 'New Hampshire House vot', 'New Hampshire Lawmakers', 'New Hampshire vote']
+            terms = ['^(?!.*delectable).*electable.*$', 'Sanders team accuses media of ignoring', 'nh for beto', 'unhinged display should frighten everyone', 'donald trump is terrified', 'a hit in n.h.', 'new hampshire primary', 'Trump supporter here in North Conway', 'campaign stop in Peterborough', 'new hampshire democrat', 'nh-sen', 'new hampshire rally', 'nh pride parade', 'Spending The Day On The Trail With Andrew Yang', 'town hall in londonderry', 'throw their rear ends in jail', 'nh poll', 'new hampshire supreme court', 'dinesh d', 'nhpolitics', 'New Hampshire seat in Trump district', 'spagnuolo', 'New Hampshire House vot', 'New Hampshire Lawmakers', 'New Hampshire vote']
             for term in terms:
                  search(term, submission)
 
