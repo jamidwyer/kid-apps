@@ -40,15 +40,16 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['sanders picking up trash', 'this awesome car parks where i do', 'Trust is the culmination of years of consistency', 'terrorizing vermont', 'Ten cities say Trump owes them money', 'mayor of burlington', 'rally on saturday in montpelier', 'sanders rally: montpelier', 'sanders to the military industrial', 'vermont gubernatorial', 'nomination in vermont', 'christine hallquist', 'vermont house', 'congressman rick larsen', 'vermont legislature', 'governor of vermont', 'vermont gov', 'vermont senate', 'GOP in Vermont']
+            terms = ['super tuesday', 'sanders picking up trash', 'this awesome car parks where i do', 'Trust is the culmination of years of consistency', 'terrorizing vermont', 'Ten cities say Trump owes them money', 'mayor of burlington', 'rally on saturday in montpelier', 'sanders rally: montpelier', 'sanders to the military industrial', 'vermont gubernatorial', 'nomination in vermont', 'christine hallquist', 'vermont house', 'congressman rick larsen', 'vermont legislature', 'governor of vermont', 'vermont gov', 'vermont senate', 'GOP in Vermont']
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Vermont 2020 Election \n\n"
             "[Register to Vote](https://olvr.sec.state.vt.us/) \n\n"
+            "[Presidential Primary](https://mvp.sec.state.vt.us/): March 3, 2020 \n\n"
             "[Primary Election](https://mvp.sec.state.vt.us/): August 11, 2020 \n\n"
             "[General Election](https://mvp.sec.state.vt.us/): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)

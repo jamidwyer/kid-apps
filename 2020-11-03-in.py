@@ -49,6 +49,9 @@ def search(term, submission):
         # Reply to the post
         text = ("Indiana 2020 Election \n\n"
             "[Register to Vote](https://indianavoters.in.gov/) \n\n"
+            "[Primary Registration Deadline](https://indianavoters.in.gov/): April 6, 2020 \n\n"
+            "[Primary Election](https://indianavoters.in.gov/): May 5, 2020 \n\n"
+            "[Voter Registration Deadline](https://indianavoters.in.gov/): October 5, 2020 \n\n"
             "[General Election](https://indianavoters.in.gov/): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
