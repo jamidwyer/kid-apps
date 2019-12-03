@@ -48,7 +48,8 @@ def search(term, submission):
         # Reply to the post
         text = ("Washington 2020 Election \n\n"
             "[Register to Vote](https://weiapplets.sos.wa.gov/MyVote/#/login) \n\n"
-            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): March 10, 2020 \n\n"
+            "[Presidential Primary](https://weiapplets.sos.wa.gov/MyVote/#/login): March 10, 2020 \n\n"
+            "[Primary Election](https://weiapplets.sos.wa.gov/MyVote/#/login): August 4, 2020 \n\n"
             "[General Election](https://weiapplets.sos.wa.gov/MyVote/#/login): November 3, 2020 \n\n")
         print("Bot replying to : ", submission.title)
         try:
