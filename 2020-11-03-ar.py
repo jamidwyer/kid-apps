@@ -40,9 +40,24 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['super tuesday', 'westerman polls', 'arkansas veterans', 'entry-level workers at Walmart', 'Political Shift in Arkansas', 'Editor of the Arkansas Times', 'gun show in arkansas', 'rally in little rock', 'rep. garry smith', 'worker advocates are coming to walmart', 'sen. rapert', 'arkansas republican', 'James M. Hinds', 'french hill', 'ar-02', 'ar-2', 'rep. hill', 'rep hill', 'representative hill', 'congressman hill']
+            terms = [
+                # top terms
+                'arkansas passes law', \
+                # governor
+                # senators
+                'sen. rapert', \
+                # fed reps
+                'ar-02', 'ar-2', 'rep. hill', 'rep hill', 'representative hill', \
+                'congressman hill', 'french hill', \
+                'rep. garry smith', \
+                # general
+                'super tuesday', 'westerman polls', 'arkansas veterans', \
+                'entry-level workers at Walmart', 'Political Shift in Arkansas', \
+                'Editor of the Arkansas Times', 'gun show in arkansas', \
+                'rally in little rock', 'arkansas republican', 'James M. Hinds', \
+            ]
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
@@ -65,7 +80,7 @@ def search(term, submission):
 
 for sub in subs:
      print(sub)
-     searchAndPost(sub);
+     searchAndPost(sub)
 
 text_file.close()
 local_subs.close()
