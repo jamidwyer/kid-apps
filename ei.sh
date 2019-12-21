@@ -15,6 +15,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-la.py # 2020-02-15
 	python 2020-11-03-al.py # 2020-02-15
 	python 2020-11-03-ca.py # 2020-02-17
+	python 2020-11-03-az.py # 2020-02-18 1 senator
 	python 2020-11-03-fl.py # 2020-02-18
 	python 2020-11-03-oh.py # 2020-02-18
 	python 2020-11-03-ga.py # 2020-02-24
@@ -40,7 +41,6 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-nv.py # 2020-06-09
 	python 2020-11-03-nd.py # 2020-06-09
 	python 2020-11-03-nm.py # 2020-06-20
-	python 2020-11-03-az.py # 2020-07-06
 	python 2020-11-03-hi.py # 2020-07-09
 	python 2020-11-03-ks.py # 2020-08-04
 	python 2020-11-03-vt.py # 2020-08-11
