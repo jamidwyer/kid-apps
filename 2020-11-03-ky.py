@@ -65,7 +65,7 @@ def search(term, submission):
 
 for sub in subs:
      print(sub)
-     searchAndPost(sub);
+     searchAndPost(sub)
 
 text_file.close()
 local_subs.close()
