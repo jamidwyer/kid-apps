@@ -38,9 +38,51 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['super tuesday', 'fundraising in oklahoma', 'conservative oklahoma', 'inhofe', 'oklahoma campaign', 'lawsuit with oklahoma', 'marijuana in oklahoma', 'fort sill', 'Supreme Court Allows Oklahoma', 'marijuana sales soar in ok', 'nomiddleground on fracking', 'fundraising in oklahoma', 'ok officials praying', 'oklahoma campaign chair', 'tulsa county da', 'oklahoma vot', 'tim gilpin', 'ok-gov', 'amanda douglas', 'oklahoma board of pharmacy director', 'congressman cole', 'oklahoma republican', 'gov. fallin', 'oklahoma board of health', 'house seats in oklahoma', 'okgov', 'oklahoma teacher primary', 'oklahoma primar', 'kevin stitt', 'oklahoma gop gubernatorial', 'oklahoma gop candidate', 'senate bill 1140', 'oklahoma governor', 'governor of oklahoma', 'oklahoma legislat', 'senate seat in oklahoma', 'Michael Brooks-Jimenez', 'oklahoma strike', 'Oklahoma teacher walkout', 'mary memed', 'tyson meade', 'Oklahoma Education Budget Crisis', 'Oklahoma State Capitol', 'kevin mcdugle', 'rep scott inman', 'ballot in oklahoma', 'oklahoma city district', 'governor fallin', 'Chuck Strohm', 'jenks lawmaker', 'Oklahoma senat', 'sb1016', 'voting in Oklahoma', 'Oklahoma Law', 'Drew Edmondson', 'Oklahoma City mayor', 'GOP rep from Oklahoma', 'rep. tom cole', 'Gov Fallin', 'markwayne', 'ok-02', 'ok-2', 'oklahoma\'s 2nd District', 'bridenstine', 'ok-01', 'ok-1', 'oklahoma\'s 1st District', 'Budget Crisis in Oklahoma', 'steve russell', 'mary fallin', 'Oklahoma House of Representatives', 'Oklahoma Tried the GOP', 'Voter Registration by County']
+            terms = [
+                'governor fallin', \
+                'mary fallin', \
+                'gov. fallin', \
+                'Gov Fallin', \
+                'oklahoma governor', 'governor of oklahoma', \
+                'okgov', \
+                'inhofe', \
+                'ok-01', 'ok-1', \
+                'oklahoma\'s 1st District', \
+                'ok-02', 'ok-2', 'oklahoma\'s 2nd District', \
+                'ok-05',
+                'bridenstine', \
+                'rep. tom cole', \
+                'congressman cole', \
+                'markwayne', \
+                'rep scott inman', \
+                'Chuck Strohm', \
+                'mary memed', \
+                'tyson meade', \
+                'Michael Brooks-Jimenez', \
+                'kevin mcdugle', \
+                'Drew Edmondson', \
+                'super tuesday', 'fundraising in oklahoma', 'conservative oklahoma', \
+                'oklahoma campaign', 'lawsuit with oklahoma', 'marijuana in oklahoma', 'fort sill', \
+                'Supreme Court Allows Oklahoma', 'marijuana sales soar in ok', 'nomiddleground on fracking', \
+                'fundraising in oklahoma', 'ok officials praying', 'oklahoma campaign chair', 'tulsa county da', \
+                'oklahoma vot', 'tim gilpin', 'ok-gov', 'amanda douglas', 'oklahoma board of pharmacy director', \
+                'oklahoma republican', \
+                'oklahoma board of health', 'house seats in oklahoma', \
+                'oklahoma teacher primary', 'oklahoma primar', \
+                'kevin stitt', \
+                'oklahoma gop gubernatorial', 'oklahoma gop candidate', 'senate bill 1140', \
+                'oklahoma legislat', 'senate seat in oklahoma', \
+                'oklahoma strike', 'Oklahoma teacher walkout', \
+                'Oklahoma Education Budget Crisis', 'Oklahoma State Capitol', \
+                'ballot in oklahoma', 'oklahoma city district', \
+                'jenks lawmaker', 'Oklahoma senat', 'sb1016', 'voting in Oklahoma', 'Oklahoma Law', \
+                'Oklahoma City mayor', \
+                'GOP rep from Oklahoma', \
+                'Budget Crisis in Oklahoma', 'steve russell', \
+                'Oklahoma House of Representatives', 'Oklahoma Tried the GOP', 'Voter Registration by County'\
+            ]
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
