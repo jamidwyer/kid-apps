@@ -46,6 +46,7 @@ def searchAndPost(sub):
                 'lindsey graham' \
                 # fed reps
                 'lindsay graham',
+                'endorsed by a south carolina', \
                 'electability', 'democrats have shifted left', 'game of smiles', \
                 '^(?!.*delectable).*electable.*$', 'you listen to bernie too much', \
                 'subject to impeachment', 'storm thurmond', '2020 south carolina', 'canceling gop primaries', \
