@@ -40,6 +40,8 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'wi-07', \
+                't given us a single good thing this year', \
                 'always been Republicans suppressing votes', \
                 '1.7 million from campaign donors', 'sewer socialists', \
                 'wisconsin launches taskforce', 'Keep Empty Migrant Detention Center Running', \
@@ -48,7 +50,11 @@ def searchAndPost(sub):
                 'unflattering numbers leak', 'Ten cities say Trump owes them money', \
                 'wisconsin is flying the rainbow', 'democratic party of wisconsin', 'terrill thomas', \
                 'wisconsin democrat', 'loss in wisconsin', 'wisconsin conservative', 'leah vukmir', \
-                'candidate won wisconsin', 'wisconsin senat', 'caleb frostman', 'Milwaukee County ballot', 'Foxconn', 'rebecca dallet', 'Wisconsin Supreme Court', 'Dane County Supervisor', 'judge rejects walker', 'wisconsin green party', 'wisconsin gop', 'Milwaukee vot', 'wisconsin legislat', 'Bryce rally', 'kyle frenette', 'Commissioner Seat in Wisconsin', 'wi-07', 'Milwaukee jail', 'Milwaukee Sheriff', 'Wisconsin Elect', 'Wisconsin Republican', 'tammy baldwin', 'matt flynn', 'Sensenbrenner', 'randy bryce', 'scott walker', 'governor walker', 'wisconsin governor', 'wi governor\'s', 'Wisconsin gubernatorial candidate', 'Wisconsin\'s partisan gerrymander', 'Voters in Wisconsin', 'Failing in Wisconsin, Pennsylvania and Michigan', 'Wisconsin Strict ID Law', 'paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'IronStache', 'Republican tax scam', 'Wisconsin\'s First Congressional District', 'brad schimel']
+                'candidate won wisconsin', 'wisconsin senat', 'caleb frostman', 'Milwaukee County ballot', \
+                'Foxconn', 'rebecca dallet', 'Wisconsin Supreme Court', 'Dane County Supervisor', \
+                'judge rejects walker', 'wisconsin green party', 'wisconsin gop', 'Milwaukee vot', \
+                'wisconsin legislat', 'Bryce rally', 'kyle frenette', 'Commissioner Seat in Wisconsin', \
+                'Milwaukee jail', 'Milwaukee Sheriff', 'Wisconsin Elect', 'Wisconsin Republican', 'tammy baldwin', 'matt flynn', 'Sensenbrenner', 'randy bryce', 'scott walker', 'governor walker', 'wisconsin governor', 'wi governor\'s', 'Wisconsin gubernatorial candidate', 'Wisconsin\'s partisan gerrymander', 'Voters in Wisconsin', 'Failing in Wisconsin, Pennsylvania and Michigan', 'Wisconsin Strict ID Law', 'paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', 'IronStache', 'Republican tax scam', 'Wisconsin\'s First Congressional District', 'brad schimel']
             for term in terms:
                  search(term, submission)
 

@@ -42,10 +42,14 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 # fed reps
+                'fred upton', 'mi-06', 'mi-6', 'michigan\'s 6th District', 'rep. upton', 'rep upton', 'representative upton', 'congressman upton', \
+                'benac', \
+                '^(?!.*trotte).*trott.*$', \
                 'rashida talib', \
                 'debbie dingle', \
                 'john dingell', 'Rep. Dingell', \
                 # misc
+                'handouts for billionaires, hunger for the poor', \
                 '1913 in calumet', \
                 'stop spreading misinformation about Trump', \
                 'detroit transportation', 'michigan sues', 'ice set up a fake university', \
@@ -57,7 +61,11 @@ def searchAndPost(sub):
                 'flint officials', 'what happened in flint', '12 points in michigan', 'Michigan Doctor Accused of Overprescribing', 'michigan jail', 'michigan lawmak', 'dems in michigan', 'michigan democrat', 'michigan absentee', 'devos family', 'candidates in michigan', 'clean water for michigan', 'votes in michigan', 'michigan poll', 'mi11', 'tlaib', 'vote in michigan', 'michigan primary', 'tom mair', 'michigan redistricting', 'gerrymandered michigan', 'fix flint', 'water in flint', 'Flint, Michigan', 'niles niemuth', 'upton stands against', 'Michigan Department of Civil Rights', 'gubernatorial candidate in Michigan', 'ballot in michigan', 'legalization in michigan', 'eponine garrod', 'state house in lansing', 'detroit dsa', 'governor in michigan', 'dana nessel', 'edgar prince', 'poppy sias', 'bobby holley', 'Michigan House votes', \
                 'gerrymandering in Michigan', 'Green Party of Michigan', 'Mich. ballot campaign', \
                 'abdulelsayed', 'brenda lawrence', 'Michigan Senate candidate', 'saari', 'schuette', \
-                'Flint drinks poison', 'Michigan ballot', 'el-sayed', 'Michigan Legalize Marijuana', 'Michigan Legalizes Marijuana', 'HENRY YANEZ', 'gretchen whitmer', 'Tim Kelly', 'Michigan still a blue state', 'Joe Schwarz', 'Political Issues in Michigan', 'sandy levin', 'jack bergman', 'marijuana legalization in Michigan', 'fred upton', 'mi-06', 'mi-6', 'michigan\'s 6th District', 'rep. upton', 'rep upton', 'representative upton', 'congressman upton', 'benac', '^(?!.*trotte).*trott.*$', 'michigan congress', 'Michigan Republican', 'mike bishop', 'rep. bishop', 'rep bishop', 'representative bishop', 'congressman bishop', 'mi-08', 'mi-8', 'Michigan\'s 8th District', 'rick snyder', 'governor snyder', 'gov snyder', 'gov. snyder', 'michigan governor', 'governor of michigan', 'michigan\'s governor', 'stabenow', 'john james', 'Robert Ritchie', '^(?!.*yamashiro).*amash.*$', 'mi-03', 'mi-3', 'michigan\'s 3rd District']
+                'Flint drinks poison', 'Michigan ballot', 'el-sayed', 'Michigan Legalize Marijuana', \
+                'Michigan Legalizes Marijuana', 'HENRY YANEZ', 'gretchen whitmer', 'Tim Kelly', \
+                'Michigan still a blue state', 'Joe Schwarz', 'Political Issues in Michigan', 'sandy levin', \
+                'jack bergman', 'marijuana legalization in Michigan', \
+                'michigan congress', 'Michigan Republican', 'mike bishop', 'rep. bishop', 'rep bishop', 'representative bishop', 'congressman bishop', 'mi-08', 'mi-8', 'Michigan\'s 8th District', 'rick snyder', 'governor snyder', 'gov snyder', 'gov. snyder', 'michigan governor', 'governor of michigan', 'michigan\'s governor', 'stabenow', 'john james', 'Robert Ritchie', '^(?!.*yamashiro).*amash.*$', 'mi-03', 'mi-3', 'michigan\'s 3rd District']
             for term in terms:
                  search(term, submission)
 
