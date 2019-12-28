@@ -40,10 +40,16 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'az gov', \
                 'flip the senate', 'ice fails to properly redact', \
+                'nothing less than a civil war', \
                 'Simulations Of Homes In Chicago And Arizona', 'representing in az', \
                 'nervous republicans', 'Trump backlash in suburbs', 'mark kelly', \
-                'donations to senate republicans', 'justiceforelijah', 'meghan mccain', 'uss john mccain', 'arizona supreme court', 'az gov', 'arizona republican', 'jerry demings', 'elected in arizona', 'az vote', 'arizona congress', 'az-sen', 'Phoenix ICE facility', 'arizona bill', 'mesa police', 'rally in Mesa', 'arizona gop', 'az education', 'kelly townsend', 'HB2663', 'arizona teacher strike', 'arizona teachers rally', 'arizona state senat', 'arizona state capitol', 'AZ RedForEd', 'az08', 'education funding in arizona', 'rally in phoenix', 'azsen', 'az 06', 'rep. gallego', 'congressman gallego', 'scott menor', 'school vouchers in Arizona', 'grijalva', 'Arizona primary', 'Arizona Republican', 'candidates running in Arizona', 'Arizona Legislature', 'Scottsdale lawmaker', 'brailsford', 'Lea Marquez Peterson', 'daniel shaver', 'arpaio', 'gosar', 'Arizona Green Party', 'Oro Valley lawmaker', 'Arizona lawmaker', 'ducey', 'arizona governor', 'az. gubernatorial race', 'arizona\'s race for governor', 'arizona gubernatorial', 'arizona\'s republican governor', 'Congressman Biggs', 'andy biggs', 'az-5', 'az-05', 'rep biggs', 'rep. biggs', 'representative biggs', 'Congressman Tom O\´Halleran', '@RepOHalleran', 'o\'halleran', 'kevin cavanaugh', 'steve smith', 'schweikert', 'mcsally', '^(?!.*snowflake).*flake.*$', '@jeffflake', 'sinema', 'Kelli Ward']
+                'donations to senate republicans', 'justiceforelijah', 'meghan mccain', 'uss john mccain', \
+                'arizona supreme court', \
+                'arizona republican', 'jerry demings', 'elected in arizona', \
+                'az vote', 'arizona congress', 'az-sen', 'Phoenix ICE facility', 'arizona bill', 'mesa police', \
+                'rally in Mesa', 'arizona gop', 'az education', 'kelly townsend', 'HB2663', 'arizona teacher strike', 'arizona teachers rally', 'arizona state senat', 'arizona state capitol', 'AZ RedForEd', 'az08', 'education funding in arizona', 'rally in phoenix', 'azsen', 'az 06', 'rep. gallego', 'congressman gallego', 'scott menor', 'school vouchers in Arizona', 'grijalva', 'Arizona primary', 'Arizona Republican', 'candidates running in Arizona', 'Arizona Legislature', 'Scottsdale lawmaker', 'brailsford', 'Lea Marquez Peterson', 'daniel shaver', 'arpaio', 'gosar', 'Arizona Green Party', 'Oro Valley lawmaker', 'Arizona lawmaker', 'ducey', 'arizona governor', 'az. gubernatorial race', 'arizona\'s race for governor', 'arizona gubernatorial', 'arizona\'s republican governor', 'Congressman Biggs', 'andy biggs', 'az-5', 'az-05', 'rep biggs', 'rep. biggs', 'representative biggs', 'Congressman Tom O\´Halleran', '@RepOHalleran', 'o\'halleran', 'kevin cavanaugh', 'steve smith', 'schweikert', 'mcsally', '^(?!.*snowflake).*flake.*$', '@jeffflake', 'sinema', 'Kelli Ward']
             for term in terms:
                  search(term, submission)
 

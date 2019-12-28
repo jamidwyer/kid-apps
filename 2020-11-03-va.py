@@ -39,8 +39,17 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'danica roem', \
+                '^(?!.*west virginia law).*virginia law.*$', \
                 'students take time off to protest', \
-                'virginia buys track', 'super tuesday', 'sen. amanda chase', 'Confederate statues in Virginia', 'voters turned virginia', 'full control of virginia', 'victory in virginia beach', 'red hair boi', 'competitive stafford county', 'lee j. carter', 'middle-finger gesture to Trump', 'danica roem', 'equal rights amendment', 'virginia department of elections', 'virginia state house', 'virginia senate', 'house of delegates flipped', 'virginia state senate', 'Russia specifically targeted Virginia', '7 national security democrats', 'Apparently President Obama is still in this guy', 'election will hinge on what they do about an impeachment inquiry', 'rep. wexton', 'fake presidential seal']
+                'virginia buys track', 'super tuesday', 'sen. amanda chase', 'Confederate statues in Virginia', \
+                'voters turned virginia', 'full control of virginia', 'victory in virginia beach', 'red hair boi', \
+                'competitive stafford county', 'lee j. carter', 'middle-finger gesture to Trump', \
+                'equal rights amendment', 'virginia department of elections', 'virginia state house', \
+                'virginia senate', 'house of delegates flipped', 'virginia state senate', \
+                'rep. wexton', \
+                'fake presidential seal'
+            ]
             for term in terms:
                  search(term, submission)
 
