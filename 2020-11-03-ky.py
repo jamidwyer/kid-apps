@@ -56,6 +56,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Kentucky 2020 Election \n\n"
+            "[Primary Election Party Affiliation Deadline](https://vrsws.sos.ky.gov/ovrweb/default): December 31, 2019 \n\n"
             "[Primary Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): April 20, 2020 \n\n"
             "[Primary Election](https://vrsws.sos.ky.gov/VIC/): May 19, 2020 \n\n"
             "[General Election Registration Deadline](https://vrsws.sos.ky.gov/ovrweb/): October 5, 2020 \n\n"
