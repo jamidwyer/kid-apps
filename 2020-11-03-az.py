@@ -41,6 +41,7 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 'az gov', \
+                'democrat steve diamond', \
                 'flip the senate', 'ice fails to properly redact', \
                 'nothing less than a civil war', \
                 'Simulations Of Homes In Chicago And Arizona', 'representing in az', \

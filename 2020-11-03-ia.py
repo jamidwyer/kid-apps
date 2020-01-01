@@ -51,6 +51,8 @@ def searchAndPost(sub):
                 'sanders overtakes joe', \
                 'biden will lose', 'iowa passes law', \
                 'days til iowa', \
+                'republican as vice president', \
+                'Woman Ran Over Girl Because She Was', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \

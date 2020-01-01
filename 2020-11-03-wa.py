@@ -45,6 +45,7 @@ def searchAndPost(sub):
                 'mcmorris rogers', \
                 'kill all males', \
                 'GOP Lawmaker Plotted Insurrection', \
+                'plan to criminalize homelessness', \
                 'trips over his own bi', 'judge in tiffany hill', 'bail laws after Vancouver mom', \
                 'spokane police officer ', 'nazis from washington', 'socialist trucker', 'marijuana banking bill', \
                 'seattle town hall', 'cuddly catz', 'seattle feeling the bern', 'thurston county and courts', \
@@ -54,7 +55,10 @@ def searchAndPost(sub):
                 'democratic socialist truck driver', 'human composting', 'washington passes bill', \
                 'washington state senator', ' wa dems', 'first state carbon tax', 'nathan choi', 'matt shea', \
                 'seattle minimum wage', 'wa state primary', 'washington state republican', 'Patriot Prayer', \
-                'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', 's up bootlickers', 'Seattle-area prosecutor', 'initiative 1600', 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', 'washington lawmakers', 'washington state law', 'washington Legislature', 'tim eyman', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'jay inslee', 'governor inslee', 'gov. inslee', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+                'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', \
+                's up bootlickers', 'Seattle-area prosecutor', 'initiative 1600', \
+                'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', \
+                'washington lawmakers', 'washington state law', 'washington Legislature', 'tim eyman', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'jay inslee', 'governor inslee', 'gov. inslee', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
             for term in terms:
                  search(term, submission)
 

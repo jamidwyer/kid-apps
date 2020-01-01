@@ -42,6 +42,7 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 # misc
+                'plan to criminalize homelessness', \
                 'campaigning in cali', \
                 'called giving a damn', \
                 'california endorsement', 'wine cave', 'house will not vote impeachment', \

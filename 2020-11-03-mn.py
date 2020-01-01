@@ -60,7 +60,20 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['MN woman sues two pharmacies', 'super tuesday', 'minnesota state capitol', 'minnesota republican', 'minneapolis mayor', 'Trump Bumper Sticker Flashed Gun At Woman With Warren Bumper Sticker', 'threatens to sue minneapolis', 'beware, minneapolis', 'what that sounds like to jews', 'twin cities climate strike', 'Israel and the Jewish diaspora is complicated', 'coverage of his racism', 'evangelicals chafe at trump', 'federal building in minnesota', 'MI, MN and WI', 'attacks on omar', 'protesters as terrorists', 'send her back', 'Trump admin holding back billions in transit funding', 'alcaida', 'pipeline in minnesota', 'minnesota house', 'mn state senate', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop ', 'minnesota moms rise up', 'mn-02', 'rep omar', 'rep. omar', 'ilhan', 'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', 'tim walz', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', 'erik paulsen', 'rep. paulsen', 'rep paulsen']
+            terms = [
+                'mn-02', \
+                'mn-08', \
+                'rep omar', 'rep. omar', 'ilhan', \
+                'erik paulsen', 'rep. paulsen', 'rep paulsen', \
+                'MN woman sues two pharmacies', 'super tuesday', 'minnesota state capitol', \
+                'minnesota republican', 'minneapolis mayor', \
+                'threatens to sue minneapolis', 'twin cities climate strike', \
+                'federal building in minnesota', 'MI, MN and WI', 'attacks on omar', 'protesters as terrorists', 'send her back', 'Trump admin holding back billions in transit funding', 'alcaida', 'pipeline in minnesota', 'minnesota house', 'mn state senate', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop ', 'minnesota moms rise up', \
+                'mn dfl', 'minnesota gubernatorial', 'minnesota dfl', \
+                'tim walz', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', \
+                'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', \
+                'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', \
+            ]
             for term in terms:
                 search(term, submission)
 
