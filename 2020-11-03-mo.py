@@ -42,16 +42,20 @@ def searchAndPost(sub):
                 'missouri governor', \
                 'missouri gubernatorial', \
                 'sarcoxie nursery', \
+                'colinsville dispensary', \
                 'pot in missouri', 'devito introducing bernie', 'black drivers in missouri', \
                 'missouri supreme court', 'billy long', 'curtis wylde', 'missouri trims its medicaid', \
                 'judge blocks missouri', 'missouri women to be charged with felonies', 
-                'St. Louis County Pays Woman', 'panic at missouri walmart', 'nicole galloway', \
-                'missouri medicaid', 'mo auditor', 'missouri abortion', 'lucile bluford', \
+                'St. Louis County Pays Woman', \
+                'nicole galloway', \
+                'missouri medicaid', 'mo auditor', 'missouri abortion', \
+                'lucile bluford', \
                 'cori bush', 'black missouri drivers', 'Right Gets Tired of Democracy', \
                 'forced by the state of missouri', 'hope Clinic for Women', 'missouri taxpayer', \
                 'Missouri is \'leaking\' sales tax revenue', 'rally in missouri', 'rally in Cape Girardeau', \
                 'missouri senat', 'st. louis abortion', 'billy long', 'missouri house', \
-                'st. louis prosecutor', 'ferguson reformer', 'missouri election', 'ferguson prosecutor', 'missouri gop', 'wesley bell', 'bob mcculloch', 'right to work in missouri', 'missouri prison', 'missouri state primary', 'missouri vote', 'missouri 2020 primary', 'j.p johnson', 'mo-7', 'st. louis minimum wage', 'missouri congress', 'michael brown was shot', 'curtiswylde', 'greitens', 'lauren arthur', 'missouripolitics', 'ferguson city council', 'missouri house moves', 'kc voters', 'osmack', 'missouri bill', 'new approach missouri', 'Missouri lawmaker', 'austin petersen', 'Missouri Medical Marijuana Campaign', 'josh hawley', 'courtland sykes', 'US Senate in Missouri', 'MO GOP Senate Nomination', 'snake-filled heads', 'career obsessed banshees', 'Missouri pregnancy mortality', 'sam graves', 'Blaine Luetkemeyer', 'kathy ellis', 'mccaskill', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4']
+                'st. louis prosecutor', 'ferguson reformer', 'missouri election', 'ferguson prosecutor', \
+                'missouri gop', 'wesley bell', 'bob mcculloch', 'right to work in missouri', 'missouri prison', 'missouri state primary', 'missouri vote', 'missouri 2020 primary', 'j.p johnson', 'mo-7', 'st. louis minimum wage', 'missouri congress', 'michael brown was shot', 'curtiswylde', 'greitens', 'lauren arthur', 'missouripolitics', 'ferguson city council', 'missouri house moves', 'kc voters', 'osmack', 'missouri bill', 'new approach missouri', 'Missouri lawmaker', 'austin petersen', 'Missouri Medical Marijuana Campaign', 'josh hawley', 'courtland sykes', 'US Senate in Missouri', 'MO GOP Senate Nomination', 'snake-filled heads', 'career obsessed banshees', 'Missouri pregnancy mortality', 'sam graves', 'Blaine Luetkemeyer', 'kathy ellis', 'mccaskill', 'ann wagner', 'mo-2', 'jenna marie bourgeois', 'hartzler', 'mo-4']
             for term in terms:
                  search(term, submission)
 

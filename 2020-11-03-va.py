@@ -42,6 +42,7 @@ def searchAndPost(sub):
                 'danica roem', \
                 '^(?!.*west virginia law).*virginia law.*$', \
                 'students take time off to protest', \
+                'even allow kids to use crayons and markers', \
                 'virginia buys track', 'super tuesday', 'sen. amanda chase', 'Confederate statues in Virginia', \
                 'voters turned virginia', 'full control of virginia', 'victory in virginia beach', 'red hair boi', \
                 'competitive stafford county', 'lee j. carter', 'middle-finger gesture to Trump', \
