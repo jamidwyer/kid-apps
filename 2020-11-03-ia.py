@@ -51,6 +51,9 @@ def searchAndPost(sub):
                 'sanders overtakes joe', \
                 'biden will lose', 'iowa passes law', \
                 'days til iowa', \
+                'Julián Castro', \
+                'castro supporters', \
+                'warren thanks castro', \
                 'republican as vice president', \
                 'Woman Ran Over Girl Because She Was', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
