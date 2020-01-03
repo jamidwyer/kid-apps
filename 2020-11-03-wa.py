@@ -45,6 +45,7 @@ def searchAndPost(sub):
                 'mcmorris rogers', \
                 'kill all males', \
                 'GOP Lawmaker Plotted Insurrection', \
+                'seattle public library', \
                 'plan to criminalize homelessness', \
                 'trips over his own bi', 'judge in tiffany hill', 'bail laws after Vancouver mom', \
                 'spokane police officer ', 'nazis from washington', 'socialist trucker', 'marijuana banking bill', \
