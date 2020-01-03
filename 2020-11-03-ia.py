@@ -43,11 +43,13 @@ def searchAndPost(sub):
                 'gov. reynolds', \
                 'joni ernst', \
                 'ia-01', \
+                'abby finkenauer', \
                 'ia-03', \
                 'Iowa\'s 3rd District race', \
                 'ia-4', 'ia-04', \
                 'congressman king', \
                 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'representative king', \
+                'Alasandro', \
                 'sanders overtakes joe', \
                 'biden will lose', 'iowa passes law', \
                 'days til iowa', \
@@ -62,18 +64,21 @@ def searchAndPost(sub):
                 'democratic party centrism', 'not accept a middle ground approach', 'take on the corporate elite', \
                 'joe biten', 'bags and bags of money', '^(?!.*delectable).*electable.*$', 'sanders for iowa', \
                 'bernie in iowa', 'bernie surge', 'sanders tied', 'new emerson poll', 'tied with biden', \
-                'corporations finally pay their fair share', 'canvassing in iowa', 'tax the rich', \
+                'canvassing in iowa', 'tax the rich', \
                 'defeat donald trump', 'emerson national poll', 'latest emerson poll', 'stacey walker endorse', \
                 'iowa endors', 'iowa field director', 'voters in iowa', 'flip the senate', 'event in des moine', \
-                '1,000 times more than his workers', 'Iowa teacher on leave after \'sniper rifle\' comment', 'feelthebern', \
-                'remove its rainbow crosswalks', 'ad buy for early 2020', 'quinnipiac national poll', 'iowa steak fry', \
+                '1,000 times more than his workers', 'Iowa teacher on leave after \'sniper rifle\' comment', \
+                'feelthebern', \
+                'quinnipiac national poll', 'iowa steak fry', \
                 'iowa contender', 'polk county steak fry', 'huge iowa crowd', 'vote blue, no matter who', \
                 'iowa senat', 'iowa field director', \
                 'Trade War Disaster', 'iowa labor day', 'presidential playbook', 'Iowa State College Dem Straw Poll', \
                 'battleground iowa', 'iowa state fair kernel poll', 'warren on the register', 'bernie beats trump', \
-                'community leaders in iowa', 'yang in iowa', 'iowa4yang', 'giving up on iowa', 'bernie sanders dominates', \
+                'community leaders in iowa', 'yang in iowa', 'iowa4yang', 'giving up on iowa', \
+                'bernie sanders dominates', \
                 'deep-red sioux county', 'iowa vote', 'reddest corner of iowa', 'iowa ground game', \
-                'donations from billionaires', 'iowa city campaign', 'donations from iowa', 'iowa union', 'caucusing for ', \
+                'donations from billionaires', 'iowa city campaign', 'donations from iowa', 'iowa union', \
+                'caucusing for ', \
                 'marching in cedar rapids', 'workers in cedar rapids', 'iacaucus', 'tied in iowa', 'rising in iowa', \
                 'iowa trump vote', 'iowa dems', 'iowa legislat', 'rally in iowa', 'sioux city rally', 'virtual caucus', \
                 'sanders in iowa', 'giant democratic primary field', 'corporate middlemen', 'is that really so radical', \
@@ -82,10 +87,15 @@ def searchAndPost(sub):
                 'iowa is feeling the bern', 'new office in iowa', 'Bernie Sanders returns to Iowa', \
                 'Iowa representatives', 'NRA president\'s Iowa business', \
                 'Factory Farming in Iowa', \
-                'Alasandro', \
-                'dead heat in iowa', 'austin frerick', 'Iowa Lawmakers', 'nate boulton', 'rob sand', 'Iowa Poll', \
+                'national democratic primary', \
+                'dead heat in iowa', \
+                'austin frerick', \
+                'Iowa Lawmakers', \
+                'nate boulton', \
+                'rob sand', 'Iowa Poll', \
                 'Iowa went big for Trump', 'david young', 'anti-Iowa positions', 'Iowa Candidate', \
                 'Running For Congress In Iowa', 'Trump sinks in Iowa', \
+                'julian castro drops out', \
                 'Trump Hate Iowa'
             ]
             for term in terms:
