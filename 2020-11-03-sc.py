@@ -48,6 +48,7 @@ def searchAndPost(sub):
                 'lindsay graham',
                 'endorsed by a south carolina', \
                 'electability', 'democrats have shifted left', 'game of smiles', \
+                'conviction and removal', \
                 '^(?!.*delectable).*electable.*$', 'you listen to bernie too much', \
                 'subject to impeachment', 'storm thurmond', '2020 south carolina', 'canceling gop primaries', \
                 'paid staff in south carolina', 'cancelling gop primaries', 'union President James Sanderson', \

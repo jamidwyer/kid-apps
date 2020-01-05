@@ -41,6 +41,7 @@ def searchAndPost(sub):
             terms = [
                 'illinois lieutenant governor', \
                 'dispensaries open in illinois', \
+                'nathan reitz', \
                 'lightfoot wants chicago', 'weed in illinois', 'chicagoyanggang', 'Jan Schakowsky', \
                 'better president than lincoln', 'illinois becomes first state', 'sanders getting arrested', \
                 'chicago teachers union', 'illinois leadership team', 'soybean purchase pledge', 'chicago prosecut', \
