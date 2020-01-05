@@ -55,6 +55,7 @@ def searchAndPost(sub):
                 'days til iowa', \
                 'castro supporters', \
                 'warren thanks castro', \
+                'poll in iowa', \
                 'republican as vice president', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
