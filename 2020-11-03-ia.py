@@ -50,6 +50,7 @@ def searchAndPost(sub):
                 'congressman king', \
                 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'representative king', \
                 'Alasandro', \
+                'first in iowa', \
                 'sanders overtakes joe', \
                 'biden will lose', 'iowa passes law', \
                 'days til iowa', \
@@ -59,7 +60,9 @@ def searchAndPost(sub):
                 'republican as vice president', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
+                'asking, why this moment', \
                 'insurance deductible', \
+                'narcissist bernie', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \

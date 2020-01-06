@@ -43,6 +43,7 @@ def searchAndPost(sub):
             terms = [
                 'surveillance video from jeffrey epstein', \
                 'ny republican', \
+                'bone spurs', \
                 'money from young cancer patients', 'new york to rally', 'ban so-called virginity tests', \
                 'drags its sorry ass to nyc', 'sdny', 'trump is copying hitler', \
                 'trump tower kept 2 sets of books', 'trump kept 2 sets of books', 'apartment hunting in nyc', \
