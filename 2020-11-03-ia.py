@@ -63,6 +63,7 @@ def searchAndPost(sub):
                 'asking, why this moment', \
                 'insurance deductible', \
                 'narcissist bernie', \
+                'becoming the frontrunner', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \
