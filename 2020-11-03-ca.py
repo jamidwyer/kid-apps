@@ -43,6 +43,7 @@ def searchAndPost(sub):
             terms = [
                 # misc
                 'rep. torres', \
+                'khanna introduce', \
                 'ca-sd-32', \
                 'plan to criminalize homelessness', \
                 'campaigning in cali', \

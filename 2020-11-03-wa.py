@@ -47,6 +47,7 @@ def searchAndPost(sub):
                 'GOP Lawmaker Plotted Insurrection', \
                 'seattle public library', \
                 'plan to criminalize homelessness', \
+                'iranians entering the country', \
                 'trips over his own bi', 'judge in tiffany hill', 'bail laws after Vancouver mom', \
                 'spokane police officer ', 'nazis from washington', 'socialist trucker', 'marijuana banking bill', \
                 'seattle town hall', 'cuddly catz', 'seattle feeling the bern', 'thurston county and courts', \

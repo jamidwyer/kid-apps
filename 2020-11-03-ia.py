@@ -59,6 +59,7 @@ def searchAndPost(sub):
                 'republican as vice president', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
+                'insurance deductible', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \
@@ -70,6 +71,7 @@ def searchAndPost(sub):
                 'iowa endors', 'iowa field director', 'voters in iowa', 'flip the senate', 'event in des moine', \
                 '1,000 times more than his workers', 'Iowa teacher on leave after \'sniper rifle\' comment', \
                 'feelthebern', \
+                'warren accuses trump', \
                 'quinnipiac national poll', 'iowa steak fry', \
                 'iowa contender', 'polk county steak fry', 'huge iowa crowd', 'vote blue, no matter who', \
                 'iowa senat', 'iowa field director', \
