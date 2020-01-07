@@ -49,6 +49,7 @@ def searchAndPost(sub):
                 'warren speaks in atlanta', 'atlanta rally', 'stump at morehouse', 'winning in georgia', \
                 'blacks for trump', 'flip the senate', 'minimum wage', 'eliminate the deficit', \
                 'America Is a Democracy in Name Only', \
+                '20 republican senators', \
                 'flip senate', 'taxes on the wealthy have fallen over the past 70 years', 'registration surges in georgia', \
                 'GEO Group Runs Out of Banks', 'senate has voted', 'debt for morehouse student', 'atlanta climate strike', \
                 'fine people on both sides in Dahlonega', 'ice fails to properly redact', 'federalist society', \

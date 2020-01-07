@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
-	python 2020-11-03-ia.py # 2020-01-24
+	python 2020-11-03-ia.py # 2020-01-24 1 senator
 	python 2020-11-03-sc.py # 2020-01-30
 	python 2020-11-03-ar.py # 2020-02-02
 	python 2020-11-03-tx.py # 2020-02-03
@@ -28,6 +28,7 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-wa.py # 2020-03-10
 	python 2020-11-03-il.py # 2020-03-17
 	python 2020-11-03-ri.py # 2020-03-29
+	python 2020-11-03-de.py # 2020-04-04
 	python 2020-11-03-in.py # 2020-04-06
 	python 2020-11-03-wi.py # 2020-04-07
 	python 2020-11-03-md.py # 2020-04-07
@@ -37,10 +38,11 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-pa.py # 2020-04-28
 	python 2020-11-03-mt.py # 2020-05-01
 	python 2020-11-03-ne.py # 2020-05-12
+	python 2020-11-03-sd.py # 2020-05-18
 	python 2020-11-03-or.py # 2020-05-19
+	python 2020-11-03-nm.py # 2020-06-02
 	python 2020-11-03-nv.py # 2020-06-09
 	python 2020-11-03-nd.py # 2020-06-09
-	python 2020-11-03-nm.py # 2020-06-20
 	python 2020-11-03-hi.py # 2020-07-09
 	python 2020-11-03-ks.py # 2020-08-04
 	python 2020-11-03-vt.py # 2020-08-11

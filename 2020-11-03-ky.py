@@ -48,6 +48,7 @@ def searchAndPost(sub):
                 'kentucky state rep', \
                 'kentucky will accept', 'trump tax cuts', 'trump impeached', \
                 'conviction and removal', \
+                '20 republican senators', \
                 'kentucky lieutenant governor', 'turtle faced traitor', 'drinking water across kentucky', \
                 'congress silently killed', \
                 'kentucky democrat', 'kentucky outcome', 'rally in kentucky', 'poor ky. county', 'kentucky mill shut', 'u.s. deficit', 'flip the senate', 'kentucky capitol', 'cut taxes for rich people', 'minimum wage bill has all but died in the Senate', 'ky gun violence', 'massacremitch', 'secure the 2020 elections', 'american mitch', 'amy mcgrath', 'no pay, we stay', 'mitch mctreason', 'armed and misogynist', 'kentucky miner', 'moscow mitch', 'moscowmitch', 'kentucky teachers', 'fuck you, mitch', 'fuck mitch', 'the fucking turtle', 'in the Way of Federal Weed Legalization', 'bitch mitch', 'kentucky coal', 'kentucky is a top target', 'Louisville, Kentucky Metro Council', 'kentucky vot', 'kentucky gop', 'war against free and fair elections', 'senate majority bitch', 'Bipartisan marijuana banking bill', 'russian investment in a kentucky', 'ky-sen', 'firefighting jobs with largest federal', 'lives are lost every day to our broken health care system', \

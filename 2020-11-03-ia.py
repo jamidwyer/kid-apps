@@ -64,8 +64,11 @@ def searchAndPost(sub):
                 'insurance deductible', \
                 'narcissist bernie', \
                 'becoming the frontrunner', \
+                'the 2020 election', \
+                'warren for president', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
+                'leading in iowa', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \
                 'democratic party centrism', 'not accept a middle ground approach', 'take on the corporate elite', \
                 'joe biten', 'bags and bags of money', '^(?!.*delectable).*electable.*$', 'sanders for iowa', \
