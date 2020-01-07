@@ -46,6 +46,7 @@ def searchAndPost(sub):
                 'lindsey graham' \
                 'lindsay graham',
                 'graham challenger', \
+                'leningrad lindsey', \
                 # fed reps
                 'endorsed by a south carolina', \
                 'electability', 'democrats have shifted left', 'game of smiles', \

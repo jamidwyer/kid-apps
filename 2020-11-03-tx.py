@@ -40,7 +40,9 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'texas vote', \
                 'texas school district', \
+                'castro endorses', \
                 'texas wants to curb college students', \
                 'plan to criminalize homelessness', \
                 'false addresses on migrant papers', 'Horrible Death in US Immigration Detention Center', \

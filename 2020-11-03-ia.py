@@ -52,7 +52,10 @@ def searchAndPost(sub):
                 'Alasandro', \
                 'first in iowa', \
                 'sanders overtakes joe', \
-                'biden will lose', 'iowa passes law', \
+                'biden will lose', 
+                'biden would lose', \
+                'sanders has opposed', \
+                'iowa passes law', \
                 'days til iowa', \
                 'castro supporters', \
                 'warren thanks castro', \
@@ -65,6 +68,7 @@ def searchAndPost(sub):
                 'narcissist bernie', \
                 'becoming the frontrunner', \
                 'the 2020 election', \
+                'biden voted', \
                 'warren for president', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
