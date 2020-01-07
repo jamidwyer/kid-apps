@@ -51,6 +51,7 @@ def searchAndPost(sub):
                 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'representative king', \
                 'Alasandro', \
                 'first in iowa', \
+                'iowa campaign', \
                 'sanders overtakes joe', \
                 'biden will lose', 
                 'biden would lose', \
@@ -60,6 +61,7 @@ def searchAndPost(sub):
                 'castro supporters', \
                 'warren thanks castro', \
                 'poll in iowa', \
+                'iowaforyang', \
                 'republican as vice president', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
@@ -82,7 +84,9 @@ def searchAndPost(sub):
                 'iowa endors', 'iowa field director', 'voters in iowa', 'flip the senate', 'event in des moine', \
                 '1,000 times more than his workers', 'Iowa teacher on leave after \'sniper rifle\' comment', \
                 'feelthebern', \
+                'beat trump', \
                 'warren accuses trump', \
+                'talk about joe biden', \
                 'quinnipiac national poll', 'iowa steak fry', \
                 'iowa contender', 'polk county steak fry', 'huge iowa crowd', 'vote blue, no matter who', \
                 'iowa senat', 'iowa field director', \

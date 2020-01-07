@@ -41,17 +41,25 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'stabenow', \
+                'rick snyder', 'governor snyder', 'gov snyder', 'gov. snyder', 'michigan governor', \
+                'governor of michigan', 'michigan\'s governor', \
                 # fed reps
-                'fred upton', 'mi-06', 'mi-6', 'michigan\'s 6th District', 'rep. upton', 'rep upton', 'representative upton', 'congressman upton', \
+                'fred upton', 'mi-06', \
+                'mi-6', 'michigan\'s 6th District', 'rep. upton', 'rep upton', 'representative upton', 'congressman upton', \
+                'mike bishop', 'rep. bishop', 'rep bishop', 'representative bishop', 'congressman bishop', \
+                'mi-08', 'mi-8', 'Michigan\'s 8th District', \
+                'john james', \
+                'Robert Ritchie', \
+                '^(?!.*yamashiro).*amash.*$', 'mi-03', 'mi-3', 'michigan\'s 3rd District'
                 'benac', \
                 '^(?!.*trotte).*trott.*$', \
                 'rashida talib', \
                 'debbie dingle', \
                 'john dingell', 'Rep. Dingell', \
                 # misc
-                'handouts for billionaires, hunger for the poor', \
+                'anatomy of a trump rally', \
                 '1913 in calumet', \
-                'stop spreading misinformation about Trump', \
                 'detroit transportation', 'michigan sues', 'ice set up a fake university', \
                 'elections fair in michigan', 'michael moore', \
                 'trump win michigan', 'garypeters', 'coverage of his racism', \
@@ -65,7 +73,8 @@ def searchAndPost(sub):
                 'Michigan Legalizes Marijuana', 'HENRY YANEZ', 'gretchen whitmer', 'Tim Kelly', \
                 'Michigan still a blue state', 'Joe Schwarz', 'Political Issues in Michigan', 'sandy levin', \
                 'jack bergman', 'marijuana legalization in Michigan', \
-                'michigan congress', 'Michigan Republican', 'mike bishop', 'rep. bishop', 'rep bishop', 'representative bishop', 'congressman bishop', 'mi-08', 'mi-8', 'Michigan\'s 8th District', 'rick snyder', 'governor snyder', 'gov snyder', 'gov. snyder', 'michigan governor', 'governor of michigan', 'michigan\'s governor', 'stabenow', 'john james', 'Robert Ritchie', '^(?!.*yamashiro).*amash.*$', 'mi-03', 'mi-3', 'michigan\'s 3rd District']
+                'michigan congress', 'Michigan Republican'
+            ]
             for term in terms:
                  search(term, submission)
 

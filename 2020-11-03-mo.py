@@ -46,6 +46,7 @@ def searchAndPost(sub):
                 'pot in missouri', 'devito introducing bernie', 'black drivers in missouri', \
                 'missouri supreme court', 'billy long', 'curtis wylde', 'missouri trims its medicaid', \
                 'judge blocks missouri', 'missouri women to be charged with felonies', 
+                'st. louis cops', \
                 'St. Louis County Pays Woman', \
                 'nicole galloway', \
                 'missouri medicaid', 'mo auditor', 'missouri abortion', \

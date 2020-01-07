@@ -42,6 +42,7 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 'surveillance video from jeffrey epstein', \
+                'kolb was twice the legal', \
                 'ny republican', \
                 'bone spurs', \
                 'money from young cancer patients', 'new york to rally', 'ban so-called virginity tests', \
