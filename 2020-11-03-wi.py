@@ -49,7 +49,6 @@ def searchAndPost(sub):
                 'brad schimel'
                 'call to honor white people', \
                 't given us a single good thing this year', \
-                'always been Republicans suppressing votes', \
                 '1.7 million from campaign donors', 'sewer socialists', \
                 'wisconsin launches taskforce', 'Keep Empty Migrant Detention Center Running', \
                 'wisconsin poll', 'Trump Won Because Of Lower Democratic Turnout', 'bernie map', \

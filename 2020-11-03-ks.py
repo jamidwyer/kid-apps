@@ -38,20 +38,21 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                '^(?!.*arkansas governor).*kansas governor.*$', 'carl brewer', \
                 'ks-sen', \
                 'chris haulmark', 'ks-2', 'ks-02', 'jenkins, lynn', 'congressman jenkins', 'lynn jenkins', \
                 'yoder', 'ks-3', 'ks-03', \
                 'rep jenkins', 'steve fitzgerald', 'ks-4', 'ks-04', 'Kansas\' 4th Congressional District', \
                 'kansas 4th congressional district', 'congressman estes', 'ron estes', 'rep estes', \
                 'kansas veteran james thompson', 'brownback', 'kobach', 'colyer', \
-                '^(?!.*arkansas governor).*kansas governor.*$', 'carl brewer', \
+                'kansas democrat', \
                 'kansas capitol', 'kansas hits hemp farmers', 'rural hospital closures', \
                 'republicans will never say that racism is', 'when schools need more funding', '77M more in taxes in May', 'kansas counties eligible for disaster', 'ksvotes', 'wichita police chief', 'sharice davids', 'kansas primary', 'deep-red kansas', 'primary in kansas', 'kansas with sanders', 'kansas rally', 'Harley-Davidson shutdown', 'jamesthompsonks', 'candidate in Kansas', 'kansas is one of the worst', 'vermin supreme', 'svaty', 'state representative in kansas', 'kansas senate', 'kansas house', 'kansas statehouse', 'andrew finch', 'kansas republican', 'kansas gop', 'ks03', 'gay Kansas rep', 'kansas state house', 'ksleg', 'Kansas Attorney General', '^(?!.*checks legislat).*ks legislat.*$', 'brent welder', 'Kansas Legislat', 'steve alford', 'Kansas lawmaker', 'voter fraud commission', 'voter-fraud commission', 'election fraud commission', \
                 'kelly rippel', \
                 'Kansas Congressional Delegation', 'Steve Bannon a subpoena', 'kansas budget crisis', 'elections in Kansas', \
                 'Trump voter fraud panel', 'trump voting commission', 'Kansas economy', 'Trump Election Fraud Panel', 'Kansas tax cut', 'governor in kansas', 'leader jim ward', 'Trump Voter Fraud Probe', 'election integrity commission', 'Trump\'s voter-fraud panel', 'Trump\'s election commission co-chair', '\'election integrity\' panel', 'Trump voting panel']
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
@@ -73,7 +74,7 @@ def search(term, submission):
 
 for sub in subs:
      print(sub)
-     searchAndPost(sub);
+     searchAndPost(sub)
 
 text_file.close()
 local_subs.close()

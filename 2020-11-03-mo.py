@@ -41,17 +41,19 @@ def searchAndPost(sub):
             terms = [
                 'missouri governor', \
                 'missouri gubernatorial', \
+                'lucile bluford', \
+                'cori bush', \
                 'sarcoxie nursery', \
                 'colinsville dispensary', \
                 'pot in missouri', 'devito introducing bernie', 'black drivers in missouri', \
-                'missouri supreme court', 'billy long', 'curtis wylde', 'missouri trims its medicaid', \
-                'judge blocks missouri', 'missouri women to be charged with felonies', 
+                'missouri supreme court', 'billy long', 'curtis wylde', \
+                'missouri\'s legislat', \
+                'judge blocks missouri', \
                 'st. louis cops', \
                 'St. Louis County Pays Woman', \
                 'nicole galloway', \
                 'missouri medicaid', 'mo auditor', 'missouri abortion', \
-                'lucile bluford', \
-                'cori bush', 'black missouri drivers', 'Right Gets Tired of Democracy', \
+                'black missouri drivers', 'Right Gets Tired of Democracy', \
                 'forced by the state of missouri', 'hope Clinic for Women', 'missouri taxpayer', \
                 'Missouri is \'leaking\' sales tax revenue', 'rally in missouri', 'rally in Cape Girardeau', \
                 'missouri senat', 'st. louis abortion', 'billy long', 'missouri house', \
