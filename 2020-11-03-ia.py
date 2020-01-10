@@ -54,6 +54,7 @@ def searchAndPost(sub):
                 'first in iowa', \
                 'iowa campaign', \
                 'win iowa', \
+                'iowa approaches', \
                 'sanders overtakes joe', \
                 'biden will lose', 
                 'biden would lose', \
