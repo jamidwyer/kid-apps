@@ -49,6 +49,7 @@ def searchAndPost(sub):
                 'ia-4', 'ia-04', \
                 'congressman king', \
                 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'representative king', \
+                'david young', \
                 'Alasandro', \
                 'first in iowa', \
                 'iowa campaign', \
@@ -70,9 +71,11 @@ def searchAndPost(sub):
                 'narcissist bernie', \
                 'becoming the frontrunner', \
                 'the 2020 election', \
+                'the 2020 race', \
                 'biden voted', \
                 'warren for president', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
+                'sunrise movement', \
                 'essay praising bernie sanders', 'Sanders lead Democrat', \
                 'leading in iowa', \
                 'endorsements in iowa', 'IBEW Local 1634', 'farmers endorse sanders', 'primary vot', 'iowa capitol', \
@@ -111,9 +114,9 @@ def searchAndPost(sub):
                 'Iowa Lawmakers', \
                 'nate boulton', \
                 'rob sand', 'Iowa Poll', \
-                'Iowa went big for Trump', 'david young', 'anti-Iowa positions', 'Iowa Candidate', \
-                'Running For Congress In Iowa', 'Trump sinks in Iowa', \
-                'julian castro drops out', \
+                'anti-Iowa positions', 'Iowa Candidate', \
+                'Running For Congress In Iowa', \
+                'Trump sinks in Iowa', \
                 'Trump Hate Iowa'
             ]
             for term in terms:

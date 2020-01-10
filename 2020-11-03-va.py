@@ -39,16 +39,21 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'rep. wexton', \
+                'rep luria', \
+                'lee j. carter', \
+                'red hair boi', \
                 'danica roem', \
                 '^(?!.*west virginia law).*virginia law.*$', \
                 'students take time off to protest', \
                 'even allow kids to use crayons and markers', \
-                'virginia buys track', 'super tuesday', 'sen. amanda chase', 'Confederate statues in Virginia', \
-                'voters turned virginia', 'full control of virginia', 'victory in virginia beach', 'red hair boi', \
-                'competitive stafford county', 'lee j. carter', 'middle-finger gesture to Trump', \
+                'virginia buys track', 'super tuesday', \
+                'sen. amanda chase', 'Confederate statues in Virginia', \
+                'voters turned virginia', 'full control of virginia', 'victory in virginia beach', \
+                'competitive stafford county', \
+                'middle-finger gesture to Trump', \
                 'equal rights amendment', 'virginia department of elections', 'virginia state house', \
                 'virginia senate', 'house of delegates flipped', 'virginia state senate', \
-                'rep. wexton', \
                 'fake presidential seal'
             ]
             for term in terms:
