@@ -47,6 +47,7 @@ def searchAndPost(sub):
                 'paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', \
                 'IronStache', 'Republican tax scam', \
                 'brad schimel'
+                'voter purg', \
                 'call to honor white people', \
                 't given us a single good thing this year', \
                 '1.7 million from campaign donors', 'sewer socialists', \

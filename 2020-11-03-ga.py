@@ -40,8 +40,9 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 # general
-                'Georgia restores 22,000', \
+                'voter purg', \
                 'conviction and removal', \
+                'Georgia restores 22,000', \
                 'georgia could be a tipping point', \
                 'pointing out the truth and fighting', \
                 'majority in senate', 'trump rages against impeachment', 'barack obama says women', \

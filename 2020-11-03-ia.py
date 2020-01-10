@@ -53,6 +53,7 @@ def searchAndPost(sub):
                 'Alasandro', \
                 'first in iowa', \
                 'iowa campaign', \
+                'win iowa', \
                 'sanders overtakes joe', \
                 'biden will lose', 
                 'biden would lose', \
