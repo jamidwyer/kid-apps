@@ -51,6 +51,7 @@ def searchAndPost(sub):
                 'congressman andy barr', \
                 'rep. yarmuth', \
                 'kentucky state rep', \
+                'kentucky republican', \
                 'kentucky will accept', 'trump tax cuts', 'trump impeached', \
                 'conviction and removal', \
                 '20 republican senators', \
