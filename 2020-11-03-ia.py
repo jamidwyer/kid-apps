@@ -39,9 +39,14 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                # top terms
+                'iowa passes law', \
+                # governor
                 'kim reynolds', \
                 'gov. reynolds', \
+                # senate
                 'joni ernst', \
+                # federal reps
                 'ia-01', \
                 'abby finkenauer', \
                 'ia-03', \
@@ -56,11 +61,11 @@ def searchAndPost(sub):
                 'win iowa', \
                 '2020 democratic nomin', \
                 'iowa approaches', \
+                'sanders takes the lead', \
                 'sanders overtakes joe', \
                 'biden will lose', 
                 'biden would lose', \
                 'sanders has opposed', \
-                'iowa passes law', \
                 'days til iowa', \
                 'castro supporters', \
                 'warren thanks castro', \
