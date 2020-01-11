@@ -55,6 +55,7 @@ def searchAndPost(sub):
                 'congressman king', \
                 'rod blum', 'rep. blum', 'congressman blum', 'rep blum', 'steve king', 'representative king', \
                 'david young', \
+                'peteforiowa', \
                 'Alasandro', \
                 'first in iowa', \
                 'iowa campaign', \
@@ -109,10 +110,13 @@ def searchAndPost(sub):
                 'donations from billionaires', 'iowa city campaign', 'donations from iowa', 'iowa union', \
                 'caucusing for ', \
                 'marching in cedar rapids', 'workers in cedar rapids', 'iacaucus', 'tied in iowa', 'rising in iowa', \
-                'iowa trump vote', 'iowa dems', 'iowa legislat', 'rally in iowa', 'sioux city rally', 'virtual caucus', \
-                'sanders in iowa', 'giant democratic primary field', 'corporate middlemen', 'is that really so radical', \
-                'iowa kickoff speech', 'rwdsu in cedar rapids', 'iowa caucus', 'iowa democrat', 'climate crisis summit', \
-                'iowa\'s medicaid', 'zach wahls', 'iowa abortion ban', 'iowa race as house candidate', 'peteforiowa', \
+                'iowa trump vote', 'iowa dems', 'iowa legislat', 'rally in iowa', 'sioux city rally', \
+                'virtual caucus', \
+                'sanders in iowa', 'giant democratic primary field', 'corporate middlemen', \
+                'iowa kickoff speech', 'rwdsu in cedar rapids', 'iowa caucus', 'iowa democrat', \
+                'climate crisis summit', \
+                'iowa\'s medicaid', 'zach wahls', 'iowa abortion ban', \
+                'iowa race', \
                 'iowa is feeling the bern', 'new office in iowa', 'Bernie Sanders returns to Iowa', \
                 'Iowa representatives', 'NRA president\'s Iowa business', \
                 'Factory Farming in Iowa', \
