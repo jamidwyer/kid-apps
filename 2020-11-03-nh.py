@@ -42,7 +42,8 @@ def searchAndPost(sub):
                 'nh-sen', \
                 'iowa and new hampshire', \
                 'iowa, new hampshire', \
-                'electability', 'democrats have shifted left', 'Democrats seeking the mythical center', \
+                'electability', \
+                'nh, nv', \
                 'nh canvass', 'new hampshire american postal workers', 'new hampshire postal workers', \
                 'primary vot', '^(?!.*delectable).*electable.*$', 'Sanders team accuses media of ignoring', \
                 'nh for beto', 'unhinged display should frighten everyone', 'donald trump is terrified', \

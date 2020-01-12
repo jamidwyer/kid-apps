@@ -44,7 +44,8 @@ def searchAndPost(sub):
                 'illinois lieutenant governor', \
                 'dispensaries open in illinois', \
                 'nathan reitz', \
-                'lightfoot wants chicago', 'weed in illinois', 'chicagoyanggang', 'Jan Schakowsky', \
+                'dispensary in illinois', \
+                'weed in illinois', 'chicagoyanggang', 'Jan Schakowsky', \
                 'better president than lincoln', 'illinois becomes first state', 'sanders getting arrested', \
                 'chicago teachers union', 'illinois leadership team', 'soybean purchase pledge', 'chicago prosecut', \
                 'sanders arrested while protesting segregation', 'agriculture disaster throughout illinois', \
@@ -62,7 +63,10 @@ def searchAndPost(sub):
                 'ILLINOIS STATE LAWMAKER', 'abe lincoln', \
                 'dirksen londrigan', 'sean casten', 'illinois law', \
                 '37th state to ratify Equal Rights Amendment', 'illinois house', \
-                'illinois rep.', 'illinois progressive network', 'haymarket riot', 'hb 4819', 'congress in illinois', 'aaron ortiz', 'il-03', 'illinoisprimary', 'chicago registered voters', 'illinois legislat', 'illinois primary', 'demonstrations in chicago', '^(?!.*tara lipinski).*lipinski.*$', 'Democrat in Illinois', 'illinois vot', 'illinoispolitics', 'Illinois Primar', 'flip illinois', 'marie newman', 'chuy garcia', '#ilgov', 'Illinois\'s 3rd Congressional District', 'illinois republican', 'Republican congressional primary in Illinois', 'arthur jones', 'Illinois Congress', 'Illinois GOP', 'illinois green Party', 'Illinois Democratic Gubernatorial', 'Illinois 13th\'s Congressman', '2018 illinois election', 'Illinois Dem gubernatorial candidate', 'rotering', 'Illinois attorney general', 'Illinois Senate', 'Chicago Congressional Primary', 'rep lahood', 'hultgren', 'il-14', 'shimkus', '\'chuy\' garcia', 'Rep. Gutierrez', 'anthony clark', '@cdrosa', 'Carlos Ramirez-Rosa', 'Rep. LaHood', 'mike bost', 'rep. bost', 'congressman bost', 'rep bost', 'representative bost', 'rodney davis', 'davis\'s seat', 'roskam', 'il-6', 'il-06', 'chicago transit', 'chris kennedy', '^(?!.*trauner).*rauner.*$', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'governor of illinois', 'il gov', 'jeanne ives', 'pritzker', 'il governor\'s']
+                'illinois rep.', 'illinois progressive network', 'haymarket riot', 'hb 4819', \
+                'congress in illinois', 'aaron ortiz', 'il-03', 'illinoisprimary', 'chicago registered voters', \
+                'illinois legislat', 'illinois primary', 'demonstrations in chicago', \
+                '^(?!.*tara lipinski).*lipinski.*$', 'Democrat in Illinois', 'illinois vot', 'illinoispolitics', 'Illinois Primar', 'flip illinois', 'marie newman', 'chuy garcia', '#ilgov', 'Illinois\'s 3rd Congressional District', 'illinois republican', 'Republican congressional primary in Illinois', 'arthur jones', 'Illinois Congress', 'Illinois GOP', 'illinois green Party', 'Illinois Democratic Gubernatorial', 'Illinois 13th\'s Congressman', '2018 illinois election', 'Illinois Dem gubernatorial candidate', 'rotering', 'Illinois attorney general', 'Illinois Senate', 'Chicago Congressional Primary', 'rep lahood', 'hultgren', 'il-14', 'shimkus', '\'chuy\' garcia', 'Rep. Gutierrez', 'anthony clark', '@cdrosa', 'Carlos Ramirez-Rosa', 'Rep. LaHood', 'mike bost', 'rep. bost', 'congressman bost', 'rep bost', 'representative bost', 'rodney davis', 'davis\'s seat', 'roskam', 'il-6', 'il-06', 'chicago transit', 'chris kennedy', '^(?!.*trauner).*rauner.*$', 'IL gubernatorial', '@govrauner', '^(?!.*bissexual).*biss.*$', 'illinois governor', 'governor of illinois', 'il gov', 'jeanne ives', 'pritzker', 'il governor\'s']
             for term in terms:
                  search(term, submission)
 

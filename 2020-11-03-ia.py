@@ -62,6 +62,7 @@ def searchAndPost(sub):
                 'win iowa', \
                 '2020 democratic nomin', \
                 'iowa approaches', \
+                'iowa, nh', \
                 'sanders takes the lead', \
                 'sanders overtakes joe', \
                 'biden will lose', 
