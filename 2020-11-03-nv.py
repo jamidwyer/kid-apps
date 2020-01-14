@@ -42,10 +42,13 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 # fed reps
+                'Nevada 4th Congressional District', \
                 'amodei', \
                 'cortez masto', \
+                'pat spearman', \
                 'rally in las vegas', \
-                'nh, nv', \                
+                'nh, nv', \
+                's Largest Teachers Union', \
                 'nevada service union', 'nevada rally', 'marijuana business in Nevada', \
                 'trump tower in las vegas', 'sanders visits las vegas', 'sheldon adelson', \
                 'child sex ring in las vegas', 'cohen uncovered a pedophile', 'leads in nevada', \
@@ -58,7 +61,8 @@ def searchAndPost(sub):
                 'Las Vegas festival mass shooting', 'congressperson in nevada', 'nevada ballot', \
                 'picket in las vegas', 'las vegans protest', 'brothel owner hof', \
                 'trump in Vegas', 'nevada gop', 'las vegas union', 'nevada primary', \
-                'Nevada 4th Congressional District', 'pat spearman', 'washoe county sheriff', 'nevada voter', 'Vegas shooter', 'John Anzalone', 'nv caucus', 'Clark County DA', 'nevada ag', 'nv assembly', 'living wage in nv', 'nevada assembly', 'Las Vegas massacre', 'nevada poll', 'banning bump stocks', 'nevada politic', 'nv04', 'nv-03', 'nv-02', 'NV GOP wants to', 'kate marshall', 'Las Vegas shooting', 'Nevada House, Senate races', 'jay craddock', 'nevada legislat', 'Nicole Cannizzaro', 'Nevada\'s 4th District Race', 'laxalt', 'kihuen', 'oscarson', 'Nevada Supreme Court justice', 'amy vilela', 'State Senate Recall', 'michael roberson', 'Richard McArthur', 'tony smith', 'sisolak', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s']
+                'washoe county sheriff', 'nevada voter', \
+                'Vegas shooter', 'John Anzalone', 'nv caucus', 'Clark County DA', 'nevada ag', 'nv assembly', 'living wage in nv', 'nevada assembly', 'Las Vegas massacre', 'nevada poll', 'banning bump stocks', 'nevada politic', 'nv04', 'nv-03', 'nv-02', 'NV GOP wants to', 'kate marshall', 'Las Vegas shooting', 'Nevada House, Senate races', 'jay craddock', 'nevada legislat', 'Nicole Cannizzaro', 'Nevada\'s 4th District Race', 'laxalt', 'kihuen', 'oscarson', 'Nevada Supreme Court justice', 'amy vilela', 'State Senate Recall', 'michael roberson', 'Richard McArthur', 'tony smith', 'sisolak', '^(?!.*hellerweather).*heller.*$', 'sbaih', 'Nevada GOP', 'jared fisher', 'governor sandoval', 'nevada governor', 'NV\'s next governor ', 'governor of nevada', 'nv gov', 'nv governor\'s']
             for term in terms:
                  search(term, submission)
 

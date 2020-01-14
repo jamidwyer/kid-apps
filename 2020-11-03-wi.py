@@ -46,12 +46,10 @@ def searchAndPost(sub):
                 'wi-07', \
                 'paul ryan', 'rep. ryan', 'congressman ryan', 'rep ryan', 'speaker ryan', '@speakerryan', \
                 'IronStache', 'Republican tax scam', \
-                'brad schimel'
+                'brad schimel', \
                 'voter purg', \
-                'call to honor white people', \
-                't given us a single good thing this year', \
-                '1.7 million from campaign donors', 'sewer socialists', \
-                'wisconsin launches taskforce', 'Keep Empty Migrant Detention Center Running', \
+                'LL TUNE IN WHEN THERE', \
+                'sewer socialists', \
                 'wisconsin poll', 'Trump Won Because Of Lower Democratic Turnout', 'bernie map', \
                 'MI, MN and WI', 'DNC Army That Could Soon Descend', 'bern in milwaukee', \
                 'unflattering numbers leak', 'Ten cities say Trump owes them money', \
