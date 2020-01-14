@@ -72,6 +72,7 @@ def searchAndPost(sub):
                 'poll in iowa', \
                 'iowaforyang', \
                 'yang iowa', \
+                'accusing bernie', \
                 'castro returns to iowa', \
                 'republican as vice president', \
                 'fought for working families my entire life', \

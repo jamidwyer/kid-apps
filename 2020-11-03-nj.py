@@ -41,6 +41,15 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'nj-7', 'nj-07', \
+                'NJ\'s 7th District', 'nj cd-7', \
+                'josh gottheimer', \
+                'Representative Chris Smith', \
+                'thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', \
+                'representative macarthur', 'congressman macarthur', \
+                'lobiondo', 'leonard lance', \
+                'frelinghuysen', \
+                'new jersey legislat', \
                 'election reform in pennsylvania and and new jersey', \
                 'activists are camped at new jersey', 'n.j. just took a big step', 'jeff van drew', \
                 'democrat expected to switch parties', 'NJ Man Arrested for Vandalising Synagogue', \
@@ -49,7 +58,20 @@ def searchAndPost(sub):
                 'rape case judge resigns', \
                 'analilia mejia', \
                 'nj to teach lgbt', \
-                'new human rights commission', 'wilda diaz', 'Immigrant Workers Fired From President Trump', 'Jewish Woman for protesting concentration Camps', '30 jewish protesters arrested', 'beronica ruiz', 'nj attny general', 'with l of these goddamn', 'spotted in middletown nj', 'Bedminster', 'nj-11', 'seth grossman', 'new jersey passed sweeping', 'murphy set to sign law', 'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', 'new jersey voters', 'josh gottheimer', 'Representative Chris Smith', 'NJ GOP Candidate', 'Republican Hugin', 'NJ\'s 7th District', 'nj cd-7', 'N.J. congressman', 'keady', 'New Jersey Senate', 'Congressman Chris Smith', 'NJ State Senator Ron Rice', 'NJ congressmen', 'NJ GOP rep', 'thomas macarthur', 'tom macarthur', 'rep. macarthur', 'rep macarthur', 'n.j. bill', 'representative macarthur', 'congressman macarthur', 'lobiondo', 'leonard lance', 'nj-7', 'nj-07', 'frelinghuysen']
+                'new human rights commission', 'wilda diaz', 'Immigrant Workers Fired From President Trump', 'Jewish Woman for protesting concentration Camps', '30 jewish protesters arrested', 'beronica ruiz', 'nj attny general', 'with l of these goddamn', 'spotted in middletown nj', 'Bedminster', 'nj-11', 'seth grossman', 'new jersey passed sweeping', \
+                'murphy set to sign law', \
+                'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', \
+                'new jersey voters', \
+                'NJ GOP Candidate', \
+                'Republican Hugin', \
+                'N.J. congressman', \
+                'keady', \
+                'New Jersey Senate', \
+                'Congressman Chris Smith', \
+                'NJ State Senator Ron Rice', \
+                'NJ congressmen', 'NJ GOP rep', \
+                'n.j. bill'
+            ]
             for term in terms:
                  search(term, submission)
 
