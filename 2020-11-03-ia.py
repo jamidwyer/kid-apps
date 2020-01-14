@@ -63,22 +63,21 @@ def searchAndPost(sub):
                 '2020 democratic nomin', \
                 'iowa approaches', \
                 'iowa, nh', \
+                'sanders surge', \
                 'sanders takes the lead', \
-                'sanders overtakes joe', \
                 'biden will lose', 
                 'biden would lose', \
                 'sanders has opposed', \
                 'days til iowa', \
-                'castro supporters', \
-                'warren thanks castro', \
                 'poll in iowa', \
                 'iowaforyang', \
+                'yang iowa', \
+                'castro returns to iowa', \
                 'republican as vice president', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
                 'asking, why this moment', \
                 'insurance deductible', \
-                'narcissist bernie', \
                 'becoming the frontrunner', \
                 'the 2020 election', \
                 'the 2020 race', \
