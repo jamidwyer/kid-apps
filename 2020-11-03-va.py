@@ -42,16 +42,17 @@ def searchAndPost(sub):
                 'rep. wexton', \
                 'abigail spanberger', \
                 'rep luria', \
+                'sen. amanda chase', \
                 'lee j. carter', \
                 'red hair boi', \
                 'danica roem', \
                 '^(?!.*west virginia law).*virginia law.*$', \
                 'super tuesday', \
-                'sen. amanda chase', 'Confederate statues in Virginia', \
-                'voters turned virginia', 'full control of virginia', 'victory in virginia beach', \
-                'competitive stafford county', \
-                'middle-finger gesture to Trump', \
-                'equal rights amendment', 'virginia department of elections', 'virginia state house', \
+                'equal rights amendment', \
+                'voters turned virginia', \
+                'Confederate statues in Virginia', \
+                'Trump Campaign Adviser Pleads Guilty to Child Porn', \
+                'virginia department of elections', 'virginia state house', \
                 'virginia senate', 'house of delegates flipped', 'virginia state senate', \
                 'fake presidential seal'
             ]
