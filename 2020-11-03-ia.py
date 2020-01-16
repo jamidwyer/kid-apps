@@ -85,6 +85,7 @@ def searchAndPost(sub):
                 'the 2020 election', \
                 'the 2020 race', \
                 'biden voted', \
+                'jane sanders', \
                 'defends sanders', \
                 'warren for president', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
