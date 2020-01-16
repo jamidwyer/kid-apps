@@ -43,16 +43,19 @@ def searchAndPost(sub):
             terms = [
                 'governor of vermont', 'vermont gov', \
                 'governor phil scott', \
-                'vermont legislature', \
                 'vermont senat', \
+                'congressman rick larsen', \
+                'christine hallquist', \
+                'vermont legislature', \
                 'feel the barn', \
                 'super tuesday', \
                 'sanders picking up trash', \
-                'terrorizing vermont', \
+                'burlington city council', \
                 'mayor of burlington', \
                 'sanders to the military industrial', \
                 'vermont gubernatorial', \
-                'nomination in vermont', 'christine hallquist', 'vermont house', 'congressman rick larsen', \
+                'nomination in vermont', \
+                'vermont house', \
                 'GOP in Vermont'
             ]
             for term in terms:

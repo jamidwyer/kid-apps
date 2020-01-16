@@ -77,6 +77,7 @@ def searchAndPost(sub):
                 'accusing bernie', \
                 'castro returns to iowa', \
                 'republican as vice president', \
+                'neck and neck in iowa', \
                 'fought for working families my entire life', \
                 'Woman Ran Over Girl Because She Was', \
                 'asking, why this moment', \

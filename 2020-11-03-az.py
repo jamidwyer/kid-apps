@@ -45,7 +45,9 @@ def searchAndPost(sub):
                 '^(?!.*snowflake).*flake.*$', '@jeffflake', 'sinema', 'Kelli Ward'
                 '@RepOHalleran', 'o\'halleran', 'kevin cavanaugh', 'steve smith', 'schweikert', \
                 'democrat steve diamond', \
-                'flip the senate', 'ice fails to properly redact', \
+                'flip the senate', \
+                'paul threatens fellow republicans', \
+                'ice fails to properly redact', \
                 'nothing less than a civil war', \
                 'Simulations Of Homes In Chicago And Arizona', 'representing in az', \
                 'nervous republicans', 'Trump backlash in suburbs', 'mark kelly', \

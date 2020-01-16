@@ -42,6 +42,7 @@ def searchAndPost(sub):
                 'dick durbin', \
                 'duckworth', \
                 'illinois lieutenant governor', \
+                'rep. underwood', \
                 'dispensaries open in illinois', \
                 'nathan reitz', \
                 'dispensary in illinois', \
@@ -55,7 +56,8 @@ def searchAndPost(sub):
                 'ICE shows up at your door', '16 shots', 'illinois expands gambling', 'welfare queen of chicago', \
                 'governor visits grafton', 'convictions for 770,000', \
                 'marijuana goes on sale Jan. 1 in Illinois', \
-                'legal in illinois', 'illinois legaliz', 'university of chicago graduate students', 'kash jackson', 'illinois prison', 'mike quigley', ' il bill', 'teenage girl for sex in exchange for impounded car', 'illinois video gambling', 'Trump falls short on infrastructure', \
+                'legal in illinois', 'illinois legaliz', 'university of chicago graduate students', 'kash jackson', \
+                'illinois prison', 'mike quigley', ' il bill', 'teenage girl for sex in exchange for impounded car', 'illinois video gambling', 'Trump falls short on infrastructure', \
                 'illinois\' legal weed', \
                 'illinois marijuana', 'chicago to protest', 'perceived threat of gun violence', \
                 'Progressives Scored Big Wins in Chicago', \

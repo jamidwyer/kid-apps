@@ -65,6 +65,7 @@ def searchAndPost(sub):
                 'ky gun violence', 'massacremitch', 'secure the 2020 elections', \
                 'kentucky miner', \
                 'kentucky teachers', \
+                'paul threatens fellow republicans', \
                 'fuck you, mitch', 'fuck mitch', 'the fucking turtle', \
                 'in the Way of Federal Weed Legalization', \
                 'kentucky coal', 'kentucky is a top target', 'Louisville, Kentucky Metro Council', 'kentucky vot', 'kentucky gop', 'war against free and fair elections', 'senate majority bitch', 'Bipartisan marijuana banking bill', 'russian investment in a kentucky', 'ky-sen', 'firefighting jobs with largest federal', 'lives are lost every day to our broken health care system', \
