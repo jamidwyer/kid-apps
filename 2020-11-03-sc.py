@@ -57,10 +57,23 @@ def searchAndPost(sub):
                 'paid staff in south carolina', 'cancelling gop primaries', 'union President James Sanderson', \
                 'sc01', 'denali stuckey', 'library in s. carolina', 'sc-04', 'scdp', \
                 'working with segregationist', 'at least there was some civility', ' sc 2020', ' sc poll', \
-                ' sc 2020', 'south carolina democrat', '#scdem', 'south carolina campaign', ' sc campaign', 'denmarkwatercri', 'campaign team in south carolina', 'stand with south carolina teachers', 'leningradlindsey', 'lindseygraham', 'lindsey fucking graham', 'sc teacher rally', 'lindsey graham', \
+                ' sc 2020', 'south carolina democrat', '#scdem', 'south carolina campaign', ' sc campaign', 'denmarkwatercri', \
+                'campaign in south carolina', \
+                'campaign team in south carolina', 'stand with south carolina teachers', 'leningradlindsey', 'lindseygraham', 'lindsey fucking graham', 'sc teacher rally', 'lindsey graham', \
                 'first primary in the south', 'south carolina support', 'bernieinsc', 'supporters in greenville', \
                 'charleston church massacre', 's.c. congress', 'south carolina vote', 'kinder-guardians', \
-                'henrymcmaster', 'charleston church shooting', 's.c. governor', 'southcarolinapolitics', 'sc governor', 'governor in sc', ' SC Democrat', 'south carolina general election', 'sc lawmaker', 'south carolina senate', 'sc house votes', 'sc legislat', 'dylann roof', 'SC needs gerrymandering', 'South Carolina party primaries', 'joe cunningham will vote', 'phil noble', 'mal hyman', 'gowdy', 'rep. joe wilson', 'jeff duncan', 'archie parnell', 'henry mcmaster', 'kevin bryant', 'south carolina governor', 'south carolina republican', 'Catherine Templeton', 'Republicans in South Carolina']
+                'henrymcmaster', \
+                'charleston church shooting', \
+                's.c. governor', 'southcarolinapolitics', \
+                'sc governor', 'governor in sc', ' SC Democrat', 'south carolina general election', \
+                'sc lawmaker', \
+                'south carolina senate', 'sc house votes', 'sc legislat', 'dylann roof', \
+                'SC needs gerrymandering', 'South Carolina party primaries', 'joe cunningham will vote', \
+                'phil noble', 'mal hyman', \
+                'gowdy', 'rep. joe wilson', 'jeff duncan', 'archie parnell', 'henry mcmaster', 'kevin bryant', \
+                'south carolina governor', \
+                'south carolina republican', \
+                'Catherine Templeton', 'Republicans in South Carolina']
             for term in terms:
                  search(term, submission)
 

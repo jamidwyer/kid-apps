@@ -38,9 +38,20 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['wyoming gop', 'cheney attack', 'liz cheney', 'sage grouse', 'wyoming protest', 'matt mead', 'wyoming governor', 'mary throne', 'barrasso', 'erik prince']
+            terms = [
+                'wyoming governor', \
+                'wy-sen', \
+                'barrasso', \
+                'mary throne', \
+                'erik prince', \
+                'liz cheney', \
+                'cheney attack', \
+                'matt mead', \
+                'wyoming gop', \
+                'sage grouse', 'wyoming protest'
+            ]
             for term in terms:
-                 search(term, submission);
+                 search(term, submission)
 
 def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):

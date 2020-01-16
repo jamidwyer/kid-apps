@@ -70,6 +70,7 @@ def searchAndPost(sub):
                 'sanders has opposed', \
                 'days til iowa', \
                 'poll in iowa', \
+                'not me. us.', \
                 'iowaforyang', \
                 'yang iowa', \
                 'debate before iowa', \
@@ -84,6 +85,8 @@ def searchAndPost(sub):
                 'the 2020 election', \
                 'the 2020 race', \
                 'biden voted', \
+                'jane sanders', \
+                'defends sanders', \
                 'warren for president', \
                 'wealth tax', 'electability', 'trump supporters from iowa', 'democrats have shifted left', \
                 'sunrise movement', \

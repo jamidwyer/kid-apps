@@ -62,7 +62,7 @@ def searchAndPost(sub):
                 'haymarket affair', 'chicago impounds', 'trump tower chicago', 'illinois state capitol', \
                 'ILLINOIS STATE LAWMAKER', 'abe lincoln', \
                 'dirksen londrigan', 'sean casten', 'illinois law', \
-                '37th state to ratify Equal Rights Amendment', 'illinois house', \
+                'illinois house', \
                 'illinois rep.', 'illinois progressive network', 'haymarket riot', 'hb 4819', \
                 'congress in illinois', 'aaron ortiz', 'il-03', 'illinoisprimary', 'chicago registered voters', \
                 'illinois legislat', 'illinois primary', 'demonstrations in chicago', \
