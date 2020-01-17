@@ -65,6 +65,7 @@ def searchAndPost(sub):
                 'mn-02', \
                 'mn-08', \
                 'rep omar', 'rep. omar', 'ilhan', \
+                'first muslim congresswoman', \
                 'erik paulsen', 'rep. paulsen', 'rep paulsen', \
                 'MN woman sues two pharmacies', 'super tuesday', 'minnesota state capitol', \
                 'minnesota republican', 'minneapolis mayor', \
