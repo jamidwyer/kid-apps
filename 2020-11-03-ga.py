@@ -42,7 +42,7 @@ def searchAndPost(sub):
                 # general
                 'voter purg', \
                 'conviction and removal', \
-                'Georgia restores 22,000', \
+                'the new voter suppression', \
                 'voting by people of color', \
                 'georgia could be a tipping point', \
                 'pointing out the truth and fighting', \

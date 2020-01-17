@@ -58,15 +58,17 @@ def searchAndPost(sub):
                 'debbie dingle', \
                 'john dingell', 'Rep. Dingell', \
                 # misc
-                'anatomy of a trump rally', \
-                '1913 in calumet', \
+                'michigan rally', \
                 'detroit transportation', 'michigan sues', 'ice set up a fake university', \
                 'elections fair in michigan', 'michael moore', \
                 'trump win michigan', 'garypeters', 'coverage of his racism', \
                 'Trump Won Because Of Lower Democratic Turnout', 'Trump supporters deported back to Iraq', \
                 'Jimmy Aldaoud', 'MI, MN and WI', 'second democratic debate', 'detroit police board', \
                 'debate in detroit', 'unflattering numbers leak', 'DNC Army That Could Soon Descend', \
-                'flint officials', 'what happened in flint', '12 points in michigan', 'Michigan Doctor Accused of Overprescribing', 'michigan jail', 'michigan lawmak', 'dems in michigan', 'michigan democrat', 'michigan absentee', 'devos family', 'candidates in michigan', 'clean water for michigan', 'votes in michigan', 'michigan poll', 'mi11', 'tlaib', 'vote in michigan', 'michigan primary', 'tom mair', 'michigan redistricting', 'gerrymandered michigan', 'fix flint', 'water in flint', 'Flint, Michigan', 'niles niemuth', 'upton stands against', 'Michigan Department of Civil Rights', 'gubernatorial candidate in Michigan', 'ballot in michigan', 'legalization in michigan', 'eponine garrod', 'state house in lansing', 'detroit dsa', 'governor in michigan', 'dana nessel', 'edgar prince', 'poppy sias', 'bobby holley', 'Michigan House votes', \
+                'flint officials', 'what happened in flint', '12 points in michigan', \
+                'Michigan Doctor Accused of Overprescribing', 'michigan jail', 'michigan lawmak', \
+                'dems in michigan', 'michigan democrat', 'michigan absentee', 'devos family', \
+                'candidates in michigan', 'clean water for michigan', 'votes in michigan', 'michigan poll', 'mi11', 'tlaib', 'vote in michigan', 'michigan primary', 'tom mair', 'michigan redistricting', 'gerrymandered michigan', 'fix flint', 'water in flint', 'Flint, Michigan', 'niles niemuth', 'upton stands against', 'Michigan Department of Civil Rights', 'gubernatorial candidate in Michigan', 'ballot in michigan', 'legalization in michigan', 'eponine garrod', 'state house in lansing', 'detroit dsa', 'governor in michigan', 'dana nessel', 'edgar prince', 'poppy sias', 'bobby holley', 'Michigan House votes', \
                 'gerrymandering in Michigan', 'Green Party of Michigan', 'Mich. ballot campaign', \
                 'abdulelsayed', 'brenda lawrence', 'Michigan Senate candidate', 'saari', 'schuette', \
                 'Flint drinks poison', 'Michigan ballot', 'el-sayed', 'Michigan Legalize Marijuana', \

@@ -58,7 +58,9 @@ def searchAndPost(sub):
                 'dd adams', \
                 'ken romley', \
                 'charlotte shooter', \
-                'meadows announces', 'payout to Sons of Confederate Veterans', \
+                'the new voter suppression', \
+                'meadows announces', \
+                'payout to Sons of Confederate Veterans', \
                 'north carolina cops', 'super tuesday', 'n.c. congress', 'rev dr barber', 'north carolina vot', \
                 'fodder for its forever wars', \
                 'deceased gop strategist', \
@@ -73,7 +75,8 @@ def searchAndPost(sub):
                 'republicans in north carolina', 'gerrymandering in north carolina', 'silent sam', \
                 'north carolina constituion', 'nc gop', \
                 'north carolina Republican', 'berger challenger', 'lee walker shooting', 'god is racist', \
-                'women in north carolina', 'north carolina trump', 'north carolina election', 'steven buccini', 'nccapitol', 'nc senate', 'nc democrats', 'diamond and silk', 'sen. tillman', 'n carolina lawmaker', 'sen. jeff jackson', 'gerrymandering of nc', 'nc election 2018', 'jenny marshall', 'N Carolina Green Party', 'house bill 185', 'vote in nc', 'North Carolina State Board of Elections', 'Democrats of Forsyth County', 'north carolina green party', 'nc republicans', 'north Carolina gop', 'NC candidates', 'north Carolina General assembly', 'roger w. allison', 'nc 5th congressional district', 'buncombe county sheriff', 'peter boykin', 'larry pittman', 'nc lawmaker', 'larry pittman', 'nc rep. lewis', 'beverly boswell', 'North Carolina\'s House District 79', 'NC House District 79', 'nc13', 'markmeadows', 'NC\'s 2nd congressional district', ' nc congress', 'NC Supreme Court', 'ncae', 'Top NC court', 'NC redistricting', 'North Carolina redistricting', \
+                'women in north carolina', 'north carolina trump', 'north carolina election', 'steven buccini', \
+                'nccapitol', 'nc senate', 'nc democrats', 'diamond and silk', 'sen. tillman', 'n carolina lawmaker', 'sen. jeff jackson', 'gerrymandering of nc', 'nc election 2018', 'jenny marshall', 'N Carolina Green Party', 'house bill 185', 'vote in nc', 'North Carolina State Board of Elections', 'Democrats of Forsyth County', 'north carolina green party', 'nc republicans', 'north Carolina gop', 'NC candidates', 'north Carolina General assembly', 'roger w. allison', 'nc 5th congressional district', 'buncombe county sheriff', 'peter boykin', 'larry pittman', 'nc lawmaker', 'larry pittman', 'nc rep. lewis', 'beverly boswell', 'North Carolina\'s House District 79', 'NC House District 79', 'nc13', 'markmeadows', 'NC\'s 2nd congressional district', ' nc congress', 'NC Supreme Court', 'ncae', 'Top NC court', 'NC redistricting', 'North Carolina redistricting', \
                 'nc gerrymandering', 'North Carolina Gerrymander', 'North Carolina\'s Pro-GOP Gerrymander', \
                 'NC Congressional map', 'NC electoral map', 'redrawn map in North Carolina', \
                 'North Carolina congress'
