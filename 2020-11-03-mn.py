@@ -33,6 +33,7 @@ def search(term, submission):
     if re.search(term, submission.title, re.IGNORECASE):
         # Reply to the post
         text = ("Minnesota 2020 Election \n\n"
+            "[Presidential Primary Early Voting Begins](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): January 17, 2020 \n\n"
             "[Presidential Primary Election Pre-Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): March 3, 2020 \n\n"
             "[Presidential Primary Election](https://mnvotes.sos.state.mn.us/ABRegistration/ABRegistrationStep1.aspx): March 3, 2020 \n\n"
             "[Primary Election Pre-Registration Deadline](https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx): July 23, 2020 \n\n"

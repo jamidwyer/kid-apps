@@ -71,10 +71,13 @@ def searchAndPost(sub):
                 'days til iowa', \
                 'poll in iowa', \
                 'not me. us.', \
+                'sanders vs. warren', \
                 'iowaforyang', \
                 'yang iowa', \
                 'debate before iowa', \
+                'cnnistrash', \
                 'accusing bernie', \
+                'lead in iowa', \
                 'castro returns to iowa', \
                 'republican as vice president', \
                 'neck and neck in iowa', \

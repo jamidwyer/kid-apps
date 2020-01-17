@@ -44,6 +44,7 @@ def searchAndPost(sub):
                 'texas vote', \
                 'texas school district', \
                 'texas right-wing', \
+                'texas registration', \
                 'castro endorses', \
                 'texas wants to curb college students', \
                 'plan to criminalize homelessness', \
@@ -60,7 +61,8 @@ def searchAndPost(sub):
                 'Carlos Gregorio Hernandez Vasquez', 'federal child abuse at our border', 'donations to senate republicans', \
                 'jodey arrington', 'deadly houston drug raid', 'house impeachment resolution', 'border city of mcallen', \
                 'texasgop', 'texas legislat', 'el paso court', 'texas a battleground', 'kids in cages', \
-                'texas young voter', 'march in clint', 'joaquin castro', 'concentration camps at its border', '2020 generic congressional ballot', 'tx border patrol', 'texas migrant facility', 'texas detention', 'clint detention', 'secretary castro', 'drowned migrant and daughter', 'soap, toothbrushes', 'texas border facility', 'toddlers in detention camps', 'sarah fabian', 'texas gov', 'texas gop', 'texas goes blue', 'fire at el paso church', 'Pompeo Laments Cruelty', 'jessica cisneros', 'txdem', 'will hurd', 'patriot front', 'vichy republicans', 'texas for border wall', 'private land for border wall', 'rig the 2020 census', 'texas dems', 'texas democrat', 'texas primary', 'el paso rally', 'texas judge', 'governor abbott', 'a resignation in texas', 'governor of texas', 'gop in texas', 'chip roy', 'pipeline in texas', 'san antonio prosecutor', 'migrant boy who died in custody', 'tx-32', 'muhlaysia booker', 'tx-22', 'tx-23', 'tx-28', 'dallas campaign', 'tx-21', 'wendy davis', 'tx-sen', 'rep. al green', 'lt. gov. patrick', 'cornyn', 'texas law', 'fastest-warming cities', 'demolished for border wall', 'texas capitol', 'turnout in Dallas', 'texas police officers', 'texas politic']
+                'texas young voter', 'march in clint', 'joaquin castro', 'concentration camps at its border', \
+                '2020 generic congressional ballot', 'tx border patrol', 'texas migrant facility', 'texas detention', 'clint detention', 'secretary castro', 'drowned migrant and daughter', 'soap, toothbrushes', 'texas border facility', 'toddlers in detention camps', 'sarah fabian', 'texas gov', 'texas gop', 'texas goes blue', 'fire at el paso church', 'Pompeo Laments Cruelty', 'jessica cisneros', 'txdem', 'will hurd', 'patriot front', 'vichy republicans', 'texas for border wall', 'private land for border wall', 'rig the 2020 census', 'texas dems', 'texas democrat', 'texas primary', 'el paso rally', 'texas judge', 'governor abbott', 'a resignation in texas', 'governor of texas', 'gop in texas', 'chip roy', 'pipeline in texas', 'san antonio prosecutor', 'migrant boy who died in custody', 'tx-32', 'muhlaysia booker', 'tx-22', 'tx-23', 'tx-28', 'dallas campaign', 'tx-21', 'wendy davis', 'tx-sen', 'rep. al green', 'lt. gov. patrick', 'cornyn', 'texas law', 'fastest-warming cities', 'demolished for border wall', 'texas capitol', 'turnout in Dallas', 'texas police officers', 'texas politic']
             for term in terms:
                  search(term, submission)
 

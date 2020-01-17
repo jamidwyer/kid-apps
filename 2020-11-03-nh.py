@@ -51,7 +51,10 @@ def searchAndPost(sub):
                 'new hampshire democrat', \
                 'new hampshire rally', 'nh pride parade', \
                 'rip, al johnson', \
-                'town hall in londonderry', 'throw their rear ends in jail', 'nh poll', 'new hampshire supreme court', 'dinesh d', 'nhpolitics', 'New Hampshire seat in Trump district', 'spagnuolo', 'New Hampshire House vot', 'voters in new hampshire', 'New Hampshire Lawmakers', 'New Hampshire vote']
+                'town hall in londonderry', 'throw their rear ends in jail', \
+                'nh poll', \
+                'new hampshire supreme court', 'dinesh d', 'nhpolitics', \
+                'New Hampshire seat in Trump district', 'spagnuolo', 'New Hampshire House vot', 'voters in new hampshire', 'New Hampshire Lawmakers', 'New Hampshire vote']
             for term in terms:
                  search(term, submission)
 

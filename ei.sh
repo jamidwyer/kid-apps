@@ -1,5 +1,6 @@
 #!/bin/sh
 cd /home/ubuntu/running-against-bot
+	python 2020-11-03-mn.py # 2020-01-17
 	python 2020-11-03-ia.py # 2020-01-24 1 senator
 	python 2020-11-03-sc.py # 2020-01-30
 	python 2020-11-03-ar.py # 2020-02-02
@@ -19,7 +20,6 @@ cd /home/ubuntu/running-against-bot
 	python 2020-11-03-fl.py # 2020-02-18
 	python 2020-11-03-oh.py # 2020-02-18
 	python 2020-11-03-ga.py # 2020-02-24
-	python 2020-11-03-mn.py # 2020-03-03
 	python 2020-11-03-me.py # 2020-03-03
 	python 2020-11-03-va.py # 2020-03-03
 	python 2020-11-03-ut.py # 2020-03-03
