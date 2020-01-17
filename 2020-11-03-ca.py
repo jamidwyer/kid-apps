@@ -64,7 +64,7 @@ def searchAndPost(sub):
                 'east bay dsa', 'ca-24', 'ca-21', 'traitor nunes', 'tight calif. race', 'irvine city council', \
                 'California This Election Cycle', 'california neo-nazi', 'trump claims california', \
                 'strikers in san francisco', 'california legislat', 'bill in california', 'bay area yimby', \
-                'afford a home in Bay Area', 'California\’s wildfires', \
+                'afford a home in Bay Area', \
                 'California Wildfires', \
                 'dsa los angeles', 'nazi rally in berkeley', 'long beach chapter of dsa', \
                 'california into three states', 'orange county vote', 'electoral college', \

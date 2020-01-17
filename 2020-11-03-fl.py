@@ -40,9 +40,9 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'fl-gov', 'nelson campaign', \
                 'augustus sol invictus', \
-                'bernie and the tomato field', \
-                'first lady with human trafficker', \
+                'legislative seats in florida', \
                 'votes at stake in florida', 'coral gables clerk of courts', 'plan to end offshore drilling', \
                 'fundraiser in florida', '1.4 million people from voting', 'ups driver killed in shootout', \
                 'Cops Use Civilians as Literal Human Shields', 'george buck', 'only grocery closed, city hall', \
@@ -67,7 +67,10 @@ def searchAndPost(sub):
                 'fl governor', \
                 'aron davis', \
                 'parkland survivor', \
-                'fl-gov', 'nelson campaign', 'scottforflorida', 'orlando massacre', 'orlando mass shooting', 'pulse shooting', 'senator nelson', 'Gary Wayne Lindsey', 'gerrymandering in florida', 'save rural florida', 'school safety commission', 'adam putnam', 'parkland kid', 'bill nelson', 'parkland parents', 'joe negron', 'lauren baer', 'mayor of tallahassee', 'hogg wild', 'scott-nelson', 'fl-6', 'parkland student activist', 'david hogg', 'Emma Gonzales', 'parkland shoot', 'wildlife conservation council', 'florida legislators', 'stoneman douglas students', 'flgov', 'florida state senator', 'fla. senate', 'kelli stargel', 'florida senate', 'florida poll', 'gwen graham', 'fl lawmaker', 'Tampa Bay lawmaker', 'Florida GOP', 'florida lawmaker', 'Florida House', 'debra kaplan', 'Tom Rooney', 'march for our lives', 'Florida high school shooting', 'florida school shooting', 'margaret good', 'Miami congressional campaign', 'Posey for Congress', 'Peters4Congress', 'Florida congressman', 'philip levine', 'sean shaw', 'Proposed Florida amendment', 'vote in Florida', 'victor torres', 'Florida Congressional District 3', 'Florida vot', 'florida legislature', 'Anna Eskamani', 'FL House district 31', 'matt haggman', 'Kelly Smith for Pasco County Commissioner', 'Orlando Lawmakers', 'ron reid', 'florida marijuana', 'bilirakis', 'marijuana in Fl', 'cannabis in florida', 'Florida Cannabis Act',  '^(?!.*klatvala).*latvala.*$' '^(?!.*gov. scott walker).*gov. scott.*$', 'Florida HD-58', 'gaetz', '2018 congressional races in Florida', 'rick scott', 'Florida Democrat', '^(?!.*governor scott).*governor scott.*$', 'florida governor', 'fla. governor', 'governor of florida', 'curbelo', 'brian mast', 'rep mast', 'rep. mast', 'representative mast', 'congressman mast', 'fl-18', 'lehtinen', 'fl-27', 'desantis', 'dennis ross', 'fl-15', 'andrew learned', 'balart', 'fl-25']
+                'orlando massacre', 'orlando mass shooting', \
+                'pulse shooting', 'senator nelson', 'Gary Wayne Lindsey', 'gerrymandering in florida', \
+                'save rural florida', 'school safety commission', 'adam putnam', 'parkland kid', 'bill nelson', \
+                'parkland parents', 'joe negron', 'lauren baer', 'mayor of tallahassee', 'hogg wild', 'scott-nelson', 'fl-6', 'parkland student activist', 'david hogg', 'Emma Gonzales', 'parkland shoot', 'wildlife conservation council', 'florida legislators', 'stoneman douglas students', 'flgov', 'florida state senator', 'fla. senate', 'kelli stargel', 'florida senate', 'florida poll', 'gwen graham', 'fl lawmaker', 'Tampa Bay lawmaker', 'Florida GOP', 'florida lawmaker', 'Florida House', 'debra kaplan', 'Tom Rooney', 'march for our lives', 'Florida high school shooting', 'florida school shooting', 'margaret good', 'Miami congressional campaign', 'Posey for Congress', 'Peters4Congress', 'Florida congressman', 'philip levine', 'sean shaw', 'Proposed Florida amendment', 'vote in Florida', 'victor torres', 'Florida Congressional District 3', 'Florida vot', 'florida legislature', 'Anna Eskamani', 'FL House district 31', 'matt haggman', 'Kelly Smith for Pasco County Commissioner', 'Orlando Lawmakers', 'ron reid', 'florida marijuana', 'bilirakis', 'marijuana in Fl', 'cannabis in florida', 'Florida Cannabis Act',  '^(?!.*klatvala).*latvala.*$' '^(?!.*gov. scott walker).*gov. scott.*$', 'Florida HD-58', 'gaetz', '2018 congressional races in Florida', 'rick scott', 'Florida Democrat', '^(?!.*governor scott).*governor scott.*$', 'florida governor', 'fla. governor', 'governor of florida', 'curbelo', 'brian mast', 'rep mast', 'rep. mast', 'representative mast', 'congressman mast', 'fl-18', 'lehtinen', 'fl-27', 'desantis', 'dennis ross', 'fl-15', 'andrew learned', 'balart', 'fl-25']
             for term in terms:
                  search(term, submission)
 
