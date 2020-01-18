@@ -40,14 +40,27 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'Governor of Washington State', \
+                'governor inslee', 'gov. inslee', \
+                'jay inslee', \
+                'wa-3', 'wa-03', 'wa\'s 3rd district', \
+                'Washington\'s 3rd Congressional Dist', \
                 'wa-05', \
+                'wa-8', \
                 'jayapal', \
                 'mcmorris rogers', \
+                'McMorris Rodgers', \
+                'cathymcmorris', \
+                'herrera beutler', '@herrerabeutler', \
+                'gasque', \
+                'ed orcutt', \
+                'matt manweller', \
+                'sarah smith', \
+                'joey gibson', \
                 'kill all males', \
-                'GOP Lawmaker Plotted Insurrection', \
+                'case on electoral college', \
                 'seattle public library', \
                 'plan to criminalize homelessness', \
-                'iranians entering the country', \
                 'trips over his own bi', 'judge in tiffany hill', 'bail laws after Vancouver mom', \
                 'spokane police officer ', 'nazis from washington', 'socialist trucker', 'marijuana banking bill', \
                 'seattle town hall', 'cuddly catz', 'seattle feeling the bern', 'thurston county and courts', \
@@ -60,7 +73,10 @@ def searchAndPost(sub):
                 'goodspaceguy', 'thurston county vote', 'lisa brown', 'Dan Satterberg', 'the head tax', \
                 's up bootlickers', 'Seattle-area prosecutor', 'initiative 1600', \
                 'Seattle Democratic Socialists of America', 'washington state\'s net Neutrality law', \
-                'washington lawmakers', 'washington state law', 'washington Legislature', 'tim eyman', 'Washington State Legislature', 'McMorris Rodgers', 'joey gibson', 'cathymcmorris', 'Washington\'s 3rd Congressional Dist', 'Washington Bill', 'gasque', 'jay inslee', 'governor inslee', 'gov. inslee', 'wa-8', 'ed orcutt', 'Governor of Washington State', 'matt manweller', 'sarah smith', 'herrera beutler', '@herrerabeutler', 'wa-3', 'wa-03', 'wa\'s 3rd district']
+                'washington lawmakers', 'washington state law', 'washington Legislature', 'tim eyman', \
+                'Washington State Legislature', \
+                'Washington Bill'
+            ]
             for term in terms:
                  search(term, submission)
 
