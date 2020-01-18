@@ -42,12 +42,15 @@ def searchAndPost(sub):
             terms = [
                 # top terms
                 'south carolina passes law', \
+                's.c. governor', \
+                'henrymcmaster', \
                 # senators
                 'lindsey graham' \
                 'lindsay graham',
                 'graham challenger', \
                 'leningrad lindsey', \
                 # fed reps
+                'Catherine Templeton', \
                 'endorsed by a south carolina', \
                 'electability', 'democrats have shifted left', 'game of smiles', \
                 'conviction and removal', \
@@ -62,9 +65,8 @@ def searchAndPost(sub):
                 'campaign team in south carolina', 'stand with south carolina teachers', 'leningradlindsey', 'lindseygraham', 'lindsey fucking graham', 'sc teacher rally', 'lindsey graham', \
                 'first primary in the south', 'south carolina support', 'bernieinsc', 'supporters in greenville', \
                 'charleston church massacre', 's.c. congress', 'south carolina vote', 'kinder-guardians', \
-                'henrymcmaster', \
                 'charleston church shooting', \
-                's.c. governor', 'southcarolinapolitics', \
+                'southcarolinapolitics', \
                 'sc governor', 'governor in sc', ' SC Democrat', 'south carolina general election', \
                 'sc lawmaker', \
                 'south carolina senate', 'sc house votes', 'sc legislat', 'dylann roof', \
@@ -73,7 +75,9 @@ def searchAndPost(sub):
                 'gowdy', 'rep. joe wilson', 'jeff duncan', 'archie parnell', 'henry mcmaster', 'kevin bryant', \
                 'south carolina governor', \
                 'south carolina republican', \
-                'Catherine Templeton', 'Republicans in South Carolina']
+                'bluffton cop', \
+                'Republicans in South Carolina'
+            ]
             for term in terms:
                  search(term, submission)
 

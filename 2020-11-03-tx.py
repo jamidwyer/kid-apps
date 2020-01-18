@@ -43,6 +43,7 @@ def searchAndPost(sub):
                 'greg abbott', \
                 'rick perry', \
                 'texas vote', \
+                'the texas house', \
                 'texas school district', \
                 'texas right-wing', \
                 'texas registration', \

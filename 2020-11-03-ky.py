@@ -54,6 +54,7 @@ def searchAndPost(sub):
                 'kentucky republican', \
                 'kentucky will accept', 'trump tax cuts', 'trump impeached', \
                 'conviction and removal', \
+                'cover senate impeachment', \
                 '20 republican senators', \
                 'defend the constitution', \
                 'threatening our constitution', \

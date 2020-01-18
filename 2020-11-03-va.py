@@ -51,6 +51,7 @@ def searchAndPost(sub):
                 '^(?!.*west virginia law).*virginia law.*$', \
                 'virginia department of elections', \
                 'super tuesday', \
+                '^(?!.*west virginia gun).*virginia gun.*$', \
                 'equal rights amendment', \
                 'voters turned virginia', \
                 'Confederate statues in Virginia', \
