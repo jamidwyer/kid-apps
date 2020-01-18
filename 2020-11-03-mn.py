@@ -67,7 +67,7 @@ def searchAndPost(sub):
                 'rep omar', 'rep. omar', 'ilhan', \
                 'first muslim congresswoman', \
                 'erik paulsen', 'rep. paulsen', 'rep paulsen', \
-                'MN woman sues two pharmacies', 'super tuesday', 'minnesota state capitol', \
+                'super tuesday', 'minnesota state capitol', \
                 'minnesota republican', 'minneapolis mayor', \
                 'threatens to sue minneapolis', 'twin cities climate strike', \
                 'federal building in minnesota', 'MI, MN and WI', 'attacks on omar', 'protesters as terrorists', 'send her back', 'Trump admin holding back billions in transit funding', 'alcaida', 'pipeline in minnesota', 'minnesota house', 'mn state senate', 'rep. jason lewis', 'doug wardlow', 'rich stanek', 'political ad in minnesota', 'hennepin county sheriff', 'minnesota gop ', 'minnesota moms rise up', \
@@ -75,6 +75,12 @@ def searchAndPost(sub):
                 'tim walz', 'minnesota congress', 'justin vold', 'tina smith', 'jon applebaum', \
                 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', \
                 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', \
+                # moveme
+                'medical debt', \
+                'blue, no matter who', \
+                '2020 democratic nomin', \
+                'poll numbers rise after warren', \
+                'trump vs bernie'
             ]
             for term in terms:
                 search(term, submission)

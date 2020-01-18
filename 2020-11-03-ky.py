@@ -57,7 +57,10 @@ def searchAndPost(sub):
                 '20 republican senators', \
                 'defend the constitution', \
                 'threatening our constitution', \
-                'kentucky lieutenant governor', 'turtle faced traitor', 'drinking water across kentucky', \
+                'kentucky lieutenant governor', \
+                'kentucky looks at recreational', \
+                'turtle faced traitor', \
+                'drinking water across kentucky', \
                 'congress silently killed', \
                 'kentucky democrat', 'kentucky outcome', 'rally in kentucky', 'poor ky. county', \
                 'kentucky mill shut', 'u.s. deficit', 'flip the senate', 'kentucky capitol', \
@@ -68,7 +71,8 @@ def searchAndPost(sub):
                 'paul threatens fellow republicans', \
                 'fuck you, mitch', 'fuck mitch', 'the fucking turtle', \
                 'in the Way of Federal Weed Legalization', \
-                'kentucky coal', 'kentucky is a top target', 'Louisville, Kentucky Metro Council', 'kentucky vot', 'kentucky gop', 'war against free and fair elections', 'senate majority bitch', 'Bipartisan marijuana banking bill', 'russian investment in a kentucky', 'ky-sen', 'firefighting jobs with largest federal', 'lives are lost every day to our broken health care system', \
+                'kentucky coal', 'kentucky is a top target', 'Louisville, Kentucky Metro Council', 'kentucky vot', \
+                'kentucky gop', 'war against free and fair elections', 'senate majority bitch', 'Bipartisan marijuana banking bill', 'russian investment in a kentucky', 'ky-sen', 'firefighting jobs with largest federal', 'lives are lost every day to our broken health care system', \
                 'kentucky ranks among worst states'
             ]
             for term in terms:

@@ -39,21 +39,24 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'virginia senate', \
                 'rep. wexton', \
                 'abigail spanberger', \
                 'rep luria', \
+                'virginia state house', \
                 'sen. amanda chase', \
                 'lee j. carter', \
                 'red hair boi', \
                 'danica roem', \
                 '^(?!.*west virginia law).*virginia law.*$', \
+                'virginia department of elections', \
                 'super tuesday', \
                 'equal rights amendment', \
                 'voters turned virginia', \
                 'Confederate statues in Virginia', \
+                'guns to richmond', \
                 'Trump Campaign Adviser Pleads Guilty to Child Porn', \
-                'virginia department of elections', 'virginia state house', \
-                'virginia senate', 'house of delegates flipped', 'virginia state senate', \
+                'house of delegates flipped', 'virginia state senate', \
                 'fake presidential seal'
             ]
             for term in terms:

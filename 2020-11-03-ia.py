@@ -57,10 +57,9 @@ def searchAndPost(sub):
                 'david young', \
                 'peteforiowa', \
                 'Alasandro', \
-                'first in iowa', \
                 'iowa campaign', \
                 'win iowa', \
-                '2020 democratic nomin', \
+                'first in iowa', \
                 'iowa approaches', \
                 'iowa, nh', \
                 'sanders surge', \
@@ -82,8 +81,7 @@ def searchAndPost(sub):
                 'republican as vice president', \
                 'neck and neck in iowa', \
                 'fought for working families my entire life', \
-                'Woman Ran Over Girl Because She Was', \
-                'asking, why this moment', \
+                'feedlot between two rivers', \
                 'insurance deductible', \
                 'becoming the frontrunner', \
                 'the 2020 election', \
@@ -109,7 +107,7 @@ def searchAndPost(sub):
                 'warren accuses trump', \
                 'talk about joe biden', \
                 'quinnipiac national poll', 'iowa steak fry', \
-                'iowa contender', 'polk county steak fry', 'huge iowa crowd', 'vote blue, no matter who', \
+                'iowa contender', 'polk county steak fry', 'huge iowa crowd', \
                 'iowa senat', 'iowa field director', \
                 'Trade War Disaster', 'iowa labor day', 'presidential playbook', 'Iowa State College Dem Straw Poll', \
                 'battleground iowa', 'iowa state fair kernel poll', 'warren on the register', 'bernie beats trump', \
