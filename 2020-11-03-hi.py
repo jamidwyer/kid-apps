@@ -42,7 +42,8 @@ def searchAndPost(sub):
             # Do a case insensitive search
             terms = [
                 'tulsi', 'rep. gabbard', \
-                'honolulu city council', 'tulsi gabbard has put her life on the line', \
+                'honolulu city council',\
+                'bigger, dumber asshole', \
                 'lawsuits in hawaii', 'corals near hawaii', 'great pacific garbage patch', \
                 'hawaii has decriminalized', 'legal in Hawaii', 'hawaii legislat', 'Hawaii Ballot', \
                 'kaniela'

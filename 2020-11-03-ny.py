@@ -62,6 +62,7 @@ def searchAndPost(sub):
                 'evelyn yang', \
                 'new york to rally', \
                 'House member from western New York', \
+                'skyscrapers are empty', \
                 'evelyn shared her story', \
                 'sdny', 'trump is copying hitler', \
                 'trump tower kept 2 sets of books', 'trump kept 2 sets of books', 'apartment hunting in nyc', \
