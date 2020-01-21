@@ -77,6 +77,9 @@ def searchAndPost(sub):
                 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', \
                 # moveme
                 'voting for bernie', \
+                'ilikebernie', \
+                'nobody likes him', \
+                'attacks on bernie', \
                 'other for 2020', \
                 'medical debt', \
                 'blue, no matter who', \

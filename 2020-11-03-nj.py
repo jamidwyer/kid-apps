@@ -41,6 +41,7 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'nj gov', \
                 'nj-7', 'nj-07', \
                 'NJ\'s 7th District', 'nj cd-7', \
                 'josh gottheimer', \
@@ -51,14 +52,17 @@ def searchAndPost(sub):
                 'frelinghuysen', \
                 'new jersey legislat', \
                 'election reform in pennsylvania and and new jersey', \
-                'activists are camped at new jersey', 'n.j. just took a big step', 'jeff van drew', \
+                'activists are camped at new jersey', \
+                'jeff van drew', \
                 'democrat expected to switch parties', 'NJ Man Arrested for Vandalising Synagogue', \
                 'nj has elected', 'nj democrat', 'giving away dividend dogs', 'last hope for white people', \
                 'Found at the flea market in New Jersey', 'judge who spared rape suspect', \
-                'rape case judge resigns', \
                 'analilia mejia', \
                 'nj to teach lgbt', \
-                'new human rights commission', 'wilda diaz', 'Immigrant Workers Fired From President Trump', 'Jewish Woman for protesting concentration Camps', '30 jewish protesters arrested', 'beronica ruiz', 'nj attny general', 'with l of these goddamn', 'spotted in middletown nj', 'Bedminster', 'nj-11', 'seth grossman', 'new jersey passed sweeping', \
+                'new human rights commission', 'wilda diaz', 'Immigrant Workers Fired From President Trump', \
+                'Jewish Woman for protesting concentration Camps', '30 jewish protesters arrested', \
+                'beronica ruiz', 'nj attny general', 'with l of these goddamn', 'spotted in middletown nj', \
+                'Bedminster', 'nj-11', 'seth grossman', 'new jersey passed sweeping', \
                 'murphy set to sign law', \
                 'nj state legislat', 'nj Representative', 'new jersey lawmaker', 'NJ marijuana legalization', 'nj assembly', \
                 'new jersey voters', \

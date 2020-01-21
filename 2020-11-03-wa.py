@@ -43,6 +43,7 @@ def searchAndPost(sub):
                 'Governor of Washington State', \
                 'governor inslee', 'gov. inslee', \
                 'jay inslee', \
+                'joey gibson', \
                 'wa-3', 'wa-03', 'wa\'s 3rd district', \
                 'Washington\'s 3rd Congressional Dist', \
                 'wa-05', \
@@ -56,13 +57,15 @@ def searchAndPost(sub):
                 'ed orcutt', \
                 'matt manweller', \
                 'sarah smith', \
-                'joey gibson', \
+                'socialist trucker', \
                 'kill all males', \
                 'case on electoral college', \
                 'seattle public library', \
+                'spokane police officer ', \
                 'plan to criminalize homelessness', \
-                'trips over his own bi', 'judge in tiffany hill', 'bail laws after Vancouver mom', \
-                'spokane police officer ', 'nazis from washington', 'socialist trucker', 'marijuana banking bill', \
+                'nazis from washington', \
+                'adults to grow their own marijuana', \
+                'marijuana banking bill', \
                 'seattle town hall', 'cuddly catz', 'seattle feeling the bern', 'thurston county and courts', \
                 'poisoning puget sound', 'toxins in the Salish Sea', 'washington state prisons', \
                 'toxics into Puget Sound', 'prime day strike', 'seattle transpride', 'trans pride seattle', \
