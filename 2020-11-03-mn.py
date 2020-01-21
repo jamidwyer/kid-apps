@@ -80,6 +80,7 @@ def searchAndPost(sub):
                 'medical debt', \
                 'blue, no matter who', \
                 '2020 democratic nomin', \
+                'clinton hating on bernie', \
                 'poll numbers rise after warren', \
                 'trump vs bernie'
             ]

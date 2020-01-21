@@ -41,7 +41,7 @@ def searchAndPost(sub):
             terms = [
                 'nh-sen', \
                 'iowa and new hampshire', \
-                'iowa and nh', \                    
+                'iowa and nh', \
                 'iowa, new hampshire', \
                 'electability', \
                 'nh, nv', \
