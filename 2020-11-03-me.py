@@ -38,14 +38,21 @@ def searchAndPost(sub):
         if submission.id not in posts_replied_to:
 
             # Do a case insensitive search
-            terms = ['super tuesday', 'flip the senate', 'maine to allowed ranked vot', \
+            terms = [
+                'maine gov', \
+                'me-gov', \
+                'maine senate', \
+                'me-sen', \
+                'super tuesday', 'flip the senate', 'maine to allowed ranked vot', \
                 'susan collins', \
                 '20 republican senators', \
                 'nervous republicans', \
                 'donations to senate republicans', 'armbands come next', 'sara gideon', \
                 'war against free and fair elections', 'Maine inches closer to shutting down', \
                 'maine prison', 'outbreak spreads to maine', 'maine lawmaker', \
-                'first state to ban styrofoam', 'wave of clean energy legislation', 'maine senate', 'me-gov', 'Maine Democratic Senate', 'maine vot', 'maine gop', 'maine state house', 'maine election', 'maine house candidate', 'eryn gilchrist', 'steve deangelis', 'mainepolitics', 'mainegreens', 'maine gov', 'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me governor\'s', 'gov. lepage']
+                'Maine Democratic Senate', 'maine vot', 'maine gop', 'maine state house', 'maine election', \
+                'maine house candidate', 'eryn gilchrist', 'steve deangelis', 'mainepolitics', 'mainegreens', \
+                'Maine town councilor', 'maine\'s governor', 'Maine State Representative', 'lepage', 'ME\'s next governor ', 'governor of maine', 'me governor\'s', 'gov. lepage']
             for term in terms:
                  search(term, submission)
 
