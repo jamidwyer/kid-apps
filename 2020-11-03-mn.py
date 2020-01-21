@@ -76,6 +76,7 @@ def searchAndPost(sub):
                 'pawleny', 'pawlenty', 'minnesota state lawmaker', 'mary franson', \
                 'keith ellison', 'angie craig', 'michele bachmann', 'adam jennings', 'Lt. Gov. Tina Smith', \
                 # moveme
+                'other for 2020', \
                 'medical debt', \
                 'blue, no matter who', \
                 '2020 democratic nomin', \

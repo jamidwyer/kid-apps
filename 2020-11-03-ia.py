@@ -119,8 +119,11 @@ def searchAndPost(sub):
                 'marching in cedar rapids', 'workers in cedar rapids', 'iacaucus', 'tied in iowa', 'rising in iowa', \
                 'iowa trump vote', 'iowa dems', 'iowa legislat', 'rally in iowa', 'sioux city rally', \
                 'virtual caucus', \
-                'sanders in iowa', 'giant democratic primary field', 'corporate middlemen', \
-                'iowa kickoff speech', 'rwdsu in cedar rapids', 'iowa caucus', 'iowa democrat', \
+                'sanders in iowa', \
+                'iowa and nh', \
+                'giant democratic primary field', 'corporate middlemen', \
+                'biden denies bernie', \
+                'rwdsu in cedar rapids', 'iowa caucus', 'iowa democrat', \
                 'climate crisis summit', \
                 'iowa\'s medicaid', 'zach wahls', 'iowa abortion ban', \
                 'iowa race', \
