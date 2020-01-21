@@ -37,9 +37,12 @@ def searchAndPost(sub):
 
             # Do a case insensitive search
             terms = [
+                'tn-sen', 'diane black', \
                 'scott desjarlais', \
                 'tennessee constitution', \
-                'tennessee immigration', 'tenncare', 'super tuesday', 'tennessee is a guinea pig', \
+                'tennessee immigration', 'tenncare', 'super tuesday', \
+                'memphis lawmaker', \
+                'tennessee is a guinea pig', \
                 'tennessee deputy sued', \
                 'tenn. lawmaker', 'school shootings, Republican congresswoman', 'cyntoia brown', \
                 'Cop Allowed to Quietly Resign', 'detain man at tennessee home', \
@@ -48,7 +51,10 @@ def searchAndPost(sub):
                 'james mackler', \
                 'macker in tennessee', \
                 'lamar alexander', \
-                'senate race in tennessee', 'rally in tennessee', 'thongnopnua', 'comstock on npr', 'tn politic', 'Pro-Trump Tennessee', 'Blue Wave hits Shelby County', 'nathan farnor', 'Pence to Visit Chattanooga', 'tn-sen', 'diane black', 'ICE Came for a Tennessee Town', 'pride of knoxville', 'knoxville straight pride', 'trump rally in nashville', 'corker and alexander', 'tennessee\'s candidate', 'trey palmedo', 'waffle house shooting', 'pro-trump tennessee', 'tennessee house', 'tn house', 'vanhuss', 'tn6', 'bill halted in tennessee', 'tn state Representative', 'memphis trees community', 'lee beaman', 'dawnbarlow', 'tennessee Republican', 'tn01', 'state Representative for tennessee', 'tennessee gop', 'oddie shoupe', 'Tennessee Heritage Protection Act', 'tennessee Legislat', 'TN State Legislature', 'phil roe', 'Greenville local races', 'House Bill 2381', 'Tennessee bill', 'tennessee judge', 'Tennessee to legalize medical marijuana', 'TN Representative Candidate', 'tennessee lawmaker', 'john duncan', 'Tennessee House Republicans', 'corker kick back', 'Corker asks', 'corker kickback', 'corkerkickback', 'corker demands', 'CORker says', 'Senate in Tennessee', 'TN Democrats Vote', 'bredesen', 'kustoff', 'tennessee gov', 'tn gubernatorial', 'gov. of tn', 'tennessee gubernatorial candidate', 'governor haslam', 'randy boyd', 'kay white', 'tn governor', 'bill lee', 'beth harwell', 'karl dean', 'mae beavers', 'tennessee senat', 'bob corker', 'sen. corker', 'blackburn', 'corker\'s u.s. senate seat', 'replace corker', 'Corker fight', 'andy ogles', 'senator corker', 'Corkers seat', 'tn-6', 'tn-7', 'tn-07']
+                'senate race in tennessee', 'rally in tennessee', 'thongnopnua', 'comstock on npr', 'tn politic', \
+                'Pro-Trump Tennessee', 'Blue Wave hits Shelby County', 'nathan farnor', \
+                'pride of knoxville', 'knoxville straight pride', 'trump rally in nashville', 'corker and alexander', 'tennessee\'s candidate', 'trey palmedo', 'waffle house shooting', 'pro-trump tennessee', 'tennessee house', 'tn house', 'vanhuss', 'tn6', 'bill halted in tennessee', 'tn state Representative', 'memphis trees community', 'lee beaman', 'dawnbarlow', 'tennessee Republican', 'tn01', 'state Representative for tennessee', 'tennessee gop', 'oddie shoupe', 'Tennessee Heritage Protection Act', 'tennessee Legislat', 'TN State Legislature', 'phil roe', 'Greenville local races', 'House Bill 2381', 'Tennessee bill', 'tennessee judge', 'Tennessee to legalize medical marijuana', 'TN Representative Candidate', \
+                'tennessee lawmaker', 'john duncan', 'Tennessee House Republicans', 'corker kick back', 'Corker asks', 'corker kickback', 'corkerkickback', 'corker demands', 'CORker says', 'Senate in Tennessee', 'TN Democrats Vote', 'bredesen', 'kustoff', 'tennessee gov', 'tn gubernatorial', 'gov. of tn', 'tennessee gubernatorial candidate', 'governor haslam', 'randy boyd', 'kay white', 'tn governor', 'bill lee', 'beth harwell', 'karl dean', 'mae beavers', 'tennessee senat', 'bob corker', 'sen. corker', 'blackburn', 'corker\'s u.s. senate seat', 'replace corker', 'Corker fight', 'andy ogles', 'senator corker', 'Corkers seat', 'tn-6', 'tn-7', 'tn-07']
             for term in terms:
                  search(term, submission)
 
