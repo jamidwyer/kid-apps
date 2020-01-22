@@ -43,6 +43,7 @@ def searchAndPost(sub):
             terms = [
                 'beshear', \
                 'matt bevin', \
+                'bevin leaves', \
                 'mcconnell', \
                 'american mitch', 'amy mcgrath', 'mitch mctreason', \
                 'moscow mitch', 'moscowmitch', \
