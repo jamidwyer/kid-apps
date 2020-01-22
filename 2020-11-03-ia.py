@@ -57,19 +57,22 @@ def searchAndPost(sub):
                 'david young', \
                 'peteforiowa', \
                 'Alasandro', \
+                # iowa
                 'iowa campaign', \
                 'win iowa', \
+                'poll in iowa', \
+                'iowan voters', \
                 'first in iowa', \
                 'iowa approaches', \
+                'days til iowa', \
+                # moveme
+                'not me. us.', \
                 'iowa, nh', \
                 'sanders surge', \
                 'sanders takes the lead', \
                 'biden will lose', 
                 'biden would lose', \
                 'sanders has opposed', \
-                'days til iowa', \
-                'poll in iowa', \
-                'not me. us.', \
                 'sanders vs. warren', \
                 'iowaforyang', \
                 'yang iowa', \

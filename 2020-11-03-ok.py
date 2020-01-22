@@ -61,7 +61,9 @@ def searchAndPost(sub):
                 'Michael Brooks-Jimenez', \
                 'kevin mcdugle', \
                 'Drew Edmondson', \
-                'super tuesday', 'fundraising in oklahoma', 'conservative oklahoma', \
+                'super tuesday', \
+                'conservative oklahoma', \
+                'fundraising in oklahoma', \
                 'oklahoma campaign', 'lawsuit with oklahoma', 'marijuana in oklahoma', 'fort sill', \
                 'Supreme Court Allows Oklahoma', 'marijuana sales soar in ok', 'nomiddleground on fracking', \
                 'fundraising in oklahoma', 'ok officials praying', 'oklahoma campaign chair', 'tulsa county da', \
@@ -78,8 +80,9 @@ def searchAndPost(sub):
                 'jenks lawmaker', 'Oklahoma senat', 'sb1016', 'voting in Oklahoma', 'Oklahoma Law', \
                 'Oklahoma City mayor', \
                 'GOP rep from Oklahoma', \
+                'trans man killed in okla', \
                 'Budget Crisis in Oklahoma', 'steve russell', \
-                'Oklahoma House of Representatives', 'Oklahoma Tried the GOP', 'Voter Registration by County'\
+                'Oklahoma House of Representatives', 'Oklahoma Tried the GOP', 'Voter Registration by County'
             ]
             for term in terms:
                  search(term, submission)

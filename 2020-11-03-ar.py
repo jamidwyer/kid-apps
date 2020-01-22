@@ -50,9 +50,14 @@ def searchAndPost(sub):
                 'ar-02', 'ar-2', 'rep. hill', 'rep hill', 'representative hill', \
                 'congressman hill', 'french hill', \
                 'rep. garry smith', \
+                # local politicians
+                'little rock police chief', \
                 # general
-                'super tuesday', 'westerman polls', 'arkansas veterans', \
-                'entry-level workers at Walmart', 'Political Shift in Arkansas', \
+                'super tuesday', \
+                'westerman polls', \
+                'arkansas veterans', \
+                'entry-level workers at Walmart', \
+                'Political Shift in Arkansas', \
                 'Editor of the Arkansas Times', 'gun show in arkansas', \
                 'rally in little rock', 'arkansas republican', 'James M. Hinds', \
             ]
